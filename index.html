@@ -1644,28 +1644,10 @@ body{cursor:default}
 
 
 
-<style id="mediabay-v73-home-cinematic">
-:root{--mb73-ease:cubic-bezier(.16,1,.3,1)}
-html{scroll-behavior:auto;overflow-x:hidden}
-body{overflow-x:hidden}
-/* Native scroll stays untouched. These variables are driven continuously by scroll position. */
-.mb73-section{position:relative;isolation:isolate;--mb73-p:0;--mb73-y:0px;--mb73-scale:1;--mb73-alpha:1}
-.mb73-section::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.06),transparent 58%);opacity:clamp(0,calc(1 - abs(var(--mb73-p))),.16)}
-.mb73-kicker,.mb73-head,.mb73-title,.mb73-copy,.mb73-content{will-change:transform,opacity}
-.mb73-head{transform:translate3d(0,calc(var(--mb73-p)*-18px),0);opacity:clamp(.55,calc(1 - abs(var(--mb73-p))*.22),1)}
-.mb73-title{transform:translate3d(0,calc(var(--mb73-p)*-34px),0) scale(calc(1 - min(.018,abs(var(--mb73-p))*.018)));}
-.mb73-copy{transform:translate3d(0,calc(var(--mb73-p)*-20px),0);opacity:clamp(.72,calc(1 - abs(var(--mb73-p))*.18),1)}
-.mb73-content{transform:translate3d(0,calc(var(--mb73-p)*-11px),0)}
-.mb73-section.is-near .mb73-title{letter-spacing:-.075em}
-@media(max-width:700px){
- .mb73-head{transform:translate3d(0,calc(var(--mb73-p)*-12px),0)}
- .mb73-title{transform:translate3d(0,calc(var(--mb73-p)*-24px),0) scale(calc(1 - min(.014,abs(var(--mb73-p))*.014)))}
- .mb73-copy{transform:translate3d(0,calc(var(--mb73-p)*-14px),0)}
- .mb73-content{transform:translate3d(0,calc(var(--mb73-p)*-8px),0)}
-}
-@media(prefers-reduced-motion:reduce){
- .mb73-section>*{transform:none!important;opacity:1!important}
-}
+<style id="mediabay-v74-home-cinematic">
+/* V74 — stable cinematic motion. JS writes transforms directly for broad mobile compatibility. */
+.mb74-motion{will-change:transform,opacity;transform-origin:center center;}
+@media(prefers-reduced-motion:reduce){.mb74-motion{transform:none!important;opacity:1!important;will-change:auto}}
 </style>
 </head>
 <body class="loading">
@@ -2486,63 +2468,75 @@ activate("strategy");
 })();
 </script>
 
-<script id="mediabay-v73-home-cinematic-js">
+<script id="mediabay-v74-home-cinematic-js">
 (function(){
 'use strict';
 function boot(){
- const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- const main=document.querySelector('main#top');
- if(!main||reduce)return;
- const sections=[...main.children].filter(el=>el.tagName==='SECTION');
- if(!sections.length)return;
- const selectors=[
-   ['.head','mb73-head'],['.giant','mb73-title'],['.desc','mb73-copy'],
-   ['.manifesto-statement','mb73-title'],['.manifesto-copy','mb73-copy'],
-   ['.manifesto-pillars','mb73-content'],['.service-detail-list','mb73-content'],
-   ['.service-note','mb73-copy'],['.approach-intro','mb73-copy'],['.diagnostic','mb73-content'],
-   ['.approach-bottom','mb73-copy'],['.internal-tech','mb73-content'],['.project-list','mb73-content'],
-   ['.client-list','mb73-content'],['.experience-intro','mb73-copy'],['.sector-list','mb73-content'],
-   ['.proof','mb73-content'],['.contact-copy','mb73-title'],['.contact-form','mb73-content']
- ];
- const targets=[];
- sections.forEach((sec,si)=>{
-   sec.classList.add('mb73-section');
-   selectors.forEach(([sel,cls])=>sec.querySelectorAll(sel).forEach(el=>{
-     el.classList.add(cls); targets.push({el,sec});
-   }));
- });
- // Fallback: every section still gets motion even if its semantic classes differ.
- sections.forEach(sec=>{
-   if(!sec.querySelector('.mb73-head,.mb73-title,.mb73-copy,.mb73-content')){
-     [...sec.children].filter(e=>!['SCRIPT','STYLE'].includes(e.tagName)).slice(0,4).forEach((el,i)=>{
-       const cls=i===0?'mb73-head':i===1?'mb73-title':i===2?'mb73-copy':'mb73-content';
-       el.classList.add(cls); targets.push({el,sec});
-     });
-   }
- });
- let ticking=false;
- function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
- function frame(){
-   ticking=false;
-   const vh=innerHeight||1, center=vh*.5;
-   sections.forEach(sec=>{
-     const r=sec.getBoundingClientRect();
-     const p=clamp((r.top+r.height*.5-center)/(vh*.95),-1.15,1.15);
-     sec.style.setProperty('--mb73-p',p.toFixed(4));
-     sec.classList.toggle('is-near',Math.abs(p)<.55);
-   });
- }
- function request(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
- addEventListener('scroll',request,{passive:true});
- addEventListener('resize',request,{passive:true});
- addEventListener('pageshow',request,{passive:true});
- frame();
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var main=document.querySelector('main#top');
+  if(!main || reduce) return;
+  var sections=Array.prototype.filter.call(main.children,function(el){return el.tagName==='SECTION';});
+  if(!sections.length) return;
+  var selectors=[
+    '.head','.giant','.desc','.manifesto-statement','.manifesto-copy','.manifesto-pillars',
+    '.service-detail-list','.service-note','.approach-intro','.diagnostic','.approach-bottom',
+    '.internal-tech','.project-list','.client-list','.experience-intro','.sector-list','.proof',
+    '.contact-copy','.contact-form'
+  ];
+  var targets=[];
+  sections.forEach(function(sec){
+    sec.classList.add('mb74-section');
+    selectors.forEach(function(sel){
+      Array.prototype.forEach.call(sec.querySelectorAll(sel),function(el){
+        if(targets.some(function(t){return t.el===el;})) return;
+        el.classList.add('mb74-motion');
+        targets.push({el:el,sec:sec});
+      });
+    });
+    if(!targets.some(function(t){return t.sec===sec;})){
+      Array.prototype.slice.call(sec.children,0,4).forEach(function(el){
+        if(['SCRIPT','STYLE'].indexOf(el.tagName)!==-1) return;
+        el.classList.add('mb74-motion');
+        targets.push({el:el,sec:sec});
+      });
+    }
+  });
+  var ticking=false;
+  function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+  function render(){
+    ticking=false;
+    var vh=window.innerHeight||1;
+    var center=vh*0.52;
+    sections.forEach(function(sec){
+      var r=sec.getBoundingClientRect();
+      var p=clamp((r.top+r.height*0.5-center)/(vh*0.95),-1,1);
+      sec.style.setProperty('--mb74-p',p.toFixed(3));
+      var d=Math.min(1,Math.abs(p));
+      var near=1-d;
+      sec.classList.toggle('mb74-near',Math.abs(p)<0.58);
+      targets.forEach(function(t){
+        if(t.sec!==sec) return;
+        var tag=(t.el.className||'').toString();
+        var y=0, scale=1, opacity=1;
+        if(tag.indexOf('mb74-head')>=0){y=-p*14; opacity=0.82+near*0.18;}
+        else if(t.el.matches && t.el.matches('.giant,.manifesto-statement,.contact-copy')){y=-p*30; scale=1-d*0.018; opacity=0.78+near*0.22;}
+        else if(t.el.matches && t.el.matches('.desc,.manifesto-copy,.service-note,.approach-intro,.approach-bottom,.experience-intro')){y=-p*18; opacity=0.72+near*0.28;}
+        else {y=-p*10; opacity=0.86+near*0.14;}
+        t.el.style.transform='translate3d(0,'+y.toFixed(2)+'px,0) scale('+scale.toFixed(4)+')';
+        t.el.style.opacity=opacity.toFixed(3);
+      });
+    });
+  }
+  function request(){if(!ticking){ticking=true;window.requestAnimationFrame(render);}}
+  window.addEventListener('scroll',request,{passive:true});
+  window.addEventListener('resize',request,{passive:true});
+  window.addEventListener('pageshow',request,{passive:true});
+  render();
 }
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot,{once:true}); else boot();
 })();
 </script>
-</body>
-</html>
+
 <section class="section green contact" data-door="contact" id="contact">
 <div class="head"><span>08 / LET'S BUILD</span><span>START THE CONVERSATION ↘</span></div>
 <div class="contact-copy">
@@ -2955,5 +2949,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 
 
+</body>
+</html>
 </body>
 </html>
