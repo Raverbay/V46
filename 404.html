@@ -1609,116 +1609,103 @@ html{scroll-behavior:smooth;overflow-x:hidden}
 }
 </style>
 
-<style id="mediabay-v67-cinematic-scroll">
-/* V67 — true scroll-linked motion. The page keeps native scrolling, while the CONTENT moves with it. */
-:root{--mb67-ease:cubic-bezier(.16,1,.3,1)}
-html{scroll-behavior:smooth;scrollbar-gutter:stable}
-@supports (animation-timeline:view()){
-  main > section{view-timeline-name:--mb67-section;view-timeline-axis:block}
-  main > section .head,
-  main > section .giant,
-  main > section .desc,
-  main > section .manifesto-statement,
-  main > section .manifesto-copy,
-  main > section .manifesto-pillars,
-  main > section .service-detail,
-  main > section .service-note,
-  main > section .diagnostic,
-  main > section .approach-bottom,
-  main > section .internal-tech,
-  main > section .experience-intro,
-  main > section .sector-list,
-  main > section .proof,
-  main > section .contact-copy h2,
-  main > section .contact-form{
-    animation:mb67-reveal linear both;
-    animation-timeline:--mb67-section;
-    animation-range:entry 0% cover 32%;
-    animation-delay:0ms!important;
-  }
-  main > section .giant{animation-name:mb67-title}
-  main > section .service-detail:nth-child(2){animation-range:entry 0% cover 28%}
-  main > section .service-detail:nth-child(3){animation-range:entry 4% cover 32%}
-  main > section .service-detail:nth-child(4){animation-range:entry 8% cover 36%}
-  main > section .service-detail:nth-child(5){animation-range:entry 12% cover 40%}
-  main > section .service-detail:nth-child(6){animation-range:entry 16% cover 44%}
-  main > section .service-detail:nth-child(7){animation-range:entry 20% cover 48%}
-  main > section .service-detail:nth-child(8){animation-range:entry 24% cover 52%}
-  main > section .head{animation-range:entry 0% cover 24%}
-  main > section .desc{animation-range:entry 2% cover 34%}
-  main > section .manifesto-pillars,
-  main > section .diagnostic,
-  main > section .proof{animation-range:entry 5% cover 42%}
-  @keyframes mb67-reveal{
-    0%{opacity:0;transform:translate3d(0,48px,0);filter:blur(3px)}
-    38%{opacity:.72;transform:translate3d(0,16px,0);filter:blur(0)}
-    100%{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}
-  }
-  @keyframes mb67-title{
-    0%{opacity:0;transform:translate3d(0,72px,0) scale(.985);clip-path:inset(0 0 18% 0)}
-    45%{opacity:1;transform:translate3d(0,14px,0) scale(1);clip-path:inset(0)}
-    100%{opacity:1;transform:translate3d(0,0,0) scale(1);clip-path:inset(0)}
-  }
+
+
+<style id="mediabay-v68-cinematic-engine">
+/* V68 — deterministic cinematic scroll. No dependency on ViewTimeline or hidden content. */
+:root{--mb68-ease:cubic-bezier(.16,1,.3,1)}
+html{scroll-behavior:auto}
+main{scroll-snap-type:y proximity}
+main>section{scroll-snap-align:start;scroll-snap-stop:normal}
+/* CSS translate is independent from existing transform rules in the legacy site. */
+main>section .head,
+main>section .giant,
+main>section .desc,
+main>section .manifesto-statement,
+main>section .manifesto-copy,
+main>section .manifesto-pillars,
+main>section .services,
+main>section .service-detail,
+main>section .service-note,
+main>section .diagnostic,
+main>section .approach-bottom,
+main>section .internal-tech,
+main>section .experience-intro,
+main>section .sector-list,
+main>section .proof,
+main>section .contact-copy,
+main>section .contact-copy h2,
+main>section .contact-form{
+  translate:0 var(--mb68-shift,0px);
+  scale:var(--mb68-scale,1);
+  opacity:var(--mb68-opacity,1);
+  will-change:translate,scale,opacity;
+  transition:opacity .08s linear;
 }
-/* Desktop: soften wheel/trackpad jumps without hijacking touch scrolling. */
-@media (hover:hover) and (pointer:fine){
-  html{scroll-behavior:auto}
-  body{overscroll-behavior-y:none}
-}
+main>section .giant{transition:translate .04s linear,scale .04s linear,opacity .08s linear}
+main>section .service-detail:nth-child(2){--mb68-delay:0}
+main>section .service-detail:nth-child(3){--mb68-delay:1}
+main>section .service-detail:nth-child(4){--mb68-delay:2}
+main>section .service-detail:nth-child(5){--mb68-delay:3}
+main>section .service-detail:nth-child(6){--mb68-delay:4}
+main>section .service-detail:nth-child(7){--mb68-delay:5}
+main>section .service-detail:nth-child(8){--mb68-delay:6}
 @media(max-width:700px){
-  /* Mobile gets the strongest scroll-linked choreography, not a fake delayed reveal. */
-  @supports (animation-timeline:view()){
-    main > section .head,
-    main > section .giant,
-    main > section .desc,
-    main > section .manifesto-statement,
-    main > section .manifesto-copy,
-    main > section .manifesto-pillars,
-    main > section .service-detail,
-    main > section .service-note,
-    main > section .diagnostic,
-    main > section .approach-bottom,
-    main > section .internal-tech,
-    main > section .experience-intro,
-    main > section .sector-list,
-    main > section .proof,
-    main > section .contact-copy h2,
-    main > section .contact-form{animation-range:entry 0% cover 38%}
-  }
+  main>section .head,main>section .giant,main>section .desc,main>section .manifesto-statement,main>section .manifesto-copy,main>section .manifesto-pillars,main>section .services,main>section .service-detail,main>section .service-note,main>section .diagnostic,main>section .approach-bottom,main>section .internal-tech,main>section .experience-intro,main>section .sector-list,main>section .proof,main>section .contact-copy,main>section .contact-copy h2,main>section .contact-form{will-change:translate,opacity}
+  main{scroll-snap-type:none}
 }
 @media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  main > section *{animation:none!important;filter:none!important;transform:none!important}
+  main{scroll-snap-type:none}
+  main>section *{translate:none!important;scale:1!important;opacity:1!important;will-change:auto!important}
 }
+/* Menu must sit above the full-screen panel while open. */
+.site-header{z-index:10001}
+.site-menu{z-index:10000;pointer-events:none}
+.site-menu.open{pointer-events:auto}
+.site-header.menu-active .menu-icon i:first-child{top:8px;transform:rotate(45deg)}
+.site-header.menu-active .menu-icon i:last-child{top:8px;transform:rotate(-45deg)}
+.site-header.menu-active .menu-btn span{font-size:0}
+.site-header.menu-active .menu-btn span:after{content:'CLOSE';font-size:10px;letter-spacing:.18em}
+@media(max-width:700px){.site-header.menu-active .menu-btn span:after{font-size:9px}}
 </style>
-<script id="mediabay-v67-scroll-engine">
+<script id="mediabay-v68-cinematic-engine">
 (function(){
   'use strict';
-  /* The visual engine is CSS scroll-linked where supported. This JS adds only a light
-     velocity field, so scrolling remains native and reliable on Android/iOS. */
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  const supports=CSS.supports && CSS.supports('animation-timeline:view()');
-  const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
-  if(!fine)return;
-  let lastY=scrollY, lastT=performance.now(), raf=0;
-  const sections=[...document.querySelectorAll('main > section')];
-  function frame(t){
-    raf=0;
-    const y=scrollY, dt=Math.max(16,t-lastT), velocity=Math.max(-1,Math.min(1,(y-lastY)/dt*3));
-    sections.forEach((s,i)=>{
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const sections=[...document.querySelectorAll('main>section')];
+  if(!sections.length) return;
+  let ticking=false;
+  function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+  function render(){
+    ticking=false;
+    const vh=Math.max(1,innerHeight);
+    sections.forEach((s)=>{
       const r=s.getBoundingClientRect();
-      if(r.bottom<0||r.top>innerHeight)return;
-      const p=(r.top+r.height/2-innerHeight/2)/(innerHeight/2);
-      s.style.setProperty('--mb67-velocity',(velocity*3).toFixed(2)+'px');
-      s.style.setProperty('--mb67-depth',Math.max(-4,Math.min(4,-p*2.5)).toFixed(2)+'px');
+      if(r.bottom < -vh*0.35 || r.top > vh*1.35){
+        s.style.setProperty('--mb68-shift','0px');
+        s.style.setProperty('--mb68-scale','1');
+        s.style.setProperty('--mb68-opacity','1');
+        return;
+      }
+      /* 0 = just entering from below, 0.5 = centered, 1 = leaving above. */
+      const p=clamp((vh-r.top)/(vh+r.height),0,1);
+      const centered=1-Math.min(1,Math.abs(p-.5)*2);
+      const shift=((.5-p)*42);
+      const scale=.985+(centered*.015);
+      const opacity=.76+(centered*.24);
+      s.style.setProperty('--mb68-shift',shift.toFixed(2)+'px');
+      s.style.setProperty('--mb68-scale',scale.toFixed(4));
+      s.style.setProperty('--mb68-opacity',opacity.toFixed(3));
     });
-    lastY=y;lastT=t;
   }
-  addEventListener('scroll',()=>{if(!raf)raf=requestAnimationFrame(frame)},{passive:true});
-  frame(performance.now());
+  function request(){if(!ticking){ticking=true;requestAnimationFrame(render)}}
+  addEventListener('scroll',request,{passive:true});
+  addEventListener('resize',request,{passive:true});
+  addEventListener('orientationchange',()=>setTimeout(request,80),{passive:true});
+  request();
+  addEventListener('load',()=>setTimeout(request,120),{once:true});
 })();
 </script>
-
 </head>
 <body class="loading">
 <div id="preloader">
