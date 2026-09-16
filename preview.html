@@ -77,6 +77,34 @@ html{scroll-behavior:smooth;overflow-x:hidden}
  html{scroll-behavior:auto}.mb65-reveal{opacity:1!important;transform:none!important;clip-path:none!important;visibility:visible!important;transition:none!important}.mb65-depth,.mb65-magnetic{transition:none!important;transform:none!important}
 }
 </style>
+
+<style id="mediabay-v66-motion">
+/* V66 — Premium motion, fail-safe: content is NEVER hidden while waiting for JS. */
+:root{--mb66-ease:cubic-bezier(.16,1,.3,1)}
+/* Neutralise previous reveal systems so they cannot blank a section. */
+.mb-reveal,.mb-title,.mb-service,.mb65-reveal,.mb-premium-reveal{
+  opacity:1!important; visibility:visible!important; transform:none!important; clip-path:none!important;
+}
+/* V66 animation is opt-in: JS adds this class only when an element is already on-screen. */
+.mb66-motion{
+  will-change:transform,opacity;
+}
+.mb66-motion.mb66-play{
+  animation:mb66-enter .9s var(--mb66-ease) both;
+  animation-delay:var(--mb66-delay,0ms);
+}
+@keyframes mb66-enter{
+  from{opacity:.01;transform:translate3d(0,34px,0)}
+  65%{opacity:1}
+  to{opacity:1;transform:translate3d(0,0,0)}
+}
+@media(max-width:700px){
+  .mb66-motion.mb66-play{animation-duration:.72s}
+}
+@media(prefers-reduced-motion:reduce){
+  .mb66-motion.mb66-play{animation:none!important;opacity:1!important;transform:none!important}
+}
+</style>
 </head>
 <body>
 <div class="preview-bar">
@@ -209,6 +237,114 @@ showPage('home');
     }
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
+})();
+</script>
+
+<script id="mediabay-v66-motion-js">
+(function(){
+  'use strict';
+  const reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const candidates=[...document.querySelectorAll(
+    'main > section .head, main > section .giant, main > section .desc,'+
+    'main > section .manifesto-statement, main > section .manifesto-copy,'+
+    'main > section .manifesto-pillars, main > section .service-detail,'+
+    'main > section .service-note, main > section .diagnostic,'+
+    'main > section .approach-bottom, main > section .internal-tech,'+
+    'main > section .project, main > section .client,'+
+    'main > section .experience-intro, main > section .sector-list,'+
+    'main > section .proof, main > section .contact-copy h2,'+
+    'main > section .contact-form'
+  )];
+  if(!candidates.length) return;
+
+  candidates.forEach((el,i)=>{
+    /* Remove every legacy hidden state, then opt into the safe V66 choreography. */
+    el.classList.remove('mb65-reveal','mb65-visible','mb-hidden','mb-premium-reveal','mb-premium-visible');
+    el.classList.add('mb66-motion');
+    el.style.setProperty('--mb66-delay',((i%5)*70)+'ms');
+  });
+
+  if(reduce) return;
+
+  const play=(el)=>{
+    if(el.dataset.mb66Played==='1') return;
+    el.dataset.mb66Played='1';
+    /* Force a clean animation even if a previous class/state touched transform. */
+    el.classList.remove('mb66-play');
+    void el.offsetWidth;
+    el.classList.add('mb66-play');
+  };
+
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        play(entry.target);
+        io.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.04,rootMargin:'0px 0px -3% 0px'});
+
+  candidates.forEach(el=>io.observe(el));
+
+  /* Initial viewport: explicitly play only what is visible. */
+  const revealInitial=()=>{
+    const vh=innerHeight||document.documentElement.clientHeight;
+    candidates.forEach(el=>{
+      const r=el.getBoundingClientRect();
+      if(r.bottom>0 && r.top<vh*.98) play(el);
+    });
+  };
+  requestAnimationFrame(()=>requestAnimationFrame(revealInitial));
+
+  /* Smooth, tiny depth effect — transform only, never opacity/display. */
+  const depthTargets=[...document.querySelectorAll('main > section .giant, main > section .manifesto-statement')];
+  let ticking=false;
+  const depth=()=>{
+    ticking=false;
+    const vh=innerHeight||1;
+    depthTargets.forEach(el=>{
+      if(!el.dataset.mb66Played) return;
+      const r=el.getBoundingClientRect();
+      if(r.bottom<0 || r.top>vh) return;
+      const p=(r.top+r.height/2-vh/2)/(vh/2);
+      const y=Math.max(-5,Math.min(5,-p*3));
+      /* Only apply depth after the entrance animation has completed. */
+      el.style.setProperty('--mb66-depth',y.toFixed(2)+'px');
+    });
+  };
+  addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(depth)}},{passive:true});
+  addEventListener('resize',depth,{passive:true});
+  depth();
+
+  /* Premium page transition for internal HTML links: short overlay, no blank page. */
+  const layer=document.createElement('div');
+  layer.id='mb66-page-transition';
+  layer.innerHTML='<span>MEDIABAY ↘</span>';
+  Object.assign(layer.style,{
+    position:'fixed',inset:'0',zIndex:'100000',background:'#101510',
+    color:'#c8ff32',display:'grid',placeItems:'center',
+    fontSize:'10px',letterSpacing:'.22em',textTransform:'uppercase',
+    pointerEvents:'none',transform:'translateY(100%)',
+    transition:'transform .72s cubic-bezier(.77,0,.18,1)'
+  });
+  document.body.appendChild(layer);
+  document.querySelectorAll('a[href$=".html"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const href=a.getAttribute('href');
+      if(!href || href.startsWith('#') || a.target==='_blank') return;
+      e.preventDefault();
+      layer.style.transform='translateY(0)';
+      setTimeout(()=>location.href=href,520);
+    });
+  });
+  addEventListener('pageshow',()=>{
+    layer.style.transition='none';
+    layer.style.transform='translateY(-100%)';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      layer.style.transition='transform .72s cubic-bezier(.77,0,.18,1)';
+      layer.style.transform='translateY(-100%)';
+    }));
+  });
 })();
 </script>
 </body>
