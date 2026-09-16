@@ -2280,14 +2280,39 @@ body{cursor:default}
 <script>
 (function(){
 const data={
-strategy:["First, we understand where you want to go.","Positioning, offer, audience and direction become a clear base from which to build.","Positioning · Offer · Identity · Action plan"],
-digital:["We make your business easy to find and understand.","Your digital presence should turn attention into an action: discovery, trust, contact or purchase.","Website · Landing page · E-commerce · Google"],
-content:["We build something people remember.","Communication is not a stream of posts. It is a system of messages, formats and content with a direction.","Strategy · Formats · Creative · Campaigns"],
-ai:["We use AI where it can create value.","AI and automation enter the process when they can save time, improve service or open new possibilities.","Assistants · Automation · Processes · Custom AI"],
-phygital:["We bring the brand into the real world too.","Physical visibility can become part of the same digital strategy: territory, mobility and activations.","Mobility · Mobile advertising · Activations · Phygital"]};
-const nodes=document.querySelectorAll(".system-node"), detail=document.getElementById("system-detail");
-function activate(k){const d=data[k];nodes.forEach(n=>n.classList.toggle("active",n.dataset.system===k));detail.querySelector(".system-detail-label").textContent=k.toUpperCase();detail.querySelector("h3").textContent=d[0];detail.querySelector("p").textContent=d[1];detail.querySelector(".system-build b").textContent=d[2];}
-nodes.forEach(n=>n.addEventListener("click",()=>activate(n.dataset.system)));
+strategy:["First, we understand where you want to go.","Positioning, offer, audience and direction become a clear base from which to build.","Positioning · Offer · Identity · Action plan","01"],
+digital:["We make your business easy to find and understand.","Your digital presence should turn attention into an action: discovery, trust, contact or purchase.","Website · Landing page · E-commerce · Google","02"],
+content:["We build something people remember.","Communication is not a stream of posts. It is a system of messages, formats and content with a direction.","Strategy · Formats · Creative · Campaigns","03"],
+ai:["We use AI where it can create value.","AI and automation enter the process when they can save time, improve service or open new possibilities.","Assistants · Automation · Processes · Custom AI","04"],
+phygital:["We bring the brand into the real world too.","Physical visibility can become part of the same digital strategy: territory, mobility and activations.","Mobility · Mobile advertising · Activations · Phygital","05"]
+};
+const items=document.querySelectorAll(".diagnostic-item");
+const panel=document.getElementById("diagnostic-panel");
+if(!items.length || !panel)return;
+
+function activate(k){
+ const d=data[k];
+ if(!d)return;
+ items.forEach(item=>item.classList.toggle("active",item.dataset.diagnostic===k));
+ const meta=panel.querySelector(".diag-panel-meta");
+ const spans=meta ? meta.querySelectorAll("span") : [];
+ if(spans[0])spans[0].textContent=k.toUpperCase();
+ if(spans[1])spans[1].textContent=d[3];
+ const title=panel.querySelector("h3");
+ const text=panel.querySelector("p");
+ const output=panel.querySelector(".diag-output strong");
+ if(title)title.textContent=d[0];
+ if(text)text.textContent=d[1];
+ if(output)output.textContent=d[2];
+}
+
+items.forEach(item=>{
+ item.addEventListener("click",function(e){
+   e.preventDefault();
+   activate(this.dataset.diagnostic);
+ });
+});
+activate("strategy");
 })();
 </script></body>
 </html>
