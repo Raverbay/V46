@@ -1900,6 +1900,7 @@ html.mb70-home body{overscroll-behavior:none}
 <script id="mediabay-v70-true-home-scroll-js">
 (function(){
 'use strict';
+function boot(){
 if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 const main=document.getElementById('top');
 if(!main)return;
@@ -2000,6 +2001,8 @@ addEventListener('resize',function(){refreshBounds();wake()},{passive:true});
 addEventListener('load',function(){refreshBounds();current=target=window.scrollY||0;wake()},{once:true});
 refreshBounds();
 window.MediaBayHomeScroll={goTo:function(id){const el=document.getElementById(id);if(el)setTarget(el.getBoundingClientRect().top+current)}};
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
 </script>
 
