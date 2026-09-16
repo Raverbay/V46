@@ -276,6 +276,117 @@ html{scroll-behavior:smooth;overflow-x:hidden}
   .mb66-motion.mb66-play{animation:none!important;opacity:1!important;transform:none!important}
 }
 </style>
+
+<style id="mediabay-v67-cinematic-scroll">
+/* V67 — true scroll-linked motion. The page keeps native scrolling, while the CONTENT moves with it. */
+:root{--mb67-ease:cubic-bezier(.16,1,.3,1)}
+html{scroll-behavior:smooth;scrollbar-gutter:stable}
+@supports (animation-timeline:view()){
+  main > section{view-timeline-name:--mb67-section;view-timeline-axis:block}
+  main > section .head,
+  main > section .giant,
+  main > section .desc,
+  main > section .manifesto-statement,
+  main > section .manifesto-copy,
+  main > section .manifesto-pillars,
+  main > section .service-detail,
+  main > section .service-note,
+  main > section .diagnostic,
+  main > section .approach-bottom,
+  main > section .internal-tech,
+  main > section .experience-intro,
+  main > section .sector-list,
+  main > section .proof,
+  main > section .contact-copy h2,
+  main > section .contact-form{
+    animation:mb67-reveal linear both;
+    animation-timeline:--mb67-section;
+    animation-range:entry 0% cover 32%;
+    animation-delay:0ms!important;
+  }
+  main > section .giant{animation-name:mb67-title}
+  main > section .service-detail:nth-child(2){animation-range:entry 0% cover 28%}
+  main > section .service-detail:nth-child(3){animation-range:entry 4% cover 32%}
+  main > section .service-detail:nth-child(4){animation-range:entry 8% cover 36%}
+  main > section .service-detail:nth-child(5){animation-range:entry 12% cover 40%}
+  main > section .service-detail:nth-child(6){animation-range:entry 16% cover 44%}
+  main > section .service-detail:nth-child(7){animation-range:entry 20% cover 48%}
+  main > section .service-detail:nth-child(8){animation-range:entry 24% cover 52%}
+  main > section .head{animation-range:entry 0% cover 24%}
+  main > section .desc{animation-range:entry 2% cover 34%}
+  main > section .manifesto-pillars,
+  main > section .diagnostic,
+  main > section .proof{animation-range:entry 5% cover 42%}
+  @keyframes mb67-reveal{
+    0%{opacity:0;transform:translate3d(0,48px,0);filter:blur(3px)}
+    38%{opacity:.72;transform:translate3d(0,16px,0);filter:blur(0)}
+    100%{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}
+  }
+  @keyframes mb67-title{
+    0%{opacity:0;transform:translate3d(0,72px,0) scale(.985);clip-path:inset(0 0 18% 0)}
+    45%{opacity:1;transform:translate3d(0,14px,0) scale(1);clip-path:inset(0)}
+    100%{opacity:1;transform:translate3d(0,0,0) scale(1);clip-path:inset(0)}
+  }
+}
+/* Desktop: soften wheel/trackpad jumps without hijacking touch scrolling. */
+@media (hover:hover) and (pointer:fine){
+  html{scroll-behavior:auto}
+  body{overscroll-behavior-y:none}
+}
+@media(max-width:700px){
+  /* Mobile gets the strongest scroll-linked choreography, not a fake delayed reveal. */
+  @supports (animation-timeline:view()){
+    main > section .head,
+    main > section .giant,
+    main > section .desc,
+    main > section .manifesto-statement,
+    main > section .manifesto-copy,
+    main > section .manifesto-pillars,
+    main > section .service-detail,
+    main > section .service-note,
+    main > section .diagnostic,
+    main > section .approach-bottom,
+    main > section .internal-tech,
+    main > section .experience-intro,
+    main > section .sector-list,
+    main > section .proof,
+    main > section .contact-copy h2,
+    main > section .contact-form{animation-range:entry 0% cover 38%}
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  main > section *{animation:none!important;filter:none!important;transform:none!important}
+}
+</style>
+<script id="mediabay-v67-scroll-engine">
+(function(){
+  'use strict';
+  /* The visual engine is CSS scroll-linked where supported. This JS adds only a light
+     velocity field, so scrolling remains native and reliable on Android/iOS. */
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const supports=CSS.supports && CSS.supports('animation-timeline:view()');
+  const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(!fine)return;
+  let lastY=scrollY, lastT=performance.now(), raf=0;
+  const sections=[...document.querySelectorAll('main > section')];
+  function frame(t){
+    raf=0;
+    const y=scrollY, dt=Math.max(16,t-lastT), velocity=Math.max(-1,Math.min(1,(y-lastY)/dt*3));
+    sections.forEach((s,i)=>{
+      const r=s.getBoundingClientRect();
+      if(r.bottom<0||r.top>innerHeight)return;
+      const p=(r.top+r.height/2-innerHeight/2)/(innerHeight/2);
+      s.style.setProperty('--mb67-velocity',(velocity*3).toFixed(2)+'px');
+      s.style.setProperty('--mb67-depth',Math.max(-4,Math.min(4,-p*2.5)).toFixed(2)+'px');
+    });
+    lastY=y;lastT=t;
+  }
+  addEventListener('scroll',()=>{if(!raf)raf=requestAnimationFrame(frame)},{passive:true});
+  frame(performance.now());
+})();
+</script>
+
 </head>
 <body>
 <header class="header"><a class="logo" href="index.html"><span class="brand-symbol" aria-hidden="true"><img class="brand-logo logo-green" src="mediabay-logo-green.png" alt=""><img class="brand-logo logo-white" src="mediabay-logo-white.png" alt=""></span><span class="brand-name" aria-label="MediaBay">MediaBay</span></a><a class="back" href="index.html#services">← Back to services</a></header>
