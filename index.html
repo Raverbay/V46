@@ -1723,289 +1723,85 @@ html{scroll-behavior:smooth;overflow-x:hidden}
 
 
 
-<style id="mediabay-v68-cinematic-engine">
-/* V68 — deterministic cinematic scroll. No dependency on ViewTimeline or hidden content. */
-:root{--mb68-ease:cubic-bezier(.16,1,.3,1)}
-html{scroll-behavior:auto}
-main{scroll-snap-type:y proximity}
-main>section{scroll-snap-align:start;scroll-snap-stop:normal}
-/* CSS translate is independent from existing transform rules in the legacy site. */
-main>section .head,
-main>section .giant,
-main>section .desc,
-main>section .manifesto-statement,
-main>section .manifesto-copy,
-main>section .manifesto-pillars,
-main>section .services,
-main>section .service-detail,
-main>section .service-note,
-main>section .diagnostic,
-main>section .approach-bottom,
-main>section .internal-tech,
-main>section .experience-intro,
-main>section .sector-list,
-main>section .proof,
-main>section .contact-copy,
-main>section .contact-copy h2,
-main>section .contact-form{
-  translate:0 var(--mb68-shift,0px);
-  scale:var(--mb68-scale,1);
-  opacity:var(--mb68-opacity,1);
-  will-change:translate,scale,opacity;
-  transition:opacity .08s linear;
-}
-main>section .giant{transition:translate .04s linear,scale .04s linear,opacity .08s linear}
-main>section .service-detail:nth-child(2){--mb68-delay:0}
-main>section .service-detail:nth-child(3){--mb68-delay:1}
-main>section .service-detail:nth-child(4){--mb68-delay:2}
-main>section .service-detail:nth-child(5){--mb68-delay:3}
-main>section .service-detail:nth-child(6){--mb68-delay:4}
-main>section .service-detail:nth-child(7){--mb68-delay:5}
-main>section .service-detail:nth-child(8){--mb68-delay:6}
-@media(max-width:700px){
-  main>section .head,main>section .giant,main>section .desc,main>section .manifesto-statement,main>section .manifesto-copy,main>section .manifesto-pillars,main>section .services,main>section .service-detail,main>section .service-note,main>section .diagnostic,main>section .approach-bottom,main>section .internal-tech,main>section .experience-intro,main>section .sector-list,main>section .proof,main>section .contact-copy,main>section .contact-copy h2,main>section .contact-form{will-change:translate,opacity}
-  main{scroll-snap-type:none}
-}
-@media(prefers-reduced-motion:reduce){
-  main{scroll-snap-type:none}
-  main>section *{translate:none!important;scale:1!important;opacity:1!important;will-change:auto!important}
-}
-/* Menu must sit above the full-screen panel while open. */
-.site-header{z-index:10001}
-.site-menu{z-index:10000;pointer-events:none}
-.site-menu.open{pointer-events:auto}
-.site-header.menu-active .menu-icon i:first-child{top:8px;transform:rotate(45deg)}
-.site-header.menu-active .menu-icon i:last-child{top:8px;transform:rotate(-45deg)}
-.site-header.menu-active .menu-btn span{font-size:0}
-.site-header.menu-active .menu-btn span:after{content:'CLOSE';font-size:10px;letter-spacing:.18em}
-@media(max-width:700px){.site-header.menu-active .menu-btn span:after{font-size:9px}}
-</style>
-<script id="mediabay-v68-cinematic-engine">
-(function(){
-  'use strict';
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const sections=[...document.querySelectorAll('main>section')];
-  if(!sections.length) return;
-  let ticking=false;
-  function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
-  function render(){
-    ticking=false;
-    const vh=Math.max(1,innerHeight);
-    sections.forEach((s)=>{
-      const r=s.getBoundingClientRect();
-      if(r.bottom < -vh*0.35 || r.top > vh*1.35){
-        s.style.setProperty('--mb68-shift','0px');
-        s.style.setProperty('--mb68-scale','1');
-        s.style.setProperty('--mb68-opacity','1');
-        return;
-      }
-      /* 0 = just entering from below, 0.5 = centered, 1 = leaving above. */
-      const p=clamp((vh-r.top)/(vh+r.height),0,1);
-      const centered=1-Math.min(1,Math.abs(p-.5)*2);
-      const shift=((.5-p)*42);
-      const scale=.985+(centered*.015);
-      const opacity=.76+(centered*.24);
-      s.style.setProperty('--mb68-shift',shift.toFixed(2)+'px');
-      s.style.setProperty('--mb68-scale',scale.toFixed(4));
-      s.style.setProperty('--mb68-opacity',opacity.toFixed(3));
-    });
-  }
-  function request(){if(!ticking){ticking=true;requestAnimationFrame(render)}}
-  addEventListener('scroll',request,{passive:true});
-  addEventListener('resize',request,{passive:true});
-  addEventListener('orientationchange',()=>setTimeout(request,80),{passive:true});
-  request();
-  addEventListener('load',()=>setTimeout(request,120),{once:true});
-})();
-</script>
 
-<style id="mediabay-v69-home-cinematic">
-/* V69 — HOME ONLY: visible section-to-section cinematic scroll.
-   Deliberately independent from every previous reveal engine. */
-#top > section.mb69-section{
-  position:relative;
-  transform:translate3d(0,var(--mb69-y,0px),0) scale(var(--mb69-scale,1)) !important;
-  opacity:var(--mb69-opacity,1) !important;
-  transform-origin:50% 50%;
-  will-change:transform,opacity;
-  transition:none !important;
-  backface-visibility:hidden;
-}
-#top > section.mb69-section.mb69-hero{
-  transform:none !important;
-  opacity:1 !important;
-}
+
+
+
+
+
+
+
+<style id="mediabay-v72-home-cinematic">
+/* V72 — native-speed home cinematic choreography. No virtual scrolling, no touch hijack. */
+html{scroll-behavior:auto;overflow-x:hidden}
+body{overflow-x:hidden}
+.mb72-item{will-change:transform,opacity;transform-origin:50% 50%;}
+.mb72-section{position:relative;isolation:isolate;}
+.mb72-section::after{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:currentColor;opacity:.14;transform:scaleX(var(--mb72-line,0));transform-origin:left center;pointer-events:none}
+.mb72-kicker{opacity:.45;letter-spacing:.18em}
 @media (max-width:700px){
-  #top > section.mb69-section{will-change:transform,opacity;}
+  .mb72-item{will-change:transform,opacity}
 }
 @media(prefers-reduced-motion:reduce){
-  #top > section.mb69-section{transform:none !important;opacity:1 !important;will-change:auto !important}
+  .mb72-item{will-change:auto!important;transform:none!important;opacity:1!important}
 }
 </style>
-<script id="mediabay-v69-home-cinematic-js">
-(function(){
-  'use strict';
-  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  const main=document.getElementById('top');
-  if(!main)return;
-  const sections=[...main.children].filter(el=>el.tagName==='SECTION');
-  if(sections.length<2)return;
-  sections.forEach((s,i)=>{s.classList.add('mb69-section');if(i===0)s.classList.add('mb69-hero');});
-  let raf=0;
-  const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
-  function paint(){
-    raf=0;
-    const vh=Math.max(1,window.innerHeight);
-    sections.forEach((s,i)=>{
-      if(i===0){s.style.setProperty('--mb69-y','0px');s.style.setProperty('--mb69-scale','1');s.style.setProperty('--mb69-opacity','1');return;}
-      const r=s.getBoundingClientRect();
-      const progress=clamp((vh-r.top)/(vh+r.height),0,1);
-      /* 0 entering -> 0.5 centered -> 1 leaving. */
-      const centered=1-Math.min(1,Math.abs(progress-.5)*2);
-      const entrance=clamp(progress*1.8,0,1);
-      const exit=clamp((progress-.55)*2.2,0,1);
-      const y=(1-entrance)*42 - exit*26;
-      const scale=.965 + centered*.035 - exit*.018;
-      const opacity=.82 + centered*.18 - exit*.10;
-      s.style.setProperty('--mb69-y',y.toFixed(2)+'px');
-      s.style.setProperty('--mb69-scale',clamp(scale,.92,1).toFixed(4));
-      s.style.setProperty('--mb69-opacity',clamp(opacity,.68,1).toFixed(3));
-    });
-  }
-  function tick(){if(!raf)raf=requestAnimationFrame(paint)}
-  window.addEventListener('scroll',tick,{passive:true});
-  window.addEventListener('resize',tick,{passive:true});
-  window.addEventListener('orientationchange',()=>setTimeout(tick,100),{passive:true});
-  paint();
-  window.addEventListener('load',()=>{paint();setTimeout(paint,150);},{once:true});
-})();
-</script>
-
-
-<style id="mediabay-v70-true-home-scroll">
-/* V70 — TRUE HOME SCROLL ENGINE. The page keeps the native document layout,
-   but wheel/touch input is routed through a damped virtual scroll position.
-   This makes the movement itself cinematic rather than merely revealing elements. */
-html.mb70-home, html.mb70-home body{scroll-behavior:auto}
-html.mb70-home body{overscroll-behavior:none}
-.mb70-section{--mb70-progress:0;--mb70-enter:0;--mb70-leave:0;will-change:transform,opacity,filter}
-@media (max-width:700px){
-  .mb70-section{will-change:transform,opacity}
-}
-@media(prefers-reduced-motion:reduce){
-  html.mb70-home body{overscroll-behavior:auto}
-  .mb70-section{will-change:auto!important;transform:none!important;opacity:1!important;filter:none!important}
-}
-</style>
-<script id="mediabay-v70-true-home-scroll-js">
+<script id="mediabay-v72-home-cinematic-js">
 (function(){
 'use strict';
 function boot(){
-if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-const main=document.getElementById('top');
-if(!main)return;
-const sections=[...main.children].filter(e=>e.tagName==='SECTION');
-if(sections.length<2)return;
-document.documentElement.classList.add('mb70-home');
-sections.forEach((s,i)=>s.classList.add('mb70-section'));
-let current=window.scrollY||0;
-let target=current;
-let raf=0;
-let touching=false,lastY=0;
-let bounds=[];
-const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
-function maxScroll(){return Math.max(0,document.documentElement.scrollHeight-innerHeight)}
-function refreshBounds(){
- bounds=sections.map(s=>({top:s.offsetTop,height:s.offsetHeight}));
- target=clamp(target,0,maxScroll()); current=clamp(current,0,maxScroll());
-}
-function easeInOut(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
-function frame(){
- raf=0;
- const delta=target-current;
- current += delta * (Math.abs(delta)>80 ? .14 : .10);
- if(Math.abs(delta)<.15) current=target;
- window.scrollTo(0,current);
- // The important part: the sections visibly move with the virtual scroll position.
- const vh=Math.max(1,innerHeight);
- sections.forEach((s,i)=>{
-   const top=bounds[i]?.top ?? s.offsetTop;
-   const h=bounds[i]?.height ?? s.offsetHeight;
-   const center=top+h/2;
-   const p=clamp((current+vh/2-center)/(vh*1.15),-1,1);
-   const ap=Math.abs(p);
-   const y=-p*26;
-   const scale=1-ap*.035;
-   const opacity=1-ap*.16;
-   const blur=ap>0.82 ? (ap-.82)*1.8 : 0;
-   s.style.transform='translate3d(0,'+y.toFixed(2)+'px,0) scale('+scale.toFixed(4)+')';
-   s.style.opacity=opacity.toFixed(3);
-   s.style.filter='blur('+blur.toFixed(2)+'px)';
-   s.style.zIndex=String(100-i);
- });
- if(Math.abs(target-current)>.15) raf=requestAnimationFrame(frame);
-}
-function wake(){if(!raf)raf=requestAnimationFrame(frame)}
-function setTarget(v){target=clamp(v,0,maxScroll());wake()}
-// Desktop wheel: intercept the wheel and feed a damped target.
-addEventListener('wheel',function(e){
- if(touching)return;
- if(Math.abs(e.deltaY)<1)return;
- e.preventDefault();
- setTarget(target+e.deltaY*1.0);
-},{passive:false});
-// Mobile touch: preserve the finger gesture but remove native inertial scrolling.
-addEventListener('touchstart',function(e){
- if(e.touches.length!==1)return;
- touching=true;lastY=e.touches[0].clientY;
- target=current;
-},{passive:true});
-addEventListener('touchmove',function(e){
- if(!touching||e.touches.length!==1)return;
- e.preventDefault();
- const y=e.touches[0].clientY;
- const dy=lastY-y;
- lastY=y;
- setTarget(target+dy*1.12);
-},{passive:false});
-addEventListener('touchend',function(){touching=false;wake()},{passive:true});
-addEventListener('touchcancel',function(){touching=false;wake()},{passive:true});
-// Keyboard remains accessible.
-addEventListener('keydown',function(e){
- if(['ArrowDown','PageDown','ArrowUp','PageUp','Home','End',' '].includes(e.key)){
-   if(document.activeElement && /input|textarea|select/i.test(document.activeElement.tagName))return;
-   e.preventDefault();
-   let v=target;
-   if(e.key==='Home')v=0;
-   else if(e.key==='End')v=maxScroll();
-   else if(e.key==='ArrowDown'||e.key==='PageDown'||e.key===' ')v+=e.key==='ArrowDown'?innerHeight*.42:innerHeight*.82;
-   else v-=e.key==='ArrowUp'?innerHeight*.42:innerHeight*.82;
-   setTarget(v);
- }
-});
-// Anchors: use the same cinematic interpolation instead of jumping.
-document.addEventListener('click',function(e){
- const a=e.target.closest('a[href^="#"]');
- if(!a)return;
- const id=a.getAttribute('href').slice(1);
- const el=id?document.getElementById(id):null;
- if(!el)return;
- e.preventDefault();
- setTarget(el.getBoundingClientRect().top+current);
- const menu=document.getElementById('menu');
- const header=document.getElementById('header');
- const btn=document.getElementById('menuBtn');
- if(menu){menu.classList.remove('open');header?.classList.remove('menu-active');btn?.setAttribute('aria-expanded','false')}
-});
-addEventListener('resize',function(){refreshBounds();wake()},{passive:true});
-addEventListener('load',function(){refreshBounds();current=target=window.scrollY||0;wake()},{once:true});
-refreshBounds();
-window.MediaBayHomeScroll={goTo:function(id){const el=document.getElementById(id);if(el)setTarget(el.getBoundingClientRect().top+current)}};
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var main=document.getElementById('top'); if(!main)return;
+  var sections=[].slice.call(main.querySelectorAll(':scope > section'));
+  if(!sections.length)return;
+  var items=[];
+  sections.forEach(function(sec,si){
+    sec.classList.add('mb72-section');
+    var kids=[].slice.call(sec.children).filter(function(el){
+      return !el.matches('script,style,template');
+    });
+    kids.forEach(function(el,ki){
+      el.classList.add('mb72-item');
+      el.dataset.mb72Base=String(Math.min(ki,4));
+      items.push({el:el,sec:sec,ki:ki});
+    });
+  });
+  var ticking=false;
+  function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+  function render(){
+    ticking=false;
+    var vh=window.innerHeight||1;
+    var mid=vh*.52;
+    sections.forEach(function(sec){
+      var r=sec.getBoundingClientRect();
+      var p=clamp((r.top + r.height*.5 - mid)/(vh*1.05),-1.15,1.15);
+      var abs=Math.min(1,Math.abs(p));
+      sec.style.setProperty('--mb72-line',String(clamp(1-Math.abs(p),0,1)));
+    });
+    items.forEach(function(o){
+      var r=o.sec.getBoundingClientRect();
+      var p=clamp((r.top + r.height*.5 - mid)/(vh*1.05),-1.15,1.15);
+      var distance=Math.abs(p);
+      var direction=p<0?-1:1;
+      var depth=clamp(distance,0,1);
+      var y=direction*depth*58;
+      var scale=1-depth*.055;
+      var opacity=1-depth*.22;
+      var stagger=Math.min(o.ki,4)*5;
+      y += direction*stagger*depth;
+      o.el.style.transform='translate3d(0,'+y.toFixed(2)+'px,0) scale('+scale.toFixed(4)+')';
+      o.el.style.opacity=opacity.toFixed(3);
+    });
+  }
+  function request(){if(!ticking){ticking=true;requestAnimationFrame(render)}}
+  window.addEventListener('scroll',request,{passive:true});
+  window.addEventListener('resize',request,{passive:true});
+  window.addEventListener('load',function(){render();setTimeout(render,120)},{once:true});
+  render();
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
 </script>
-
 </head>
 <body class="loading">
 <div id="preloader">
