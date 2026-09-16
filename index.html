@@ -573,68 +573,46 @@ body{background:var(--cream);color:var(--ink)}
  .contact h2{font-size:clamp(65px,16vw,105px)}
 }
 
-/* V19 — AD010-inspired minimal loading screen */
+/* V19 — MediaBay logo loading screen */
 #preloader{
  position:fixed;inset:0;z-index:99999;
- background:#c8ff32;color:#101510;
- display:flex;flex-direction:column;justify-content:space-between;
- padding:28px 4.5vw 30px;
+ background:#c8ff32;
+ display:flex;align-items:center;justify-content:center;
  opacity:1;visibility:visible;
  transition:transform .9s cubic-bezier(.77,0,.18,1),opacity .35s ease;
  overflow:hidden;
-}
-#preloader:before{
- content:"";position:absolute;left:0;right:0;top:50%;
- border-top:1px solid rgba(16,21,16,.2);
 }
 #preloader.done{
  opacity:0;visibility:hidden;pointer-events:none;
  transform:translateY(-100%);
 }
-.ad-loader-top,.ad-loader-bottom{
- position:relative;z-index:2;
- display:flex;justify-content:space-between;
- font-size:9px;letter-spacing:.18em;
- text-transform:uppercase;font-weight:700;
+.preloader-logo{
+ width:clamp(88px,11vw,150px);
+ height:auto;
+ display:block;
+ opacity:0;
+ transform:scale(.82);
+ animation:mbLoaderLogo 1.25s cubic-bezier(.16,1,.3,1) .08s forwards,
+           mbLoaderPulse 1.8s ease-in-out 1.33s infinite;
 }
-.ad-loader-center{
- position:absolute;left:4.5vw;right:4.5vw;top:50%;
- transform:translateY(-50%);
- z-index:2;
+@keyframes mbLoaderLogo{
+ 0%{opacity:0;transform:scale(.82)}
+ 65%{opacity:1;transform:scale(1.04)}
+ 100%{opacity:1;transform:scale(1)}
 }
-.ad-loader-percent{
- font-size:clamp(130px,25vw,380px);
- font-weight:900;
- line-height:.68;
- letter-spacing:-.11em;
- display:flex;align-items:flex-end;
+@keyframes mbLoaderPulse{
+ 0%,100%{transform:scale(1)}
+ 50%{transform:scale(1.045)}
 }
-.ad-loader-percent small{
- font-size:.18em;
- letter-spacing:-.03em;
- margin:0 0 .08em .18em;
-}
-.ad-loader-rule{
- height:2px;background:rgba(16,21,16,.2);
- margin-top:40px;
- overflow:hidden;
-}
-.ad-loader-rule i{
- display:block;width:0;height:100%;
- background:#101510;
- transition:width .08s linear;
-}
-.ad-loader-bottom{opacity:.7}
 @media(max-width:700px){
- #preloader{padding:22px 18px 24px}
- .ad-loader-top,.ad-loader-bottom{font-size:7px}
- .ad-loader-center{left:18px;right:18px}
- .ad-loader-percent{
-   font-size:clamp(108px,31vw,190px);
-   letter-spacing:-.1em;
- }
- .ad-loader-rule{margin-top:28px}
+ .preloader-logo{width:100px}
 }
+@media(prefers-reduced-motion:reduce){
+ .preloader-logo{animation:none;opacity:1;transform:none}
+ #preloader{transition:opacity .35s ease,visibility .35s ease}
+ #preloader.done{transform:none}
+}
+
 
 /* V20 — full content system */
 .content-split{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:start;margin-top:5vh}
@@ -1804,19 +1782,8 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 </script>
 </head>
 <body class="loading">
-<div id="preloader">
-<div class="ad-loader-top">
-<span>MEDIA BAY ↘</span>
-<span>LOADING</span>
-</div>
-<div class="ad-loader-center">
-<div class="ad-loader-percent"><span id="loadPct">0</span><small>%</small></div>
-<div class="ad-loader-rule"><i id="loadLine"></i></div>
-</div>
-<div class="ad-loader-bottom">
-<span>PHYGITAL MARKETING</span>
-<span id="loadStatus">PLEASE WAIT</span>
-</div>
+<div id="preloader" aria-hidden="true">
+<img class="preloader-logo" src="mediabay-logo-white.png" alt="MediaBay">
 </div>
 <header class="site-header" id="header">
 <a class="logo" href="#top"><span class="brand-symbol" aria-hidden="true"><img class="brand-logo logo-green" src="mediabay-logo-green.png" alt=""><img class="brand-logo logo-white" src="mediabay-logo-white.png" alt=""></span><span class="brand-name" aria-label="MediaBay">MediaBay</span></a>
@@ -2100,28 +2067,18 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="mediabay-v9-core">
 (function(){
  const loader=document.getElementById('preloader');
- const pct=document.getElementById('loadPct');
- const line=document.getElementById('loadLine');
- const status=document.getElementById('loadStatus');
- let n=0;
- const milestones=[[0,'PLEASE WAIT'],[28,'LOADING'],[58,'BUILDING'],[82,'ALMOST THERE'],[100,'READY']];
- function tick(){
-   n += n<70 ? 1.65 : n<92 ? .9 : .55;
-   n=Math.min(100,n);
-   const v=Math.floor(n);
-   pct.textContent=v;
-   line.style.width=v+'%';
-   status.textContent=milestones.reduce((a,x)=>v>=x[0]?x[1]:a,'PLEASE WAIT');
-   if(n<100) requestAnimationFrame(tick);
-   else setTimeout(()=>{
+ function finish(){
+   if(!loader)return;
+   setTimeout(()=>{
      loader.classList.add('done');
      document.body.classList.remove('loading');
      setTimeout(()=>loader.remove(),950);
-   },420);
+   },650);
  }
- addEventListener('load',()=>setTimeout(tick,120));
+ if(document.readyState==='complete') finish();
+ else addEventListener('load',finish,{once:true});
 
- const menu=document.getElementById('menu');
+ const menu=document.getElementById('menu');document.getElementById('menu');
  const btn=document.getElementById('menuBtn');
  const header=document.getElementById('header');
  function closeMenu(){
