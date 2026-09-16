@@ -374,6 +374,121 @@ main>section .service-detail:nth-child(8){--mb68-delay:6}
   addEventListener('load',()=>setTimeout(request,120),{once:true});
 })();
 </script>
+
+<style id="mediabay-v76-header-clean">
+/* V76 — centered symbol-only header + minimal menu/language controls */
+.site-header{
+  position:fixed;
+  z-index:9000;
+  left:0;
+  top:0;
+  width:100%;
+  height:76px;
+  padding:0 30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:#fff;
+  border-bottom:1px solid #ffffff30;
+  mix-blend-mode:difference;
+}
+.site-header .logo{
+  position:absolute!important;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  display:flex!important;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  margin:0;
+  padding:0;
+  gap:0!important;
+}
+.site-header .brand-symbol{
+  width:34px!important;
+  height:34px!important;
+  flex:0 0 34px!important;
+}
+.site-header .brand-name{display:none!important}
+
+.header-controls{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:15px;
+}
+.site-header .menu-btn{
+  width:30px;
+  height:20px;
+  padding:0;
+  margin:0;
+  border:0;
+  background:none;
+  color:inherit;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.site-header .menu-btn .menu-icon{
+  width:30px;
+  height:16px;
+  display:block;
+  position:relative;
+}
+.site-header .menu-btn .menu-icon i{
+  position:absolute;
+  left:0;
+  width:30px;
+  height:1px;
+  background:currentColor;
+  transition:.35s cubic-bezier(.16,1,.3,1);
+}
+.site-header .menu-btn .menu-icon i:first-child{top:3px}
+.site-header .menu-btn .menu-icon i:last-child{top:13px}
+.site-header .menu-open .menu-icon i:first-child{top:8px;transform:rotate(45deg)}
+.site-header .menu-open .menu-icon i:last-child{top:8px;transform:rotate(-45deg)}
+
+.site-header .lang-switch{
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  display:flex!important;
+  align-items:center;
+  gap:7px;
+  font-size:9px;
+  letter-spacing:.14em;
+}
+.site-header .lang-switch button{
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:inherit!important;
+  font:inherit;
+  letter-spacing:inherit;
+  line-height:1;
+  cursor:pointer;
+  opacity:.42;
+  transition:opacity .2s ease;
+}
+.site-header .lang-switch button.active{opacity:1}
+
+@media(max-width:700px){
+  .site-header{height:64px;padding:0 20px}
+  .site-header .logo{width:34px;height:34px}
+  .site-header .brand-symbol{width:30px!important;height:30px!important;flex-basis:30px!important}
+  .header-controls{gap:12px}
+  .site-header .menu-btn,.site-header .menu-btn .menu-icon{width:28px}
+  .site-header .menu-btn .menu-icon i{width:28px}
+  .site-header .lang-switch{font-size:8px;gap:6px}
+}
+</style>
+
 </head>
 <body>
 <header class="header"><a class="logo" href="index.html"><span class="brand-symbol" aria-hidden="true"><img class="brand-logo logo-green" src="mediabay-logo-green.png" alt=""><img class="brand-logo logo-white" src="mediabay-logo-white.png" alt=""></span><span class="brand-name" aria-label="MediaBay">MediaBay</span></a><a class="back" href="index.html#services">← Back to services</a></header>
