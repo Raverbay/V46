@@ -1818,6 +1818,69 @@ main>section .service-detail:nth-child(8){--mb68-delay:6}
   addEventListener('load',()=>setTimeout(request,120),{once:true});
 })();
 </script>
+
+<style id="mediabay-v69-home-cinematic">
+/* V69 — HOME ONLY: visible section-to-section cinematic scroll.
+   Deliberately independent from every previous reveal engine. */
+#top > section.mb69-section{
+  position:relative;
+  transform:translate3d(0,var(--mb69-y,0px),0) scale(var(--mb69-scale,1)) !important;
+  opacity:var(--mb69-opacity,1) !important;
+  transform-origin:50% 50%;
+  will-change:transform,opacity;
+  transition:none !important;
+  backface-visibility:hidden;
+}
+#top > section.mb69-section.mb69-hero{
+  transform:none !important;
+  opacity:1 !important;
+}
+@media (max-width:700px){
+  #top > section.mb69-section{will-change:transform,opacity;}
+}
+@media(prefers-reduced-motion:reduce){
+  #top > section.mb69-section{transform:none !important;opacity:1 !important;will-change:auto !important}
+}
+</style>
+<script id="mediabay-v69-home-cinematic-js">
+(function(){
+  'use strict';
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const main=document.getElementById('top');
+  if(!main)return;
+  const sections=[...main.children].filter(el=>el.tagName==='SECTION');
+  if(sections.length<2)return;
+  sections.forEach((s,i)=>{s.classList.add('mb69-section');if(i===0)s.classList.add('mb69-hero');});
+  let raf=0;
+  const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
+  function paint(){
+    raf=0;
+    const vh=Math.max(1,window.innerHeight);
+    sections.forEach((s,i)=>{
+      if(i===0){s.style.setProperty('--mb69-y','0px');s.style.setProperty('--mb69-scale','1');s.style.setProperty('--mb69-opacity','1');return;}
+      const r=s.getBoundingClientRect();
+      const progress=clamp((vh-r.top)/(vh+r.height),0,1);
+      /* 0 entering -> 0.5 centered -> 1 leaving. */
+      const centered=1-Math.min(1,Math.abs(progress-.5)*2);
+      const entrance=clamp(progress*1.8,0,1);
+      const exit=clamp((progress-.55)*2.2,0,1);
+      const y=(1-entrance)*42 - exit*26;
+      const scale=.965 + centered*.035 - exit*.018;
+      const opacity=.82 + centered*.18 - exit*.10;
+      s.style.setProperty('--mb69-y',y.toFixed(2)+'px');
+      s.style.setProperty('--mb69-scale',clamp(scale,.92,1).toFixed(4));
+      s.style.setProperty('--mb69-opacity',clamp(opacity,.68,1).toFixed(3));
+    });
+  }
+  function tick(){if(!raf)raf=requestAnimationFrame(paint)}
+  window.addEventListener('scroll',tick,{passive:true});
+  window.addEventListener('resize',tick,{passive:true});
+  window.addEventListener('orientationchange',()=>setTimeout(tick,100),{passive:true});
+  paint();
+  window.addEventListener('load',()=>{paint();setTimeout(paint,150);},{once:true});
+})();
+</script>
+
 </head>
 <body class="loading">
 <div id="preloader">
