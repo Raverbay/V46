@@ -1881,6 +1881,128 @@ main>section .service-detail:nth-child(8){--mb68-delay:6}
 })();
 </script>
 
+
+<style id="mediabay-v70-true-home-scroll">
+/* V70 — TRUE HOME SCROLL ENGINE. The page keeps the native document layout,
+   but wheel/touch input is routed through a damped virtual scroll position.
+   This makes the movement itself cinematic rather than merely revealing elements. */
+html.mb70-home, html.mb70-home body{scroll-behavior:auto}
+html.mb70-home body{overscroll-behavior:none}
+.mb70-section{--mb70-progress:0;--mb70-enter:0;--mb70-leave:0;will-change:transform,opacity,filter}
+@media (max-width:700px){
+  .mb70-section{will-change:transform,opacity}
+}
+@media(prefers-reduced-motion:reduce){
+  html.mb70-home body{overscroll-behavior:auto}
+  .mb70-section{will-change:auto!important;transform:none!important;opacity:1!important;filter:none!important}
+}
+</style>
+<script id="mediabay-v70-true-home-scroll-js">
+(function(){
+'use strict';
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const main=document.getElementById('top');
+if(!main)return;
+const sections=[...main.children].filter(e=>e.tagName==='SECTION');
+if(sections.length<2)return;
+document.documentElement.classList.add('mb70-home');
+sections.forEach((s,i)=>s.classList.add('mb70-section'));
+let current=window.scrollY||0;
+let target=current;
+let raf=0;
+let touching=false,lastY=0;
+let bounds=[];
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function maxScroll(){return Math.max(0,document.documentElement.scrollHeight-innerHeight)}
+function refreshBounds(){
+ bounds=sections.map(s=>({top:s.offsetTop,height:s.offsetHeight}));
+ target=clamp(target,0,maxScroll()); current=clamp(current,0,maxScroll());
+}
+function easeInOut(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+function frame(){
+ raf=0;
+ const delta=target-current;
+ current += delta * (Math.abs(delta)>80 ? .14 : .10);
+ if(Math.abs(delta)<.15) current=target;
+ window.scrollTo(0,current);
+ // The important part: the sections visibly move with the virtual scroll position.
+ const vh=Math.max(1,innerHeight);
+ sections.forEach((s,i)=>{
+   const top=bounds[i]?.top ?? s.offsetTop;
+   const h=bounds[i]?.height ?? s.offsetHeight;
+   const center=top+h/2;
+   const p=clamp((current+vh/2-center)/(vh*1.15),-1,1);
+   const ap=Math.abs(p);
+   const y=-p*26;
+   const scale=1-ap*.035;
+   const opacity=1-ap*.16;
+   const blur=ap>0.82 ? (ap-.82)*1.8 : 0;
+   s.style.transform='translate3d(0,'+y.toFixed(2)+'px,0) scale('+scale.toFixed(4)+')';
+   s.style.opacity=opacity.toFixed(3);
+   s.style.filter='blur('+blur.toFixed(2)+'px)';
+   s.style.zIndex=String(100-i);
+ });
+ if(Math.abs(target-current)>.15) raf=requestAnimationFrame(frame);
+}
+function wake(){if(!raf)raf=requestAnimationFrame(frame)}
+function setTarget(v){target=clamp(v,0,maxScroll());wake()}
+// Desktop wheel: intercept the wheel and feed a damped target.
+addEventListener('wheel',function(e){
+ if(touching)return;
+ if(Math.abs(e.deltaY)<1)return;
+ e.preventDefault();
+ setTarget(target+e.deltaY*1.0);
+},{passive:false});
+// Mobile touch: preserve the finger gesture but remove native inertial scrolling.
+addEventListener('touchstart',function(e){
+ if(e.touches.length!==1)return;
+ touching=true;lastY=e.touches[0].clientY;
+ target=current;
+},{passive:true});
+addEventListener('touchmove',function(e){
+ if(!touching||e.touches.length!==1)return;
+ e.preventDefault();
+ const y=e.touches[0].clientY;
+ const dy=lastY-y;
+ lastY=y;
+ setTarget(target+dy*1.12);
+},{passive:false});
+addEventListener('touchend',function(){touching=false;wake()},{passive:true});
+addEventListener('touchcancel',function(){touching=false;wake()},{passive:true});
+// Keyboard remains accessible.
+addEventListener('keydown',function(e){
+ if(['ArrowDown','PageDown','ArrowUp','PageUp','Home','End',' '].includes(e.key)){
+   if(document.activeElement && /input|textarea|select/i.test(document.activeElement.tagName))return;
+   e.preventDefault();
+   let v=target;
+   if(e.key==='Home')v=0;
+   else if(e.key==='End')v=maxScroll();
+   else if(e.key==='ArrowDown'||e.key==='PageDown'||e.key===' ')v+=e.key==='ArrowDown'?innerHeight*.42:innerHeight*.82;
+   else v-=e.key==='ArrowUp'?innerHeight*.42:innerHeight*.82;
+   setTarget(v);
+ }
+});
+// Anchors: use the same cinematic interpolation instead of jumping.
+document.addEventListener('click',function(e){
+ const a=e.target.closest('a[href^="#"]');
+ if(!a)return;
+ const id=a.getAttribute('href').slice(1);
+ const el=id?document.getElementById(id):null;
+ if(!el)return;
+ e.preventDefault();
+ setTarget(el.getBoundingClientRect().top+current);
+ const menu=document.getElementById('menu');
+ const header=document.getElementById('header');
+ const btn=document.getElementById('menuBtn');
+ if(menu){menu.classList.remove('open');header?.classList.remove('menu-active');btn?.setAttribute('aria-expanded','false')}
+});
+addEventListener('resize',function(){refreshBounds();wake()},{passive:true});
+addEventListener('load',function(){refreshBounds();current=target=window.scrollY||0;wake()},{once:true});
+refreshBounds();
+window.MediaBayHomeScroll={goTo:function(id){const el=document.getElementById(id);if(el)setTarget(el.getBoundingClientRect().top+current)}};
+})();
+</script>
+
 </head>
 <body class="loading">
 <div id="preloader">
