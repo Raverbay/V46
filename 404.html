@@ -1560,6 +1560,26 @@ body{cursor:default}
 .n1{left:8%;top:18%}.n2{right:8%;top:18%;background:var(--b)}.n3{left:8%;bottom:18%;background:var(--d);color:var(--b)}.n4{right:8%;bottom:18%;background:var(--g2)}
 @media(max-width:700px){.system-visual{height:175px}.node{font-size:7px;padding:7px 9px}.system-core{width:62px;height:62px;font-size:15px}}
 </style>
+
+<style id="mediabay-v65-motion-fix">
+/* V65 — Premium Motion / robust mobile-safe reveal system */
+:root{--mb65-ease:cubic-bezier(.16,1,.3,1)}
+html{scroll-behavior:smooth;overflow-x:hidden}
+/* Kill the previous conflicting reveal states and let V65 own the choreography. */
+.mb-premium-reveal,.mb-reveal,.mb-title,.mb-service{opacity:1!important;transform:none!important;clip-path:none!important;visibility:visible!important}
+.mb65-reveal{opacity:0!important;transform:translate3d(0,42px,0)!important;clip-path:inset(0 0 100% 0)!important;visibility:hidden!important;transition:opacity .72s var(--mb65-ease),transform .95s var(--mb65-ease),clip-path .95s var(--mb65-ease)!important}
+.mb65-reveal.mb65-visible{opacity:1!important;transform:none!important;clip-path:inset(0)!important;visibility:visible!important}
+.mb65-reveal[data-mb65-delay="1"]{transition-delay:.04s!important}.mb65-reveal[data-mb65-delay="2"]{transition-delay:.10s!important}.mb65-reveal[data-mb65-delay="3"]{transition-delay:.16s!important}.mb65-reveal[data-mb65-delay="4"]{transition-delay:.22s!important}.mb65-reveal[data-mb65-delay="5"]{transition-delay:.28s!important}
+.mb65-depth{will-change:transform;transition:transform .16s linear}
+.mb65-magnetic{will-change:transform;transition:transform .42s var(--mb65-ease)}
+@media(max-width:700px){
+ .mb65-reveal{transform:translate3d(0,26px,0)!important;transition-duration:.65s!important}
+ .mb65-depth{transition:none}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}.mb65-reveal{opacity:1!important;transform:none!important;clip-path:none!important;visibility:visible!important;transition:none!important}.mb65-depth,.mb65-magnetic{transition:none!important;transform:none!important}
+}
+</style>
 </head>
 <body class="loading">
 <div id="preloader">
@@ -2257,131 +2277,75 @@ body{cursor:default}
 })();
 </script>
 
-<style id="mediabay-v64-premium-motion">
-/* V64 — Premium Motion System: cinematic transitions, depth, velocity and micro-interaction */
-:root{--mb-ease-premium:cubic-bezier(.16,1,.3,1);--mb-vel:0;--mb-scroll:0}
-html{scroll-behavior:smooth;overflow-x:hidden}
-body{--mb-page-opacity:1;transition:background-color .7s ease}
-body.mb-scrolling .site-header{transition:height .45s var(--mb-ease-premium),background-color .45s ease,border-color .45s ease}
-
-/* Navigation/page transition curtain */
-#mb-page-curtain{position:fixed;inset:0;z-index:99998;background:var(--d,#182318);color:var(--b,#e9e2d3);pointer-events:none;clip-path:inset(100% 0 0 0);transition:clip-path .72s var(--mb-ease-premium)}
-#mb-page-curtain:before{content:"MEDIABAY";position:absolute;left:5vw;bottom:5vh;font-size:clamp(42px,9vw,120px);font-weight:800;letter-spacing:-.09em;line-height:.8;opacity:.12}
-#mb-page-curtain:after{content:"PHYGITAL MARKETING / 2013—∞";position:absolute;right:5vw;top:5vh;font-size:8px;letter-spacing:.18em;opacity:.55}
-body.mb-leaving #mb-page-curtain{clip-path:inset(0)}
-
-/* Cursor — desktop only, intentionally quiet */
-#mb-cursor,#mb-cursor-ring{position:fixed;left:0;top:0;z-index:99997;pointer-events:none;border-radius:50%;opacity:0;transform:translate(-50%,-50%);transition:opacity .25s ease,transform .35s var(--mb-ease-premium),width .35s var(--mb-ease-premium),height .35s var(--mb-ease-premium),border-color .35s ease}
-#mb-cursor{width:5px;height:5px;background:currentColor;mix-blend-mode:difference}
-#mb-cursor-ring{width:34px;height:34px;border:1px solid currentColor;mix-blend-mode:difference}
-body.mb-cursor-ready #mb-cursor,body.mb-cursor-ready #mb-cursor-ring{opacity:.72}
-body.mb-cursor-hover #mb-cursor{transform:translate(-50%,-50%) scale(.5)}
-body.mb-cursor-hover #mb-cursor-ring{width:54px;height:54px}
-
-/* Section state/depth */
-main>section{--mb-section-shift:0px;position:relative;isolation:isolate}
-main>section:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;opacity:calc(.015 + (abs(var(--mb-vel)) * .002));transform:translate3d(0,var(--mb-section-shift),0)}
-.mb-velocity{will-change:transform}
-.mb-image-depth{will-change:transform;transform:translate3d(0,calc(var(--mb-image-shift,0px) + var(--mb-vel) * -1px),0);transition:transform .18s linear}
-
-/* Refined entrance choreography */
-.mb-premium-reveal{opacity:0;transform:translate3d(0,38px,0);clip-path:inset(0 0 100% 0);transition:opacity .7s var(--mb-ease-premium),transform .95s var(--mb-ease-premium),clip-path 1s var(--mb-ease-premium)}
-.mb-premium-reveal.mb-premium-visible{opacity:1;transform:none;clip-path:inset(0)}
-.mb-premium-reveal[data-mb-premium-delay="1"]{transition-delay:.05s}.mb-premium-reveal[data-mb-premium-delay="2"]{transition-delay:.11s}.mb-premium-reveal[data-mb-premium-delay="3"]{transition-delay:.17s}.mb-premium-reveal[data-mb-premium-delay="4"]{transition-delay:.23s}.mb-premium-reveal[data-mb-premium-delay="5"]{transition-delay:.29s}
-
-/* Magnetic targets keep their visual language but gain physical response */
-.mb-magnetic{will-change:transform;transition:transform .45s var(--mb-ease-premium)}
-
-/* Page layer becomes a proper modal transition rather than a simple panel */
-body.mb-layer-active .page-layer{box-shadow:0 0 0 1px #00000010,0 -20px 80px #00000018}
-body.mb-layer-active main{filter:blur(3px);transform:scale(.992);transition:filter .65s ease,transform .8s var(--mb-ease-premium)}
-main{transition:filter .65s ease,transform .8s var(--mb-ease-premium)}
-
-/* Scroll progress: make the existing indicator feel intentional */
-#progress{transition:opacity .4s ease}
-#progress i{transition:height .12s linear}
-
-@media(max-width:700px){
- #mb-cursor,#mb-cursor-ring{display:none}
- #mb-page-curtain:before{left:20px;bottom:28px;font-size:48px}
- #mb-page-curtain:after{right:20px;top:24px;font-size:7px}
- .mb-image-depth{transform:translate3d(0,var(--mb-image-shift,0px),0)}
- body.mb-layer-active main{filter:none;transform:none}
-}
-@media(prefers-reduced-motion:reduce){
- #mb-page-curtain{transition:none}
- #mb-cursor,#mb-cursor-ring{display:none}
- .mb-premium-reveal,.mb-image-depth,main{transition:none!important;transform:none!important;clip-path:none!important;opacity:1!important}
- body.mb-layer-active main{filter:none}
-}
-</style>
 
 
-<script id="mediabay-v64-premium-motion-js">
+
+
+
+
+<script id="mediabay-v65-motion-fix-js">
 (function(){
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const body=document.body;
-  const curtain=document.createElement('div'); curtain.id='mb-page-curtain'; document.body.appendChild(curtain);
-  if(!reduce){
-    const cursor=document.createElement('div'); cursor.id='mb-cursor';
-    const ring=document.createElement('div'); ring.id='mb-cursor-ring';
-    document.body.append(cursor,ring);
-    let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my, raf=0;
-    const tick=()=>{raf=0;rx+=(mx-rx)*.22;ry+=(my-ry)*.22;cursor.style.left=mx+'px';cursor.style.top=my+'px';ring.style.left=rx+'px';ring.style.top=ry+'px';if(Math.abs(mx-rx)+Math.abs(my-ry)>0.2)raf=requestAnimationFrame(tick)};
-    addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;body.classList.add('mb-cursor-ready');if(!raf)raf=requestAnimationFrame(tick)},{passive:true});
-    document.addEventListener('pointerover',e=>{if(e.target.closest('a,button,[role="button"],.service,.project'))body.classList.add('mb-cursor-hover')});
-    document.addEventListener('pointerout',e=>{if(e.target.closest('a,button,[role="button"],.service,.project'))body.classList.remove('mb-cursor-hover')});
-  }
+  function boot(){
+    const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const sections=[...document.querySelectorAll('main > section')];
+    if(!sections.length)return;
 
-  const targets=[...document.querySelectorAll('.menu-btn,.next,.scroll-dot,.project-open,.page-close,.interactive-tag')];
-  if(!reduce && matchMedia('(hover:hover) and (pointer:fine)').matches){
-    targets.forEach(el=>{el.classList.add('mb-magnetic');el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();const x=(e.clientX-(r.left+r.width/2))*0.16,y=(e.clientY-(r.top+r.height/2))*0.16;el.style.transform='translate3d('+x.toFixed(1)+'px,'+y.toFixed(1)+'px,0)'},{passive:true});el.addEventListener('pointerleave',()=>el.style.transform='')});
-  }
+    /* Only V65-managed elements are hidden. Existing content can never disappear because
+       of an observer timing failure. */
+    const selectors=[
+      '.head','.giant','.desc','.facts','.contact-copy h2','.contact-form',
+      '.approach-intro > div','.diagnostic','.approach-bottom','.service-detail',
+      '.service-note','.project','.client','.internal-tech'
+    ];
+    const els=[];
+    sections.forEach(section=>{
+      selectors.forEach(sel=>section.querySelectorAll(sel).forEach(el=>{if(!els.includes(el))els.push(el)}));
+    });
 
-  // Premium entrance choreography on every page, without changing layout.
-  const candidates=[...document.querySelectorAll('main>section .head,main>section .giant,main>section .desc,main>section h2,main>section h3,main>section .project,main>section .client,main>section .service-detail,main>section .contact-form,main>section .diagnostic,main>section .approach-bottom')];
-  candidates.forEach((el,i)=>{if(el.classList.contains('mb-premium-reveal')||el.classList.contains('mb-visible'))return;el.classList.add('mb-premium-reveal');el.dataset.mbPremiumDelay=Math.min((i%5)+1,5)});
-  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('mb-premium-visible');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -7% 0px'});
-  candidates.forEach(el=>io.observe(el));
+    if(reduce){els.forEach(el=>el.classList.remove('mb65-reveal'));return;}
+    els.forEach((el,i)=>{
+      el.classList.remove('mb-premium-reveal','mb-premium-visible','mb-reveal','mb-visible','mb-title','mb-service','mb-hidden');
+      el.classList.add('mb65-reveal');
+      el.dataset.mb65Delay=String((i%5)+1);
+    });
 
-  // Give images a restrained depth movement. No transforms on logos or icons.
-  if(!reduce){
-    document.querySelectorAll('main section img:not(.logo img):not(.site-header img)').forEach(img=>{img.classList.add('mb-image-depth')});
-  }
+    const reveal=el=>{el.classList.add('mb65-visible');};
+    const io=new IntersectionObserver(entries=>entries.forEach(entry=>{
+      if(entry.isIntersecting){reveal(entry.target);io.unobserve(entry.target)}
+    }),{threshold:0.02,rootMargin:'0px 0px -4% 0px'});
+    els.forEach(el=>io.observe(el));
 
-  let lastY=scrollY,lastT=performance.now(),velocity=0,ticking=false;
-  function scrollFrame(){
-    ticking=false; const now=performance.now(),dy=scrollY-lastY,dt=Math.max(16,now-lastT); const instant=Math.max(-2,Math.min(2,dy/dt*16)); velocity+=(instant-velocity)*.16; lastY=scrollY;lastT=now;
-    document.documentElement.style.setProperty('--mb-vel',velocity.toFixed(3));
-    const max=Math.max(1,document.documentElement.scrollHeight-innerHeight);document.documentElement.style.setProperty('--mb-scroll',(scrollY/max).toFixed(4));
-    if(!reduce){
-      document.querySelectorAll('main>section').forEach(section=>{const r=section.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;const center=r.top+r.height/2;const p=(center-innerHeight/2)/(innerHeight/2);const shift=Math.max(-9,Math.min(9,-p*5+velocity*2));section.style.setProperty('--mb-section-shift',shift.toFixed(2)+'px')});
-      document.querySelectorAll('.mb-image-depth').forEach(img=>{const r=img.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;const p=(r.top+r.height/2-innerHeight/2)/(innerHeight/2);img.style.setProperty('--mb-image-shift',(-p*10).toFixed(2)+'px')});
+    /* Guarantee the first visible frame is revealed even on browsers that restore scroll
+       position before IntersectionObserver has delivered its first batch. */
+    const revealVisible=()=>{
+      const vh=innerHeight||document.documentElement.clientHeight;
+      els.forEach(el=>{const r=el.getBoundingClientRect();if(r.bottom>0&&r.top<vh*.96)reveal(el)});
+    };
+    requestAnimationFrame(()=>requestAnimationFrame(revealVisible));
+    addEventListener('pageshow',()=>setTimeout(revealVisible,30),{passive:true});
+
+    /* Controlled image depth: tiny, never enough to alter layout. */
+    const imgs=[...document.querySelectorAll('main section img:not(.logo img):not(.site-header img)')];
+    imgs.forEach(img=>img.classList.add('mb65-depth'));
+    let ticking=false;
+    const frame=()=>{
+      ticking=false;const vh=innerHeight||1;
+      imgs.forEach(img=>{const r=img.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;const p=(r.top+r.height/2-vh/2)/(vh/2);img.style.transform='translate3d(0,'+Math.max(-8,Math.min(8,-p*7)).toFixed(2)+'px,0)'});
+    };
+    addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(frame)}},{passive:true});
+    addEventListener('resize',frame,{passive:true});frame();
+
+    /* Quiet desktop magnetic response. */
+    if(matchMedia('(hover:hover) and (pointer:fine)').matches){
+      document.querySelectorAll('.menu-btn,.next,.scroll-dot,.project-open,.page-close,.interactive-tag').forEach(el=>{
+        el.classList.add('mb65-magnetic');
+        el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.12,y=(e.clientY-r.top-r.height/2)*.12;el.style.transform='translate3d('+x.toFixed(1)+'px,'+y.toFixed(1)+'px,0)'},{passive:true});
+        el.addEventListener('pointerleave',()=>el.style.transform='');
+      });
     }
-    body.classList.add('mb-scrolling'); clearTimeout(scrollFrame.timer);scrollFrame.timer=setTimeout(()=>body.classList.remove('mb-scrolling'),180);
   }
-  addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(scrollFrame)}},{passive:true});
-  addEventListener('resize',scrollFrame,{passive:true}); scrollFrame();
-
-  // True page-to-page transition for same-origin HTML navigation.
-  document.addEventListener('click',e=>{
-    const a=e.target.closest('a[href]'); if(!a||reduce)return;
-    if(e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||a.target==='_blank')return;
-    const href=a.getAttribute('href'); if(!href||href.startsWith('#')||href.startsWith('mailto:')||href.startsWith('tel:')||href.startsWith('javascript:'))return;
-    let url;try{url=new URL(href,location.href)}catch{return}
-    if(url.origin!==location.origin)return;
-    if(url.pathname===location.pathname && !url.search)return;
-    e.preventDefault(); body.classList.add('mb-leaving'); setTimeout(()=>location.href=url.href,520);
-  },true);
-
-  // Existing full-screen page layer gets a subtle depth state.
-  const layer=document.getElementById('pageLayer');
-  if(layer)new MutationObserver(()=>body.classList.toggle('mb-layer-active',layer.classList.contains('open'))).observe(layer,{attributes:true,attributeFilter:['class']});
-
-  requestAnimationFrame(()=>requestAnimationFrame(()=>{body.classList.add('mb-page-ready');setTimeout(()=>{if(!body.classList.contains('mb-leaving'))curtain.style.clipPath='inset(100% 0 0 0)'},80)}));
-  addEventListener('pageshow',()=>body.classList.remove('mb-leaving'));
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
 </script>
-
 </body>
 </html>
