@@ -161,7 +161,7 @@ button[disabled]{opacity:.55;cursor:wait}
     if(node.nodeType===3){
       const raw=node.nodeValue;
       const norm=raw.replace(/\s+/g,' ').trim();
-      if(IT[norm]){
+      if(Object.prototype.hasOwnProperty.call(IT,norm)){
         node.__mbOriginal = raw;
         const lead=raw.match(/^\s*/)?.[0]||'';
         const trail=raw.match(/\s*$/)?.[0]||'';
