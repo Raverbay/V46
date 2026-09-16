@@ -13,3 +13,6 @@ After that activation, form requests are delivered to `info@mediabay.it`.
 
 
 V45: global IT/EN language system expanded across Home, all service pages, 404 and thank-you pages, including page-specific copy and common attributes/title.
+
+
+V47: visible MediaBay wordmark in the header, written as MediaBay (no space), using Manrope with responsive sizing. The wordmark inherits the header color so it switches with the green/white logo state.

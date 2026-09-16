@@ -164,6 +164,45 @@ h2{font-size:clamp(4rem,8.3vw,9rem);line-height:.74;letter-spacing:-.09em;margin
 .site-header.logo-on-green .logo-white,.header.logo-on-green .logo-white{opacity:1}
 .site-header .logo,.header .logo{display:inline-flex;align-items:center;gap:0}
 .site-header .logo:hover .brand-symbol,.header .logo:hover .brand-symbol{transform:translateY(-1px)}
+/* V47 — MediaBay wordmark */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
+
+.site-header .logo,
+.header .logo{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:9px!important;
+  text-decoration:none;
+}
+.site-header .brand-name,
+.header .brand-name{
+  display:inline-block;
+  font-family:'Manrope',Arial,Helvetica,sans-serif;
+  font-size:19px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:-.055em;
+  color:currentColor;
+  white-space:nowrap;
+  transform:translateY(-1px);
+  transition:color .22s ease,transform .22s ease;
+}
+.site-header .logo:hover .brand-name,
+.header .logo:hover .brand-name{
+  transform:translateY(-1px) translateX(1px);
+}
+@media(max-width:700px){
+  .site-header .brand-name,
+  .header .brand-name{
+    font-size:17px;
+    letter-spacing:-.06em;
+  }
+  .site-header .logo,
+  .header .logo{
+    gap:7px!important;
+  }
+}
+
 @media(max-width:700px){
   .brand-symbol{width:30px!important;height:30px!important;flex-basis:30px}
 }
@@ -194,7 +233,7 @@ button[disabled]{opacity:.55;cursor:wait}
 </head>
 <body>
 <header class="header">
-<a class="logo" href="index.html"><span class="brand-symbol" aria-hidden="true"><img class="brand-logo logo-green" src="mediabay-logo-green.png" alt=""><img class="brand-logo logo-white" src="mediabay-logo-white.png" alt=""></span><span class="sr-only">MEDIA BAY</span></a>
+<a class="logo" href="index.html"><span class="brand-symbol" aria-hidden="true"><img class="brand-logo logo-green" src="mediabay-logo-green.png" alt=""><img class="brand-logo logo-white" src="mediabay-logo-white.png" alt=""></span><span class="brand-name" aria-label="MediaBay">MediaBay</span></a>
 <a class="back" href="index.html#services">← Back to services</a>
 </header>
 <main>
