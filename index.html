@@ -1963,6 +1963,55 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 }
 </style>
 
+
+<style id="mediabay-contact-centered-fix">
+#contact .contact-copy{
+  width:100%;
+  max-width:1100px;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center!important;
+  box-sizing:border-box;
+}
+#contact .contact-copy h2{
+  width:100%!important;
+  max-width:100%!important;
+  margin-left:0!important;
+  margin-right:0!important;
+  padding-left:0!important;
+  padding-right:0!important;
+  text-align:center!important;
+  box-sizing:border-box;
+}
+#contact .contact-copy h2 span{
+  display:block;
+  width:100%;
+  text-align:center;
+}
+@media(max-width:700px){
+  #contact .contact-copy{
+    width:100%!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+  #contact .contact-copy h2{
+    width:100%!important;
+    font-size:clamp(3rem,12.2vw,5.4rem)!important;
+    line-height:.88!important;
+    letter-spacing:-.065em!important;
+    text-align:center!important;
+  }
+  #contact .contact-copy h2 span{width:100%;text-align:center}
+  #contact .contact-copy .desc{
+    width:100%!important;
+    max-width:520px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    text-align:center!important;
+  }
+}
+</style>
+
 </head>
 <body class="loading">
 <div id="preloader" aria-hidden="true">
