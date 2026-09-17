@@ -1,40 +1,40 @@
 {
   "site": {
     "brandName": "Flip&Co",
-    "tagline": "Più di un negozio. Un modo di essere.",
+    "tagline": "Scopri. Immagina. Vieni a provarlo.",
     "accent": "#b8ff38",
     "background": "#f2f0ea",
     "ink": "#11120f",
-    "introTitle": "NON È UN CATALOGO.\nÈ IL PRIMO PASSO\nVERSO IL NEGOZIO.",
-    "introLead": "Guarda. Immagina il tuo prossimo look. Poi vieni a provarlo dal vivo.",
-    "introBody": "Flip&Co è un multibrand store a Cagliari per uomo, donna e bambino. Qui trovi una selezione di denim, streetwear, sport, workwear e contemporary essentials. Il sito non è un e-commerce: è il tuo punto di partenza. Ti mostra il mondo Flip&Co, accende la curiosità e ti porta dove la scelta diventa reale: in negozio."
+    "introTitle": "NON È UN CATALOGO.\nÈ IL PRIMO PASSO\nVERSO IL TUO PROSSIMO LOOK.",
+    "introLead": "Online ti ispiri. In store lo vivi.",
+    "introBody": "Flip&Co è un multibrand store a Cagliari per uomo, donna e bambino. Qui scopri una selezione di brand e collezioni che abbiamo scelto per il nostro negozio. Non trovi un carrello, trovi un invito: guarda, lasciati ispirare, contattaci se vuoi saperne di più e vieni a provare dal vivo ciò che ti ha colpito."
   },
   "hero": {
     "logo": "logo-flipco.png",
     "kicker": "CAGLIARI · MULTIBRAND STORE",
-    "meta": "UOMO / DONNA / BAMBINO · IN STORE",
+    "meta": "UOMO / DONNA / BAMBINO · SCOPRI IN STORE",
     "headline": [
-      "PIÙ DI UN",
-      "NEGOZIO.",
-      "UN MODO",
-      "DI ESSERE."
+      "NON CERCHI SOLO",
+      "COSA INDOSSARE.",
+      "CERCHI COME",
+      "SENTIRTI."
     ]
   },
   "worlds": [
     {
       "label": "01",
       "name": "UOMO",
-      "description": "Denim, street, tailoring e essentials. Trova il tuo prossimo punto di partenza."
+      "description": "Denim, contemporary, casual e essentials. Una selezione da guardare, provare e fare tua."
     },
     {
       "label": "02",
       "name": "DONNA",
-      "description": "Contemporary, denim e occasion. Pezzi da vedere, toccare e interpretare."
+      "description": "Contemporary, denim e occasion. Capi da combinare, interpretare e vivere secondo il tuo stile."
     },
     {
       "label": "03",
       "name": "BAMBINO",
-      "description": "Comfort, stile e personalità. Una selezione pensata per crescere con loro."
+      "description": "Comfort, carattere e stile. Una selezione pensata per i più piccoli e da scoprire dal vivo."
     }
   ],
   "brands": [
@@ -53,19 +53,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di Tommy Hilfiger scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui Tommy Hilfiger non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione Tommy Hilfiger che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -83,19 +83,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di Calvin Klein scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui Calvin Klein non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione Calvin Klein che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -113,19 +113,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di Guess scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui Guess non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione Guess che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -143,19 +143,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di Levi's scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui Levi's non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione Levi's che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -173,19 +173,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di The North Face scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui The North Face non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione The North Face che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -204,19 +204,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di Nike scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui Nike non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione Nike che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -235,19 +235,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di adidas scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui adidas non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione adidas che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -266,19 +266,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di Vans scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui Vans non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione Vans che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -296,19 +296,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di Carhartt scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui Carhartt non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione Carhartt che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -326,19 +326,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di New Balance scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui New Balance non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione New Balance che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -357,19 +357,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di Timberland scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui Timberland non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione Timberland che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -387,19 +387,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di Dickies scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui Dickies non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione Dickies che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -416,19 +416,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di ONLY scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui ONLY non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione ONLY che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -445,19 +445,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di Jack & Jones scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui Jack & Jones non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione Jack & Jones che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -474,19 +474,19 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di Vero Moda scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui Vero Moda non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione Vero Moda che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     },
     {
@@ -503,59 +503,61 @@
         ],
         "selection": [
           {
-            "title": "FIRST LOOK",
-            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
+            "title": "SCOPRI LA SELEZIONE",
+            "text": "Un assaggio di name it scelto da Flip&Co per il nostro negozio."
           },
           {
-            "title": "BUILD THE LOOK",
-            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
+            "title": "IMMAGINA IL LOOK",
+            "text": "Guarda i capi, lasciati ispirare e immagina come potrebbero diventare parte del tuo stile."
           },
           {
-            "title": "SEE IT IN STORE",
-            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
+            "title": "VIENI A PROVARLO",
+            "text": "Per taglie, disponibilità e informazioni sui capi, contattaci oppure vieni in store e scoprili dal vivo."
           }
         ],
-        "statement": "Qui name it non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
+        "statement": "La selezione name it che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
       }
     }
   ],
   "story": {
-    "kicker": "THE FLIP&CO CODE",
+    "kicker": "IL CODICE FLIP&CO",
     "title": [
       "MENO RUMORE.",
       "PIÙ SELEZIONE."
     ],
-    "body": "Un buon negozio non ti mostra tutto. Ti fa notare quello che cercavi — anche quando non sapevi ancora di cercarlo. Flip&Co costruisce la propria selezione attorno a brand riconoscibili, capi versatili e dettagli che meritano di essere visti da vicino. Il digitale ti orienta. Il negozio ti fa scegliere.",
+    "body": "Un buon negozio non ti mostra tutto. Ti fa notare quello che potresti amare. Flip&Co seleziona brand, collezioni e capi con un criterio semplice: creare una proposta che abbia carattere e che valga la pena scoprire dal vivo. Il digitale ti orienta. La prova in negozio ti aiuta a scegliere.",
     "facts": [
       "UOMO / DONNA / BAMBINO",
       "16 / BRAND SELEZIONATI",
-      "TOCCA · PROVA · SCEGLI"
+      "GUARDA · CONTATTA · PROVA"
     ]
   },
   "store": {
-    "kicker": "THE STORE",
+    "kicker": "IL NEGOZIO",
     "title": [
-      "IL LOOK",
-      "CAMBIA QUANDO LO PROVI."
+      "NON È SOLO DOVE",
+      "COMPRI.",
+      "È DOVE SCOPRI."
     ],
     "address": "Via Italia 22, Cagliari",
     "hours": "LUN–SAB · 09:00–13:30 / 16:00–20:00",
     "phone": "+39 366 108 7819",
     "whatsapp": "393661087819",
-    "maps": "https://www.google.com/maps/search/?api=1&query=Flip%26Co%20Via%20Italia%2022%20Cagliari"
+    "maps": "https://www.google.com/maps/@39.2467883,9.1296471,15z"
   },
   "reviews": {
     "rating": "4,2",
     "count": "41 RECENSIONI",
     "title": "LA PARTE PIÙ IMPORTANTE È FUORI DALLO SCHERMO.",
-    "body": "Il sito ti fa scoprire. Il negozio ti fa vedere come ti sta. Vieni a provarlo dal vivo."
+    "body": "Il sito ti fa scoprire. Il negozio ti permette di vedere, toccare e provare. E se vuoi sapere qualcosa prima di venire, scrivici: siamo qui per aiutarti."
   },
   "contact": {
     "title": [
-      "SEE YOU",
-      "IN STORE."
+      "VISTO.",
+      "TI PIACE.",
+      "ADESSO PROVALO."
     ],
-    "instagram": "https://www.instagram.com/",
+    "instagram": "https://www.instagram.com/flipabbigliamento/",
     "whatsapp": "393661087819"
   }
 }

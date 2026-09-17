@@ -281,3 +281,53 @@ footer{background:var(--bg);color:var(--ink)}.footer-inner{padding-top:32px;padd
   #worlds .section-head .display{font-size:48px}
   #brands .brand-top .display{font-size:48px}
 }
+
+
+/* V12 — responsive containment + store-first editorial system */
+html, body { width:100%; max-width:100%; overflow-x:hidden; }
+body { position:relative; }
+img, video, svg, canvas { max-width:100%; }
+*, *::before, *::after { max-width:100%; }
+.hero, .store-feature, .editorial-feature, .intro, #worlds, #brands, #story, #store, .review-band, #contact, footer, .mb-demo-footer { width:100%; max-width:100%; overflow-x:clip; }
+.hero-headline span, .contact-title br, .story-grid h2 br { white-space:nowrap; }
+.world-card, .brand-item, .selection-card, .store-card, .visit-card { min-width:0; }
+.brand-intro, .intro-copy, .story-copy, .body-copy, .lead, .world-card p, .selection-card p { overflow-wrap:break-word; word-break:normal; }
+
+@media (max-width:800px){
+  .section-pad { padding-left:20px; padding-right:20px; }
+  .hero { padding-left:20px; padding-right:20px; }
+  .hero-gridline { width:100%; }
+  .hero-headline { width:100%; max-width:100%; overflow-wrap:normal; word-break:normal; }
+  .hero-headline span { display:block; white-space:nowrap; width:max-content; max-width:100%; }
+  .store-feature { grid-template-columns:1fr; }
+  .store-feature-copy { min-width:0; }
+  .store-feature-copy h2 { overflow-wrap:normal; word-break:normal; }
+  .editorial-feature-head { gap:18px; flex-wrap:wrap; }
+  .intro-grid, .story-grid, .review-grid { min-width:0; }
+  #worlds .section-head { display:block; }
+  #worlds .section-head > div { width:100%; min-width:0; }
+  #worlds .section-head .display { width:100%; max-width:100%; font-size:clamp(46px,13.8vw,68px); line-height:.86; }
+  #worlds .section-head .display .keep-word { display:inline-block; white-space:nowrap; }
+  #worlds .section-head > .muted { margin-top:24px; }
+  .world-grid { width:100%; }
+  .world-card { grid-template-columns:34px minmax(0,1fr) 26px; width:100%; }
+  .world-card h3 { font-size:clamp(48px,17vw,82px); white-space:nowrap; }
+  .world-card p { max-width:100%; }
+  #brands .brand-top { display:block; }
+  #brands .brand-top > div:first-child { width:100%; }
+  #brands .brand-top .display { width:100%; max-width:100%; font-size:clamp(46px,13.6vw,68px); line-height:.86; }
+  #brands .brand-top .display .keep-word { display:inline-block; white-space:nowrap; }
+  #brands .brand-note { margin-top:26px; width:100%; }
+  .brand-intro { max-width:100%; }
+  .brand-grid { width:100%; }
+  .brand-item { width:100%; }
+  .story-grid h2 .heading-reveal { overflow-wrap:normal; }
+  .contact-title { width:100%; max-width:100%; overflow-wrap:normal; }
+  .contact-title br + * { white-space:nowrap; }
+  .mb-demo-grid { min-width:0; }
+}
+
+@media (max-width:380px){
+  #worlds .section-head .display, #brands .brand-top .display { font-size:44px; }
+  .world-card h3 { font-size:46px; }
+}

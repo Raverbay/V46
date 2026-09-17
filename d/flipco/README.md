@@ -62,5 +62,10 @@ Logo asset: `assets/logo-flipco.png` (exact filename/case). All site references 
 - Section naming refined: THE EDIT / BRAND ATLAS.
 
 
-## V11 — Store-first copy
-The website is positioned as a digital storefront: discover the selection online, then visit or contact Flip&Co.
+## V12 — Full store-first rebuild
+- Homepage copy fully aligned to discovery → inspiration → contact/store visit.
+- Uomo / Donna / Bambino section renamed and expanded.
+- Brand Atlas explains that each brand is a Flip&Co in-store selection and links to an internal selection page.
+- Contact and store CTAs reinforce both options: visit or message for information.
+- Added robust mobile horizontal-overflow containment and safer headline wrapping.
+- Updated Instagram and Maps destinations supplied for Flip&Co.

@@ -12,10 +12,10 @@
   const img=$('#brandLogo');img.src=logo;img.alt=brand.name;
   img.onerror=()=>img.style.display='none';
   set('#brandIndex',`${String(cfg.brands.indexOf(brand)+1).padStart(2,'0')} / ${String(cfg.brands.length).padStart(2,'0')}`);
-  set('#brandTagline',data.tagline||'SELECTED IN STORE');
+  set('#brandTagline','SELEZIONE DISPONIBILE IN NEGOZIO');
   set('#brandAudience',data.audience||'SELECTED COLLECTION');
   set('#brandTitle',brand.name.toUpperCase());set('#brandIntro',data.intro||`La selezione ${brand.name} disponibile da Flip&Co.`);set('#brandDescription',data.description||'Una selezione pensata per essere scoperta dal vivo, provata e scelta in negozio.');
-  set('#brandWorlds',(data.worlds||[]).join(' / '));set('#brandStatement',data.statement||'Non è un catalogo. È una selezione da vivere in store.');
+  set('#brandWorlds',(data.worlds||[]).join(' / '));set('#brandStatement',data.statement||'Non è un catalogo. È la selezione Flip&Co da scoprire in store.');
   const sg=$('#selectionGrid');(data.selection||[]).forEach((item,i)=>{const d=document.createElement('article');d.className='selection-card reveal';d.innerHTML=`<span class="selection-number">${String(i+1).padStart(2,'0')}</span><div><h3>${item.title}</h3><p>${item.text}</p></div><span class="selection-arrow">↗</span>`;sg.appendChild(d)});
   set('#visitAddress',`${cfg.store.address} · ${cfg.store.hours}`);$('#visitMap').href=cfg.store.maps;$('#visitWa').href=`https://wa.me/${cfg.store.whatsapp}`;
   const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});$$('.reveal,.heading-reveal').forEach(e=>observer.observe(e));
