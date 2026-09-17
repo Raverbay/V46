@@ -359,3 +359,34 @@ img, video, svg, canvas { max-width:100%; }
 html,body{max-width:100%;overflow-x:hidden}
 body *{max-width:100%}
 img,svg,video,canvas{max-width:100%;height:auto}
+
+/* V14 — deterministic mobile menu + MediaBay conversion block */
+.menu-panel[hidden]{display:none!important}
+.menu-panel{visibility:hidden;opacity:0;pointer-events:none}
+.menu-panel.open{display:block!important;visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0)}
+.mediabay-offer{
+  background:#b8ff38!important;
+  color:#11120f!important;
+  width:100%;
+  max-width:100%;
+  overflow:hidden;
+}
+.mediabay-offer *{max-width:100%}
+.mb-offer-top,.mb-offer-bottom{min-width:0}
+.mb-offer-top span,.mb-offer-bottom span{display:block;width:auto;height:auto}
+.mb-offer-points{display:flex!important;flex-wrap:wrap!important;align-items:center;gap:8px!important}
+.mb-offer-points span{display:inline-flex!important;width:auto!important;height:auto!important;white-space:nowrap}
+.mb-offer-bottom span{opacity:1}
+@media(max-width:800px){
+  .mb-offer-inner{padding:58px 20px 22px}
+  .mb-offer-top{display:grid;grid-template-columns:1fr;gap:9px}
+  .mb-offer-index{opacity:.55}
+  .mb-offer-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:42px;padding:66px 0 68px}
+  .mb-offer-grid h2{font-size:clamp(48px,14.5vw,78px);line-height:.82;letter-spacing:-.075em}
+  .mb-offer-copy{font-size:15px;line-height:1.55}
+  .mb-offer-lead{font-size:22px;line-height:1.05}
+  .mb-offer-points{gap:7px!important;margin:28px 0}
+  .mb-offer-points span{font-size:8px!important;padding:8px 9px!important}
+  .mb-offer-cta{width:100%;justify-content:space-between}
+  .mb-offer-bottom{display:grid;grid-template-columns:1fr;gap:8px}
+}

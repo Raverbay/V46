@@ -76,3 +76,10 @@ Logo asset: `assets/logo-flipco.png` (exact filename/case). All site references 
 - Removed MediaBay/theme/demo branding from the store footer.
 - Added a separate acid-green MediaBay offer section: “Questo sito potrebbe essere tuo”, focused on discovery, trust, store visits and contact.
 - Added mobile horizontal-overflow safeguards.
+
+
+## V14 — mobile/footer cleanup
+- Hidden menu panel deterministically until the hamburger is opened, preventing navigation labels from leaking into the page.
+- Forced the MediaBay conversion section to the brand green and rebuilt its mobile layout.
+- Kept the Flip&Co footer store-only; removed legacy theme/demo footer references.
+- Refined the conversion copy around discovery, trust, store visit and direct contact.
