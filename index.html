@@ -2838,34 +2838,14 @@ activate("strategy");
   addEventListener('resize',depth,{passive:true});
   depth();
 
-  /* Premium page transition for internal HTML links: short overlay, no blank page. */
-  const layer=document.createElement('div');
-  layer.id='mb66-page-transition';
-  layer.innerHTML='<span>MEDIABAY ↘</span>';
-  Object.assign(layer.style,{
-    position:'fixed',inset:'0',zIndex:'100000',background:'#101510',
-    color:'#c8ff32',display:'grid',placeItems:'center',
-    fontSize:'10px',letterSpacing:'.22em',textTransform:'uppercase',
-    pointerEvents:'none',transform:'translateY(100%)',
-    transition:'transform .72s cubic-bezier(.77,0,.18,1)'
-  });
-  document.body.appendChild(layer);
+  /* V92 — internal HTML navigation is handled by the destination page preloader. */
   document.querySelectorAll('a[href$=".html"]').forEach(a=>{
     a.addEventListener('click',e=>{
       const href=a.getAttribute('href');
-      if(!href || href.startsWith('#') || a.target==='_blank') return;
-      e.preventDefault();
-      layer.style.transform='translateY(0)';
-      setTimeout(()=>location.href=href,520);
+      if(!href || href.startsWith('#') || a.target==='_blank' || e.defaultPrevented) return;
+      // Do not create a second overlay here. The destination page starts with
+      // the exact same MediaBay preloader used on the home page.
     });
-  });
-  addEventListener('pageshow',()=>{
-    layer.style.transition='none';
-    layer.style.transform='translateY(-100%)';
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{
-      layer.style.transition='transform .72s cubic-bezier(.77,0,.18,1)';
-      layer.style.transform='translateY(-100%)';
-    }));
   });
 })();
 </script>

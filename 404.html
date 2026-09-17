@@ -1835,6 +1835,24 @@ main>section .service-detail:nth-child(8){--mb68-delay:6}
 @media(max-width:700px){.mb-footer{padding:54px 20px 20px}.mb-footer-top{grid-template-columns:1fr;gap:34px;padding-bottom:48px}.mb-footer-brand strong{font-size:48px}.mb-footer-bottom{flex-direction:column;gap:10px}}
 </style>
 
+
+<style id="mediabay-v92-page-preloader">
+/* V92 — identical MediaBay loading screen on first load and internal page changes */
+#preloader{
+ position:fixed;inset:0;z-index:99999;
+ background:#c8ff32;
+ display:flex;align-items:center;justify-content:center;
+ opacity:1;visibility:visible;
+ transition:transform .9s cubic-bezier(.77,0,.18,1),opacity .35s ease;
+ overflow:hidden;
+}
+#preloader.done{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-100%)}
+.preloader-logo{width:clamp(88px,11vw,150px);height:auto;display:block;opacity:0;transform:scale(.82);animation:mbLoaderLogo 1.25s cubic-bezier(.16,1,.3,1) .08s forwards,mbLoaderPulse 1.8s ease-in-out 1.33s infinite}
+@keyframes mbLoaderLogo{0%{opacity:0;transform:scale(.82)}65%{opacity:1;transform:scale(1.04)}100%{opacity:1;transform:scale(1)}}
+@keyframes mbLoaderPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+@media(max-width:700px){.preloader-logo{width:100px}}
+@media(prefers-reduced-motion:reduce){.preloader-logo{animation:none;opacity:1;transform:none}#preloader{transition:opacity .35s ease,visibility .35s ease}.done{transform:none}}
+</style>
 </head>
 <body class="loading">
 <div id="preloader">
@@ -2679,35 +2697,7 @@ main>section .service-detail:nth-child(8){--mb68-delay:6}
   addEventListener('resize',depth,{passive:true});
   depth();
 
-  /* Premium page transition for internal HTML links: short overlay, no blank page. */
-  const layer=document.createElement('div');
-  layer.id='mb66-page-transition';
-  layer.innerHTML='<span>MEDIABAY ↘</span>';
-  Object.assign(layer.style,{
-    position:'fixed',inset:'0',zIndex:'100000',background:'#101510',
-    color:'#c8ff32',display:'grid',placeItems:'center',
-    fontSize:'10px',letterSpacing:'.22em',textTransform:'uppercase',
-    pointerEvents:'none',transform:'translateY(100%)',
-    transition:'transform .72s cubic-bezier(.77,0,.18,1)'
-  });
-  document.body.appendChild(layer);
-  document.querySelectorAll('a[href$=".html"]').forEach(a=>{
-    a.addEventListener('click',e=>{
-      const href=a.getAttribute('href');
-      if(!href || href.startsWith('#') || a.target==='_blank') return;
-      e.preventDefault();
-      layer.style.transform='translateY(0)';
-      setTimeout(()=>location.href=href,520);
-    });
-  });
-  addEventListener('pageshow',()=>{
-    layer.style.transition='none';
-    layer.style.transform='translateY(-100%)';
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{
-      layer.style.transition='transform .72s cubic-bezier(.77,0,.18,1)';
-      layer.style.transform='translateY(-100%)';
-    }));
-  });
+  /* V92 — internal HTML navigation uses the same preloader on the destination page. */
 })();
 </script>
 <footer class="mb-footer" id="site-footer">
@@ -2720,5 +2710,21 @@ main>section .service-detail:nth-child(8){--mb68-delay:6}
   <div class="mb-footer-bottom"><span>© 2026 MediaBay</span><span>Web · Social · AI · Mobility</span><a href="contact.html">CONTACT ↗</a></div>
 </footer>
 
+<script id="mediabay-v92-preloader">
+(function(){
+  const loader=document.getElementById('preloader');
+  if(!loader)return;
+  document.body.classList.add('loading');
+  function finish(){
+    setTimeout(function(){
+      loader.classList.add('done');
+      document.body.classList.remove('loading');
+      setTimeout(function(){if(loader.parentNode)loader.remove()},950);
+    },650);
+  }
+  if(document.readyState==='complete') finish();
+  else window.addEventListener('load',finish,{once:true});
+})();
+</script>
 </body>
 </html>
