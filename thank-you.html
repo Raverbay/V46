@@ -427,6 +427,19 @@ body.loading{overflow:hidden}
 @media(max-width:700px){.preloader-logo{width:100px}}
 @media(prefers-reduced-motion:reduce){.preloader-logo{animation:none;opacity:1;transform:none}#preloader{transition:opacity .35s ease,visibility .35s ease}.done{transform:none}}
 </style>
+
+<style id="mediabay-cookie-style">
+#mb-cookie-banner{position:fixed;left:24px;right:24px;bottom:24px;z-index:99999;display:none;background:rgba(13,31,24,.97);color:#f5f4ec;border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 60px rgba(0,0,0,.28);border-radius:18px;padding:22px 24px;font-family:inherit;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+#mb-cookie-banner .mb-cookie-inner{display:flex;align-items:center;gap:28px;justify-content:space-between;max-width:1280px;margin:auto}
+#mb-cookie-banner .mb-cookie-copy{max-width:760px;font-size:13px;line-height:1.55;letter-spacing:.01em}
+#mb-cookie-banner .mb-cookie-title{font-size:15px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:7px}
+#mb-cookie-banner .mb-cookie-copy a{color:#b7d83d;text-decoration:underline;text-underline-offset:3px}
+#mb-cookie-banner .mb-cookie-actions{display:flex;align-items:center;gap:9px;flex-shrink:0}
+#mb-cookie-banner button{appearance:none;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:999px;padding:11px 18px;font:inherit;font-size:12px;cursor:pointer;white-space:nowrap}
+#mb-cookie-banner .mb-cookie-accept{background:#b7d83d;border-color:#b7d83d;color:#102018;font-weight:650}
+#mb-cookie-banner button:hover{transform:translateY(-1px)}
+@media(max-width:720px){#mb-cookie-banner{left:12px;right:12px;bottom:12px;padding:18px;border-radius:16px}#mb-cookie-banner .mb-cookie-inner{display:block}#mb-cookie-banner .mb-cookie-copy{font-size:12px}.mb-cookie-title{font-size:13px!important}.mb-cookie-actions{margin-top:15px;display:block!important}.mb-cookie-actions button{width:100%}}
+</style>
 </head><body class="loading"><div id="preloader" aria-hidden="true"><img class="preloader-logo" src="mediabay-logo-white.png" alt="MediaBay"></div><header><a href="index.html" style="display:inline-flex;align-items:center;gap:9px;color:inherit;text-decoration:none;"><img class="brand-symbol" src="mediabay-symbol-transparent.png" alt="" aria-hidden="true"><span class="brand-name">MediaBay</span></a></header><main><div class="meta">REQUEST RECEIVED / MEDIA BAY</div><h1>WE'LL<br><span style="color:var(--forest)">BE IN TOUCH.</span></h1><p>Your message is on its way. We’ll review the project and get back to you.</p><a href="index.html">← Back to MediaBay</a></main>
 <script id="mediabay-language">
 (function(){
@@ -750,6 +763,35 @@ body.loading{overflow:hidden}
   }
   if(document.readyState==='complete') finish();
   else window.addEventListener('load',finish,{once:true});
+})();
+</script>
+
+<div id="mb-cookie-banner" role="dialog" aria-label="Cookie notice" aria-live="polite">
+  <div class="mb-cookie-inner">
+    <div class="mb-cookie-copy">
+      <div class="mb-cookie-title" data-cookie-it="La tua privacy conta." data-cookie-en="Your privacy matters.">La tua privacy conta.</div>
+      <span data-cookie-it="Usiamo solo cookie tecnici necessari al funzionamento del sito. Puoi consultare la nostra " data-cookie-en="We use only essential cookies needed for this website to work. Read our ">Usiamo solo cookie tecnici necessari al funzionamento del sito. Puoi consultare la nostra </span><a href="cookie-policy.html" data-cookie-it="Cookie Policy" data-cookie-en="Cookie Policy">Cookie Policy</a><span data-cookie-it=" per maggiori informazioni." data-cookie-en=" for more information."> per maggiori informazioni.</span>
+    </div>
+    <div class="mb-cookie-actions"><button class="mb-cookie-accept" type="button" data-cookie-it="OK" data-cookie-en="OK">OK</button></div>
+  </div>
+</div>
+<script id="mediabay-cookie-script">
+(function(){
+  const KEY='mediabay_cookie_notice_v1';
+  const banner=document.getElementById('mb-cookie-banner');
+  if(!banner)return;
+  function hide(){banner.style.display='none';}
+  function show(){banner.style.display='block';}
+  try{if(!localStorage.getItem(KEY)) show();}catch(e){show();}
+  const setCopy=(lang)=>{
+    banner.querySelectorAll('[data-cookie-it]').forEach(el=>{
+      const v=el.getAttribute(lang==='it'?'data-cookie-it':'data-cookie-en');
+      if(v!==null) el.textContent=v;
+    });
+  };
+  setCopy(localStorage.getItem('mediabay-language')||'it');
+  banner.querySelector('.mb-cookie-accept').addEventListener('click',function(){try{localStorage.setItem(KEY,'accepted')}catch(e){} hide();});
+  document.querySelectorAll('[data-lang]').forEach(btn=>btn.addEventListener('click',()=>setCopy(btn.dataset.lang)));
 })();
 </script>
 </body></html>
