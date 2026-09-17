@@ -2013,102 +2013,31 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 </style>
 
 
-<style id="mediabay-footer-v1">
-.mediabay-footer{
-  background:#10110f;
-  color:#f2f0e7;
-  padding:0 5.5vw 28px;
-  position:relative;
-  z-index:20;
-  font-family:inherit;
-}
-.mb-footer-top{
-  border-top:1px solid rgba(242,240,231,.3);
-  border-bottom:1px solid rgba(242,240,231,.18);
-  min-height:110px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
-}
-.mb-footer-label,.mb-footer-top a,.mb-footer-bottom,.mb-footer-col span{
-  font-size:10px;
-  letter-spacing:.19em;
-  text-transform:uppercase;
-}
-.mb-footer-cta{
-  color:#b7ff18;
-  text-decoration:none;
-  border-bottom:1px solid #b7ff18;
-  padding-bottom:4px;
-  white-space:nowrap;
-}
-.mb-footer-main{
-  display:grid;
-  grid-template-columns:1.6fr 1fr 1fr 1fr;
-  gap:6vw;
-  padding:70px 0 80px;
-}
-.mb-footer-wordmark{
-  font-size:clamp(34px,6vw,88px);
-  line-height:.85;
-  font-weight:800;
-  letter-spacing:-.075em;
-}
-.mb-footer-brand p{
-  margin-top:28px;
-  font-size:16px;
-  line-height:1.45;
-  max-width:280px;
-}
-.mb-footer-col{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:12px;
-}
-.mb-footer-col span{
-  color:rgba(242,240,231,.5);
-  margin-bottom:8px;
-}
-.mb-footer-col a,.mb-footer-col p{
-  color:#f2f0e7;
-  text-decoration:none;
-  font-size:15px;
-  line-height:1.4;
-  margin:0;
-}
+
+
+
+<style id="mediabay-footer-final">
+.mediabay-footer{background:#10110f;color:#f2f0e7;padding:0 5.5vw 28px;position:relative;z-index:20;font-family:inherit}
+.mb-footer-top{border-top:1px solid rgba(242,240,231,.3);border-bottom:1px solid rgba(242,240,231,.18);min-height:110px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.mb-footer-label,.mb-footer-top a,.mb-footer-bottom,.mb-footer-col span{font-size:10px;letter-spacing:.19em;text-transform:uppercase}
+.mb-footer-cta{color:#b7ff18;text-decoration:none;border-bottom:1px solid #b7ff18;padding-bottom:4px;white-space:nowrap}
+.mb-footer-main{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:6vw;padding:70px 0 80px}
+.mb-footer-wordmark{font-size:clamp(34px,6vw,88px);line-height:.85;font-weight:800;letter-spacing:-.075em}
+.mb-footer-brand p{margin-top:28px;font-size:16px;line-height:1.45;max-width:280px}
+.mb-footer-col{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.mb-footer-col span{color:rgba(242,240,231,.5);margin-bottom:8px}
+.mb-footer-col a,.mb-footer-col p{color:#f2f0e7;text-decoration:none;font-size:15px;line-height:1.4;margin:0}
 .mb-footer-col a:hover{color:#b7ff18}
-.mb-footer-bottom{
-  border-top:1px solid rgba(242,240,231,.18);
-  padding-top:20px;
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  color:rgba(242,240,231,.55);
-}
+.mb-footer-bottom{border-top:1px solid rgba(242,240,231,.18);padding-top:20px;display:flex;justify-content:space-between;gap:20px;color:rgba(242,240,231,.55)}
 .mb-footer-bottom div{display:flex;gap:24px}
 .mb-footer-bottom a{color:inherit;text-decoration:none}
 @media(max-width:700px){
-  .mediabay-footer{padding:0 6vw 22px}
-  .mb-footer-top{min-height:92px;align-items:flex-start;padding:24px 0}
-  .mb-footer-top{flex-direction:column;gap:18px}
-  .mb-footer-main{
-    grid-template-columns:1fr 1fr;
-    gap:48px 28px;
-    padding:48px 0 55px;
-  }
-  .mb-footer-brand{grid-column:1/-1}
-  .mb-footer-wordmark{font-size:16vw}
-  .mb-footer-brand p{font-size:15px;margin-top:20px}
-  .mb-footer-col a,.mb-footer-col p{font-size:14px}
-  .mb-footer-bottom{flex-direction:column;gap:14px;line-height:1.5}
-  .mb-footer-bottom div{gap:18px;flex-wrap:wrap}
+ .mediabay-footer{padding:0 6vw 22px}.mb-footer-top{min-height:92px;align-items:flex-start;padding:24px 0;flex-direction:column;gap:18px}
+ .mb-footer-main{grid-template-columns:1fr 1fr;gap:48px 28px;padding:48px 0 55px}
+ .mb-footer-brand{grid-column:1/-1}.mb-footer-wordmark{font-size:16vw}.mb-footer-brand p{font-size:15px;margin-top:20px}
+ .mb-footer-col a,.mb-footer-col p{font-size:14px}.mb-footer-bottom{flex-direction:column;gap:14px;line-height:1.5}.mb-footer-bottom div{gap:18px;flex-wrap:wrap}
 }
-@media(max-width:380px){
-  .mb-footer-main{grid-template-columns:1fr}
-  .mb-footer-brand{grid-column:auto}
-}
+@media(max-width:380px){.mb-footer-main{grid-template-columns:1fr}.mb-footer-brand{grid-column:auto}}
 </style>
 
 </head>
@@ -3346,457 +3275,46 @@ activate("strategy");
 </script>
 
 
+
+
+
 <footer class="mediabay-footer" id="contatti">
   <div class="mb-footer-top">
-    <div class="mb-footer-label">MEDIA BAY / CONTATTI</div>
-    <a class="mb-footer-cta" href="mailto:info@mediabay.it">PARLIAMONE ↘</a>
+    <div class="mb-footer-label" data-it="MEDIA BAY / CONTATTI" data-en="MEDIA BAY / CONTACT">MEDIA BAY / CONTATTI</div>
+    <a class="mb-footer-cta" href="mailto:info@mediabay.it"
+       data-it="PARLIAMONE ↘" data-en="LET'S TALK ↘">PARLIAMONE ↘</a>
   </div>
-
   <div class="mb-footer-main">
     <div class="mb-footer-brand">
       <div class="mb-footer-wordmark">MEDIABAY</div>
-      <p>Phygital Marketing.<br>Physical presence. Digital impact.</p>
+      <p data-it="Phygital Marketing.<br>Presenza fisica. Impatto digitale."
+         data-en="Phygital Marketing.<br>Physical presence. Digital impact.">
+        Phygital Marketing.<br>Presenza fisica. Impatto digitale.
+      </p>
     </div>
-
     <div class="mb-footer-col">
-      <span>CONTATTACI</span>
+      <span data-it="CONTATTACI" data-en="CONTACT">CONTATTACI</span>
       <a href="mailto:info@mediabay.it">info@mediabay.it</a>
       <a href="https://wa.me/393518472396" target="_blank" rel="noopener">+39 351 847 2396</a>
     </div>
-
     <div class="mb-footer-col">
-      <span>DOVE SIAMO</span>
+      <span data-it="DOVE SIAMO" data-en="WHERE WE ARE">DOVE SIAMO</span>
       <p>Via Mercurio 2<br>09045 Sardegna, Italia</p>
     </div>
-
     <div class="mb-footer-col">
-      <span>ONLINE</span>
+      <span data-it="ONLINE" data-en="ONLINE">ONLINE</span>
       <a href="https://instagram.com/mediabay.it" target="_blank" rel="noopener">@mediabay.it</a>
       <a href="https://mediabay.it/">mediabay.it</a>
     </div>
   </div>
-
   <div class="mb-footer-bottom">
     <span>© MediaBay · Since 2013</span>
     <div>
-      <a href="/privacy.html">PRIVACY</a>
-      <a href="/cookie-policy.html">COOKIE POLICY</a>
+      <a href="/privacy.html" data-it="PRIVACY" data-en="PRIVACY">PRIVACY</a>
+      <a href="/cookie-policy.html" data-it="COOKIE POLICY" data-en="COOKIE POLICY">COOKIE POLICY</a>
     </div>
   </div>
 </footer>
-
-</body>
-</html>
-<section class="section green contact" data-door="contact" id="contact">
-<div class="head"><span>08 / LET'S BUILD</span><span>START THE CONVERSATION ↘</span></div>
-<div class="contact-copy">
-<h2 class="reveal" data-contact-title="1">LET'S BUILD<br/><span>WHAT COMES NEXT.</span></h2>
-<p class="desc reveal" data-contact-copy="1">Tell us where you want to go. You don't need to know what you need yet.</p>
-<p class="desc reveal" data-contact-copy="2">We'll analyse your business, identify the opportunity and show you what we can build.</p>
-<div class="contact-cta reveal" data-contact-cta="1">WRITE TO US — NO OBLIGATION ↘</div>
-</div>
-<form class="contact-form" method="POST" action="https://formsubmit.co/info@mediabay.it" name="mediabay-contact">
-<input type="hidden" name="_next" value="https://mediabay.it/thank-you.html"/>
-<input name="form-name" type="hidden" value="mediabay-contact"/>
-<p style="display:none"><label>Don't fill this out if you're human: <input name="bot-field"/></label></p>
-<div class="form-grid">
-<div class="field">
-<label for="name">Name *</label>
-<input autocomplete="name" id="name" name="name" required="" type="text"/>
-</div>
-<div class="field">
-<label for="company">Company</label>
-<input autocomplete="organization" id="company" name="company" type="text"/>
-</div>
-<div class="field">
-<label for="email">Email *</label>
-<input autocomplete="email" id="email" name="email" required="" type="email"/>
-</div>
-<div class="field">
-<label for="phone">Phone</label>
-<input autocomplete="tel" id="phone" name="phone" type="tel"/>
-</div>
-<div class="field full">
-<label for="service">What do you need?</label>
-<select id="service" name="service">
-<option value="">Select a service</option>
-<option>Strategy &amp; Brand</option>
-<option>Websites &amp; Landing Pages</option>
-<option>E-commerce</option>
-<option>Social Media &amp; Content</option>
-<option>SEO, Google &amp; Advertising</option>
-<option>AI &amp; Automation</option>
-<option>Mobility &amp; Phygital</option>
-<option>Something else</option>
-</select>
-</div>
-<div class="field full">
-<label for="message">Tell us about the project *</label>
-<textarea id="message" name="message" placeholder="What are you building, changing or trying to solve?" required=""></textarea>
-</div>
-</div>
-<div class="consent">
-<input id="consent" name="consent" required="" type="checkbox" value="accepted"/>
-<label for="consent">I agree to be contacted by MediaBay regarding my request.</label>
-</div>
-<div class="submit-row">
-<span class="form-note">We don't sell promises. We show you what we can build.</span>
-<button type="submit">Send request ↗</button>
-</div>
-<div class="form-success">Thanks — your request has been sent.</div>
-</form>
-</section></main>
-<div aria-label="Section navigation" class="color-rail" id="colorRail">
-<button aria-label="Hero" class="active" data-target="top" type="button"></button>
-<button aria-label="Manifesto" data-target="manifesto" type="button"></button>
-<button aria-label="Team" data-target="team" type="button"></button>
-<button aria-label="We Do" data-target="services" type="button"></button>
-<button aria-label="Projects" data-target="projects" type="button"></button>
-<button aria-label="Clients" data-target="clients" type="button"></button>
-<button aria-label="Contact" data-target="contact" type="button"></button>
-</div>
-<div id="progress"><i></i></div><div id="index">01 / 07</div>
-<div class="page-layer" id="pageLayer">
-<button class="page-close" id="pageClose">CLOSE ×</button>
-<div class="page-inner" id="pageInner"></div>
-</div>
-
-<script id="mediabay-v7-pages">
-(function(){
- const layer=document.getElementById('pageLayer'), inner=document.getElementById('pageInner'), close=document.getElementById('pageClose');
- const pages={
-  engine:{dark:true,kicker:'01 / MEDIA BAY INTERNAL SYSTEM',title:'BUILD<br>BEFORE<br><em style="color:var(--g2)">YOU ASK.</em>',text:'The product direction behind MediaBay: a system designed to recognise a business, understand what it needs and generate the foundations of its digital presence — structure, content, experience and conversion.',tiles:['BUSINESS RECOGNITION','AUTOMATED WEB','AI CONTENT','READY TO MOVE']},
-  revelle:{dark:false,kicker:'02 / REVELLE',title:'STYLE<br>WITH<br><em style="color:var(--g)">SIGNAL.</em>',text:'A fashion concept built around one coherent language across identity, product, e-commerce and physical presence.',tiles:['STREETWEAR','CASUAL','FITNESS','E-COMMERCE']},
-  mobility:{dark:false,kicker:'03 / MOBILITY',title:'TAKE IT<br><em style="color:var(--g)">OUTSIDE.</em>',text:'MediaBay Mobility evolves the original Mediabike idea into moving urban media: physical advertising designed to be visible, memorable and connected to digital campaigns.',tiles:['BIKES','SCOOTERS','URBAN CAMPAIGNS','PHYGITAL']},
- };
- function openPage(key){
-  const p=pages[key]; if(!p)return;
-  layer.classList.toggle('dark-page',!!p.dark);
-  inner.innerHTML='<div class="page-kicker">'+p.kicker+'</div><h1 class="page-title">'+p.title+'</h1><p class="page-text">'+p.text+'</p><div class="page-grid">'+p.tiles.map((x,i)=>'<div class="page-tile"><span>0'+(i+1)+'</span><strong>'+x+'</strong><span>↗</span></div>').join('')+'</div>';
-  layer.classList.add('open'); document.body.style.overflow='hidden';
- }
- function closePage(){layer.classList.remove('open');document.body.style.overflow=''}
- document.querySelectorAll('.project[data-page]').forEach(x=>x.addEventListener('click',()=>openPage(x.dataset.page)));
- close.addEventListener('click',closePage);
- addEventListener('keydown',e=>{if(e.key==='Escape')closePage()});
-})();
-</script>
-<script>
-(function(){
- const layer=document.getElementById('pageLayer'),inner=document.getElementById('pageInner');
- const data={
-'Strategy & Identity':['02 / STRATEGY & IDENTITY','MAKE THE BRAND<br><em style="color:var(--g)">RECOGNISABLE.</em>','We define what the business stands for, who it is speaking to and how that idea becomes a consistent visual and verbal identity.',['POSITIONING','NAMING & MESSAGING','ART DIRECTION','BRAND SYSTEM']],
-'Web Systems':['02 / WEB SYSTEMS','WE BUILD<br><em style="color:var(--g)">DIGITAL PLACES.</em>','Websites and landing pages designed around the business goal: clear information architecture, responsive UX, strong visual identity, performance and conversion.',['CORPORATE SITES','LANDING PAGES','UX / UI','DEVELOPMENT']],
-'E-commerce':['02 / E-COMMERCE','TURN ATTENTION<br>INTO <em style="color:var(--g)">ORDERS.</em>','Online stores built to make products easy to discover, understand and buy — from catalogue structure to checkout, content and ongoing optimisation.',['ONLINE STORES','PRODUCT UX','CONVERSION','STORE OS']],
-'Social & Content':['02 / SOCIAL & CONTENT','MAKE THE BRAND<br><em style="color:var(--g)">MOVE.</em>','A recognisable content system rather than a stream of random posts: strategy, formats, creative direction, campaigns and paid distribution.',['STRATEGY','CONTENT SYSTEM','CAMPAIGNS','PAID MEDIA']],
-'AI & Automation':['02 / AI & AUTOMATION','INTELLIGENCE<br>THAT<br><em style="color:var(--g)">WORKS.</em>','AI assistants, agents and automations that reduce repetitive work, answer customers, qualify requests and connect business workflows.',['AI AGENTS','ASSISTANTS','AUTOMATION','INTEGRATIONS']],
-'Mobility & Phygital':['02 / MOBILITY & PHYGITAL','TAKE THE BRAND<br><em style="color:var(--g)">OUTSIDE.</em>','Physical advertising and urban activation evolved with a digital layer. Mobile media, bikes, scooters and campaigns designed to be seen in the real world.',['BIKES','SCOOTERS','URBAN MEDIA','EVENTS']],
-'Growth & Local':['02 / GROWTH & LOCAL','BE FOUND.<br>BE <em style="color:var(--g)">CHOSEN.</em>','The local and performance layer: Google Business presence, SEO, landing pages, advertising, tracking and optimisation built around measurable actions.',['SEO','GOOGLE BUSINESS','ADVERTISING','ANALYTICS']]
-};
- document.querySelectorAll('.service').forEach(row=>row.addEventListener('click',()=>{
-  const key=row.dataset.service; const labels={'strategy':'Strategy & Identity','web':'Web Systems','commerce':'E-commerce','social':'Social & Content','ai':'AI & Automation','mobility':'Mobility & Phygital','growth':'Growth & Local'}; const d=data[labels[key]]; if(!d)return;
-  layer.classList.remove('dark-page');
-  inner.innerHTML='<div class="page-kicker">'+d[0]+'</div><h1 class="page-title">'+d[1]+'</h1><p class="page-text">'+d[2]+'</p><div class="page-grid">'+d[3].map((x,i)=>'<div class="page-tile"><span>0'+(i+1)+'</span><strong>'+x+'</strong><span>↗</span></div>').join('')+'</div>';
-  layer.classList.add('open');document.body.style.overflow='hidden';
- }));
- document.querySelectorAll('.service').forEach(x=>x.style.cursor='pointer');
-})();
-</script>
-<script id="mediabay-v8-interaction">
-(function(){
- const root=document;
- const orb=document.getElementById('heroOrb'),dot=document.getElementById('heroOrbDot'),hero=document.querySelector('.hero');
- if(orb&&hero&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
-   hero.addEventListener('pointermove',e=>{
-     const r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-     orb.style.transform=`translate(calc(-50% + ${x*55}px),calc(-50% + ${y*40}px)) rotate(${x*14}deg)`;
-     dot.style.transform=`translate(${x*95}px,${y*65}px)`;
-   });
- }
- const rail=document.getElementById('colorRail'), sections=[...document.querySelectorAll('main>section')];
- if(rail){
-   const buttons=[...rail.querySelectorAll('button')];
-   buttons.forEach(b=>b.addEventListener('click',()=>document.getElementById(b.dataset.target)?.scrollIntoView({behavior:'smooth'})));
-   const io=new IntersectionObserver(es=>es.forEach(e=>{
-     if(e.isIntersecting){buttons.forEach(b=>b.classList.toggle('active',b.dataset.target===e.target.id||(!e.target.id&&b.dataset.target==='top')))}
-   }),{threshold:.5});
-   sections.forEach(s=>io.observe(s));
- }
- // Subtle pointer tilt on project cards, with touch-safe behavior.
- if(matchMedia('(hover:hover) and (pointer:fine)').matches){
-   document.querySelectorAll('.project').forEach(card=>{
-     card.addEventListener('pointermove',e=>{
-       const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-       card.style.transform=`perspective(900px) rotateY(${x*3}deg) rotateX(${-y*3}deg) scale(.99)`;
-     });
-     card.addEventListener('pointerleave',()=>card.style.transform='');
-   });
- }
-})();
-</script>
-<script id="mediabay-v9-page-scroll-fix">
-(function(){
- const layer=document.getElementById('pageLayer');
- const close=document.getElementById('pageClose');
- if(!layer||!close)return;
- close.addEventListener('click',()=>{document.body.style.overflow=''});
- layer.addEventListener('click',e=>{if(e.target===layer){layer.classList.remove('open');document.body.style.overflow=''}});
-})();
-</script>
-<script>
-(function(){
-  const map=document.querySelector('.approach-map');
-  if(!map || map.dataset.ready) return;
-  map.dataset.ready='1';
-  const core=map.querySelector('#bayCore');
-  const detail=map.querySelector('#approachDetail');
-  const status=document.getElementById('systemStatus');
-  const activeLayer=document.getElementById('activeLayer');
-  const nodes=[...map.querySelectorAll('.approach-node')];
-  const info={
-    strategy:['STRATEGY','direction','The starting point: understand the business, the audience, the offer and the opportunity.'],
-    digital:['DIGITAL','presence','The digital layer: websites, landing pages, e-commerce and the places where customers meet the brand.'],
-    content:['CONTENT','attention','The communication layer: social, campaigns and content that keeps the brand visible and recognisable.'],
-    ai:['AI','intelligence','The automation layer: assistants, agents and workflows that remove friction and create leverage.'],
-    phygital:['PHYGITAL','visibility','The real-world layer: mobility, urban media and physical experiences connected to digital.']
-  };
-  const pos={
-    strategy:[12,22], digital:[88,25], content:[16,72], ai:[84,70], phygital:[50,88]
-  };
-  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
-
-  function setNodePosition(node,x,y){
-    const key=node.dataset.key;
-    pos[key]=[clamp(x,6,94),clamp(y,13,88)];
-    node.style.left=pos[key][0]+'%';
-    node.style.top=pos[key][1]+'%';
-    node.style.right='auto';
-    node.style.bottom='auto';
-    node.style.transform=key==='phygital'?'translateX(-50%)':'';
-  }
-  function updateLine(key){
-    const line=map.querySelector('#line-'+key);
-    const p=pos[key];
-    if(!line || !p) return;
-    line.setAttribute('x2',p[0]*10);
-    line.setAttribute('y2',p[1]/100*520);
-    const active=map.querySelector('[data-key="'+key+'"]').classList.contains('is-active');
-    line.style.opacity=active?.9:.42;
-    line.style.strokeWidth=active?'2.5':'1.2';
-  }
-  function renderLines(){nodes.forEach(n=>updateLine(n.dataset.key));}
-  nodes.forEach((n,i)=>{setTimeout(()=>{n.style.transition='transform .18s ease,background .25s ease,color .25s ease';},i*80)});
-
-  function select(node){
-    nodes.forEach(n=>n.classList.remove('is-active'));
-    node.classList.add('is-active');
-    const d=info[node.dataset.key];
-    if(activeLayer) activeLayer.textContent=d[0];
-    if(status) status.textContent=d[0]+' LAYER ACTIVE';
-    detail.innerHTML='<strong>'+d[0]+' · '+d[1]+'</strong><span>'+d[2]+'</span>';
-    core.style.transform='translate(-50%,-50%) scale(1.06)';
-    clearTimeout(select.t);
-    select.t=setTimeout(()=>core.style.transform='translate(-50%,-50%) scale(1)',220);
-    renderLines();
-  }
-
-  nodes.forEach(node=>{
-    node.addEventListener('click',()=>select(node));
-    let drag=null;
-    node.addEventListener('pointerdown',e=>{
-      drag={id:e.pointerId,startX:e.clientX,startY:e.clientY,moved:false};
-      node.setPointerCapture(e.pointerId);
-    });
-    node.addEventListener('pointermove',e=>{
-      if(!drag || drag.id!==e.pointerId) return;
-      const dx=e.clientX-drag.startX, dy=e.clientY-drag.startY;
-      if(Math.abs(dx)+Math.abs(dy)>5) drag.moved=true;
-      if(!drag.moved) return;
-      const r=map.getBoundingClientRect();
-      setNodePosition(node,(e.clientX-r.left)/r.width*100,(e.clientY-r.top)/r.height*100);
-      renderLines();
-    });
-    node.addEventListener('pointerup',e=>{
-      if(drag && drag.moved) e.preventDefault();
-      drag=null;
-    });
-    node.addEventListener('pointercancel',()=>drag=null);
-  });
-
-  // Gentle pointer parallax on the central core, disabled for touch.
-  map.addEventListener('pointermove',e=>{
-    if(e.pointerType==='touch') return;
-    const r=map.getBoundingClientRect();
-    const x=(e.clientX-r.left)/r.width-.5;
-    const y=(e.clientY-r.top)/r.height-.5;
-    core.style.transform='translate(calc(-50% + '+(x*10)+'px),calc(-50% + '+(y*8)+'px))';
-  });
-  map.addEventListener('pointerleave',()=>core.style.transform='translate(-50%,-50%)');
-  renderLines();
-})();
-</script>
-
-
-
-<script id="mediabay-language">
-(function(){
-  const IT = { "YOU DON'T NEED TO KNOW WHAT YOU NEED.":"NON DEVI SAPERE COSA TI SERVE.","BUT WHERE YOU WANT TO GO.":"MA DOVE VUOI ARRIVARE.","NOW YOU HAVE":"ADESSO NON HAI PIÙ SCUSE.","NO EXCUSES.":"HAI GIÀ DA DOVE PARTIRE.","YOU ALREADY":"HAI GIÀ","HAVE A STARTING":"DA DOVE","POINT.":"PARTIRE.","We analyse your business remotely. We study what is already online, identify what is missing and look for where we can create value.":"Analizziamo il tuo business da remoto. Studiamo ciò che è già online, individuiamo cosa manca e cerchiamo dove possiamo creare valore.","Then we build a demo tailored to your business and show it to you for free — before you even ask us to.":"Poi costruiamo una demo su misura per il tuo business e te la mostriamo gratuitamente, prima ancora che tu ce la chieda.","WE ANALYSE":"ANALIZZIAMO","Your business, your online presence and what can be improved.":"Il tuo business, la tua presenza online e ciò che può essere migliorato.","WE BUILD":"COSTRUIAMO","A tailored demo based on what we find.":"Una demo su misura, costruita su ciò che abbiamo trovato.","YOU SEE IT":"TU LO VEDI","A real starting point, not a promise.":"Un punto di partenza reale, non una promessa.","We don't sell promises. We show you what we can build.":"Non vendiamo promesse. Ti facciamo vedere cosa possiamo costruire.","WHAT WE BRING":"COSA CI PORTIAMO DIETRO","KNOW HOW.":"SAPERE COME SI FA.","CURIOSITY.":"CAPIRE COSA STA CAMBIANDO.","ACTION.":"AVERE IL CORAGGIO DI FARLO.","We know how businesses work because we have learned by doing: marketing, communication, design, digital products and business in the real world.":"Sappiamo come funzionano i business perché abbiamo imparato facendo: marketing, comunicazione, design, prodotti digitali e attività reali.","We stay curious about what changes, then turn what we learn into practical solutions — from digital platforms to AI, automation and everything in between.":"Restiamo curiosi verso ciò che cambia e trasformiamo quello che impariamo in soluzioni concrete: dalle piattaforme digitali all’AI, dall’automazione a tutto ciò che può essere utile.","We know what works. We watch what changes. Then we build.":"Sappiamo cosa funziona. Osserviamo cosa cambia. Poi costruiamo.", "YOU DON'T NEED TO KNOW WHAT YOU NEED.":"NON DEVI SAPERE COSA TI SERVE.","BUT WHERE YOU WANT TO GO.":"MA DOVE VUOI ARRIVARE.","BUILD BEFORE YOU ASK.":"NON DEVI SAPERE COSA TI SERVE.","NOW YOU HAVE":"ADESSO NON HAI PIÙ SCUSE.","NO EXCUSES.":"HAI GIÀ DA DOVE PARTIRE.","YOU ALREADY":"HAI GIÀ","HAVE A STARTING":"DA DOVE","POINT.":"PARTIRE.","We analyse your business remotely, study what is already online, identify what is missing and look for where we can create value.":"Analizziamo il tuo business da remoto, studiamo ciò che è già online, individuiamo cosa manca e cerchiamo dove possiamo creare valore.","Then we build a demo tailored to your business and show it to you for free — before you even ask us to.":"Poi costruiamo una demo su misura per il tuo business e te la mostriamo gratuitamente, prima ancora che tu ce la chieda.","WE ANALYSE":"ANALIZZIAMO","Your business, your online presence and what can be improved.":"Il tuo business, la tua presenza online e ciò che può essere migliorato.","WE BUILD":"COSTRUIAMO","A tailored demo based on what we find.":"Una demo su misura, costruita su ciò che abbiamo trovato.","YOU SEE IT":"TU LO VEDI","A real starting point, not a promise.":"Un punto di partenza reale, non una promessa.","We don't sell promises. We show you what we can build.":"Non vendiamo promesse. Ti facciamo vedere cosa possiamo costruire.","← Back to services":"← Torna ai servizi","CLOSE ×":"CHIUDI ×","MEDIA BAY / SERVICE":"MEDIA BAY / SERVIZIO","START A PROJECT":"INIZIA UN PROGETTO","START A PROJECT / 01":"INIZIA UN PROGETTO / 01","START A PROJECT / 02":"INIZIA UN PROGETTO / 02","START A PROJECT / 03":"INIZIA UN PROGETTO / 03","START A PROJECT / 04":"INIZIA UN PROGETTO / 04","START A PROJECT / 05":"INIZIA UN PROGETTO / 05","START A PROJECT / 06":"INIZIA UN PROGETTO / 06","START A PROJECT / 07":"INIZIA UN PROGETTO / 07","NEXT SERVICE →":"SERVIZIO SUCCESSIVO →","← PREVIOUS SERVICE":"← SERVIZIO PRECEDENTE","SELECT LANGUAGE":"SELEZIONA LINGUA","ITALIAN":"ITALIANO","ENGLISH":"INGLESE","MENU":"MENU","CLOSE":"CHIUDI","VIEW SERVICE":"VEDI IL SERVIZIO","VIEW PROJECT":"VEDI IL PROGETTO","SCROLL TO ENTER ↓":"SCORRI PER ENTRARE ↓","PHYGITAL MARKETING · SINCE 2013":"MARKETING PHYGITAL · DAL 2013","WEB · SOCIAL · AI · MOBILITY":"WEB · SOCIAL · AI · MOBILITÀ","PHYGITAL MARKETING / SINCE 2013":"MARKETING PHYGITAL / DAL 2013","Strategy · Web · E-commerce · Social · AI · Mobility":"Strategia · Web · E-commerce · Social · AI · Mobility","Physical presence. Digital impact.":"Presenza fisica. Impatto digitale.","CAGLIARI · ITALY · ONLINE":"CAGLIARI · ITALIA · ONLINE","BUILD BEFORE YOU ASK.":"NON DEVI SAPERE COSA TI SERVE.","THE MEDIA BAY PRINCIPLE":"IL PRINCIPIO MEDIA BAY","Your business rarely needs just one thing. It needs the right things, connected in the right order — then built around what the business actually needs.":"La tua attività raramente ha bisogno di una sola cosa. Ha bisogno delle cose giuste, collegate nel modo giusto e costruite intorno a ciò che serve davvero.","A website is not just a website. A social profile is not just a collection of posts. An AI assistant is not just a chatbot. Every touchpoint is part of the same business.":"Un sito non è solo un sito. Un profilo social non è solo una sequenza di post. Un assistente AI non è solo un chatbot. Ogni punto di contatto fa parte della stessa attività.","We look at what your business needs now, what it will need next and how those pieces should work together. Then we build the system around it.":"Guardiamo cosa serve alla tua attività oggi, cosa potrebbe servirle domani e come far funzionare insieme ogni elemento. Poi costruiamo il sistema intorno a questa logica.","STRATEGY → CREATIVE → TECHNOLOGY":"STRATEGIA → CREATIVITÀ → TECNOLOGIA","MediaBay brings marketing, design, development and technology together. You can start with one service or build a complete ecosystem with us. The important thing is that every part has a purpose and works with the others.":"MediaBay unisce marketing, design, sviluppo e tecnologia. Puoi partire da un solo servizio oppure costruire con noi un sistema completo. L’importante è che ogni elemento abbia uno scopo e funzioni insieme agli altri.","Strategy & Brand":"Strategia & Brand","Websites & Landing Pages":"Siti web & Landing page","E-commerce":"E-commerce","Social Media & Content":"Social & Contenuti","SEO, Google & Advertising":"SEO, Google & Pubblicità","AI & Automation":"AI & Automazione","Mobility & Phygital Marketing":"Mobility & Marketing Phygital","We define the direction before we start producing. Positioning, offer, audience, messaging and visual identity become a clear system that the business can actually use.":"Definiamo la direzione prima di produrre. Posizionamento, offerta, pubblico, messaggi e identità visiva diventano un sistema chiaro, concreto e utilizzabile.","We design and build websites that explain the business, communicate the brand and turn attention into action. Responsive, fast and structured around real customer journeys.":"Progettiamo e sviluppiamo siti che spiegano subito l’attività, raccontano il brand e trasformano l’attenzione in un’azione. Veloci, responsive e costruiti sui percorsi reali dei clienti.","From catalogue to checkout, we create online stores that make products easy to discover, understand and buy. We work on structure, product presentation, conversion and the digital experience around the store.":"Dal catalogo al checkout, costruiamo e-commerce in cui i prodotti sono facili da trovare, capire e acquistare. Lavoriamo su struttura, presentazione, esperienza e conversione.","We build a recognisable communication system instead of posting just for the sake of posting: strategy, formats, creative direction, campaigns, content and paid distribution.":"Costruiamo una comunicazione riconoscibile, non un flusso di post senza direzione: strategia, format, creatività, campagne, contenuti e distribuzione a pagamento.","Being online is not enough if people cannot find you. We improve search visibility, Google Business presence, landing pages and advertising campaigns around measurable business actions.":"Essere online non basta se nessuno ti trova. Miglioriamo la presenza sui motori di ricerca, Google Business, landing page e campagne pubblicitarie collegandole ad azioni misurabili.","We use AI where it creates real value: customer assistance, repetitive workflows, content operations, internal processes and business automations. The technology serves the business, not the other way around.":"Usiamo l’AI dove può creare valore reale: assistenza clienti, attività ripetitive, gestione dei contenuti, processi interni e automazioni. La tecnologia deve servire l’attività, non il contrario.","MediaBay carries the original Mediabike idea forward: physical visibility combined with digital communication. Mobile advertising, bikes, scooters and real-world activations become part of a connected campaign.":"MediaBay porta avanti il DNA di Mediabike: visibilità fisica unita alla comunicazione digitale. Pubblicità mobile, bici, scooter e attivazioni sul territorio diventano parte della stessa campagna.","ONE SERVICE OR THE WHOLE SYSTEM.":"UN SERVIZIO O UN SISTEMA COMPLETO.","We adapt the scope to the business. No unnecessary packages. No technology for technology's sake.":"Adattiamo il progetto alla tua attività. Niente pacchetti inutili. Niente tecnologia usata solo perché esiste.","HOW THE SYSTEM CONNECTS":"COME SI COLLEGA IL SISTEMA","ONE BRAND. ONE SYSTEM. MANY TOUCHPOINTS.":"UN BRAND. UN SISTEMA. PIÙ PUNTI DI CONTATTO.","MediaBay connects strategy, digital presence, communication, AI and physical visibility. Explore the system: move a node, select a layer and see what it contributes to the whole.":"MediaBay collega strategia, presenza digitale, comunicazione, AI e visibilità fisica. Ogni elemento ha un ruolo e contribuisce al sistema nel suo insieme.","MOVE THE SYSTEM":"MUOVI IL SISTEMA","DRAG / TAP A NODE":"TRASCINA / TOCCA UN NODO","direction":"direzione","presence":"presenza","attention":"attenzione","intelligence":"intelligenza","visibility":"visibilità","Tap a node to see how it connects to the system.":"Tocca un nodo per vedere come si collega al sistema.","SYSTEM STATUS":"STATO DEL SISTEMA","ALL LAYERS CONNECTED":"TUTTI I LIVELLI CONNESSI","ACTIVE LAYER":"LIVELLO ATTIVO","MOVE":"MUOVI","DRAG TO REPOSITION":"TRASCINA PER SPOSTARE","WE BUILD TOOLS THAT MAKE US BETTER.":"COSTRUIAMO STRUMENTI CHE CI FANNO LAVORARE MEGLIO.","MediaBay can develop internal software, AI systems and automations to improve how we create and operate. These are part of our working infrastructure — not presented as services unless we decide to launch them as products.":"MediaBay sviluppa anche strumenti interni, sistemi AI e automazioni per migliorare il modo in cui lavoriamo. Fanno parte della nostra infrastruttura e diventano prodotti solo quando decidiamo di portarli sul mercato.","BUSINESSES WE CAN MOVE":"ATTIVITÀ CHE POSSIAMO FAR MUOVERE","REAL BUSINESS. REAL PEOPLE. REAL IMPACT.":"BUSINESS REALI. PERSONE REALI. IMPATTO REALE.","MediaBay is designed for businesses that need more than a pretty website. We help turn visibility into enquiries, visits, bookings, sales and stronger customer relationships.":"MediaBay è pensata per attività che hanno bisogno di più di un bel sito. Trasformiamo la visibilità in contatti, visite, prenotazioni, vendite e relazioni più solide con i clienti.","Our approach can work for a local business building its first serious digital presence, or for an established brand connecting multiple channels.":"Il nostro approccio parte bene sia da un’attività locale che vuole costruire una presenza digitale solida, sia da un brand già strutturato che vuole collegare più canali.","HOSPITALITY & TOURISM":"HOSPITALITY & TURISMO","RETAIL & E-COMMERCE":"RETAIL & E-COMMERCE","FASHION & LIFESTYLE":"FASHION & LIFESTYLE","FOOD & BEVERAGE":"FOOD & BEVERAGE","PROFESSIONAL SERVICES":"SERVIZI PROFESSIONALI","STARTUPS & DIGITAL PRODUCTS":"STARTUP & PRODOTTI DIGITALI","LOCAL & REGIONAL BRANDS":"BRAND LOCALI & REGIONALI","OUR ROOTS":"LE NOSTRE RADICI","MEDIABIKE → MEDIA BAY":"MEDIABIKE → MEDIA BAY","FROM 2013 TO MEDIA BAY":"DAL 2013 A MEDIA BAY","PRESENCE. DIGITAL IMPACT.":"PRESENZA. IMPATTO DIGITALE.","MediaBay comes from a simple idea: marketing should move. The journey began with Mediabike, a mobile advertising concept created in 2013 to bring brands physically into the streets.":"MediaBay nasce da un’idea semplice: il marketing deve muoversi. Il percorso è iniziato nel 2013 con Mediabike, un progetto di pubblicità mobile nato per portare i brand direttamente nelle strade.","Over time, the same instinct expanded into websites, e-commerce, social communication, SEO, AI and digital products. MediaBay is the evolution of that experience.":"Nel tempo quella stessa intuizione si è estesa a siti web, e-commerce, social, SEO, AI e prodotti digitali. MediaBay è l’evoluzione naturale di quell’esperienza.","Understand the business before choosing the channel.":"Capire l’attività prima di scegliere il canale.","Build the identity, experience and communication.":"Costruire identità, esperienza e comunicazione.","Make digital tools and channels work together.":"Far lavorare insieme strumenti e canali digitali.","Bring the brand into the real world when it makes sense.":"Portare il brand nel mondo reale quando serve.","Keep improving instead of treating launch as the finish line.":"Continuare a migliorare: il lancio è solo l’inizio.","WHAT COMES NEXT.":"COSA SUCCEDE DOPO.","Tell us what you are trying to achieve, what is not working or what you think your business needs next. You do not need to have the solution already. That is where we start.":"Raccontaci cosa vuoi ottenere, cosa non sta funzionando o cosa pensi serva alla tua attività. Non devi avere già la soluzione. È da qui che partiamo.","YOU TELL US":"TU CI RACCONTI","Business, idea, problem or goal.":"Business, idea, problema o obiettivo.","WE UNDERSTAND":"NOI NON DEVI SAPERE COSA TI SERVE.","We identify what matters and what can move the needle.":"Individuiamo ciò che conta davvero e dove possiamo fare la differenza.","WE BUILD":"NOI COSTRUIAMO","A clear plan, the right tools and the next step.":"Un piano chiaro, gli strumenti giusti e il prossimo passo.","info@mediabay.it ↗":"info@mediabay.it ↗","Don't fill this out if you're human:":"Non compilare questo campo se sei umano:","Name *":"Nome *","Company":"Azienda","Email *":"Email *","Phone":"Telefono","What do you need?":"Di cosa hai bisogno?","Select a service":"Seleziona un servizio","Something else":"Altro","Tell us about the project *":"Parlaci del progetto *","I agree to be contacted by MediaBay regarding my request.":"Accetto di essere contattato da MediaBay in merito alla mia richiesta.","We build before you ask. Start with the problem.":"Costruiamo prima che tu lo chieda. Partiamo dal problema.","Send request ↗":"Invia richiesta ↗","Thanks — your request has been sent.":"Grazie — la tua richiesta è stata inviata.","STRATEGY":"STRATEGIA","BRAND.":"BRAND.","WEBSITES":"SITI WEB","LANDING.":"LANDING.","SYSTEMS.":"SISTEMI.","SOCIAL":"SOCIAL","CONTENT.":"CONTENUTI.","SEO, GOOGLE":"SEO, GOOGLE","ADS.":"ADS.","AI &":"AI &","AUTOMATION.":"AUTOMAZIONE.","MOBILITY":"MOBILITÀ","PHYGITAL.":"PHYGITAL.","Before the look,":"Prima dell'immagine,","comes the direction.":"viene la direzione.","Don't fill the feed. Build a point of view.":"Non riempire il feed. Costruisci un punto di vista.","Technology with a job to do.":"Tecnologia con un compito preciso.","Take the brand outside the screen.":"Porta il brand fuori dallo schermo.","Be found. Then give people a reason to act.":"Fatti trovare. Poi dai alle persone un motivo per agire.","A digital place built for the next action.":"Uno spazio digitale costruito per la prossima azione.","From discovery to checkout.":"Dalla scoperta al checkout.","MediaBay — Phygital Marketing":"MediaBay — Marketing Phygital","MEDIA BAY ↘":"MEDIA BAY ↘","LOADING":"CARICAMENTO","PHYGITAL MARKETING":"MARKETING PHYGITAL","PLEASE WAIT":"ATTENDI","MENU +":"MENU +","MANIFESTO":"MANIFESTO","TEAM / ABOUT":"TEAM / CHI SIAMO","SERVICES":"SERVIZI","APPROACH":"APPROCCIO","EXPERIENCE":"ESPERIENZA","LET'S BUILD":"COSTRUIAMO","ENTER THE BAY ↘":"ENTRA NELLA BAY ↘","THINK. CREATE. MOVE.":"PENSA. CREA. MUOVI.","BUILD":"NON DEVI SAPERE COSA TI SERVE.","BEFORE":"","YOU ASK.":"DEVI SOLO SAPERE DOVE VUOI ARRIVARE.","03 / MANIFESTO":"03 / MANIFESTO","WE START":"PARTIAMO","THE BRIEF.":"DALLA NECESSITÀ.","Your business rarely needs just one thing. It needs the right things, connected in the right order. We look at the next step before it becomes a request — then build the tools, communication and experiences around it.":"La tua attività raramente ha bisogno di una sola cosa. Ha bisogno delle cose giuste, collegate nel modo giusto. Noi cerchiamo di capire il passo successivo prima che diventi una richiesta, poi costruiamo ciò che serve.","WHAT IT MEANS":"COSA CI PORTIAMO DIETRO","A DIFFERENT":"UN MODO","WAY TO":"DIVERSO","START.":"DI PARTIRE.","Build Before You Ask":"Costruiamo ciò che ancora non stai cercando","means anticipating the next step instead of waiting for the business to ask for it.":"significa anticipare il passo successivo invece di aspettare che sia il business a chiederlo.","UNDERSTAND":"CAPIRE","Business, audience, offer and opportunity.":"Attività, pubblico, offerta e opportunità.","CONNECT":"COLLEGARE","Brand, digital channels, technology and people.":"Brand, canali digitali, tecnologia e persone.","The right assets and systems, not unnecessary complexity.":"Gli strumenti e i sistemi giusti, senza complicazioni inutili.","EVOLVE":"EVOLVERE","Launch, learn, optimise and build what comes next.":"Lanciare, imparare, migliorare e costruire ciò che viene dopo.","04 / SERVICES":"02 / SERVIZI","EVERYTHING":"TUTTO CIÒ CHE","YOUR BUSINESS":"IL TUO BUSINESS","NEEDS TO MOVE.":"HA BISOGNO PER MUOVERSI.","POSITIONING":"POSIZIONAMENTO","BRAND IDENTITY":"IDENTITÀ DEL BRAND","MESSAGING":"MESSAGGI","ART DIRECTION":"ART DIRECTION","WEB DESIGN":"WEB DESIGN","LANDING PAGES":"LANDING PAGE","DEVELOPMENT":"SVILUPPO","ONLINE STORE":"STORE ONLINE","PRODUCT UX":"UX PRODOTTO","SOCIAL STRATEGY":"STRATEGIA SOCIAL","CONTENT":"CONTENUTI","CAMPAIGNS":"CAMPAGNE","PAID MEDIA":"MEDIA A PAGAMENTO","SEO":"SEO","GOOGLE BUSINESS":"GOOGLE BUSINESS","ADS":"ADS","ANALYTICS":"ANALYTICS","AI ASSISTANTS":"ASSISTENTI AI","AI AGENTS":"AGENTI AI","AUTOMATION":"AUTOMAZIONE","WORKFLOWS":"WORKFLOW","MOBILE MEDIA":"MEDIA MOBILE","BIKES":"BICI","SCOOTERS":"SCOOTER","URBAN ACTIVATION":"ATTIVAZIONE URBANA","05 / THE MEDIA BAY APPROACH":"03 / L'APPROCCIO MEDIA BAY","ONE BRAND.":"UN BRAND.","ONE SYSTEM.":"UN SISTEMA.","MANY TOUCHPOINTS.":"MOLTI PUNTI DI CONTATTO.","MEDIA":"MEDIA","BAY":"BAY","DIGITAL":"DIGITALE","PHYGITAL":"PHYGITAL","MEDIA BAY / INTERNAL TECHNOLOGY":"MEDIA BAY / TECNOLOGIA INTERNA","WE BUILD TOOLS":"COSTRUIAMO STRUMENTI","THAT MAKE US":"CHE CI RENDONO","BETTER.":"MIGLIORI.","06 / EXPERIENCE":"04 / ESPERIENZA","REAL BUSINESS.":"BUSINESS REALI.","REAL PEOPLE.":"PERSONE REALI.","REAL IMPACT.":"IMPATTO REALE.","The physical advertising experience that started the journey evolved into a broader phygital marketing model.":"L’esperienza nella pubblicità fisica da cui siamo partiti si è evoluta in un modello di marketing phygital, dove mondo reale e digitale lavorano insieme.","07 / ABOUT":"05 / CHI SIAMO","PHYSICAL":"PRESENZA","PRESENCE.":"FISICA.","DIGITAL IMPACT.":"IMPATTO DIGITALE.","THINK":"PENSA","CREATE":"CREARE","06 / START A PROJECT":"06 / INIZIA UN PROGETTO","WHAT COMES":"CIÒ CHE VIENE","NEXT.":"DOPO.","Mobility & Phygital":"Mobilità & Phygital","01 / 07 · STRATEGY & BRAND":"01 / 07 · STRATEGIA & BRAND","02 / 07 · WEBSITES & LANDING PAGES":"02 / 07 · SITI WEB & LANDING PAGE","03 / 07 · E-COMMERCE":"03 / 07 · E-COMMERCE","04 / 07 · SOCIAL MEDIA & CONTENT":"04 / 07 · SOCIAL MEDIA & CONTENUTI","05 / 07 · SEO, GOOGLE & ADVERTISING":"05 / 07 · SEO, GOOGLE & ADVERTISING","06 / 07 · AI & AUTOMATION":"06 / 07 · AI & AUTOMAZIONE","07 / 07 · MOBILITY & PHYGITAL MARKETING":"07 / 07 · MOBILITÀ & MARKETING PHYGITAL","&":"&","ONE":"UN","SYSTEM.":"SISTEMA.","BUILT TO MOVE.":"COSTRUITO PER MUOVERSI.","TYPICAL SCOPE":"AMBITO TIPICO","THE RIGHT":"IL GIUSTO","FOUNDATION.":"FONDAMENTO.","BUILD.":"BUILD.","HOW WE WORK":"COME LAVORIAMO","FROM":"DALLA","QUESTION":"DOMANDA","TO DIRECTION.":"ALLA DIREZIONE.","TO BUILD.":"ALLA COSTRUZIONE.","THE OUTCOME":"IL RISULTATO","A BRAND":"UN BRAND","THAT KNOWS":"CHE SA","WHAT'S NEXT.":"COSA VIENE DOPO.","MAKE THE":"RENDI IL","NEXT STEP":"PROSSIMO PASSO","OBVIOUS.":"OVVIO.","READY TO GIVE":"PRONTO A DARE","THE BUSINESS":"AL BUSINESS","A DIRECTION?":"UNA DIREZIONE?","READY TO BUILD":"PRONTO A COSTRUIRE","THE NEXT DIGITAL":"IL PROSSIMO PUNTO DI CONTATTO","TOUCHPOINT?":"?","A STORE THAT":"UNO STORE CHE","CAN MOVE?":"PUÒ MUOVERSI?","GIVE THE BRAND":"DAI AL BRAND","SOMETHING WORTH":"QUALCOSA CHE VALGA","FOLLOWING.":"LA PENA SEGUIRE.","READY TO TURN":"PRONTO A TRASFORMARE","SEARCH INTO":"LA RICERCA IN","ACTION?":"AZIONE?","FIND THE WORK":"TROVA IL LAVORO","THAT AI CAN":"CHE L'AI PUÒ","REMOVE.":"ELIMINARE.","READY TO TAKE":"PRONTO A PORTARE","THE BRAND":"IL BRAND","OUTSIDE?":"FUORI?","MediaBay — Strategy & Brand":"MediaBay — Strategia & Brand","We turn what your business is, does and wants to become into a clear strategic and visual system — one that can guide the website, communication, campaigns and everything that comes next.":"Trasformiamo ciò che il tuo business è, fa e vuole diventare in un sistema strategico e visivo chiaro — capace di guidare il sito, la comunicazione, le campagne e tutto ciò che verrà.","THE MEDIA BAY VIEW / STRATEGY & BRAND":"IL PUNTO DI VISTA MEDIA BAY / STRATEGIA & BRAND","KNOW":"SAPERE","WHAT YOU":"CHI","STAND FOR.":"SEI.","A brand is not only a logo, a colour palette or a nice-looking website. It is the system of decisions behind what a business says, shows and builds.":"Un brand non è solo un logo, una palette di colori o un bel sito. È il sistema di decisioni dietro ciò che un business dice, mostra e costruisce.","We start by understanding the business: what it sells, who it serves, what makes it different, where it wants to go and what is currently getting in the way.":"Partiamo dalla comprensione del business: cosa vende, a chi si rivolge, cosa lo rende diverso, dove vuole andare e cosa oggi lo ostacola.","Then we turn that understanding into a direction that can actually be used — by the website, by social, by campaigns, by sales and by every future touchpoint.":"Poi trasformiamo questa comprensione in una direzione realmente utilizzabile — dal sito, dai social, dalle campagne, dalle vendite e da ogni futuro punto di contatto.","CLARITY":"CHIAREZZA","OUTPUT.":"OUTPUT.","The point of strategy is not to make the project slower. It is to stop the business from producing the wrong things faster. A clear direction gives every creative decision a reason.":"Lo scopo della strategia non è rallentare il progetto. È evitare che il business produca più velocemente le cose sbagliate. Una direzione chiara dà un motivo a ogni scelta creativa.","Where should the business sit in the mind of the customer? We clarify the offer, audience, category, differentiation and territory the brand can credibly own.":"Come dovrebbe essere percepito il business nella mente del cliente? Chiariamo offerta, pubblico, categoria, differenziazione e territorio che il brand può occupare in modo credibile.","We translate the direction into a visual language: logo direction, typography, composition, graphic elements and practical rules that make the brand recognisable.":"Traduciamo la direzione in un linguaggio visivo: direzione del logo, tipografia, composizione, elementi grafici e regole pratiche che rendono il brand riconoscibile.","We define what needs to be said and how it should be said — claims, tone of voice, hierarchy, key messages and the language customers encounter along the journey.":"Definiamo cosa deve essere detto e come — claim, tono di voce, gerarchia, messaggi chiave e linguaggio che i clienti incontrano lungo il percorso.","We establish the visual direction for campaigns, website, social, commerce and physical communication so different outputs still feel like the same brand.":"Definiamo la direzione visiva per campagne, sito, social, commerce e comunicazione fisica, così che output diversi sembrino comunque parte dello stesso brand.","WHAT WE BUILD / STRATEGY & BRAND":"COSA COSTRUIAMO / STRATEGIA & BRAND","ONE LANGUAGE.":"UN SOLO LINGUAGGIO.","The work can begin with a business idea that has not found its position yet, or with an established brand that feels fragmented across channels.":"Il lavoro può partire da un'idea di business che non ha ancora trovato il proprio posizionamento, oppure da un brand affermato che appare frammentato tra i diversi canali.","We build the strategic and creative foundation first, then make it useful in the places where customers actually meet the business.":"Costruiamo prima la base strategica e creativa, poi la rendiamo utile nei luoghi in cui i clienti incontrano davvero il business.","THE RIGHT FOUNDATION.":"IL GIUSTO FONDAMENTO.","Audience":"Pubblico","Offer":"Offerta","Tone of Voice":"Tono di voce","Creative Direction":"Direzione creativa","Brand System":"Sistema di brand","FROM QUESTION TO DIRECTION.":"DALLA DOMANDA ALLA DIREZIONE.","There is no fixed formula for every business. The process adapts to the starting point, but the logic stays the same: understand first, define second, create with purpose.":"Non esiste una formula fissa per ogni business. Il processo si adatta al punto di partenza, ma la logica resta la stessa: prima capire, poi definire, quindi creare con uno scopo.","DISCOVER":"SCOPRIRE","Business, audience, offer, competitors, context and ambitions. We identify what is true, what is unclear and where the opportunity sits.":"Business, pubblico, offerta, concorrenti, contesto e ambizioni. Identifichiamo ciò che è vero, ciò che non è chiaro e dove si trova l'opportunità.","POSITION":"POSIZIONARE","We define the strategic territory: who the brand is for, what it promises, what makes it relevant and how it should be perceived.":"Definiamo il territorio strategico: a chi si rivolge il brand, cosa promette, cosa lo rende rilevante e come dovrebbe essere percepito.","DEFINE":"DEFINIRE","Strategy becomes language and identity. We establish the messages, tone, visual direction and rules that make the brand coherent.":"La strategia diventa linguaggio e identità. Definiamo messaggi, tono, direzione visiva e regole che rendono il brand coerente.","ACTIVATE":"ATTIVARE","The system moves into the real world: website, social, campaigns, e-commerce, advertising and physical touchpoints.":"Il sistema entra nel mondo reale: sito, social, campagne, e-commerce, advertising e punti di contatto fisici.","You leave with more than a visual identity. You have a direction the business can use to make decisions, communicate consistently and build the next digital or physical touchpoint without starting from zero every time.":"Ti ritrovi con più di un'identità visiva. Hai una direzione che il business può usare per decidere, comunicare in modo coerente e costruire il prossimo punto di contatto digitale o fisico senza ripartire ogni volta da zero.","MediaBay — WEBSITES & LANDING PAGES":"MediaBay — SITI WEB & LANDING PAGE","We design and develop websites that explain the business quickly, feel like the brand and turn attention into enquiries, bookings or sales.":"Progettiamo e sviluppiamo siti che spiegano rapidamente il business, comunicano il brand e trasformano l'attenzione in richieste, prenotazioni o vendite.","THE MEDIA BAY VIEW / WEBSITES & LANDING PAGES":"IL PUNTO DI VISTA MEDIA BAY / SITI WEB & LANDING PAGE","MAKE":"FAI","THE DIGITAL":"IL DIGITALE","DO THE WORK.":"FARE IL LAVORO.","The website is often the first serious interaction someone has with a business. It needs to explain, create confidence and make the next action obvious.":"Il sito è spesso la prima interazione seria che una persona ha con un business. Deve spiegare, creare fiducia e rendere ovvia la prossima azione.","We connect structure, UX, visual design, content and development instead of treating them as separate stages.":"Colleghiamo struttura, UX, visual design, contenuti e sviluppo invece di trattarli come fasi separate.","From a focused landing page to a complete business website, we build around the customer journey and the objective behind the project.":"Da una landing page focalizzata a un sito completo, costruiamo intorno al percorso del cliente e all'obiettivo del progetto.","THE WEBSITE":"IL SITO","IS NOT":"NON È","THE DECORATION.":"DECORAZIONE.","It is the digital environment where the brand becomes useful. Every page, interaction and call to action has a job: answer a question, build trust or move someone forward.":"È l'ambiente digitale in cui il brand diventa utile. Ogni pagina, interazione e call to action ha un compito: rispondere a una domanda, creare fiducia o portare qualcuno avanti.","ARCHITECTURE":"ARCHITETTURA","We organise pages, navigation, content and hierarchy around what customers need to understand first.":"Organizziamo pagine, navigazione, contenuti e gerarchie intorno a ciò che i clienti devono capire per prima cosa.","UX / UI":"UX / UI","We design interfaces that feel clear, distinctive and natural to use across desktop, tablet and mobile.":"Progettiamo interfacce chiare, distintive e naturali da usare su desktop, tablet e mobile.","We turn the approved direction into a responsive, performant and maintainable website.":"Trasformiamo la direzione approvata in un sito responsive, performante e facile da mantenere.","Forms, calls to action, landing flows and content are structured around the real business objective.":"Form, call to action, flussi delle landing e contenuti sono strutturati intorno al vero obiettivo del business.","WHAT WE BUILD / WEBSITES & LANDING PAGES":"COSA COSTRUIAMO / SITI WEB & LANDING PAGE","The service is one discipline inside a larger MediaBay system. We connect it to the other pieces when the project needs more than one channel.":"Il servizio è una disciplina all'interno di un sistema MediaBay più ampio. Lo colleghiamo agli altri elementi quando il progetto ha bisogno di più di un canale.","That means strategy can inform the website, the website can support campaigns, content can support the offer and technology can remove friction behind the scenes.":"Questo significa che la strategia può guidare il sito, il sito può supportare le campagne, i contenuti possono sostenere l'offerta e la tecnologia può eliminare attriti dietro le quinte.","Web design":"Web design","Responsive":"Responsive","FROM QUESTION TO BUILD.":"DALLA DOMANDA ALLA COSTRUZIONE.","Goals, audience, offer, current digital presence.":"Obiettivi, pubblico, offerta, presenza digitale attuale.","STRUCTURE":"STRUTTURARE","Sitemap, content hierarchy, user journeys.":"Sitemap, gerarchia dei contenuti, percorsi degli utenti.","DESIGN & BUILD":"DESIGN & SVILUPPO","Interface, responsive development, interactions.":"Interfaccia, sviluppo responsive, interazioni.","LAUNCH & REFINE":"LANCIARE & MIGLIORARE","QA, tracking, optimisation and next improvements.":"QA, tracciamento, ottimizzazione e prossimi miglioramenti.","A website that communicates in seconds, works on every screen and becomes an active part of the marketing system rather than a static brochure.":"Un sito che comunica in pochi secondi, funziona su ogni schermo e diventa parte attiva del sistema marketing invece di una brochure statica.","MediaBay — E-COMMERCE":"MediaBay — E-COMMERCE","We create commerce experiences that make products easier to discover, understand, trust and buy.":"Creiamo esperienze commerce che rendono i prodotti più facili da scoprire, capire, considerare affidabili e acquistare.","THE MEDIA BAY VIEW / E-COMMERCE":"IL PUNTO DI VISTA MEDIA BAY / E-COMMERCE","TURN":"TRASFORMA","ATTENTION INTO":"L'ATTENZIONE IN","COMMERCE.":"COMMERCE.","An online store is more than a catalogue with a checkout. It is a sequence of decisions: what appears first, what builds confidence and what removes friction.":"Uno store online è più di un catalogo con checkout. È una sequenza di decisioni: cosa appare prima, cosa crea fiducia e cosa elimina attriti.","We work across catalogue structure, product presentation, customer experience and conversion so the store makes sense to both people and the business operating it.":"Lavoriamo su struttura del catalogo, presentazione dei prodotti, esperienza cliente e conversione, così lo store funziona sia per le persone sia per il business che lo gestisce.","The goal is not simply to put products online. It is to create a commerce system that can evolve with the catalogue, campaigns and customers.":"L'obiettivo non è semplicemente mettere prodotti online. È creare un sistema commerce capace di evolvere con catalogo, campagne e clienti.","EVERY CLICK":"OGNI CLICK","HAS A":"HA UNA","REASON.":"RAGIONE.","Discovery should feel natural. Product information should answer objections. Checkout should not create unnecessary friction. The store should make buying easier without losing the identity of the brand.":"La scoperta deve essere naturale. Le informazioni sul prodotto devono rispondere alle obiezioni. Il checkout non deve creare attriti inutili. Lo store deve rendere l'acquisto più semplice senza perdere l'identità del brand.","STORE STRUCTURE":"STRUTTURA DELLO STORE","Categories, collections, navigation and product hierarchy designed around how customers discover products.":"Categorie, collezioni, navigazione e gerarchia dei prodotti progettate intorno a come i clienti scoprono i prodotti.","Product presentation, information and purchase confidence shaped around the questions people have before buying.":"Presentazione del prodotto, informazioni e fiducia nell'acquisto costruite intorno alle domande che le persone hanno prima di comprare.","Cart, checkout, calls to action and purchase flows designed to keep momentum and remove friction.":"Carrello, checkout, call to action e flussi d'acquisto progettati per mantenere il ritmo ed eliminare attriti.","STORE OS":"STORE OS","The operational layer behind the shop: product management, content and systems that keep the store moving.":"Il livello operativo dietro lo shop: gestione prodotti, contenuti e sistemi che tengono in movimento lo store.","WHAT WE BUILD / E-COMMERCE":"COSA COSTRUIAMO / E-COMMERCE","Online store":"Store online","Catalogue":"Catalogo","Collections":"Collezioni","Products, catalogue, customers and commercial objectives.":"Prodotti, catalogo, clienti e obiettivi commerciali.","DESIGN":"DESIGN","Store architecture, product experience and interface.":"Architettura dello store, esperienza prodotto e interfaccia.","Commerce implementation, responsive experience and QA.":"Implementazione commerce, esperienza responsive e QA.","GROW":"CRESCERE","Campaigns, optimisation, merchandising and iteration.":"Campagne, ottimizzazione, merchandising e iterazione.","A store where brand, product and customer experience work as one system — from the first product discovery to the final checkout.":"Uno store in cui brand, prodotto ed esperienza cliente lavorano come un unico sistema — dalla prima scoperta del prodotto fino al checkout finale.","MediaBay — SOCIAL MEDIA & CONTENT":"MediaBay — SOCIAL MEDIA & CONTENUTI","We create a recognisable communication system: strategy, formats, creative direction, campaigns and paid distribution.":"Creiamo un sistema di comunicazione riconoscibile: strategia, format, direzione creativa, campagne e distribuzione a pagamento.","THE MEDIA BAY VIEW / SOCIAL MEDIA & CONTENT":"IL PUNTO DI VISTA MEDIA BAY / SOCIAL MEDIA & CONTENUTI","RECOGNISABLE.":"RICONOSCIBILE.","Social should not become a factory for disconnected posts. The strongest communication has a point of view, a visual language and a reason to exist.":"I social non devono diventare una fabbrica di post scollegati. La comunicazione più forte ha un punto di vista, un linguaggio visivo e una ragione per esistere.","We define what each channel is for, what the brand should talk about and how ideas become repeatable formats without becoming repetitive.":"Definiamo a cosa serve ogni canale, di cosa deve parlare il brand e come le idee diventano format replicabili senza diventare ripetitivi.","Content then connects to the wider system: website, campaigns, offers, launches and the physical world.":"I contenuti si collegano poi al sistema più ampio: sito, campagne, offerte, lanci e mondo fisico.","CONSISTENCY":"COERENZA","WITHOUT":"SENZA","REPETITION.":"RIPETIZIONE.","A recognisable brand can change format, rhythm and subject without losing itself. We build the underlying language first, then use it to create content that can move.":"Un brand riconoscibile può cambiare formato, ritmo e argomento senza perdere se stesso. Costruiamo prima il linguaggio di base, poi lo usiamo per creare contenuti capaci di muoversi.","Audiences, channel roles, content pillars and objectives that give communication a clear direction.":"Pubblici, ruoli dei canali, pilastri dei contenuti e obiettivi che danno una direzione chiara alla comunicazione.","CONTENT SYSTEM":"SISTEMA DEI CONTENUTI","Repeatable visual and editorial formats that make the brand recognisable while leaving room for ideas.":"Format visivi ed editoriali replicabili che rendono il brand riconoscibile lasciando spazio alle idee.","Concepts, creative direction and coordinated assets built around a specific launch, offer or objective.":"Concept, direzione creativa e asset coordinati costruiti intorno a un lancio, un'offerta o un obiettivo specifico.","Targeted distribution connected to the same creative idea and the business result it is designed to support.":"Distribuzione mirata collegata alla stessa idea creativa e al risultato di business che deve supportare.","WHAT WE BUILD / SOCIAL MEDIA & CONTENT":"COSA COSTRUIAMO / SOCIAL MEDIA & CONTENUTI","Social strategy":"Strategia social","Content system":"Sistema dei contenuti","Editorial":"Editoriale","Paid social":"Social a pagamento","LISTEN":"ASCOLTARE","Audience, brand, channels, competitors and context.":"Pubblico, brand, canali, concorrenti e contesto.","Pillars, formats, voice, visual direction and rhythm.":"Pilastri, format, voce, direzione visiva e ritmo.","Content, campaigns and channel-ready assets.":"Contenuti, campagne e asset pronti per i canali.","AMPLIFY":"AMPLIFICARE","Distribution, testing, learning and refinement.":"Distribuzione, test, apprendimento e miglioramento.","A communication system that gives the brand something useful and recognisable to say — consistently, without turning the feed into noise.":"Un sistema di comunicazione che dà al brand qualcosa di utile e riconoscibile da dire — con coerenza, senza trasformare il feed in rumore.","MediaBay — SEO, GOOGLE & ADVERTISING":"MediaBay — SEO, GOOGLE & ADVERTISING","We connect search visibility, Google presence, landing pages and advertising around real business actions.":"Colleghiamo visibilità sui motori di ricerca, presenza Google, landing page e advertising intorno ad azioni di business reali.","THE MEDIA BAY VIEW / SEO, GOOGLE & ADVERTISING":"IL PUNTO DI VISTA MEDIA BAY / SEO, GOOGLE & ADVERTISING","FOUND.":"TROVATO.","BE CHOSEN.":"FATTI SCEGLIERE.","Visibility only matters when it reaches the right people. We connect organic search, Google presence and paid acquisition with the experience that happens after the click.":"La visibilità conta solo quando raggiunge le persone giuste. Colleghiamo ricerca organica, presenza Google e acquisizione a pagamento con l'esperienza che avviene dopo il click.","We look at how the business is understood by search engines and by customers: structure, content, local information, intent, landing pages and calls to action.":"Guardiamo come il business viene compreso dai motori di ricerca e dai clienti: struttura, contenuti, informazioni locali, intento, landing page e call to action.","The result is a connected acquisition layer rather than isolated marketing activities.":"Il risultato è un livello di acquisizione connesso, non un insieme di attività marketing isolate.","TRAFFIC":"TRAFFICO","THE GOAL.":"L'OBIETTIVO.","The useful question is what happens after discovery. A search should lead to a page that answers the need, builds confidence and gives the visitor a relevant next step.":"La domanda utile è cosa succede dopo la scoperta. Una ricerca dovrebbe portare a una pagina che risponde al bisogno, crea fiducia e offre al visitatore un passo successivo rilevante.","Technical and content improvements that help search engines and customers understand what the business offers.":"Miglioramenti tecnici e dei contenuti che aiutano motori di ricerca e clienti a capire cosa offre il business.","GOOGLE PRESENCE":"PRESENZA GOOGLE","A clear, useful local and search presence that gives people the information they need when they are looking.":"Una presenza locale e nella ricerca chiara e utile, che dà alle persone le informazioni di cui hanno bisogno quando stanno cercando.","ADVERTISING":"ADVERTISING","Campaigns built around audience, objective, creative, budget and a destination designed to convert attention.":"Campagne costruite intorno a pubblico, obiettivo, creatività, budget e una destinazione progettata per trasformare l'attenzione.","Measurement that closes the loop between visibility, behaviour and business action so decisions improve over time.":"Misurazioni che chiudono il ciclo tra visibilità, comportamento e azione di business, così le decisioni migliorano nel tempo.","WHAT WE BUILD / SEO, GOOGLE & ADVERTISING":"COSA COSTRUIAMO / SEO, GOOGLE & ADVERTISING","Google Business":"Google Business","Search":"Ricerca","Paid media":"Media a pagamento","Search intent, demand, audience and current visibility.":"Intento di ricerca, domanda, pubblico e visibilità attuale.","OPTIMISE":"OTTIMIZZARE","Site structure, content and Google presence.":"Struttura del sito, contenuti e presenza Google.","CAMPAIGN":"CAMPAGNA","Ads, audiences, creative and landing flows.":"Ads, pubblici, creatività e flussi delle landing.","LEARN":"IMPARARE","Measure, refine, test and repeat.":"Misurare, migliorare, testare e ripetere.","A connected acquisition layer where being found and being chosen are part of the same customer journey.":"Un livello di acquisizione connesso in cui essere trovati ed essere scelti fanno parte dello stesso percorso cliente.","MediaBay — AI & AUTOMATION":"MediaBay — AI & AUTOMAZIONE","We apply AI where it can remove friction, accelerate work or create a useful new capability.":"Applichiamo l'AI dove può eliminare attriti, accelerare il lavoro o creare una nuova capacità utile.","THE MEDIA BAY VIEW / AI & AUTOMATION":"IL PUNTO DI VISTA MEDIA BAY / AI & AUTOMAZIONE","BUILD AI":"COSTRUIRE L'AI","AROUND THE":"INTORNO AL","BUSINESS.":"BUSINESS.","We do not add AI because it is fashionable. We start with the process, find the friction and identify where technology can create a measurable advantage.":"Non aggiungiamo l'AI perché è di moda. Partiamo dal processo, troviamo l'attrito e identifichiamo dove la tecnologia può creare un vantaggio misurabile.","That can mean an assistant that answers questions, an agent that performs a controlled task, an automation that removes repetitive work or a new workflow connecting people, data and tools.":"Può significare un assistente che risponde alle domande, un agente che esegue un'attività controllata, un'automazione che elimina lavoro ripetitivo o un nuovo workflow che collega persone, dati e strumenti.","The technology stays in service of the business. Human control, clear boundaries and useful outcomes come first.":"La tecnologia resta al servizio del business. Prima vengono controllo umano, confini chiari e risultati utili.","START WITH":"PARTI DALL'","THE FRICTION.":"ATTRITO.","NOT THE TOOL.":"NON DALLO STRUMENTO.","The right AI project begins with a real problem. We map the work, decide what should remain human and then introduce automation or intelligence where it actually improves the process.":"Il progetto AI giusto parte da un problema reale. Mappiamo il lavoro, decidiamo cosa deve restare umano e poi introduciamo automazione o intelligenza dove migliora davvero il processo.","Customer-facing or internal assistants for information, support, guidance and repetitive questions.":"Assistenti rivolti ai clienti o interni per informazioni, supporto, guida e domande ripetitive.","Task-oriented systems designed to execute defined workflows while keeping the right controls around them.":"Sistemi orientati alle attività, progettati per eseguire workflow definiti mantenendo i controlli necessari.","Recurring actions connected so people spend less time copying, checking and moving information between tools.":"Azioni ricorrenti collegate, così le persone dedicano meno tempo a copiare, controllare e spostare informazioni tra strumenti.","Process design that places AI, automation, integrations and human decisions in the right sequence.":"Progettazione dei processi che colloca AI, automazione, integrazioni e decisioni umane nella sequenza corretta.","WHAT WE BUILD / AI & AUTOMATION":"COSA COSTRUIAMO / AI & AUTOMAZIONE","AI assistants":"Assistenti AI","AI agents":"Agenti AI","Integrations":"Integrazioni","AI operations":"Operazioni AI","People, tools, information, repetitive work and friction.":"Persone, strumenti, informazioni, lavoro ripetitivo e attriti.","Choose the right AI, automation, integration and controls.":"Scegliere AI, automazione, integrazione e controlli giusti.","Develop the assistant, agent or workflow.":"Sviluppare l'assistente, l'agente o il workflow.","IMPROVE":"MIGLIORARE","Observe real use, refine the system and expand where it works.":"Osservare l'uso reale, migliorare il sistema ed estenderlo dove funziona.","Useful AI infrastructure that stays in the background while the business becomes faster, more responsive or easier to operate.":"Un'infrastruttura AI utile che resta sullo sfondo mentre il business diventa più veloce, reattivo o facile da gestire.","MediaBay — MOBILITY & PHYGITAL MARKETING":"MediaBay — MOBILITÀ & MARKETING PHYGITAL","The MediaBay evolution of the Mediabike DNA: physical visibility, mobility and urban activation connected to digital communication.":"L'evoluzione MediaBay del DNA Mediabike: visibilità fisica, mobilità e attivazione urbana collegate alla comunicazione digitale.","THE MEDIA BAY VIEW / MOBILITY & PHYGITAL MARKETING":"IL PUNTO DI VISTA MEDIA BAY / MOBILITÀ & MARKETING PHYGITAL","MOVE.":"MUOVERE.","Some messages need to leave the screen. Mobility turns physical presence into a media channel: visible, local, flexible and connected to the places where people actually are.":"Alcuni messaggi devono uscire dallo schermo. La mobilità trasforma la presenza fisica in un canale media: visibile, locale, flessibile e connesso ai luoghi in cui le persone si trovano davvero.","MediaBay carries forward the physical advertising DNA of Mediabike and extends it with bikes, scooters, mobile formats, urban activation and digital journeys.":"MediaBay porta avanti il DNA della pubblicità fisica di Mediabike e lo estende con bici, scooter, formati mobili, attivazione urbana e percorsi digitali.","The physical moment can then continue online through QR experiences, landing pages, social, offers or measurable actions.":"Il momento fisico può poi continuare online attraverso esperienze QR, landing page, social, offerte o azioni misurabili.","ATTENTION.":"ATTENZIONE.","DIGITAL CONTINUATION.":"CONTINUITÀ DIGITALE.","A campaign can start on a phone and finish in the street. It can also start in the street and continue on a phone. Phygital connects those moments.":"Una campagna può iniziare sul telefono e finire in strada. Oppure può iniziare in strada e continuare sul telefono. Il phygital collega questi momenti.","Physical advertising designed to travel through the places and routes where the audience is present.":"Pubblicità fisica progettata per muoversi nei luoghi e lungo i percorsi in cui si trova il pubblico.","BIKES & SCOOTERS":"BICI & SCOOTER","Mobile formats for local visibility, campaigns, events and brand activation.":"Formati mobili per visibilità locale, campagne, eventi e attivazione del brand.","Campaigns brought into streets and physical environments to create a real-world brand moment.":"Campagne portate nelle strade e negli ambienti fisici per creare un momento reale di brand.","DIGITAL LAYER":"LIVELLO DIGITALE","QR journeys, landing pages, social and digital actions that give physical attention somewhere to go.":"Percorsi QR, landing page, social e azioni digitali che danno alla visibilità fisica una destinazione.","WHAT WE BUILD / MOBILITY & PHYGITAL MARKETING":"COSA COSTRUIAMO / MOBILITÀ & MARKETING PHYGITAL","Mobile media":"Media mobile","Urban activation":"Attivazione urbana","QR journeys":"Percorsi QR","Audience, place, route, timing and objective.":"Pubblico, luogo, percorso, tempistica e obiettivo.","Format, message, mobility and physical presence.":"Formato, messaggio, mobilità e presenza fisica.","QR, landing page, social or digital action.":"QR, landing page, social o azione digitale.","MEASURE":"MISURARE","Response, learnings and the next move.":"Risposta, apprendimenti e prossima mossa.","A phygital experience that makes the brand visible in the real world and gives that visibility a measurable digital continuation.":"Un'esperienza phygital che rende il brand visibile nel mondo reale e dà a quella visibilità una continuazione digitale misurabile.","STRATEGY & BRAND":"STRATEGIA & BRAND","WEBSITES & LANDING PAGES":"SITI WEB & LANDING PAGE","WEBSITES & LANDING":"SITI WEB & LANDING","E-COMMERCE":"E-COMMERCE","SOCIAL & CONTENT":"SOCIAL & CONTENUTI","SEO, GOOGLE & ADS":"SEO, GOOGLE & ADS","AI & AUTOMATION":"AI & AUTOMAZIONE","MOBILITY & PHYGITAL":"MOBILITÀ & PHYGITAL","MEDIA BAY · PHYGITAL MARKETING":"MEDIA BAY · MARKETING PHYGITAL","MediaBay — Thank you":"MediaBay — Grazie","REQUEST RECEIVED / MEDIA BAY":"RICHIESTA RICEVUTA / MEDIA BAY","WE'LL":"TI","BE IN TOUCH.":"RICONTATTEREMO.","Your message is on its way. We’ll review the project and get back to you.":"Il tuo messaggio è stato inviato. Lo esamineremo e ti ricontatteremo.","← Back to MediaBay":"← Torna a MediaBay","OUR":"LA NOSTRA","MEETS THE FUTURE.":"INCONTRA CULTURA E TECNOLOGIA.","Experience matters. Culture gives it context. Technology gives it new possibilities. MediaBay brings these three dimensions together to build what businesses need today and what they will need next.":"L’esperienza ci dà le basi. La cultura ci insegna a leggere il contesto. La tecnologia apre nuove possibilità. MediaBay unisce queste tre dimensioni per costruire ciò che serve oggi e ciò che servirà domani.","EXPERIENCE.":"ESPERIENZA.","CULTURE.":"CULTURA.","TECHNOLOGY.":"TECNOLOGIA.","We come from real experience: marketing, communication, design, digital products and business. We combine what we have learned with a culture that stays curious, practical and open to change.":"Veniamo dall’esperienza reale: marketing, comunicazione, design, prodotti digitali e business. Uniamo ciò che abbiamo imparato a una cultura curiosa, concreta e aperta al cambiamento.","Then we bring in technology — from digital platforms to AI and automation — where it can create a real advantage, not simply because it is new.":"Poi entra la tecnologia — dalle piattaforme digitali all’AI e all’automazione — quando può creare un vantaggio reale, non semplicemente perché è nuova.","Experience gives us the foundation. Culture keeps us moving. Technology opens what comes next.":"L’esperienza ci dà le basi. La cultura ci fa evolvere. La tecnologia apre ciò che viene dopo.","WHAT YOU NEED.":"NON DEVI SAPERE COSA TI SERVE.","BEFORE IT":"","BECOMES A PROBLEM.":""};
-  const KEY = 'mediabay-language';
-  const SKIP = new Set(['SCRIPT','STYLE','NOSCRIPT']);
-  const ATTRS = ['placeholder','aria-label','title'];
-  function translateAttrs(lang){
-    document.querySelectorAll(ATTRS.map(a=>'['+a+']').join(',')).forEach(el=>{
-      ATTRS.forEach(attr=>{
-        if(!el.hasAttribute(attr)) return;
-        const raw=el.getAttribute(attr);
-        if(!el.__mbAttrs) el.__mbAttrs={};
-        if(el.__mbAttrs[attr]===undefined) el.__mbAttrs[attr]=raw;
-        if(lang==='it' && IT[raw]) el.setAttribute(attr,IT[raw]);
-        if(lang==='en') el.setAttribute(attr,el.__mbAttrs[attr]);
-      });
-    });
-    const title=document.querySelector('title');
-    if(title){
-      if(!title.__mbOriginal) title.__mbOriginal=title.textContent;
-      title.textContent=lang==='it' && IT[title.__mbOriginal] ? IT[title.__mbOriginal] : title.__mbOriginal;
-    }
-  }
-  function walk(node){
-    if(node.nodeType===3){
-      const raw=node.nodeValue;
-      const norm=raw.replace(/\s+/g,' ').trim();
-      if(Object.prototype.hasOwnProperty.call(IT,norm)){
-        node.__mbOriginal = raw;
-        const lead=raw.match(/^\s*/)?.[0]||'';
-        const trail=raw.match(/\s*$/)?.[0]||'';
-        node.nodeValue=lead+IT[norm]+trail;
-      }
-      return;
-    }
-    if(node.nodeType!==1 || SKIP.has(node.tagName)) return;
-    for(const c of [...node.childNodes]) walk(c);
-  }
-  function restore(){
-    document.querySelectorAll('*').forEach(el=>{
-      for(const n of [...el.childNodes]){
-        if(n.nodeType===3 && n.__mbOriginal!==undefined){
-          n.nodeValue=n.__mbOriginal;
-          delete n.__mbOriginal;
-        }
-      }
-    });
-  }
-  function setLang(lang){
-    if(lang==='it'){ restore(); walk(document.body); }
-    else restore();
-    translateAttrs(lang);
-    document.documentElement.lang=lang;
-    localStorage.setItem(KEY,lang);
-    document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
-  }
-  window.MediaBayLang={setLang};
-  document.addEventListener('DOMContentLoaded',function(){
-    const saved=localStorage.getItem(KEY)||'it';
-    setLang(saved);
-    document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
-  });
-})();
-</script>
-
-
-<script id="mediabay-form-handler">
-(function(){
-  function initForm(form){
-    if(form.dataset.mbFormReady) return;
-    form.dataset.mbFormReady='1';
-
-    form.addEventListener('submit', async function(e){
-      e.preventDefault();
-
-      const button = form.querySelector('button[type="submit"], input[type="submit"]');
-      const original = button ? button.textContent : '';
-      if(button){ button.disabled=true; button.textContent='Sending…'; }
-
-      const data = {};
-      new FormData(form).forEach((value,key)=>{ data[key]=value; });
-
-      // FormSubmit AJAX endpoint: submissions are delivered to info@mediabay.it.
-      // The first live submission may require one-time email activation.
-      try{
-        const response = await fetch('https://formsubmit.co/ajax/info@mediabay.it', {
-          method:'POST',
-          headers:{
-            'Content-Type':'application/json',
-            'Accept':'application/json'
-          },
-          body:JSON.stringify(data)
-        });
-
-        const result = await response.json().catch(()=>({}));
-        if(!response.ok || result.success === false){
-          throw new Error('Submission failed');
-        }
-
-        window.location.href = '/thank-you.html';
-      }catch(err){
-        if(button){
-          button.disabled=false;
-          button.textContent=original;
-        }
-        const old=form.querySelector('.form-error');
-        if(old) old.remove();
-        const msg=document.createElement('div');
-        msg.className='form-error';
-        msg.textContent='We could not send the request. Please try again or email info@mediabay.it.';
-        form.appendChild(msg);
-      }
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function(){
-    document.querySelectorAll('form[name="mediabay-contact"]').forEach(initForm);
-  });
-})();
-</script>
-
-
-<script>
-/* V45 — automatic header logo contrast */
-(function(){
-  const header=document.querySelector('.site-header, .header');
-  if(!header) return;
-  function updateLogo(){
-    const y=header.getBoundingClientRect().height/2;
-    const sections=[...document.querySelectorAll('section, main, .hero, .cta, .deliverables, .service-nav')];
-    let active=null;
-    for(const el of sections){
-      const r=el.getBoundingClientRect();
-      if(r.top<=y && r.bottom>y){active=el;break;}
-    }
-    if(!active){header.classList.remove('logo-on-green');return;}
-    const cls=(active.className||'').toString().toLowerCase();
-    const bg=getComputedStyle(active).backgroundColor;
-    const greenLike=cls.includes('green')||cls.includes('acid')||cls.includes('forest')||cls.includes('dark')||
-      (bg && bg!=='rgba(0, 0, 0, 0)' && bg!=='transparent' && (()=>{
-        const m=bg.match(/rgba?\(([^)]+)\)/); if(!m)return false;
-        const v=m[1].split(',').map(x=>parseFloat(x)); const r=v[0],g=v[1],b=v[2];
-        return g>r*1.12 && g>b*1.08 && g<255 || (r<90&&g<110&&b<100);
-      })());
-    header.classList.toggle('logo-on-green',!!greenLike);
-  }
-  let ticking=false;
-  const run=()=>{ticking=false;updateLogo()};
-  addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(run)}},{passive:true});
-  addEventListener('resize',run,{passive:true});
-  window.addEventListener('load',()=>setTimeout(run,80));
-  run();
-})();
-</script>
-
-
-
-
-
 
 </body>
 </html>
