@@ -87,3 +87,9 @@ Logo asset: `assets/logo-flipco.png` (exact filename/case). All site references 
 ## V15
 - Reordered the final sections so the original Flip&Co store footer comes immediately before the MediaBay commercial offer.
 - The MediaBay offer is now the absolute final section of the page.
+
+
+## V16
+- Added a transparent note in the MediaBay closing section explaining that the demo was created from information found online.
+- Added an invitation to send corrections, extra information, or requests for a more precise version.
+- Added separate CTAs for contacting MediaBay and visiting the brief page.
