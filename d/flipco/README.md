@@ -60,3 +60,7 @@ Logo asset: `assets/logo-flipco.png` (exact filename/case). All site references 
 - Stronger semantic hierarchy, curiosity, sensory language, micro-commitments and action-oriented CTAs.
 - Reworked all brand-page copy and selection modules.
 - Section naming refined: THE EDIT / BRAND ATLAS.
+
+
+## V11 — Store-first copy
+The website is positioned as a digital storefront: discover the selection online, then visit or contact Flip&Co.
