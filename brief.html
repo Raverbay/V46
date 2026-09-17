@@ -1,39 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Client Brief · MediaBay</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MediaBay — Client Brief</title>
 <meta name="robots" content="noindex,nofollow,noarchive">
 <style>
-:root{--bg:#f1f0e8;--ink:#10110f;--muted:#6d6d66;--line:rgba(16,17,15,.2);--acid:#b7ff18}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit}.brief-header{height:86px;padding:0 5.5vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(241,240,232,.92);backdrop-filter:blur(12px);z-index:5}
-.brand{font-weight:800;letter-spacing:-.06em;font-size:24px}.private{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-main{max-width:1050px;margin:auto;padding:9vw 5.5vw 8vw}.eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-h1{font-size:clamp(54px,9vw,130px);line-height:.84;letter-spacing:-.075em;margin:25px 0 35px;max-width:900px}
-.intro{font-size:clamp(18px,2vw,25px);line-height:1.4;max-width:680px;margin-bottom:80px}
-form{border-top:1px solid var(--ink)}fieldset{border:0;padding:65px 0;margin:0;border-bottom:1px solid var(--line)}
-.legend{display:flex;justify-content:space-between;gap:30px;margin-bottom:38px}.num{font-size:11px;letter-spacing:.16em}.section-title{font-size:clamp(28px,4vw,48px);font-weight:700;letter-spacing:-.05em}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px}.full{grid-column:1/-1}
-label{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:9px}
-input,textarea,select{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;padding:14px 0;font:inherit;font-size:16px;outline:0;color:var(--ink);border-radius:0}
-input:focus,textarea:focus,select:focus{border-bottom-color:var(--ink)}textarea{min-height:130px;resize:vertical}
-.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:13px 28px}.check{display:flex;align-items:center;gap:10px;font-size:15px}.check input{width:auto}
-.drop{border:1px dashed rgba(16,17,15,.35);padding:28px;margin-top:10px}.drop input{border:0;padding:0}.hint{font-size:12px;line-height:1.5;color:var(--muted);margin-top:12px}
-.submit-wrap{padding:65px 0 20px;display:flex;justify-content:space-between;align-items:end;gap:30px}.submit-note{max-width:430px;font-size:14px;line-height:1.5;color:var(--muted)}
-button{border:0;background:var(--ink);color:var(--bg);padding:22px 30px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;min-width:210px}
-button:hover{background:var(--acid);color:var(--ink)}
-.success{display:none;padding:30px 0;border-top:1px solid var(--ink)}.success h2{font-size:clamp(42px,7vw,90px);line-height:.88;letter-spacing:-.07em;margin:0 0 20px}.success p{font-size:17px;line-height:1.5;max-width:600px}
-@media(max-width:700px){.brief-header{height:68px;padding:0 6vw}.brand{font-size:20px}.private{font-size:8px}main{padding:18vw 6vw 15vw}h1{font-size:18vw;margin-top:22px}.intro{font-size:18px;margin-bottom:55px}fieldset{padding:45px 0}.grid,.checks{grid-template-columns:1fr}.full{grid-column:auto}.legend{display:block}.section-title{margin-top:10px}.submit-wrap{display:block}.submit-note{margin-bottom:25px}button{width:100%}}
+:root{--g:#b7ff18;--g2:#8bcf61;--b:#e9e2d3;--d:#10110f;--line:#10110f2e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--b);color:var(--d);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}a{color:inherit}
+.site-header{position:fixed;z-index:9000;left:0;top:0;width:100%;height:76px;padding:0 30px;display:flex;align-items:center;justify-content:space-between;color:#fff;border-bottom:1px solid #ffffff30;mix-blend-mode:difference}
+.lang{display:flex;gap:12px;font-size:10px;letter-spacing:.18em}.lang a{text-decoration:none}.lang .active{text-decoration:underline;text-underline-offset:4px}
+.header-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:31px;height:34px;object-fit:contain}.menu-icon{width:30px;height:17px;position:relative}.menu-icon i{position:absolute;left:0;width:100%;height:1px;background:currentColor}.menu-icon i:first-child{top:4px}.menu-icon i:last-child{top:13px}
+.hero{min-height:100svh;background:var(--g);padding:150px 5.5vw 70px;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.kicker,.section-meta,.field label,.smallcaps{font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.hero-top{display:flex;justify-content:space-between;gap:30px}.hero-top span:last-child{text-align:right}
+.hero h1{font-size:clamp(58px,10.5vw,160px);line-height:.82;letter-spacing:-.085em;margin:10vh 0 7vh;max-width:1050px}
+.hero h1 em{font-style:normal;display:block;margin-left:9vw}
+.hero p{font-size:clamp(18px,2.2vw,27px);line-height:1.35;max-width:700px;margin:0}
+.hero-bottom{display:flex;justify-content:space-between;align-items:end;margin-top:70px}.count{font-size:10px;letter-spacing:.2em}.arrow{font-size:28px}
+.intro{background:var(--b);padding:110px 5.5vw 90px}.intro-grid{display:grid;grid-template-columns:1fr 2fr;gap:7vw}.intro h2{font-size:clamp(38px,6vw,82px);line-height:.9;letter-spacing:-.07em;margin:0}.intro-copy{font-size:clamp(19px,2.3vw,29px);line-height:1.35;max-width:760px}.intro-copy p{margin:0 0 25px}.intro-copy strong{font-weight:700}
+form{background:var(--b);padding:0 5.5vw 110px}
+fieldset{border:0;border-top:1px solid var(--d);padding:58px 0 70px;margin:0}
+.legend{display:flex;justify-content:space-between;gap:30px;margin-bottom:48px}.section-title{font-size:clamp(32px,5vw,72px);font-weight:800;line-height:.88;letter-spacing:-.07em;max-width:850px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:35px 55px}.full{grid-column:1/-1}.field label{display:block;margin-bottom:12px;color:#55584f}.field input,.field textarea,.field select{width:100%;border:0;border-bottom:1px solid #10110f66;background:transparent;color:var(--d);padding:14px 0 13px;font:inherit;font-size:17px;outline:none;border-radius:0}.field input:focus,.field textarea:focus,.field select:focus{border-bottom-color:var(--d)}textarea{min-height:125px;resize:vertical}
+.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}.choice{position:relative;border-bottom:1px solid var(--line);padding:20px 12px 20px 0;display:flex;align-items:center;gap:12px;font-size:16px}.choice input{accent-color:var(--d);width:17px;height:17px}
+.upload{border:1px dashed #10110f66;padding:32px;margin-top:8px}.upload input{width:100%;font:inherit}.hint{font-size:12px;line-height:1.5;color:#686b62;margin-top:12px}
+.submit{background:var(--g);margin:0 -5.5vw;padding:85px 5.5vw;display:flex;justify-content:space-between;align-items:end;gap:50px}.submit-copy{max-width:600px}.submit-copy .smallcaps{margin-bottom:22px}.submit-copy h2{font-size:clamp(45px,7vw,100px);line-height:.85;letter-spacing:-.075em;margin:0}.submit-copy p{font-size:15px;line-height:1.5;max-width:530px;margin:28px 0 0}.submit button{border:1px solid var(--d);background:var(--d);color:var(--g);font:inherit;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:23px 30px;min-width:225px;cursor:pointer}.submit button:hover{background:transparent;color:var(--d)}
+.success{display:none;background:var(--g);min-height:100svh;padding:150px 5.5vw 80px}.success .smallcaps{margin-bottom:25px}.success h1{font-size:clamp(65px,12vw,180px);line-height:.8;letter-spacing:-.09em;margin:0 0 40px}.success p{font-size:clamp(20px,2.5vw,30px);line-height:1.35;max-width:650px}.success a{display:inline-block;margin-top:35px;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+@media(max-width:700px){
+.site-header{height:64px;padding:0 20px}.header-logo{width:29px;height:32px}.hero{padding:115px 6vw 40px;min-height:100svh}.hero-top{font-size:9px}.hero h1{font-size:16.5vw;line-height:.83;margin:18vh 0 11vh}.hero h1 em{margin-left:8vw}.hero p{font-size:18px;line-height:1.42}.hero-bottom{margin-top:55px}.intro{padding:72px 6vw 65px}.intro-grid{display:block}.intro h2{font-size:15vw;margin-bottom:45px}.intro-copy{font-size:19px}.grid{grid-template-columns:1fr;gap:30px}.full{grid-column:auto}.choice-grid{grid-template-columns:1fr}.legend{display:block;margin-bottom:35px}.section-title{font-size:12vw;margin-top:12px}form{padding:0 6vw 75px}fieldset{padding:45px 0 55px}.submit{margin:0 -6vw;padding:60px 6vw;display:block}.submit-copy h2{font-size:15vw}.submit button{width:100%;margin-top:35px}.success{padding:115px 6vw 60px}.success h1{font-size:18vw}
+}
 </style>
 </head>
 <body>
-<header class="brief-header"><a class="brand" href="/">MEDIABAY</a><div class="private">CLIENT BRIEF · PRIVATE PAGE</div></header>
-<main>
-<div class="eyebrow">MEDIA BAY / DIGITAL PRESENCE</div>
-<h1>LET'S BUILD<br>YOUR NEXT STEP.</h1>
-<p class="intro">Raccontaci la tua attività. Non servono testi perfetti: ci bastano le informazioni giuste per costruire la tua demo.</p>
+<header class="site-header">
+  <div class="lang"><a class="active" href="#" onclick="return false">IT</a><a href="#" onclick="return false">EN</a></div>
+  <a href="/"><img class="header-logo" src="mediabay-symbol-transparent.png" alt="MediaBay"></a>
+  <div class="menu-icon"><i></i><i></i></div>
+</header>
+
+<main id="briefPage">
+<section class="hero">
+  <div class="hero-top"><span>01 / CLIENT BRIEF</span><span>LET'S BUILD ↘</span></div>
+  <div>
+    <div class="kicker">MEDIA BAY / DIGITAL PRESENCE</div>
+    <h1>RACCONTACI<br><em>IL TUO BUSINESS.</em></h1>
+    <p>Non servono testi perfetti. Ci servono le informazioni giuste per capire dove vuoi arrivare e costruire la tua demo.</p>
+  </div>
+  <div class="hero-bottom"><span class="count">01 / 08</span><span class="arrow">↓</span></div>
+</section>
+
+<section class="intro">
+  <div class="intro-grid">
+    <h2>PARTIAMO<br>DA TE.</h2>
+    <div class="intro-copy">
+      <p>Raccontaci la tua attività con le tue parole. <strong>Al copy, alla struttura e al design pensiamo noi.</strong></p>
+      <p>Puoi allegare logo, fotografie, cataloghi, menu, listini e qualsiasi materiale possa aiutarci a capire il tuo mondo.</p>
+    </div>
+  </div>
+</section>
 
 <form id="clientBrief" action="https://formsubmit.co/info@mediabay.it" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="_subject" value="MediaBay · Nuovo Client Brief">
@@ -41,88 +66,90 @@ button:hover{background:var(--acid);color:var(--ink)}
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_next" value="https://mediabay.it/brief.html?sent=1">
 
-<fieldset><div class="legend"><span class="num">01</span><span class="section-title">LA TUA ATTIVITÀ</span></div>
+<fieldset><div class="legend"><span class="section-meta">02</span><div class="section-title">LA TUA ATTIVITÀ</div></div>
 <div class="grid">
-<div><label>Nome attività *</label><input name="Nome attività" required></div>
-<div><label>Nome referente *</label><input name="Referente" required></div>
-<div><label>Settore *</label><input name="Settore" required></div>
-<div><label>Da quanto tempo?</label><input name="Anni di attività"></div>
-<div class="full"><label>Descrivi brevemente la tua attività *</label><textarea name="Descrizione attività" required></textarea></div>
-<div><label>Indirizzo</label><input name="Indirizzo"></div><div><label>Telefono</label><input name="Telefono"></div>
-<div><label>WhatsApp</label><input name="WhatsApp"></div><div><label>Email *</label><input type="email" name="Email" required></div>
+<div class="field"><label>Nome attività *</label><input name="Nome attività" required></div>
+<div class="field"><label>Nome referente *</label><input name="Referente" required></div>
+<div class="field"><label>Settore *</label><input name="Settore" required></div>
+<div class="field"><label>Da quanto tempo?</label><input name="Anni di attività"></div>
+<div class="field full"><label>Descrivi brevemente la tua attività *</label><textarea name="Descrizione attività" required></textarea></div>
+<div class="field"><label>Indirizzo</label><input name="Indirizzo"></div>
+<div class="field"><label>Telefono</label><input name="Telefono"></div>
+<div class="field"><label>WhatsApp</label><input name="WhatsApp"></div>
+<div class="field"><label>Email *</label><input type="email" name="Email" required></div>
 </div></fieldset>
 
-<fieldset><div class="legend"><span class="num">02</span><span class="section-title">IL BUSINESS</span></div>
+<fieldset><div class="legend"><span class="section-meta">03</span><div class="section-title">IL BUSINESS</div></div>
 <div class="grid">
-<div class="full"><label>Quali prodotti o servizi offri? *</label><textarea name="Prodotti e servizi" required></textarea></div>
-<div class="full"><label>Su cosa vuoi puntare maggiormente?</label><textarea name="Focus business"></textarea></div>
-<div class="full"><label>Cosa ti distingue dai tuoi concorrenti?</label><textarea name="Differenziazione"></textarea></div>
-<div><label>Chi sono i tuoi clienti?</label><textarea name="Target"></textarea></div><div><label>Qual è il tuo punto di forza?</label><textarea name="Punto di forza"></textarea></div>
+<div class="field full"><label>Quali prodotti o servizi offri? *</label><textarea name="Prodotti e servizi" required></textarea></div>
+<div class="field full"><label>Su cosa vuoi puntare maggiormente?</label><textarea name="Focus business"></textarea></div>
+<div class="field full"><label>Cosa ti distingue dai tuoi concorrenti?</label><textarea name="Differenziazione"></textarea></div>
+<div class="field"><label>Chi sono i tuoi clienti?</label><textarea name="Target"></textarea></div>
+<div class="field"><label>Qual è il tuo punto di forza?</label><textarea name="Punto di forza"></textarea></div>
 </div></fieldset>
 
-<fieldset><div class="legend"><span class="num">03</span><span class="section-title">OBIETTIVO</span></div>
-<label>Cosa vuoi ottenere principalmente dal nuovo sito?</label>
-<div class="checks">
-<label class="check"><input type="checkbox" name="Obiettivo" value="Far conoscere l'attività"> Far conoscere l'attività</label>
-<label class="check"><input type="checkbox" name="Obiettivo" value="Ricevere contatti"> Ricevere contatti</label>
-<label class="check"><input type="checkbox" name="Obiettivo" value="WhatsApp"> Ricevere messaggi WhatsApp</label>
-<label class="check"><input type="checkbox" name="Obiettivo" value="Portare clienti in negozio"> Portare clienti nel punto vendita</label>
-<label class="check"><input type="checkbox" name="Obiettivo" value="Prenotazioni"> Ricevere prenotazioni</label>
-<label class="check"><input type="checkbox" name="Obiettivo" value="Presentare prodotti e servizi"> Presentare prodotti e servizi</label>
+<fieldset><div class="legend"><span class="section-meta">04</span><div class="section-title">COSA DEVE FARE IL SITO?</div></div>
+<label class="smallcaps">Scegli gli obiettivi principali</label>
+<div class="choice-grid">
+<label class="choice"><input type="checkbox" name="Obiettivo" value="Far conoscere l'attività"> Far conoscere l'attività</label>
+<label class="choice"><input type="checkbox" name="Obiettivo" value="Ricevere contatti"> Ricevere contatti</label>
+<label class="choice"><input type="checkbox" name="Obiettivo" value="WhatsApp"> Ricevere messaggi WhatsApp</label>
+<label class="choice"><input type="checkbox" name="Obiettivo" value="Portare clienti in negozio"> Portare clienti nel punto vendita</label>
+<label class="choice"><input type="checkbox" name="Obiettivo" value="Prenotazioni"> Ricevere prenotazioni</label>
+<label class="choice"><input type="checkbox" name="Obiettivo" value="Presentare prodotti e servizi"> Presentare prodotti e servizi</label>
 </div>
-<div style="margin-top:35px"><label>Quale azione vuoi che faccia una persona dopo aver visitato il sito?</label><textarea name="Azione desiderata"></textarea></div>
+<div class="field" style="margin-top:40px"><label>Quale azione vuoi che faccia una persona dopo aver visitato il sito?</label><textarea name="Azione desiderata"></textarea></div>
 </fieldset>
 
-<fieldset><div class="legend"><span class="num">04</span><span class="section-title">IDENTITÀ</span></div>
+<fieldset><div class="legend"><span class="section-meta">05</span><div class="section-title">IDENTITÀ & PRESENZA ONLINE</div></div>
 <div class="grid">
-<div><label>Instagram</label><input name="Instagram"></div><div><label>Facebook</label><input name="Facebook"></div>
-<div><label>Google Maps / Google Business</label><input name="Google Maps"></div><div><label>Sito attuale</label><input name="Sito attuale"></div>
-<div class="full"><label>Ci sono siti che ti piacciono?</label><textarea name="Siti di riferimento" placeholder="Puoi incollare qui i link."></textarea></div>
-<div class="full"><label>Come vuoi che venga percepita la tua attività?</label><div class="checks">
-<label class="check"><input type="checkbox" name="Stile" value="Elegante"> Elegante</label><label class="check"><input type="checkbox" name="Stile" value="Moderna"> Moderna</label>
-<label class="check"><input type="checkbox" name="Stile" value="Minimal"> Minimal</label><label class="check"><input type="checkbox" name="Stile" value="Premium"> Premium</label>
-<label class="check"><input type="checkbox" name="Stile" value="Giovane"> Giovane</label><label class="check"><input type="checkbox" name="Stile" value="Creativa"> Creativa</label>
-<label class="check"><input type="checkbox" name="Stile" value="Professionale"> Professionale</label><label class="check"><input type="checkbox" name="Stile" value="Naturale"> Naturale</label>
-</div></div>
+<div class="field"><label>Instagram</label><input name="Instagram"></div><div class="field"><label>Facebook</label><input name="Facebook"></div>
+<div class="field"><label>Google Maps / Google Business</label><input name="Google Maps"></div><div class="field"><label>Sito attuale</label><input name="Sito attuale"></div>
+<div class="field full"><label>Ci sono siti che ti piacciono?</label><textarea name="Siti di riferimento" placeholder="Incolla qui i link."></textarea></div>
 </div></fieldset>
 
-<fieldset><div class="legend"><span class="num">05</span><span class="section-title">FOTO & MATERIALI</span></div>
-<p>Inviaci tutto quello che hai. <strong>Non preoccuparti di scegliere le immagini migliori: le selezioniamo noi.</strong></p>
-<div class="drop"><label>Carica foto, logo e materiali</label><input type="file" name="Materiali" multiple accept="image/*,.pdf,.doc,.docx,.ppt,.pptx,.zip"></div>
+<fieldset><div class="legend"><span class="section-meta">06</span><div class="section-title">FOTO & MATERIALI</div></div>
+<p style="font-size:20px;line-height:1.4;max-width:700px">Inviaci tutto quello che hai. <strong>Non preoccuparti di scegliere le immagini migliori: le selezioniamo noi.</strong></p>
+<div class="upload"><label class="smallcaps">Carica foto, logo e materiali</label><input type="file" name="Materiali" multiple accept="image/*,.pdf,.doc,.docx,.ppt,.pptx,.zip"></div>
 <p class="hint">Puoi caricare più file. Se hai molte foto, puoi inviarle anche separatamente tramite WhatsApp o email.</p>
 </fieldset>
 
-<fieldset><div class="legend"><span class="num">06</span><span class="section-title">I TUOI CONTENUTI</span></div>
-<label>Raccontaci la tua attività con le tue parole.</label><textarea name="Racconto" placeholder="Scrivi liberamente. Al copy pensiamo noi."></textarea>
+<fieldset><div class="legend"><span class="section-meta">07</span><div class="section-title">LE TUE PAROLE</div></div>
+<div class="field"><label>Raccontaci la tua attività con le tue parole.</label><textarea name="Racconto" placeholder="Scrivi liberamente. Al copy pensiamo noi."></textarea></div>
+<div style="margin-top:45px"><label class="smallcaps">Lingue del sito</label><div class="choice-grid">
+<label class="choice"><input type="checkbox" name="Lingua sito" value="Italiano"> Italiano</label>
+<label class="choice"><input type="checkbox" name="Lingua sito" value="Inglese"> Inglese</label>
+<label class="choice"><input type="checkbox" name="Lingua sito" value="Entrambe"> Entrambe</label>
+</div></div>
 </fieldset>
 
-<fieldset><div class="legend"><span class="num">07</span><span class="section-title">LINGUE</span></div>
-<div class="checks">
-<label class="check"><input type="checkbox" name="Lingua sito" value="Italiano"> Italiano</label>
-<label class="check"><input type="checkbox" name="Lingua sito" value="Inglese"> Inglese</label>
-<label class="check"><input type="checkbox" name="Lingua sito" value="Entrambe"> Entrambe</label>
-</div>
+<fieldset><div class="legend"><span class="section-meta">08</span><div class="section-title">ULTIMA COSA.</div></div>
+<div class="field"><label>C'è qualcosa che vuoi assolutamente vedere nel nuovo sito?</label><textarea name="Note finali"></textarea></div>
 </fieldset>
 
-<fieldset><div class="legend"><span class="num">08</span><span class="section-title">NOTE FINALI</span></div>
-<label>C'è qualcosa che vuoi assolutamente vedere nel nuovo sito?</label><textarea name="Note finali"></textarea>
-</fieldset>
-
-<div class="submit-wrap">
-<p class="submit-note">Con l'invio ci autorizzi a utilizzare le informazioni e i materiali forniti esclusivamente per la preparazione della tua demo e per ricontattarti in merito al progetto.</p>
+<div class="submit">
+<div class="submit-copy"><div class="smallcaps">MEDIA BAY / NEXT STEP</div><h2>ORA TOCCA<br>A NOI.</h2><p>Con l'invio ci autorizzi a utilizzare le informazioni e i materiali forniti per la preparazione della tua demo e per ricontattarti in merito al progetto.</p></div>
 <button type="submit">INVIA IL BRIEF ↗</button>
 </div>
 </form>
-
-<section class="success" id="success"><h2>BRIEF<br>RECEIVED.</h2><p>Abbiamo ricevuto le tue informazioni. Adesso tocca a noi: iniziamo a costruire la tua demo.</p></section>
 </main>
+
+<section class="success" id="success">
+<div class="smallcaps">MEDIA BAY / BRIEF RECEIVED</div>
+<h1>ADESSO<br>TOCCA A NOI.</h1>
+<p>Abbiamo ricevuto le tue informazioni. Iniziamo a costruire la tua demo.</p>
+<a href="/">← TORNA A MEDIABAY</a>
+</section>
+
 <script>
 (function(){
- const params=new URLSearchParams(location.search);
- if(params.get('sent')==='1'){
-   document.getElementById('clientBrief').style.display='none';
-   document.getElementById('success').style.display='block';
- }
+  const p=new URLSearchParams(location.search);
+  if(p.get('sent')==='1'){
+    document.getElementById('briefPage').style.display='none';
+    document.getElementById('success').style.display='block';
+    window.scrollTo(0,0);
+  }
 })();
 </script>
-</body></html>
+</body>
+</html>
