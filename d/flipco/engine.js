@@ -16,40 +16,44 @@
   setHTML('#heroHeadline',cfg.hero.headline.map(x=>`<span>${x}</span>`).join(''));
   set('#introTitle',site.introTitle); set('#introLead',site.introLead); set('#introBody',site.introBody);
 
-  const wg=$('#worldGrid');
   const bg=$('#brandGrid');
   const filterBar=$('#brandFilterBar');
   const brandCount=$('#brandCount');
   const categoryKey=w=>String(w.name||'').toUpperCase();
-  const allWorldNames=cfg.worlds.map(categoryKey);
-  const teenSlugs=(cfg.worlds.find(w=>categoryKey(w)==='TEENS')||{}).brandSlugs||[];
+  const allWorldNames=(cfg.worlds||[]).map(categoryKey);
+  const teenSlugs=((cfg.worlds||[]).find(w=>categoryKey(w)==='TEENS')||{}).brandSlugs||[];
   const brandsFor=(category)=>{
     if(category==='TUTTI') return cfg.brands;
     if(category==='TEENS') return cfg.brands.filter(b=>teenSlugs.includes(b.slug));
     return cfg.brands.filter(b=>(b.collection.worlds||[]).map(x=>String(x).toUpperCase()).includes(category));
+  };
+  const logoSlug={
+    'Tommy Hilfiger':'tommyhilfiger','Calvin Klein':'calvinklein','Guess':'guess','Levi\'s':'levis',
+    'The North Face':'thenorthface','Nike':'nike','adidas':'adidas','Vans':'vans','Carhartt':'carhartt',
+    'New Balance':'newbalance','Timberland':'timberland','Dickies':'dickies','ONLY':'only',
+    'Jack & Jones':'jackandjones','Vero Moda':'veromoda','name it':'nameit'
   };
   const renderBrands=(category='TUTTI')=>{
     const list=brandsFor(category);
     bg.innerHTML='';
     list.forEach((b,i)=>{
       const a=document.createElement('a'); a.className='brand-item reveal'; a.href=`brand.html?brand=${encodeURIComponent(b.slug)}`; a.style.setProperty('--i',i);
-      const logoDomain=b.logoDomain||new URL(b.url).hostname.replace(/^www\./,''); a.innerHTML=`<span class="brand-number">${String(i+1).padStart(2,'0')}</span><div class="brand-logo-wrap"><img class="brand-logo-img" src="https://logos.hunter.io/${logoDomain}" alt="${b.name} logo" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.classList.add('logo-fallback')"><span class="brand-fallback">${b.name}</span></div><div class="brand-name-hidden">${b.name}</div><span class="brand-arrow">↗</span>`;
+      const logoDomain=b.logoDomain||new URL(b.url).hostname.replace(/^www\./,'');
+      const simpleSlug=logoSlug[b.name];
+      const simpleLogo=simpleSlug?`https://cdn.simpleicons.org/${simpleSlug}`:'';
+      const hunterLogo=`https://logos.hunter.io/${logoDomain}`;
+      a.innerHTML=`<span class="brand-number">${String(i+1).padStart(2,'0')}</span><div class="brand-logo-wrap"><img class="brand-logo-img" src="${simpleLogo||hunterLogo}" data-hunter="${hunterLogo}" alt="${b.name} logo" loading="lazy" decoding="async"><span class="brand-fallback">${b.name}</span></div><div class="brand-name-hidden">${b.name}</div><span class="brand-arrow">↗</span>`;
+      const img=a.querySelector('img');
+      img.addEventListener('error',()=>{
+        if(img.src!==hunterLogo){ img.src=hunterLogo; return; }
+        img.style.display='none'; img.parentElement.classList.add('logo-fallback');
+      },{once:false});
       bg.appendChild(a);
     });
     if(brandCount) brandCount.textContent=list.length;
     bg.querySelectorAll('.reveal').forEach(e=>observer?.observe?.(e));
     return list.length;
   };
-  cfg.worlds.forEach((w,i)=>{
-    const a=document.createElement('a');
-    a.className='world-card reveal';
-    const cat=categoryKey(w);
-    a.href=`#brands-${encodeURIComponent(cat.toLowerCase())}`;
-    a.dataset.category=cat;
-    a.innerHTML=`<span class="world-number">${w.label}</span><div><h3>${w.name}</h3><p>${w.description}</p></div><span class="world-arrow">↗</span>`;
-    a.addEventListener('click',()=>setTimeout(()=>applyCategory(cat,true),0));
-    wg.appendChild(a);
-  });
   if(filterBar){
     const cats=['TUTTI',...allWorldNames];
     cats.forEach(cat=>{
@@ -72,7 +76,7 @@
   set('#rating',cfg.reviews.rating); set('#reviewCount',cfg.reviews.count); set('#reviewTitle',cfg.reviews.title); set('#reviewBody',cfg.reviews.body);
   setHTML('#contactTitle',cfg.contact.title.map(x=>`${x}<br>`).join('')); set('#contactMeta',`${site.brandName} · ${cfg.store.address}`); $('#instagramLink').href=cfg.contact.instagram; $('#contactWa').href=`https://wa.me/${cfg.contact.whatsapp}`;
 
-  const navItems=[['MODI DI ESSERE','#worlds'],['BRAND','#brands'],['IL CODICE','#story'],['IL NEGOZIO','#store'],['CONTATTI','#contact']];
+  const navItems=[['UN SOLO MODO DI ESSERE','#campaign'],['BRAND','#brands'],['IL CODICE','#story'],['IL NEGOZIO','#store'],['CONTATTI','#contact']];
   const n=$('#mobileNav'); navItems.forEach(([label,href])=>{const a=document.createElement('a');a.href=href;a.textContent=label;n.appendChild(a)});
   $$('.language button').forEach(btn=>btn.addEventListener('click',()=>{$$('.language button').forEach(b=>b.classList.remove('active'));btn.classList.add('active')}));
   const menuButton=$('#menuButton'),panel=$('#menuPanel');

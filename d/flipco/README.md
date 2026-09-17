@@ -21,3 +21,11 @@ Rebuilt the MediaBay closing section as a complete mini sales page: methodology,
 
 
 V24: refined the “Modi di essere” section for four categories (Uomo, Donna, Teens, Bambino), removed the oversized empty visual tail on mobile, added category navigation, and refined optical centering/size constraints for brand logos.
+
+
+## V25
+- Removed the duplicate four-worlds section.
+- The editorial 'UN SOLO MODO DI ESSERE TE' section is now the only category chooser.
+- Category links jump directly to filtered Brand Atlas views.
+- Brand logos prefer transparent Simple Icons SVGs, with Hunter logo fallback.
+- Removed visual backgrounds around brand logo containers and normalized optical sizing.
