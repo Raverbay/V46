@@ -2479,6 +2479,59 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 </script>
 
+<script id="mediabay-home-demo-title-fix">
+(function(){
+  function applyDemoTitle(lang){
+    var h=document.querySelector('#demo .contact-copy h2');
+    if(!h) return;
+    if(lang==='it'){
+      h.innerHTML='ADESSO NON HAI PIÙ SCUSE.<br><span>HAI GIÀ DA DOVE PARTIRE.</span>';
+    }else{
+      h.innerHTML='NOW YOU HAVE NO EXCUSES.<br><span>YOU HAVE A STARTING POINT.</span>';
+    }
+  }
+
+  function currentLang(){
+    return localStorage.getItem('mediabay-language') || 'it';
+  }
+
+  document.addEventListener('DOMContentLoaded',function(){
+    applyDemoTitle(currentLang());
+
+    if(window.MediaBayLang && typeof window.MediaBayLang.setLang==='function'){
+      var original=window.MediaBayLang.setLang;
+      window.MediaBayLang.setLang=function(lang){
+        original(lang);
+        applyDemoTitle(lang);
+      };
+    }
+
+    document.querySelectorAll('[data-lang]').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        setTimeout(function(){ applyDemoTitle(btn.dataset.lang); },0);
+      });
+    });
+
+    // The V46 motion layer may touch the DOM after the language pass.
+    // Re-apply only when the stored language is Italian and the English
+    // headline has reappeared.
+    var h=document.querySelector('#demo .contact-copy h2');
+    if(h){
+      var observer=new MutationObserver(function(){
+        var lang=currentLang();
+        if(lang==='it' && /NOW YOU HAVE NO EXCUSES/i.test(h.textContent)){
+          observer.disconnect();
+          applyDemoTitle('it');
+          setTimeout(function(){ observer.observe(h,{childList:true,subtree:true,characterData:true}); },0);
+        }
+      });
+      observer.observe(h,{childList:true,subtree:true,characterData:true});
+    }
+  });
+})();
+</script>
+
+
 
 <script id="mediabay-form-handler">
 (function(){
