@@ -248,7 +248,56 @@ fieldset{border:0;border-top:1px solid var(--d);padding:58px 0 70px;margin:0}
     document.getElementById('briefPage').style.display='none';
     document.getElementById('success').style.display='block';
     window.scrollTo(0,0);
+    return;
   }
+
+  const form=document.getElementById('clientBrief');
+  if(!form) return;
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+
+    if(!form.checkValidity()){
+      form.reportValidity();
+      return;
+    }
+
+    const button=form.querySelector('button[type="submit"]');
+    const original=button ? button.textContent : '';
+    if(button){
+      button.disabled=true;
+      button.textContent='INVIO IN CORSO…';
+    }
+
+    const errorOld=form.querySelector('.form-error');
+    if(errorOld) errorOld.remove();
+
+    try{
+      const formData=new FormData(form);
+      const response=await fetch('https://formsubmit.co/ajax/info@mediabay.it',{
+        method:'POST',
+        headers:{'Accept':'application/json'},
+        body:formData
+      });
+
+      const result=await response.json().catch(()=>({}));
+      if(!response.ok || result.success===false){
+        throw new Error('Submission failed');
+      }
+
+      window.location.href='https://mediabay.it/brief-received.html';
+    }catch(err){
+      if(button){
+        button.disabled=false;
+        button.textContent=original;
+      }
+      const msg=document.createElement('div');
+      msg.className='form-error';
+      msg.textContent='Non siamo riusciti a inviare il brief. Riprova tra poco oppure scrivici a info@mediabay.it.';
+      form.appendChild(msg);
+      msg.scrollIntoView({behavior:'smooth',block:'center'});
+    }
+  });
 })();
 </script>
 </body>
