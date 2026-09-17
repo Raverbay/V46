@@ -250,3 +250,34 @@ footer{background:var(--bg);color:var(--ink)}.footer-inner{padding-top:32px;padd
     padding-top:16px;
   }
 }
+
+
+/* V9 — preserve whole words in editorial headlines */
+.keep-word{
+  display:inline-block;
+  white-space:nowrap;
+  word-break:keep-all;
+  overflow-wrap:normal;
+}
+
+@media(max-width:800px){
+  #worlds .section-head .display{
+    font-size:clamp(50px,12.5vw,66px);
+    line-height:.88;
+    letter-spacing:-.065em;
+    width:max-content;
+    max-width:100%;
+  }
+  #brands .brand-top .display{
+    font-size:clamp(50px,12.8vw,68px);
+    line-height:.88;
+    letter-spacing:-.065em;
+    width:max-content;
+    max-width:100%;
+  }
+}
+
+@media(max-width:380px){
+  #worlds .section-head .display{font-size:48px}
+  #brands .brand-top .display{font-size:48px}
+}

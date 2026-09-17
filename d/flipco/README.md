@@ -46,3 +46,9 @@ Logo asset: `assets/logo-flipco.png` (exact filename/case). All site references 
 - Reworked the mobile layout of "The Worlds" so the headline gets full width and no longer breaks the final word awkwardly.
 - Reworked the mobile "Brand Atlas" header so the "16 Selected Brands" counter sits below the headline instead of compressing it.
 - Removed the remaining unverified "Since 1986" footer claim.
+
+
+## V9 — editorial headline correction
+- Renamed section 02 from “THE WORLDS” to “THE EDIT”.
+- Forced whole-word rendering for “ESSERE.” and “CONOSCI.” so individual letters cannot wrap onto a new line.
+- Tuned mobile headline sizing to preserve the intended editorial hierarchy without breaking words.
