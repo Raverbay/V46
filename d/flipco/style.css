@@ -331,3 +331,31 @@ img, video, svg, canvas { max-width:100%; }
   #worlds .section-head .display, #brands .brand-top .display { font-size:44px; }
   .world-card h3 { font-size:46px; }
 }
+
+
+/* V13 — Store footer + MediaBay conversion section */
+.mediabay-offer{background:var(--accent);color:var(--ink);overflow:hidden;border-top:1px solid rgba(17,18,15,.18)}
+.mb-offer-inner{padding:clamp(58px,8vw,120px) clamp(20px,5vw,78px) 26px}
+.mb-offer-top,.mb-offer-bottom{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.mb-offer-kicker{font-size:11px;letter-spacing:.18em}.mb-offer-index{opacity:.52}
+.mb-offer-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);gap:clamp(40px,8vw,120px);align-items:end;padding:clamp(70px,10vw,145px) 0}
+.mb-offer-grid h2{font-family:Manrope,sans-serif;font-size:clamp(52px,9.5vw,150px);line-height:.8;letter-spacing:-.08em;font-weight:800;margin:0;max-width:1000px}
+.mb-offer-grid h2 span{opacity:.42}.mb-offer-copy{max-width:520px;font-size:15px;line-height:1.55}.mb-offer-copy p{margin:0 0 18px}.mb-offer-copy strong{font-weight:800}
+.mb-offer-lead{font-family:Manrope,sans-serif;font-size:clamp(20px,2.4vw,32px);line-height:1.05;letter-spacing:-.035em}
+.mb-offer-points{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0}.mb-offer-points span{border:1px solid rgba(17,18,15,.28);padding:8px 10px;font-size:9px;letter-spacing:.13em;font-weight:800}
+.mb-offer-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:36px;margin-top:8px;border:1px solid var(--ink);padding:15px 17px;min-width:170px;font-size:10px;letter-spacing:.15em;font-weight:800;transition:background .25s,color .25s}.mb-offer-cta:hover{background:var(--ink);color:var(--accent)}
+.mb-offer-bottom{border-top:1px solid rgba(17,18,15,.22);padding-top:16px;opacity:.6}
+.store-footer{background:var(--bg);color:var(--ink);border-top:1px solid var(--line)}
+.store-footer-inner{padding-top:54px;padding-bottom:54px;display:grid;grid-template-columns:1.3fr .9fr .8fr;gap:50px;align-items:start}
+.store-footer-brand img{width:115px;height:auto;display:block;margin-bottom:20px}.store-footer-brand p{margin:13px 0 0;font-size:12px;color:var(--muted)}
+.store-footer-col{display:flex;flex-direction:column;gap:10px;font-size:12px}.store-footer-col .micro{margin-bottom:8px;opacity:.55}.store-footer-col a{text-decoration:underline;text-underline-offset:4px}.store-footer-col span:not(.micro){color:var(--muted);line-height:1.5}
+.store-footer-base{border-top:1px solid var(--line);padding:16px clamp(20px,5vw,78px);display:flex;justify-content:space-between;gap:20px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.52}
+@media(max-width:800px){
+ .mb-offer-inner{padding-bottom:20px}.mb-offer-top,.mb-offer-bottom{align-items:flex-start;flex-direction:column;gap:8px}.mb-offer-grid{grid-template-columns:1fr;gap:44px;padding:68px 0 72px}.mb-offer-grid h2{font-size:clamp(52px,15vw,92px)}.mb-offer-copy{max-width:none}.mb-offer-lead{font-size:24px}.mb-offer-bottom{padding-top:14px}.store-footer-inner{grid-template-columns:1fr;gap:38px;padding-top:44px;padding-bottom:44px}.store-footer-base{flex-direction:column;gap:8px}
+}
+@media(max-width:430px){.mb-offer-grid h2{font-size:clamp(48px,14vw,76px)}.mb-offer-copy{font-size:14px}.mb-offer-lead{font-size:21px}}
+
+/* V13 — hard horizontal-overflow guard */
+html,body{max-width:100%;overflow-x:hidden}
+body *{max-width:100%}
+img,svg,video,canvas{max-width:100%;height:auto}

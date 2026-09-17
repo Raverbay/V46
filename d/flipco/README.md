@@ -69,3 +69,10 @@ Logo asset: `assets/logo-flipco.png` (exact filename/case). All site references 
 - Contact and store CTAs reinforce both options: visit or message for information.
 - Added robust mobile horizontal-overflow containment and safer headline wrapping.
 - Updated Instagram and Maps destinations supplied for Flip&Co.
+
+
+## V13 — Store-first footer + MediaBay offer
+- Replaced the footer with a store-native Flip&Co footer using address, hours, phone, WhatsApp, Instagram and Maps.
+- Removed MediaBay/theme/demo branding from the store footer.
+- Added a separate acid-green MediaBay offer section: “Questo sito potrebbe essere tuo”, focused on discovery, trust, store visits and contact.
+- Added mobile horizontal-overflow safeguards.
