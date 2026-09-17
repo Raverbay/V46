@@ -408,3 +408,36 @@ img,svg,video,canvas{max-width:100%;height:auto}
 .brand-filter{appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink);font:700 10px/1 Manrope,sans-serif;letter-spacing:.12em;padding:11px 14px;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
 .brand-filter:hover,.brand-filter.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 @media(max-width:800px){.brand-filter-bar{gap:6px;margin-bottom:22px}.brand-filter{font-size:8px;padding:10px 11px}}
+
+/* V18 — MediaBay mini landing / conversion layer */
+.mb-strategy{border-top:1px solid rgba(17,18,15,.22);padding-top:22px}
+.mb-strategy-head{display:flex;justify-content:space-between;gap:20px;margin-bottom:28px}
+.mb-strategy-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.mb-strategy-card{border:1px solid rgba(17,18,15,.25);padding:22px;min-height:250px;display:flex;flex-direction:column}
+.mb-strategy-num{font:800 10px/1 Manrope,Arial,sans-serif;letter-spacing:.12em;opacity:.5}
+.mb-strategy-card h3{font:800 clamp(24px,3vw,42px)/.88 Manrope,Arial,sans-serif;letter-spacing:-.055em;margin:48px 0 18px}
+.mb-strategy-card p{margin:auto 0 0;font-size:13px;line-height:1.5;max-width:300px}
+.mb-value{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.7fr);gap:clamp(40px,8vw,120px);padding:clamp(70px,9vw,130px) 0;border-top:1px solid rgba(17,18,15,.22)}
+.mb-value h3{font:800 clamp(52px,8vw,120px)/.82 Manrope,Arial,sans-serif;letter-spacing:-.08em;margin:22px 0 0}
+.mb-value-copy{font-size:15px;line-height:1.55;max-width:560px}
+.mb-value-lead{font:800 clamp(24px,3vw,38px)/1.02 Manrope,Arial,sans-serif;letter-spacing:-.04em}
+.mb-offer-final{border-top:1px solid rgba(17,18,15,.22);padding:clamp(65px,8vw,110px) 0 85px;max-width:900px}
+.mb-offer-final h3{font:800 clamp(56px,9vw,135px)/.8 Manrope,Arial,sans-serif;letter-spacing:-.085em;margin:28px 0 28px}
+.mb-offer-final h3 span{opacity:.42}
+.mb-offer-final p{max-width:620px;font-size:16px;line-height:1.55;margin:0 0 28px}
+.mb-buy-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:55px;background:var(--ink);color:var(--accent);padding:19px 21px;border:1px solid var(--ink);font:800 11px/1 Manrope,Arial,sans-serif;letter-spacing:.16em;text-decoration:none;min-width:240px;transition:transform .2s,background .2s,color .2s}
+.mb-buy-cta:hover{transform:translateY(-2px);background:transparent;color:var(--ink)}
+@media(max-width:760px){
+ .mb-strategy-head{display:grid;gap:8px}
+ .mb-strategy-grid{grid-template-columns:1fr 1fr}
+ .mb-strategy-card{min-height:235px;padding:17px}
+ .mb-strategy-card h3{margin:38px 0 14px;font-size:28px}
+ .mb-strategy-card p{font-size:12px}
+ .mb-value{grid-template-columns:1fr;gap:42px;padding:65px 0}
+ .mb-offer-final h3{font-size:clamp(52px,15vw,82px)}
+ .mb-buy-cta{width:100%;min-width:0}
+}
+@media(max-width:430px){
+ .mb-strategy-grid{grid-template-columns:1fr}
+ .mb-strategy-card{min-height:200px}
+}

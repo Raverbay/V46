@@ -100,3 +100,10 @@ Logo asset: `assets/logo-flipco.png` (exact filename/case). All site references 
 - Each audience card is clickable and jumps to the Brand Atlas filtered to that category.
 - Brand Atlas includes category filter controls and updates the visible brand count.
 - Brand cards continue to open the individual Flip&Co brand selection page.
+
+## V18 — MediaBay conversion landing
+- Expanded the final MediaBay section into a mini landing page explaining the site's UX/marketing architecture.
+- Added four strategy cards: attention, choice orientation, desire, and action.
+- Added a business-value section explaining the website as a digital entry point to the physical store.
+- Added a prominent **ACQUISTA IL SITO** CTA opening WhatsApp with purchase intent.
+- Preserved the original Flip&Co footer before the MediaBay closing section.
