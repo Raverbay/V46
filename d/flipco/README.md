@@ -7,3 +7,7 @@ Footer order preserved: Flip&Co store footer first, MediaBay sales section last.
 
 ## V20
 Rebuilt the MediaBay closing section as a complete mini sales page: methodology, section rationale, customer journey, non-ecommerce positioning, e-commerce option, demo provenance, business value, brief and purchase/contact CTAs.
+
+
+## V21
+- MediaBay commercial CTA links updated to WhatsApp +39 351 847 2396.
