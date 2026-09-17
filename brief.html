@@ -9,8 +9,10 @@
 :root{--g:#b7ff18;--g2:#8bcf61;--b:#e9e2d3;--d:#10110f;--line:#10110f2e}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--b);color:var(--d);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}a{color:inherit}
 .site-header{position:fixed;z-index:9000;left:0;top:0;width:100%;height:76px;padding:0 30px;display:flex;align-items:center;justify-content:space-between;color:#fff;border-bottom:1px solid #ffffff30;mix-blend-mode:difference}
-.lang{display:flex;gap:12px;font-size:10px;letter-spacing:.18em}.lang a{text-decoration:none}.lang .active{text-decoration:underline;text-underline-offset:4px}
-.header-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:31px;height:34px;object-fit:contain}.menu-icon{width:30px;height:17px;position:relative}.menu-icon i{position:absolute;left:0;width:100%;height:1px;background:currentColor}.menu-icon i:first-child{top:4px}.menu-icon i:last-child{top:13px}
+.lang{display:flex;gap:10px;font-size:10px;letter-spacing:.18em}.lang button{border:0;background:transparent;color:inherit;padding:0;font:inherit;font-size:inherit;letter-spacing:inherit;cursor:pointer;opacity:.5}.lang button.active{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.header-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:31px;height:34px;object-fit:contain}.menu-btn{border:0;background:none;color:inherit;padding:0;width:30px;height:20px;cursor:pointer;position:relative;z-index:10001}.menu-icon{width:30px;height:17px;position:relative;display:block}.menu-icon i{position:absolute;left:0;width:100%;height:1px;background:currentColor;transition:transform .35s,top .35s}.menu-icon i:first-child{top:4px}.menu-icon i:last-child{top:13px}.menu-btn.open .menu-icon i:first-child{top:8px;transform:rotate(45deg)}.menu-btn.open .menu-icon i:last-child{top:8px;transform:rotate(-45deg)}
+.site-menu{position:fixed;z-index:8999;inset:0;background:var(--g);color:var(--d);padding:105px 5vw 28px;display:flex;flex-direction:column;transform:translateY(-101%);transition:transform .65s cubic-bezier(.77,0,.18,1)}.site-menu.open{transform:translateY(0)}.menu-info,.menu-foot{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.17em;text-transform:uppercase}.site-menu nav{margin:auto 0}.site-menu nav a{display:grid;grid-template-columns:55px 1fr;text-decoration:none;color:inherit;font-size:clamp(52px,9.5vw,145px);line-height:.84;letter-spacing:-.08em;font-weight:800;border-bottom:1px solid #18231840;padding:5px 0}.site-menu nav span{font-size:10px;letter-spacing:.1em;font-weight:400}
+@media(max-width:700px){.site-menu{padding:82px 18px 20px}.menu-info,.menu-foot{font-size:7px}.site-menu nav a{grid-template-columns:32px 1fr;font-size:15.2vw;padding:7px 0}.site-menu nav span{font-size:8px}}
 .hero{min-height:100svh;background:var(--g);padding:150px 5.5vw 70px;display:flex;flex-direction:column;justify-content:space-between;position:relative}
 .kicker,.section-meta,.field label,.smallcaps{font-size:10px;letter-spacing:.2em;text-transform:uppercase}
 .hero-top{display:flex;justify-content:space-between;gap:30px}.hero-top span:last-child{text-align:right}
@@ -122,10 +124,24 @@ fieldset{border:0;border-top:1px solid var(--d);padding:58px 0 70px;margin:0}
 </head>
 <body>
 <header class="site-header">
-  <div class="lang"><a class="active" href="#" onclick="return false">IT</a><a href="#" onclick="return false">EN</a></div>
-  <a href="/"><img class="header-logo" src="mediabay-symbol-transparent.png" alt="MediaBay"></a>
-  <div class="menu-icon"><i></i><i></i></div>
+  <div class="lang" aria-label="Language"><button type="button" data-lang="it" class="active">IT</button><button type="button" data-lang="en">EN</button></div>
+  <a href="/" aria-label="MediaBay home"><img class="header-logo" src="mediabay-symbol-transparent.png" alt="MediaBay"></a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-controls="siteMenu" aria-expanded="false" aria-label="Open menu"><span class="menu-icon"><i></i><i></i></span></button>
 </header>
+
+<div class="site-menu" id="siteMenu" aria-hidden="true">
+  <div class="menu-info"><span>MEDIA BAY</span><span>PHYGITAL MARKETING · SINCE 2013</span></div>
+  <nav>
+    <a href="/#team"><span>02</span><span data-menu-it="ABOUT" data-menu-en="ABOUT">ABOUT</span></a>
+    <a href="/#demo"><span>03</span><span data-menu-it="YOUR STARTING POINT" data-menu-en="YOUR STARTING POINT">YOUR STARTING POINT</span></a>
+    <a href="/#manifesto"><span>04</span><span data-menu-it="MANIFESTO" data-menu-en="MANIFESTO">MANIFESTO</span></a>
+    <a href="/#services"><span>05</span><span data-menu-it="SERVICES" data-menu-en="SERVICES">SERVICES</span></a>
+    <a href="/#projects"><span>06</span><span data-menu-it="APPROACH" data-menu-en="APPROACH">APPROACH</span></a>
+    <a href="/#clients"><span>07</span><span data-menu-it="EXPERIENCE" data-menu-en="EXPERIENCE">EXPERIENCE</span></a>
+    <a href="/#contact"><span>08</span><span data-menu-it="LET’S BUILD" data-menu-en="LET’S BUILD">LET’S BUILD</span></a>
+  </nav>
+  <div class="menu-foot"><span>WEB · SOCIAL · AI · MOBILITY</span><span>ENTER THE BAY ↘</span></div>
+</div>
 
 <main id="briefPage">
 <section class="hero">
@@ -240,6 +256,54 @@ fieldset{border:0;border-top:1px solid var(--d);padding:58px 0 70px;margin:0}
     <span>PHYGITAL MARKETING · SINCE 2013</span>
   </div>
 </section>
+
+<script id="mediabay-brief-ui">
+(function(){
+  const root=document.documentElement;
+  const menu=document.getElementById('siteMenu');
+  const menuBtn=document.getElementById('menuBtn');
+  const langButtons=[...document.querySelectorAll('[data-lang]')];
+  const T={
+    'LET\'S BUILD ↘':['COSTRUIAMO ↘',"LET'S BUILD ↘"],
+    'RACCONTACI':['RACCONTACI','TELL US ABOUT'],'IL TUO BUSINESS.':['IL TUO BUSINESS.','YOUR BUSINESS.'],
+    'Non servono testi perfetti. Ci servono le informazioni giuste per capire dove vuoi arrivare e costruire la tua demo.':['Non servono testi perfetti. Ci servono le informazioni giuste per capire dove vuoi arrivare e costruire la tua demo.',"You don't need perfect copy. We need the right information to understand where you want to go and build your demo."],
+    'PARTIAMO':['PARTIAMO','LET’S START'],'DA TE.':['DA TE.','WITH YOU.'],
+    'Raccontaci la tua attività con le tue parole.':['Raccontaci la tua attività con le tue parole.','Tell us about your business in your own words.'],
+    'Al copy, alla struttura e al design pensiamo noi.':['Al copy, alla struttura e al design pensiamo noi.','We take care of the copy, structure and design.'],
+    'Puoi allegare logo, fotografie, cataloghi, menu, listini e qualsiasi materiale possa aiutarci a capire il tuo mondo.':['Puoi allegare logo, fotografie, cataloghi, menu, listini e qualsiasi materiale possa aiutarci a capire il tuo mondo.','You can attach your logo, photos, catalogues, menus, price lists and anything that helps us understand your world.'],
+    'LA TUA ATTIVITÀ':['LA TUA ATTIVITÀ','YOUR BUSINESS'],'IL BUSINESS':['IL BUSINESS','THE BUSINESS'],'COSA DEVE FARE IL SITO?':['COSA DEVE FARE IL SITO?','WHAT SHOULD THE WEBSITE DO?'],'IDENTITÀ & PRESENZA ONLINE':['IDENTITÀ & PRESENZA ONLINE','IDENTITY & ONLINE PRESENCE'],'FOTO & MATERIALI':['FOTO & MATERIALI','PHOTOS & MATERIALS'],'LE TUE PAROLE':['LE TUE PAROLE','YOUR WORDS'],'ULTIMA COSA.':['ULTIMA COSA.','ONE LAST THING.'],
+    'Scegli gli obiettivi principali':['Scegli gli obiettivi principali','Choose the main objectives'],
+    'Far conoscere l’attività':['Far conoscere l’attività','Make the business known'],'Ricevere contatti':['Ricevere contatti','Receive enquiries'],'Ricevere messaggi WhatsApp':['Ricevere messaggi WhatsApp','Receive WhatsApp messages'],'Portare clienti nel punto vendita':['Portare clienti nel punto vendita','Bring customers to the store'],'Ricevere prenotazioni':['Ricevere prenotazioni','Receive bookings'],'Presentare prodotti e servizi':['Presentare prodotti e servizi','Present products and services'],
+    'Inviaci tutto quello che hai.':['Inviaci tutto quello che hai.','Send us everything you have.'],'Non preoccuparti di scegliere le immagini migliori: le selezioniamo noi.':['Non preoccuparti di scegliere le immagini migliori: le selezioniamo noi.',"Don't worry about choosing the best images: we'll select them."],'Carica foto, logo e materiali':['Carica foto, logo e materiali','Upload photos, logo and materials'],'Puoi caricare più file. Se hai molte foto, puoi inviarle anche separatamente tramite WhatsApp o email.':['Puoi caricare più file. Se hai molte foto, puoi inviarle anche separatamente tramite WhatsApp o email.','You can upload multiple files. If you have many photos, you can also send them separately via WhatsApp or email.'],
+    'Scrivi liberamente. Al copy pensiamo noi.':['Scrivi liberamente. Al copy pensiamo noi.','Write freely. We take care of the copy.'],'Lingue del sito':['Lingue del sito','Website languages'],'Italiano':['Italiano','Italian'],'Inglese':['Inglese','English'],'Entrambe':['Entrambe','Both'],
+    'C’è qualcosa che vuoi assolutamente vedere nel nuovo sito?':["C’è qualcosa che vuoi assolutamente vedere nel nuovo sito?","Is there anything you definitely want to see on the new website?"],
+    "C'è qualcosa che vuoi assolutamente vedere nel nuovo sito?": ["C'è qualcosa che vuoi assolutamente vedere nel nuovo sito?","Is there anything you definitely want to see on the new website?"],
+    'MEDIA BAY / NEXT STEP':['MEDIA BAY / NEXT STEP','MEDIA BAY / NEXT STEP'],'ORA TOCCA':['ORA TOCCA','NOW IT’S'],'A NOI.':['A NOI.','OUR TURN.'],
+    "Con l'invio ci autorizzi a utilizzare le informazioni e i materiali forniti per la preparazione della tua demo e per ricontattarti in merito al progetto.":["Con l'invio ci autorizzi a utilizzare le informazioni e i materiali forniti per la preparazione della tua demo e per ricontattarti in merito al progetto.",'By submitting, you authorise us to use the information and materials provided to prepare your demo and contact you about the project.'],
+    'INVIA IL BRIEF ↗':['INVIA IL BRIEF ↗','SEND THE BRIEF ↗'],'INVIO IN CORSO…':['INVIO IN CORSO…','SENDING…'],
+    'Non siamo riusciti a inviare il brief. Riprova tra poco oppure scrivici a info@mediabay.it.':['Non siamo riusciti a inviare il brief. Riprova tra poco oppure scrivici a info@mediabay.it.',"We couldn't send the brief. Please try again shortly or email us at info@mediabay.it."]
+  };
+  const P={
+    'Incolla qui i link.':['Incolla qui i link.','Paste links here.'],
+    'Scrivi liberamente. Al copy pensiamo noi.':['Scrivi liberamente. Al copy pensiamo noi.','Write freely. We take care of the copy.']
+  };
+  const L={
+    'Nome attività *':['Nome attività *','Business name *'],'Nome referente *':['Nome referente *','Contact person *'],'Settore *':['Settore *','Industry *'],'Da quanto tempo?':['Da quanto tempo?','How long have you been in business?'],'Descrivi brevemente la tua attività *':['Descrivi brevemente la tua attività *','Briefly describe your business *'],'Indirizzo':['Indirizzo','Address'],'Telefono':['Telefono','Phone'],'WhatsApp':['WhatsApp','WhatsApp'],'Email *':['Email *','Email *'],'Quali prodotti o servizi offri? *':['Quali prodotti o servizi offri? *','What products or services do you offer? *'],'Su cosa vuoi puntare maggiormente?':['Su cosa vuoi puntare maggiormente?','What do you want to focus on most?'],'Cosa ti distingue dai tuoi concorrenti?':['Cosa ti distingue dai tuoi concorrenti?','What sets you apart from competitors?'],'Chi sono i tuoi clienti?':['Chi sono i tuoi clienti?','Who are your customers?'],'Qual è il tuo punto di forza?':['Qual è il tuo punto di forza?','What is your main strength?'],'Quale azione vuoi che faccia una persona dopo aver visitato il sito?':['Quale azione vuoi che faccia una persona dopo aver visitato il sito?','What action should someone take after visiting the website?'],'Instagram':['Instagram','Instagram'],'Facebook':['Facebook','Facebook'],'Google Maps / Google Business':['Google Maps / Google Business','Google Maps / Google Business'],'Sito attuale':['Sito attuale','Current website'],'Ci sono siti che ti piacciono?':['Ci sono siti che ti piacciono?','Are there websites you like?'],"C'è qualcosa che vuoi assolutamente vedere nel nuovo sito?":["C'è qualcosa che vuoi assolutamente vedere nel nuovo sito?","Is there anything you definitely want to see on the new website?"]
+  };
+  function textNodes(node){const out=[];const w=document.createTreeWalker(node,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode())out.push(n);return out;}
+  function applyLang(lang){
+    textNodes(document.body).forEach(n=>{const key=n.nodeValue.trim();if(T[key]){const lead=n.nodeValue.match(/^\s*/)[0],trail=n.nodeValue.match(/\s*$/)[0];n.nodeValue=lead+T[key][lang==='en'?1:0]+trail;}});
+    document.querySelectorAll('label').forEach(label=>{const key=[...label.childNodes].filter(n=>n.nodeType===3).map(n=>n.nodeValue.trim()).find(Boolean);if(L[key]){const texts=[...label.childNodes].filter(n=>n.nodeType===3);const target=texts[texts.length-1];if(target){const lead=target.nodeValue.match(/^\s*/)[0];target.nodeValue=lead+(lang==='en'?L[key][1]:L[key][0]);}}});
+    document.querySelectorAll('[placeholder]').forEach(el=>{const key=el.getAttribute('placeholder');if(P[key])el.placeholder=lang==='en'?P[key][1]:P[key][0];});
+    root.lang=lang;localStorage.setItem('mediabay-language',lang);langButtons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+  }
+  function closeMenu(){menu.classList.remove('open');menuBtn.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open menu');menu.setAttribute('aria-hidden','true');}
+  menuBtn.addEventListener('click',()=>{const open=!menu.classList.contains('open');menu.classList.toggle('open',open);menuBtn.classList.toggle('open',open);menuBtn.setAttribute('aria-expanded',String(open));menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');menu.setAttribute('aria-hidden',String(!open));});
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+  langButtons.forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+  const saved=localStorage.getItem('mediabay-language');applyLang(saved==='en'?'en':'it');
+})();
+</script>
 
 <script>
 (function(){
