@@ -30,7 +30,13 @@ Upload the contents of this folder to the repository root, preserving `assets/`.
 - Homepage remains non-commerce: the store image drives the physical-store experience.
 
 
-V5 FINAL: centered logo header, language left, menu right, translucent header, and only three supplied Flip&Co visual sources (logo + editorial campaign + store entrance).
 
 
 Logo asset: `assets/logo-flipco.png` (exact filename/case). All site references use this exact path.
+
+
+## V7 — clean factual copy
+- Removed unverified historical references (1976/1986/2011 and similar dates) from visible client copy.
+- Replaced historical hero/story facts with neutral, non-dated positioning.
+- Kept the editorial storefront structure, brand pages, store section and responsive system intact.
+- No historical claim is made unless it is explicitly verified by the client.
