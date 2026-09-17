@@ -2926,6 +2926,124 @@ activate("strategy");
  window.MediaBayCookieSettings={open:function(){settings.style.display='flex'}};
 })();
 </script>
+
+<script id="mediabay-approach-full-locale-fix">
+(function(){
+  const EN = {
+    head1:"THE MEDIA BAY APPROACH",
+    head2:"WHAT COULD WE BUILD? ↘",
+    title:["YOU BRING","THE BUSINESS.","WE FIND THE NEXT MOVE."],
+    explore:"EXPLORE",
+    items:{
+      strategy:["STRATEGY","DIRECTION"],
+      digital:["DIGITAL","PRESENCE"],
+      content:["CONTENT","ATTENTION"],
+      ai:["AI","AUTOMATION"],
+      phygital:["PHYGITAL","TERRITORY"]
+    },
+    panel:{
+      strategy:["STRATEGY","01","First, we understand where you want to go.","Positioning, offer, audience and direction become a clear base from which to build.","Positioning · Offer · Identity · Action plan"],
+      digital:["DIGITAL","02","We make your business easy to find and understand.","Your digital presence should turn attention into an action: discovery, trust, contact or purchase.","Website · Landing page · E-commerce · Google"],
+      content:["CONTENT","03","We build something people remember.","Communication is not a stream of posts. It is a system of messages, formats and content with a direction.","Strategy · Formats · Creative · Campaigns"],
+      ai:["AI","04","We use AI where it can create value.","AI and automation enter the process when they can save time, improve service or open new possibilities.","Assistants · Automation · Processes · Custom AI"],
+      phygital:["PHYGITAL","05","We bring the brand into the real world too.","Physical visibility can become part of the same digital strategy: territory, mobility and activations.","Mobility · Mobile advertising · Activations · Phygital"]
+    },
+    bottom:["NOT EVERYONE NEEDS EVERYTHING.","OUR JOB IS TO UNDERSTAND WHAT YOU NEED."]
+  };
+  const IT = {
+    head1:"IL METODO MEDIA BAY",
+    head2:"COSA POSSIAMO COSTRUIRE? ↘",
+    title:["TU PORTI","IL BUSINESS.","NOI TROVIAMO IL PROSSIMO PASSO."],
+    explore:"ESPLORA",
+    items:{
+      strategy:["STRATEGIA","DIREZIONE"],
+      digital:["DIGITALE","PRESENZA"],
+      content:["CONTENUTI","ATTENZIONE"],
+      ai:["AI","AUTOMAZIONE"],
+      phygital:["PHYGITAL","TERRITORIO"]
+    },
+    panel:{
+      strategy:["STRATEGIA","01","Prima capiamo dove vuoi andare.","Posizionamento, offerta, pubblico e direzione diventano una base chiara da cui costruire.","Posizionamento · Offerta · Identità · Piano d'azione"],
+      digital:["DIGITALE","02","Rendiamo il tuo business facile da trovare e capire.","La tua presenza digitale deve trasformare l’attenzione in un’azione: scoperta, fiducia, contatto o acquisto.","Sito · Landing page · E-commerce · Google"],
+      content:["CONTENUTI","03","Costruiamo qualcosa che le persone ricordano.","La comunicazione non è un flusso di post. È un sistema di messaggi, format e contenuti con una direzione.","Strategia · Format · Creatività · Campagne"],
+      ai:["AI","04","Usiamo l’AI dove può creare valore.","AI e automazione entrano nei processi quando possono far risparmiare tempo, migliorare il servizio o aprire nuove possibilità.","Assistenti · Automazioni · Processi · AI custom"],
+      phygital:["PHYGITAL","05","Portiamo il brand anche nel mondo reale.","La visibilità fisica può diventare parte della stessa strategia digitale: territorio, mobilità e attivazioni.","Mobility · Pubblicità mobile · Attivazioni · Phygital"]
+    },
+    bottom:["NON TUTTI HANNO BISOGNO DI TUTTO.","IL NOSTRO LAVORO È CAPIRE COSA SERVE A TE."]
+  };
+
+  function lang(){ return localStorage.getItem("mediabay-language") || "it"; }
+
+  function apply(){
+    const root=document.querySelector("#projects");
+    if(!root) return;
+    const d=lang()==="it"?IT:EN;
+
+    const head=root.querySelector(".head");
+    if(head){
+      const s=head.querySelectorAll("span");
+      if(s[0])s[0].textContent="06 / "+d.head1;
+      if(s[1])s[1].textContent=d.head2;
+    }
+
+    const h2=root.querySelector(".approach-intro h2");
+    if(h2){
+      h2.innerHTML=d.title[0]+"<br/>"+d.title[1]+"<br/><em>"+d.title[2]+"</em>";
+    }
+
+    const ex=root.querySelector(".diagnostic-head span");
+    if(ex) ex.textContent=d.explore;
+
+    root.querySelectorAll(".diagnostic-item").forEach(item=>{
+      const key=item.dataset.diagnostic, v=d.items[key];
+      if(!v)return;
+      const name=item.querySelector(".diag-name"), tag=item.querySelector(".diag-tag");
+      if(name)name.textContent=v[0];
+      if(tag)tag.textContent=v[1];
+    });
+
+    const active=root.querySelector(".diagnostic-item.active") || root.querySelector(".diagnostic-item");
+    const key=active ? active.dataset.diagnostic : "strategy";
+    const p=d.panel[key];
+    const meta=root.querySelector(".diag-panel-meta");
+    if(meta){
+      const spans=meta.querySelectorAll("span");
+      if(spans[0])spans[0].textContent=p[0];
+      if(spans[1])spans[1].textContent=p[1];
+    }
+    const title=root.querySelector(".diag-panel-content h3");
+    const text=root.querySelector(".diag-panel-content p");
+    const output=root.querySelector(".diag-output strong");
+    if(title)title.textContent=p[2];
+    if(text)text.textContent=p[3];
+    if(output)output.textContent=p[4];
+
+    const bottom=root.querySelector(".approach-bottom");
+    if(bottom){
+      const spans=bottom.querySelectorAll("span,strong");
+      if(spans[0])spans[0].textContent=d.bottom[0];
+      if(spans[1])spans[1].textContent=d.bottom[1];
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded",function(){
+    // Run after the site's own language and diagnostic initializers.
+    setTimeout(apply,40);
+
+    document.querySelectorAll("[data-lang]").forEach(btn=>{
+      btn.addEventListener("click",function(){ setTimeout(apply,40); });
+    });
+
+    document.querySelectorAll("#projects .diagnostic-item").forEach(item=>{
+      item.addEventListener("click",function(){ setTimeout(apply,20); });
+    });
+  });
+
+  // Expose a tiny hook for the existing language patch without replacing it.
+  window.MediaBayApproachLocale={apply:apply};
+})();
+</script>
+
 </body>
 </html>
 <section class="section green contact" data-door="contact" id="contact">
