@@ -88,6 +88,13 @@
   const hashCategory=(location.hash.match(/^#brands-(.+)$/i)||[])[1];
   applyCategory(hashCategory?decodeURIComponent(hashCategory).toUpperCase():'TUTTI',false);
   addEventListener('hashchange',()=>{const m=location.hash.match(/^#brands-(.+)$/i);if(m)applyCategory(decodeURIComponent(m[1]).toUpperCase(),false)});
+  // V26 — category links are real interactive controls and scroll to the Brand Atlas
+  $$('#campaign .editorial-links a[data-category-link]').forEach(a=>a.addEventListener('click',e=>{
+    e.preventDefault();
+    const cat=String(a.dataset.categoryLink||'').toUpperCase();
+    applyCategory(cat,true);
+    history.replaceState(null,'',`#brands-${encodeURIComponent(cat.toLowerCase())}`);
+  }));
   let ticking=false; const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;const p=$('.progress span');if(p)p.style.width=(max>0?(scrollY/max)*100:0)+'%';ticking=false};
   addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(update);ticking=true}},{passive:true}); addEventListener('resize',update); update();
   setTimeout(()=>document.body.classList.add('loaded'),900);
