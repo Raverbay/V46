@@ -543,7 +543,8 @@ main>section .service-detail:nth-child(8){--mb68-delay:6}
 </section>
 <section class="outcome"><div class="eyebrow">THE OUTCOME</div><div class="outcome-grid"><h2>MAKE THE<br/>NEXT STEP<br/><em>OBVIOUS.</em></h2><p>A store where brand, product and customer experience work as one system — from the first product discovery to the final checkout.</p></div></section>
 <section class="cta"><div class="eyebrow">START A PROJECT / 03</div><h2>READY TO BUILD<br/>A STORE THAT<br/><em>CAN MOVE?</em></h2>
-<form class="contact-form" method="POST" name="mediabay-contact">
+<form class="contact-form" method="POST" action="https://formsubmit.co/info@mediabay.it" name="mediabay-contact">
+<input type="hidden" name="_next" value="https://mediabay.it/thank-you.html"/>
 <input name="form-name" type="hidden" value="mediabay-contact"/>
 <p style="display:none"><label>Don't fill this out if you're human: <input name="bot-field"/></label></p>
 <div class="form-grid">
@@ -699,10 +700,7 @@ main>section .service-detail:nth-child(8){--mb68-delay:6}
           throw new Error('Submission failed');
         }
 
-        const ok = document.createElement('div');
-        ok.className='form-success';
-        ok.textContent='Thanks — your request has been sent.';
-        form.replaceWith(ok);
+        window.location.href = '/thank-you.html';
       }catch(err){
         if(button){
           button.disabled=false;
