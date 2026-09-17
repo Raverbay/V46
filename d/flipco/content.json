@@ -1,0 +1,561 @@
+{
+  "site": {
+    "brandName": "Flip&Co",
+    "tagline": "Più di un negozio. Un modo di essere.",
+    "accent": "#b8ff38",
+    "background": "#f2f0ea",
+    "ink": "#11120f",
+    "introTitle": "NON È UN CATALOGO.\nÈ UN PUNTO DI VISTA.",
+    "introLead": "Dal 1986 selezioniamo moda, persone e brand con un'idea semplice: entrare in un negozio deve essere un'esperienza.",
+    "introBody": "Flip&Co è uno spazio multibrand a Cagliari. Uomo, donna e bambino convivono nello stesso universo: denim, streetwear, sport, workwear e contemporary essentials. Niente e-commerce. Qui il digitale serve a farti venire voglia di entrare."
+  },
+  "hero": {
+    "logo": "logo-flipco.png",
+    "kicker": "CAGLIARI · SINCE 1986",
+    "meta": "UOMO / DONNA / BAMBINO",
+    "headline": [
+      "PIÙ DI UN",
+      "NEGOZIO.",
+      "UN MODO",
+      "DI ESSERE."
+    ]
+  },
+  "worlds": [
+    {
+      "label": "01",
+      "name": "UOMO",
+      "description": "Denim, tailoring, street e everyday essentials."
+    },
+    {
+      "label": "02",
+      "name": "DONNA",
+      "description": "Contemporary, denim, occasion e attitude."
+    },
+    {
+      "label": "03",
+      "name": "BAMBINO",
+      "description": "Icone, comfort e personalità per le nuove generazioni."
+    }
+  ],
+  "brands": [
+    {
+      "name": "Tommy Hilfiger",
+      "slug": "tommyhilfiger",
+      "url": "https://it.tommy.com/",
+      "collection": {
+        "tagline": "CLASSIC / AMERICAN / MODERN",
+        "audience": "UOMO / DONNA",
+        "intro": "Il lato più iconico del guardaroba americano, selezionato per il negozio.",
+        "description": "Una selezione tra essenziali, logo pieces e capi casual da costruire ogni giorno.",
+        "worlds": [
+          "UOMO",
+          "DONNA"
+        ],
+        "selection": [
+          {
+            "title": "KEY PIECES",
+            "text": "I capi che definiscono la stagione."
+          },
+          {
+            "title": "EVERYDAY",
+            "text": "Essenziali e combinazioni per tutti i giorni."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "Le icone che rendono riconoscibile il brand."
+          }
+        ],
+        "statement": "La collezione Tommy Hilfiger non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "Calvin Klein",
+      "slug": "calvinklein",
+      "url": "https://www.calvinklein.it/",
+      "collection": {
+        "tagline": "MINIMAL / ICONIC / DENIM",
+        "audience": "UOMO / DONNA",
+        "intro": "Essenziali puliti, denim e signature pieces con un linguaggio contemporaneo.",
+        "description": "Una selezione pensata per chi cerca linee semplici, identità forte e capi facili da combinare.",
+        "worlds": [
+          "UOMO",
+          "DONNA"
+        ],
+        "selection": [
+          {
+            "title": "KEY PIECES",
+            "text": "I capi che definiscono la stagione."
+          },
+          {
+            "title": "EVERYDAY",
+            "text": "Essenziali e combinazioni per tutti i giorni."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "Le icone che rendono riconoscibile il brand."
+          }
+        ],
+        "statement": "La collezione Calvin Klein non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "Guess",
+      "slug": "guess",
+      "url": "https://www.guess.eu/",
+      "collection": {
+        "tagline": "DENIM / GLAM / ATTITUDE",
+        "audience": "UOMO / DONNA",
+        "intro": "Un mix di denim, attitude e dettagli statement.",
+        "description": "La selezione porta in store il lato più riconoscibile e contemporaneo del brand.",
+        "worlds": [
+          "UOMO",
+          "DONNA"
+        ],
+        "selection": [
+          {
+            "title": "KEY PIECES",
+            "text": "I capi che definiscono la stagione."
+          },
+          {
+            "title": "EVERYDAY",
+            "text": "Essenziali e combinazioni per tutti i giorni."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "Le icone che rendono riconoscibile il brand."
+          }
+        ],
+        "statement": "La collezione Guess non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "Levi's",
+      "slug": "levis",
+      "url": "https://www.levi.com/",
+      "collection": {
+        "tagline": "DENIM / ORIGINAL / EVERYDAY",
+        "audience": "UOMO / DONNA",
+        "intro": "Il denim come punto di partenza.",
+        "description": "Jeans, icon pieces e casualwear: una selezione costruita intorno all’heritage denim.",
+        "worlds": [
+          "UOMO",
+          "DONNA"
+        ],
+        "selection": [
+          {
+            "title": "DENIM / WORKWEAR",
+            "text": "I capi fondamentali attorno a cui costruire il look."
+          },
+          {
+            "title": "ESSENTIALS",
+            "text": "Layering, t-shirt, shirt e capi quotidiani."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "I pezzi più riconoscibili del brand, selezionati in store."
+          }
+        ],
+        "statement": "La collezione Levi's non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "The North Face",
+      "slug": "thenorthface",
+      "url": "https://www.thenorthface.it/",
+      "collection": {
+        "tagline": "OUTDOOR / URBAN / ICONIC",
+        "audience": "UOMO / DONNA",
+        "intro": "Performance e cultura outdoor entrano nel guardaroba urbano.",
+        "description": "Una selezione di outerwear, fleece e capi iconici pensati per città e movimento.",
+        "worlds": [
+          "UOMO",
+          "DONNA"
+        ],
+        "selection": [
+          {
+            "title": "KEY PIECES",
+            "text": "I capi che definiscono la stagione."
+          },
+          {
+            "title": "EVERYDAY",
+            "text": "Essenziali e combinazioni per tutti i giorni."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "Le icone che rendono riconoscibile il brand."
+          }
+        ],
+        "statement": "La collezione The North Face non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "Nike",
+      "slug": "nike",
+      "url": "https://www.nike.com/it/",
+      "collection": {
+        "tagline": "SPORT / CULTURE / MOVEMENT",
+        "audience": "UOMO / DONNA / KIDS",
+        "intro": "Performance, street culture e design in un unico linguaggio.",
+        "description": "Sneakers, apparel e icone sportive selezionate per vivere oltre lo sport.",
+        "worlds": [
+          "UOMO",
+          "DONNA",
+          "BAMBINO"
+        ],
+        "selection": [
+          {
+            "title": "FOOTWEAR",
+            "text": "Le icone e le silhouette che definiscono il linguaggio del brand."
+          },
+          {
+            "title": "APPAREL",
+            "text": "Capi sportivi e lifestyle selezionati per il guardaroba quotidiano."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "I codici riconoscibili che vale la pena vedere dal vivo."
+          }
+        ],
+        "statement": "La collezione Nike non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "adidas",
+      "slug": "adidas",
+      "url": "https://www.adidas.it/",
+      "collection": {
+        "tagline": "SPORT / ORIGINALS / CULTURE",
+        "audience": "UOMO / DONNA / KIDS",
+        "intro": "Sport heritage e street culture.",
+        "description": "Una selezione tra Originals, footwear e apparel che attraversano generazioni.",
+        "worlds": [
+          "UOMO",
+          "DONNA",
+          "BAMBINO"
+        ],
+        "selection": [
+          {
+            "title": "FOOTWEAR",
+            "text": "Le icone e le silhouette che definiscono il linguaggio del brand."
+          },
+          {
+            "title": "APPAREL",
+            "text": "Capi sportivi e lifestyle selezionati per il guardaroba quotidiano."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "I codici riconoscibili che vale la pena vedere dal vivo."
+          }
+        ],
+        "statement": "La collezione adidas non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "Vans",
+      "slug": "vans",
+      "url": "https://www.vans.it/",
+      "collection": {
+        "tagline": "SKATE / STREET / OFF THE WALL",
+        "audience": "UOMO / DONNA / KIDS",
+        "intro": "Skate culture, sneakers e attitude.",
+        "description": "Footwear e apparel scelti per un guardaroba casual con un codice preciso.",
+        "worlds": [
+          "UOMO",
+          "DONNA",
+          "BAMBINO"
+        ],
+        "selection": [
+          {
+            "title": "KEY PIECES",
+            "text": "I capi che definiscono la stagione."
+          },
+          {
+            "title": "EVERYDAY",
+            "text": "Essenziali e combinazioni per tutti i giorni."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "Le icone che rendono riconoscibile il brand."
+          }
+        ],
+        "statement": "La collezione Vans non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "Carhartt",
+      "slug": "carhartt",
+      "url": "https://www.carhartt.com/it-it/",
+      "collection": {
+        "tagline": "WORKWEAR / STREET / DURABLE",
+        "audience": "UOMO / DONNA",
+        "intro": "Funzionalità, materiali e workwear contemporaneo.",
+        "description": "Capi resistenti e iconici che hanno trasformato il workwear in cultura urbana.",
+        "worlds": [
+          "UOMO",
+          "DONNA"
+        ],
+        "selection": [
+          {
+            "title": "DENIM / WORKWEAR",
+            "text": "I capi fondamentali attorno a cui costruire il look."
+          },
+          {
+            "title": "ESSENTIALS",
+            "text": "Layering, t-shirt, shirt e capi quotidiani."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "I pezzi più riconoscibili del brand, selezionati in store."
+          }
+        ],
+        "statement": "La collezione Carhartt non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "New Balance",
+      "slug": "newbalance",
+      "url": "https://www.newbalance.it/",
+      "collection": {
+        "tagline": "RUNNING / LIFESTYLE / BALANCE",
+        "audience": "UOMO / DONNA",
+        "intro": "Performance e lifestyle con una forte identità sneaker.",
+        "description": "Sneakers e apparel per chi cerca comfort, tecnologia e carattere.",
+        "worlds": [
+          "UOMO",
+          "DONNA"
+        ],
+        "selection": [
+          {
+            "title": "FOOTWEAR",
+            "text": "Le icone e le silhouette che definiscono il linguaggio del brand."
+          },
+          {
+            "title": "APPAREL",
+            "text": "Capi sportivi e lifestyle selezionati per il guardaroba quotidiano."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "I codici riconoscibili che vale la pena vedere dal vivo."
+          }
+        ],
+        "statement": "La collezione New Balance non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "Timberland",
+      "slug": "timberland",
+      "url": "https://www.timberland.it/",
+      "collection": {
+        "tagline": "OUTDOOR / WORK / HERITAGE",
+        "audience": "UOMO / DONNA / KIDS",
+        "intro": "Heritage outdoor e cultura urbana.",
+        "description": "Boots, footwear e capi che portano la storia outdoor nel quotidiano.",
+        "worlds": [
+          "UOMO",
+          "DONNA",
+          "BAMBINO"
+        ],
+        "selection": [
+          {
+            "title": "KEY PIECES",
+            "text": "I capi che definiscono la stagione."
+          },
+          {
+            "title": "EVERYDAY",
+            "text": "Essenziali e combinazioni per tutti i giorni."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "Le icone che rendono riconoscibile il brand."
+          }
+        ],
+        "statement": "La collezione Timberland non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "Dickies",
+      "slug": "dickies",
+      "url": "https://www.dickies.com/",
+      "collection": {
+        "tagline": "WORKWEAR / UTILITY / STREET",
+        "audience": "UOMO / DONNA",
+        "intro": "Utility wear, workwear e street culture.",
+        "description": "Pantaloni, workwear e capi essenziali costruiti per durare.",
+        "worlds": [
+          "UOMO",
+          "DONNA"
+        ],
+        "selection": [
+          {
+            "title": "DENIM / WORKWEAR",
+            "text": "I capi fondamentali attorno a cui costruire il look."
+          },
+          {
+            "title": "ESSENTIALS",
+            "text": "Layering, t-shirt, shirt e capi quotidiani."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "I pezzi più riconoscibili del brand, selezionati in store."
+          }
+        ],
+        "statement": "La collezione Dickies non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "ONLY",
+      "slug": "only",
+      "url": "https://www.only.com/",
+      "collection": {
+        "tagline": "WOMEN / EVERYDAY / TREND",
+        "audience": "DONNA",
+        "intro": "Moda donna contemporanea, accessibile e versatile.",
+        "description": "Una selezione di everyday pieces, denim e capi facili da costruire in look.",
+        "worlds": [
+          "DONNA"
+        ],
+        "selection": [
+          {
+            "title": "KEY PIECES",
+            "text": "I capi che definiscono la stagione."
+          },
+          {
+            "title": "EVERYDAY",
+            "text": "Essenziali e combinazioni per tutti i giorni."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "Le icone che rendono riconoscibile il brand."
+          }
+        ],
+        "statement": "La collezione ONLY non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "Jack & Jones",
+      "slug": "jackjones",
+      "url": "https://www.jackjones.com/it-it/",
+      "collection": {
+        "tagline": "MEN / DENIM / EVERYDAY",
+        "audience": "UOMO",
+        "intro": "Menswear contemporaneo con una forte anima denim.",
+        "description": "Denim, overshirt, knitwear e casual essentials per tutti i giorni.",
+        "worlds": [
+          "UOMO"
+        ],
+        "selection": [
+          {
+            "title": "DENIM / WORKWEAR",
+            "text": "I capi fondamentali attorno a cui costruire il look."
+          },
+          {
+            "title": "ESSENTIALS",
+            "text": "Layering, t-shirt, shirt e capi quotidiani."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "I pezzi più riconoscibili del brand, selezionati in store."
+          }
+        ],
+        "statement": "La collezione Jack & Jones non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "Vero Moda",
+      "slug": "veromoda",
+      "url": "https://www.veromoda.com/it-it/",
+      "collection": {
+        "tagline": "WOMEN / MODERN / EVERYDAY",
+        "audience": "DONNA",
+        "intro": "Un guardaroba femminile contemporaneo e versatile.",
+        "description": "Essentials, denim e capi stagionali da mixare in libertà.",
+        "worlds": [
+          "DONNA"
+        ],
+        "selection": [
+          {
+            "title": "KEY PIECES",
+            "text": "I capi che definiscono la stagione."
+          },
+          {
+            "title": "EVERYDAY",
+            "text": "Essenziali e combinazioni per tutti i giorni."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "Le icone che rendono riconoscibile il brand."
+          }
+        ],
+        "statement": "La collezione Vero Moda non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    },
+    {
+      "name": "name it",
+      "slug": "nameit",
+      "url": "https://www.nameit.com/",
+      "collection": {
+        "tagline": "KIDS / PLAY / EVERYDAY",
+        "audience": "BAMBINO",
+        "intro": "Stile, comfort e libertà di movimento per i più piccoli.",
+        "description": "Capi everyday e icone kids pensati per accompagnare ogni giorno.",
+        "worlds": [
+          "BAMBINO"
+        ],
+        "selection": [
+          {
+            "title": "KEY PIECES",
+            "text": "I capi che definiscono la stagione."
+          },
+          {
+            "title": "EVERYDAY",
+            "text": "Essenziali e combinazioni per tutti i giorni."
+          },
+          {
+            "title": "SIGNATURE",
+            "text": "Le icone che rendono riconoscibile il brand."
+          }
+        ],
+        "statement": "La collezione name it non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+      }
+    }
+  ],
+  "story": {
+    "kicker": "THE FLIP&CO CODE",
+    "title": [
+      "SELEZIONARE.",
+      "NON RIEMPIRE."
+    ],
+    "body": "Dal 1986 Flip&Co costruisce il proprio stile attraverso la selezione. Non inseguiamo tutto: scegliamo ciò che ha carattere, riconoscibilità e un posto nella vita reale. Il negozio è il punto d'incontro tra brand internazionali e persone di Cagliari.",
+    "facts": [
+      "1986 / NASCE FLIP&CO",
+      "2011 / CAGLIARI",
+      "16 / BRAND SELEZIONATI"
+    ]
+  },
+  "store": {
+    "kicker": "THE STORE",
+    "title": [
+      "VIENI A",
+      "VEDERLO DAL VIVO."
+    ],
+    "address": "Via Italia 22, Cagliari",
+    "hours": "LUN–SAB · 09:00–13:30 / 16:00–20:00",
+    "phone": "+39 366 108 7819",
+    "whatsapp": "393661087819",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Flip%26Co%20Via%20Italia%2022%20Cagliari"
+  },
+  "reviews": {
+    "rating": "4,2",
+    "count": "41 RECENSIONI",
+    "title": "LA PARTE PIÙ IMPORTANTE È FUORI DALLO SCHERMO.",
+    "body": "Il sito non sostituisce il negozio. Ti porta alla porta."
+  },
+  "contact": {
+    "title": [
+      "SEE YOU",
+      "IN STORE."
+    ],
+    "instagram": "https://www.instagram.com/",
+    "whatsapp": "393661087819"
+  }
+}

@@ -1,1 +1,184 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f2f0ea">
+<title>Flip&Co — Cagliari · Since 1986</title>
+<meta name="description" content="Flip&Co — multibrand fashion store in Cagliari. Uomo, donna, bambino. Since 1986.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
+<style>
+.mb-demo-footer{margin:0;padding:clamp(72px,10vw,150px) clamp(24px,5vw,80px) 28px;background:#11120f;color:#f4f2ec;border-top:1px solid rgba(244,242,236,.16)}
+.mb-demo-kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.62;margin-bottom:32px}
+.mb-demo-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:clamp(36px,8vw,120px);align-items:end}
+.mb-demo-footer h2{margin:0;font-size:clamp(48px,8vw,124px);line-height:.88;letter-spacing:-.055em;font-weight:700}
+.mb-demo-footer h2 span{opacity:.42}
+.mb-demo-copy{max-width:430px;font-size:15px;line-height:1.5}
+.mb-demo-copy p{margin:0 0 10px}
+.mb-demo-copy strong{font-weight:700}
+.mb-demo-cta{display:inline-flex;margin-top:24px;padding:13px 18px;border:1px solid rgba(244,242,236,.35);color:#f4f2ec;text-decoration:none;font-size:11px;letter-spacing:.14em}
+.mb-demo-cta:hover{background:#f4f2ec;color:#11120f}
+.mb-demo-meta{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:90px;padding-top:18px;border-top:1px solid rgba(244,242,236,.16);font-size:10px;letter-spacing:.09em;text-transform:uppercase;opacity:.7}
+.mb-demo-meta a{color:inherit;text-decoration:none}
+@media(max-width:760px){
+  .mb-demo-grid{grid-template-columns:1fr}
+  .mb-demo-footer h2{font-size:clamp(48px,15vw,82px)}
+  .mb-demo-copy{max-width:none}
+  .mb-demo-meta{margin-top:56px;gap:12px 18px}
+}
+</style>
+
+</head>
+<body>
+<div id="loader" aria-hidden="true"><img class="loaderLogo" src="./assets/logo-flipco.png" alt="Flip&Co"><div class="loaderLine"><i></i></div></div>
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-language language" aria-label="Language">
+      <button class="active">IT</button><button>EN</button>
+    </div>
+    <a class="brandmark" href="#top" aria-label="Flip&Co"><img id="navLogo" src="./assets/logo-flipco.png" alt="Flip&Co"></a>
+    <div class="header-actions">
+      <button class="menu-button" id="menuButton" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div id="menuPanel" class="menu-panel" aria-hidden="true">
+  <div class="menu-panel-inner">
+    <span class="micro">NAVIGATION</span>
+    <nav id="mobileNav"></nav>
+    <div class="menu-meta"><span id="menuLocation"></span><a id="menuWhatsapp" target="_blank" rel="noopener">WHATSAPP ↗</a></div>
+  </div>
+</div>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-gridline"></div>
+    <div class="hero-top"><span id="heroKicker" class="micro"></span><span class="hero-index">001 / 006</span></div>
+    <div class="hero-center"><img id="heroLogo" class="hero-logo" alt="Flip&Co"><div class="hero-rule"></div></div>
+    <div class="hero-bottom"><div id="heroHeadline" class="hero-headline"></div><div class="hero-meta"><span id="heroMeta"></span><span class="scroll-cue">SCROLL <i></i></span></div></div>
+  </section>
+
+  <section class="store-feature" id="store-preview">
+    <div class="store-feature-media reveal">
+      <img src="assets/store-entrance.jpg" alt="Ingresso del negozio Flip&Co a Cagliari" loading="eager">
+      <span class="store-feature-label">FLIP&CO / CAGLIARI</span>
+    </div>
+    <div class="store-feature-copy reveal">
+      <span class="micro">A PLACE TO DISCOVER</span>
+      <h2 class="display">ENTRA.<br>GUARDA.<br>PROVA.</h2>
+      <p>Il digitale ti porta fino alla porta. Il resto succede dentro.</p>
+      <div class="store-feature-meta"><span>VIA ITALIA 22</span><span>MON—SAT · 09:00—20:00</span></div>
+      <a href="#store" class="feature-link">DISCOVER THE STORE <span>↘</span></a>
+    </div>
+  </section>
+
+  <section class="editorial-feature section-pad" id="campaign">
+    <div class="editorial-feature-head reveal">
+      <span class="micro">02 / THE FLIP&CO EDIT</span>
+      <span class="micro muted">REAL PEOPLE / REAL STYLE</span>
+    </div>
+    <div class="editorial-image reveal">
+      <img src="assets/editorial-campaign.jpg" alt="Flip&Co — fashion editorial in store" loading="lazy">
+      <div class="editorial-overlay">
+        <span class="editorial-mark">FLIP&CO</span>
+        <span class="editorial-caption">SAME STREET.<br>DIFFERENT STORY.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro section-pad reveal">
+    <div class="intro-grid">
+      <div><span class="micro">01 / PHILOSOPHY</span><h2 id="introTitle" class="display heading-reveal"></h2></div>
+      <div class="intro-copy"><p id="introLead" class="lead"></p><p id="introBody" class="body-copy"></p></div>
+    </div>
+  </section>
+
+  <section id="worlds" class="worlds section-pad">
+    <div class="section-head reveal"><div><span class="micro">02 / THE WORLDS</span><h2 class="display heading-reveal">TRE MODI<br>DI ESSERE.</h2></div><span class="micro muted">UOMO / DONNA / BAMBINO</span></div>
+    <div id="worldGrid" class="world-grid"></div>
+  </section>
+
+  <section id="brands" class="brand-section section-pad">
+    <div class="brand-top reveal"><div><span class="micro">03 / THE BRAND ATLAS</span><h2 class="display heading-reveal">NOMI CHE<br>CONOSCI.</h2></div><div class="brand-note"><span id="brandCount" class="brand-count">16</span><span class="micro">SELECTED<br>BRANDS</span></div></div>
+    <p class="brand-intro reveal">Non un elenco. Un atlante. Ogni marchio apre la propria selezione: niente carrello, solo quello che troverai davvero in negozio.</p>
+    <div id="brandGrid" class="brand-grid"></div>
+  </section>
+
+  <section id="story" class="story section-pad">
+    <div class="story-grid">
+      <div class="reveal"><span id="storyKicker" class="micro"></span><h2 id="storyTitle" class="display heading-reveal"></h2></div>
+      <div class="story-copy reveal"><p id="storyBody" class="story-lead"></p><div id="storyFacts" class="story-facts"></div></div>
+    </div>
+  </section>
+
+  <section id="store" class="store section-pad">
+    <div class="section-head reveal"><div><span id="storeKicker" class="micro"></span><h2 id="storeTitle" class="display heading-reveal"></h2></div></div>
+    <div class="store-stage reveal">
+      <div class="store-coordinate"><span>39°13′ N</span><span>09°07′ E</span></div>
+      <div class="store-word">CAGLIARI</div>
+      <div class="store-card">
+        <span class="micro">FLIP&CO / STORE</span><h3 id="storeAddress"></h3>
+        <div class="facts"><div><span>HOURS</span><strong id="storeHours"></strong></div><div><span>PHONE</span><strong id="storePhone"></strong></div></div>
+        <div class="store-actions"><a id="mapLink" target="_blank" rel="noopener" class="pill">OPEN MAP ↗</a><a id="waLink" target="_blank" rel="noopener" class="pill dark">WHATSAPP ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="review-band">
+    <div class="section-pad review-grid"><div class="reveal"><span class="micro">05 / REPUTATION</span><div id="rating" class="rating"></div><span id="reviewCount" class="micro"></span></div><div class="reveal"><h2 id="reviewTitle" class="display heading-reveal"></h2><p id="reviewBody" class="body-copy light"></p></div></div>
+  </section>
+
+  <section id="contact" class="contact section-pad"><span class="micro reveal">06 / CONTACT</span><h2 id="contactTitle" class="contact-title heading-reveal"></h2><div class="contact-row reveal"><span id="contactMeta" class="micro"></span><div><a id="instagramLink" class="pill" target="_blank" rel="noopener">INSTAGRAM ↗</a><a id="contactWa" class="pill dark" target="_blank" rel="noopener">START A CONVERSATION ↗</a></div></div></section>
+</main>
+
+<div class="floating-actions" aria-label="Azioni rapide">
+  <a id="floatingContact" class="floating-action" href="https://wa.me/393661087819" target="_blank" rel="noopener" aria-label="Contattaci su WhatsApp">
+    <span class="floating-icon whatsapp-icon" aria-hidden="true">↗</span>
+    <span>CONTATTACI</span>
+  </a>
+  <a id="floatingMaps" class="floating-action floating-action-map" href="https://www.google.com/maps/search/?api=1&query=Via+Italia+22%2C+Cagliari" target="_blank" rel="noopener" aria-label="Visita il negozio su Maps">
+    <span class="floating-icon" aria-hidden="true">⌖</span>
+    <span>VISITA SU MAPS</span>
+  </a>
+</div>
+<style>
+/* V9 — always-visible quick actions */
+.floating-actions{position:fixed!important;left:50%!important;right:auto!important;bottom:calc(14px + env(safe-area-inset-bottom))!important;transform:translateX(-50%)!important;z-index:2147483647!important;display:flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;align-items:center!important;gap:0!important;padding:4px!important;border:1px solid rgba(17,18,15,.22)!important;border-radius:999px!important;background:rgba(244,242,236,.94)!important;backdrop-filter:blur(18px)!important;-webkit-backdrop-filter:blur(18px)!important;box-shadow:0 10px 30px rgba(0,0,0,.28)!important}
+.floating-actions .floating-action{display:flex!important;visibility:visible!important;opacity:1!important;align-items:center!important;justify-content:center!important;gap:8px!important;min-height:42px!important;padding:0 18px!important;border-radius:999px!important;color:#11120f!important;background:transparent!important;text-decoration:none!important;font:800 9px/1 Manrope,Arial,sans-serif!important;letter-spacing:.12em!important;white-space:nowrap!important}
+.floating-actions .floating-action:hover{background:#11120f!important;color:#f4f2ec!important}
+.floating-actions .floating-action-map{border-left:1px solid rgba(17,18,15,.16)!important;border-radius:0 999px 999px 0!important}
+.floating-actions .floating-icon{width:20px!important;height:20px!important;display:grid!important;place-items:center!important;border:1px solid currentColor!important;border-radius:50%!important;font-size:11px!important}
+@media(max-width:520px){.floating-actions{left:12px!important;right:12px!important;bottom:calc(10px + env(safe-area-inset-bottom))!important;transform:none!important;width:auto!important}.floating-actions .floating-action{flex:1!important;min-height:44px!important;padding:0 8px!important;font-size:8px!important;letter-spacing:.09em!important}}
+</style>
+
+<footer><div class="section-pad footer-inner"><div><img id="footerLogo" alt="Flip&Co"><span class="micro">FLIP&CO · CAGLIARI · SINCE 1986</span></div><div class="footer-links"><a href="#campaign">Edit</a><a href="#worlds">Worlds</a><a href="#brands">Brands</a><a href="#story">Story</a><a href="#store">Store</a></div><span class="micro">MEDIA­BAY FASHION MASTER THEME · 2026</span></div></footer>
+<script src="engine.js"></script>
+
+<section class="mb-demo-footer" aria-label="MediaBay demo information">
+  <div class="mb-demo-kicker">A DEMO BY MEDIABAY</div>
+  <div class="mb-demo-grid">
+    <div>
+      <h2>QUESTO SITO<br><span>PUÒ ESSERE TUO.</span></h2>
+    </div>
+    <div class="mb-demo-copy">
+      <p>Questa esperienza digitale è una demo realizzata da <strong>MediaBay</strong>.</p>
+      <p>Web · Social · AI · Mobility</p>
+      <a class="mb-demo-cta" href="https://www.mediabay.it/" target="_blank" rel="noopener">SCOPRI MEDIABAY ↗</a>
+    </div>
+  </div>
+  <div class="mb-demo-meta">
+    <a href="https://www.mediabay.it/" target="_blank" rel="noopener">www.mediabay.it</a>
+    <a href="mailto:info@mediabay.it">info@mediabay.it</a>
+    <a href="https://wa.me/393518472396" target="_blank" rel="noopener">WhatsApp +39 351 847 2396</a>
+    <span>© MediaBay · Since 2013</span>
+  </div>
+</section>
+
+</body>
+</html>

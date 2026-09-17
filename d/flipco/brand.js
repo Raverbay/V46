@@ -1,0 +1,23 @@
+(async function(){
+  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+  const cfg=await fetch('content.json').then(r=>r.json());
+  const slug=new URLSearchParams(location.search).get('brand')||cfg.brands[0].slug;
+  const brand=cfg.brands.find(b=>b.slug===slug)||cfg.brands[0];
+  const root=document.documentElement, site=cfg.site;
+  root.style.setProperty('--accent',site.accent||'#b8ff38');root.style.setProperty('--bg',site.background||'#f2f0ea');root.style.setProperty('--ink',site.ink||'#11120f');
+  const set=(sel,v)=>{const e=$(sel);if(e)e.textContent=v||''};
+  const logo=`https://cdn.simpleicons.org/${brand.slug}/11120f`;
+  const data=brand.collection||{};
+  document.title=`${brand.name} — Flip&Co`;
+  const img=$('#brandLogo');img.src=logo;img.alt=brand.name;
+  img.onerror=()=>img.style.display='none';
+  set('#brandIndex',`${String(cfg.brands.indexOf(brand)+1).padStart(2,'0')} / ${String(cfg.brands.length).padStart(2,'0')}`);
+  set('#brandTagline',data.tagline||'SELECTED IN STORE');
+  set('#brandAudience',data.audience||'SELECTED COLLECTION');
+  set('#brandTitle',brand.name.toUpperCase());set('#brandIntro',data.intro||`La selezione ${brand.name} disponibile da Flip&Co.`);set('#brandDescription',data.description||'Una selezione pensata per essere scoperta dal vivo, provata e scelta in negozio.');
+  set('#brandWorlds',(data.worlds||[]).join(' / '));set('#brandStatement',data.statement||'Non è un catalogo. È una selezione da vivere in store.');
+  const sg=$('#selectionGrid');(data.selection||[]).forEach((item,i)=>{const d=document.createElement('article');d.className='selection-card reveal';d.innerHTML=`<span class="selection-number">${String(i+1).padStart(2,'0')}</span><div><h3>${item.title}</h3><p>${item.text}</p></div><span class="selection-arrow">↗</span>`;sg.appendChild(d)});
+  set('#visitAddress',`${cfg.store.address} · ${cfg.store.hours}`);$('#visitMap').href=cfg.store.maps;$('#visitWa').href=`https://wa.me/${cfg.store.whatsapp}`;
+  const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});$$('.reveal,.heading-reveal').forEach(e=>observer.observe(e));
+  setTimeout(()=>document.body.classList.add('loaded'),700);
+})();
