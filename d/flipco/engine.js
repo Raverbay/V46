@@ -33,7 +33,7 @@
   set('#rating',cfg.reviews.rating); set('#reviewCount',cfg.reviews.count); set('#reviewTitle',cfg.reviews.title); set('#reviewBody',cfg.reviews.body);
   setHTML('#contactTitle',cfg.contact.title.map(x=>`${x}<br>`).join('')); set('#contactMeta',`${site.brandName} · ${cfg.store.address}`); $('#instagramLink').href=cfg.contact.instagram; $('#contactWa').href=`https://wa.me/${cfg.contact.whatsapp}`;
 
-  const navItems=[['THE WORLDS','#worlds'],['BRANDS','#brands'],['STORY','#story'],['STORE','#store'],['CONTACT','#contact']];
+  const navItems=[['THE EDIT','#worlds'],['BRANDS','#brands'],['STORY','#story'],['STORE','#store'],['CONTACT','#contact']];
   const n=$('#mobileNav'); navItems.forEach(([label,href])=>{const a=document.createElement('a');a.href=href;a.textContent=label;n.appendChild(a)});
   $$('.language button').forEach(btn=>btn.addEventListener('click',()=>{$$('.language button').forEach(b=>b.classList.remove('active'));btn.classList.add('active')}));
   const menuButton=$('#menuButton'),panel=$('#menuPanel');

@@ -5,14 +5,14 @@
     "accent": "#b8ff38",
     "background": "#f2f0ea",
     "ink": "#11120f",
-    "introTitle": "NON È UN CATALOGO.\nÈ UN PUNTO DI VISTA.",
-    "introLead": "Selezioniamo moda, persone e brand con un'idea semplice: entrare in un negozio deve essere un'esperienza.",
-    "introBody": "Flip&Co è uno spazio multibrand a Cagliari. Uomo, donna e bambino convivono nello stesso universo: denim, streetwear, sport, workwear e contemporary essentials. Niente e-commerce. Qui il digitale serve a farti venire voglia di entrare."
+    "introTitle": "NON È UN CATALOGO.\nÈ IL PRIMO PASSO\nVERSO IL NEGOZIO.",
+    "introLead": "Guarda. Immagina il tuo prossimo look. Poi vieni a provarlo dal vivo.",
+    "introBody": "Flip&Co è un multibrand store a Cagliari per uomo, donna e bambino. Qui trovi una selezione di denim, streetwear, sport, workwear e contemporary essentials. Il sito non è un e-commerce: è il tuo punto di partenza. Ti mostra il mondo Flip&Co, accende la curiosità e ti porta dove la scelta diventa reale: in negozio."
   },
   "hero": {
     "logo": "logo-flipco.png",
-    "kicker": "CAGLIARI · MULTIBRAND",
-    "meta": "UOMO / DONNA / BAMBINO",
+    "kicker": "CAGLIARI · MULTIBRAND STORE",
+    "meta": "UOMO / DONNA / BAMBINO · IN STORE",
     "headline": [
       "PIÙ DI UN",
       "NEGOZIO.",
@@ -24,17 +24,17 @@
     {
       "label": "01",
       "name": "UOMO",
-      "description": "Denim, tailoring, street e everyday essentials."
+      "description": "Denim, street, tailoring e essentials. Trova il tuo prossimo punto di partenza."
     },
     {
       "label": "02",
       "name": "DONNA",
-      "description": "Contemporary, denim, occasion e attitude."
+      "description": "Contemporary, denim e occasion. Pezzi da vedere, toccare e interpretare."
     },
     {
       "label": "03",
       "name": "BAMBINO",
-      "description": "Icone, comfort e personalità per le nuove generazioni."
+      "description": "Comfort, stile e personalità. Una selezione pensata per crescere con loro."
     }
   ],
   "brands": [
@@ -45,27 +45,27 @@
       "collection": {
         "tagline": "CLASSIC / AMERICAN / MODERN",
         "audience": "UOMO / DONNA",
-        "intro": "Il lato più iconico del guardaroba americano, selezionato per il negozio.",
-        "description": "Una selezione tra essenziali, logo pieces e capi casual da costruire ogni giorno.",
+        "intro": "Iconico, riconoscibile, facile da fare tuo.",
+        "description": "Una selezione di capi e signature pieces pensata per costruire look puliti, contemporanei e immediatamente riconoscibili.",
         "worlds": [
           "UOMO",
           "DONNA"
         ],
         "selection": [
           {
-            "title": "KEY PIECES",
-            "text": "I capi che definiscono la stagione."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "EVERYDAY",
-            "text": "Essenziali e combinazioni per tutti i giorni."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "Le icone che rendono riconoscibile il brand."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione Tommy Hilfiger non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui Tommy Hilfiger non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -75,27 +75,27 @@
       "collection": {
         "tagline": "MINIMAL / ICONIC / DENIM",
         "audience": "UOMO / DONNA",
-        "intro": "Essenziali puliti, denim e signature pieces con un linguaggio contemporaneo.",
-        "description": "Una selezione pensata per chi cerca linee semplici, identità forte e capi facili da combinare.",
+        "intro": "Quando la semplicità ha carattere.",
+        "description": "Denim, essentials e linee essenziali per chi cerca un guardaroba pulito, contemporaneo e facile da combinare.",
         "worlds": [
           "UOMO",
           "DONNA"
         ],
         "selection": [
           {
-            "title": "KEY PIECES",
-            "text": "I capi che definiscono la stagione."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "EVERYDAY",
-            "text": "Essenziali e combinazioni per tutti i giorni."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "Le icone che rendono riconoscibile il brand."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione Calvin Klein non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui Calvin Klein non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -105,27 +105,27 @@
       "collection": {
         "tagline": "DENIM / GLAM / ATTITUDE",
         "audience": "UOMO / DONNA",
-        "intro": "Un mix di denim, attitude e dettagli statement.",
-        "description": "La selezione porta in store il lato più riconoscibile e contemporaneo del brand.",
+        "intro": "Un dettaglio può cambiare tutto.",
+        "description": "Denim, attitude e pezzi statement: una selezione da vedere da vicino per capire subito cosa può funzionare sul tuo stile.",
         "worlds": [
           "UOMO",
           "DONNA"
         ],
         "selection": [
           {
-            "title": "KEY PIECES",
-            "text": "I capi che definiscono la stagione."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "EVERYDAY",
-            "text": "Essenziali e combinazioni per tutti i giorni."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "Le icone che rendono riconoscibile il brand."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione Guess non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui Guess non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -135,27 +135,27 @@
       "collection": {
         "tagline": "DENIM / ORIGINAL / EVERYDAY",
         "audience": "UOMO / DONNA",
-        "intro": "Il denim come punto di partenza.",
-        "description": "Jeans, icon pieces e casualwear: una selezione costruita intorno all’heritage denim.",
+        "intro": "Il denim giusto non ha bisogno di spiegazioni.",
+        "description": "Jeans, icon pieces e casualwear selezionati per partire dal denim e costruire il resto del look attorno a te.",
         "worlds": [
           "UOMO",
           "DONNA"
         ],
         "selection": [
           {
-            "title": "DENIM / WORKWEAR",
-            "text": "I capi fondamentali attorno a cui costruire il look."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "ESSENTIALS",
-            "text": "Layering, t-shirt, shirt e capi quotidiani."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "I pezzi più riconoscibili del brand, selezionati in store."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione Levi's non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui Levi's non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -165,27 +165,27 @@
       "collection": {
         "tagline": "OUTDOOR / URBAN / ICONIC",
         "audience": "UOMO / DONNA",
-        "intro": "Performance e cultura outdoor entrano nel guardaroba urbano.",
-        "description": "Una selezione di outerwear, fleece e capi iconici pensati per città e movimento.",
+        "intro": "Fuori dalla città. Dentro il tuo stile.",
+        "description": "Outerwear, fleece e capi iconici dove performance e cultura outdoor incontrano il guardaroba urbano.",
         "worlds": [
           "UOMO",
           "DONNA"
         ],
         "selection": [
           {
-            "title": "KEY PIECES",
-            "text": "I capi che definiscono la stagione."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "EVERYDAY",
-            "text": "Essenziali e combinazioni per tutti i giorni."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "Le icone che rendono riconoscibile il brand."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione The North Face non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui The North Face non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -195,8 +195,8 @@
       "collection": {
         "tagline": "SPORT / CULTURE / MOVEMENT",
         "audience": "UOMO / DONNA / KIDS",
-        "intro": "Performance, street culture e design in un unico linguaggio.",
-        "description": "Sneakers, apparel e icone sportive selezionate per vivere oltre lo sport.",
+        "intro": "Lo sport è solo l’inizio.",
+        "description": "Sneakers, apparel e icone Nike selezionate per chi vive il movimento anche quando non sta facendo sport.",
         "worlds": [
           "UOMO",
           "DONNA",
@@ -204,19 +204,19 @@
         ],
         "selection": [
           {
-            "title": "FOOTWEAR",
-            "text": "Le icone e le silhouette che definiscono il linguaggio del brand."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "APPAREL",
-            "text": "Capi sportivi e lifestyle selezionati per il guardaroba quotidiano."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "I codici riconoscibili che vale la pena vedere dal vivo."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione Nike non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui Nike non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -226,8 +226,8 @@
       "collection": {
         "tagline": "SPORT / ORIGINALS / CULTURE",
         "audience": "UOMO / DONNA / KIDS",
-        "intro": "Sport heritage e street culture.",
-        "description": "Una selezione tra Originals, footwear e apparel che attraversano generazioni.",
+        "intro": "Le icone che continuano a muoversi.",
+        "description": "Originals, footwear e apparel per chi vuole portare il linguaggio dello sport dentro il proprio quotidiano.",
         "worlds": [
           "UOMO",
           "DONNA",
@@ -235,19 +235,19 @@
         ],
         "selection": [
           {
-            "title": "FOOTWEAR",
-            "text": "Le icone e le silhouette che definiscono il linguaggio del brand."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "APPAREL",
-            "text": "Capi sportivi e lifestyle selezionati per il guardaroba quotidiano."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "I codici riconoscibili che vale la pena vedere dal vivo."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione adidas non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui adidas non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -257,8 +257,8 @@
       "collection": {
         "tagline": "SKATE / STREET / OFF THE WALL",
         "audience": "UOMO / DONNA / KIDS",
-        "intro": "Skate culture, sneakers e attitude.",
-        "description": "Footwear e apparel scelti per un guardaroba casual con un codice preciso.",
+        "intro": "Attitude, senza complicazioni.",
+        "description": "Sneakers e apparel scelti per costruire un guardaroba casual con un’identità precisa e immediata.",
         "worlds": [
           "UOMO",
           "DONNA",
@@ -266,19 +266,19 @@
         ],
         "selection": [
           {
-            "title": "KEY PIECES",
-            "text": "I capi che definiscono la stagione."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "EVERYDAY",
-            "text": "Essenziali e combinazioni per tutti i giorni."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "Le icone che rendono riconoscibile il brand."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione Vans non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui Vans non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -288,27 +288,27 @@
       "collection": {
         "tagline": "WORKWEAR / STREET / DURABLE",
         "audience": "UOMO / DONNA",
-        "intro": "Funzionalità, materiali e workwear contemporaneo.",
-        "description": "Capi resistenti e iconici che hanno trasformato il workwear in cultura urbana.",
+        "intro": "Funzione che diventa stile.",
+        "description": "Workwear, materiali e silhouette iconiche per chi cerca capi solidi, riconoscibili e fatti per entrare nel quotidiano.",
         "worlds": [
           "UOMO",
           "DONNA"
         ],
         "selection": [
           {
-            "title": "DENIM / WORKWEAR",
-            "text": "I capi fondamentali attorno a cui costruire il look."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "ESSENTIALS",
-            "text": "Layering, t-shirt, shirt e capi quotidiani."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "I pezzi più riconoscibili del brand, selezionati in store."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione Carhartt non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui Carhartt non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -316,29 +316,29 @@
       "slug": "newbalance",
       "url": "https://www.newbalance.it/",
       "collection": {
-        "tagline": "RUNNING / LIFESTYLE / BALANCE",
-        "audience": "UOMO / DONNA",
-        "intro": "Performance e lifestyle con una forte identità sneaker.",
-        "description": "Sneakers e apparel per chi cerca comfort, tecnologia e carattere.",
+        "tagline": "PERFORMANCE / LIFESTYLE / COMFORT",
+        "audience": "UOMO / DONNA / KIDS",
+        "intro": "Comfort che si vede. E si sente.",
+        "description": "Sneakers e apparel per incontrare comfort, performance e carattere in un unico look.",
         "worlds": [
           "UOMO",
           "DONNA"
         ],
         "selection": [
           {
-            "title": "FOOTWEAR",
-            "text": "Le icone e le silhouette che definiscono il linguaggio del brand."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "APPAREL",
-            "text": "Capi sportivi e lifestyle selezionati per il guardaroba quotidiano."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "I codici riconoscibili che vale la pena vedere dal vivo."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione New Balance non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui New Balance non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -346,10 +346,10 @@
       "slug": "timberland",
       "url": "https://www.timberland.it/",
       "collection": {
-        "tagline": "OUTDOOR / WORK / HERITAGE",
-        "audience": "UOMO / DONNA / KIDS",
-        "intro": "Heritage outdoor e cultura urbana.",
-        "description": "Boots, footwear e capi che portano la storia outdoor nel quotidiano.",
+        "tagline": "OUTDOOR / HERITAGE / URBAN",
+        "audience": "UOMO / DONNA",
+        "intro": "Nato per stare fuori. Fatto per stare ovunque.",
+        "description": "Boots, footwear e capi che portano il DNA outdoor dentro una selezione urbana e contemporanea.",
         "worlds": [
           "UOMO",
           "DONNA",
@@ -357,19 +357,19 @@
         ],
         "selection": [
           {
-            "title": "KEY PIECES",
-            "text": "I capi che definiscono la stagione."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "EVERYDAY",
-            "text": "Essenziali e combinazioni per tutti i giorni."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "Le icone che rendono riconoscibile il brand."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione Timberland non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui Timberland non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -377,29 +377,29 @@
       "slug": "dickies",
       "url": "https://www.dickies.com/",
       "collection": {
-        "tagline": "WORKWEAR / UTILITY / STREET",
+        "tagline": "UTILITY / WORKWEAR / STREET",
         "audience": "UOMO / DONNA",
-        "intro": "Utility wear, workwear e street culture.",
-        "description": "Pantaloni, workwear e capi essenziali costruiti per durare.",
+        "intro": "La semplicità fatta bene dura.",
+        "description": "Utility wear, workwear e street essentials: capi funzionali che diventano parte naturale del tuo stile.",
         "worlds": [
           "UOMO",
           "DONNA"
         ],
         "selection": [
           {
-            "title": "DENIM / WORKWEAR",
-            "text": "I capi fondamentali attorno a cui costruire il look."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "ESSENTIALS",
-            "text": "Layering, t-shirt, shirt e capi quotidiani."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "I pezzi più riconoscibili del brand, selezionati in store."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione Dickies non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui Dickies non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -407,28 +407,28 @@
       "slug": "only",
       "url": "https://www.only.com/",
       "collection": {
-        "tagline": "WOMEN / EVERYDAY / TREND",
+        "tagline": "WOMEN / CONTEMPORARY / EVERYDAY",
         "audience": "DONNA",
-        "intro": "Moda donna contemporanea, accessibile e versatile.",
-        "description": "Una selezione di everyday pieces, denim e capi facili da costruire in look.",
+        "intro": "Il quotidiano, quando è quello giusto.",
+        "description": "Denim, essentials e pezzi contemporanei da mixare con libertà e trasformare nel proprio guardaroba.",
         "worlds": [
           "DONNA"
         ],
         "selection": [
           {
-            "title": "KEY PIECES",
-            "text": "I capi che definiscono la stagione."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "EVERYDAY",
-            "text": "Essenziali e combinazioni per tutti i giorni."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "Le icone che rendono riconoscibile il brand."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione ONLY non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui ONLY non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -436,28 +436,28 @@
       "slug": "jackjones",
       "url": "https://www.jackjones.com/it-it/",
       "collection": {
-        "tagline": "MEN / DENIM / EVERYDAY",
+        "tagline": "MENSWEAR / DENIM / EVERYDAY",
         "audience": "UOMO",
-        "intro": "Menswear contemporaneo con una forte anima denim.",
-        "description": "Denim, overshirt, knitwear e casual essentials per tutti i giorni.",
+        "intro": "Parti dal denim. Costruisci il resto.",
+        "description": "Denim, overshirt, knitwear e casual essentials per un guardaroba maschile contemporaneo e facile da vivere.",
         "worlds": [
           "UOMO"
         ],
         "selection": [
           {
-            "title": "DENIM / WORKWEAR",
-            "text": "I capi fondamentali attorno a cui costruire il look."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "ESSENTIALS",
-            "text": "Layering, t-shirt, shirt e capi quotidiani."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "I pezzi più riconoscibili del brand, selezionati in store."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione Jack & Jones non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui Jack & Jones non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -465,28 +465,28 @@
       "slug": "veromoda",
       "url": "https://www.veromoda.com/it-it/",
       "collection": {
-        "tagline": "WOMEN / MODERN / EVERYDAY",
+        "tagline": "WOMEN / MODERN / VERSATILE",
         "audience": "DONNA",
-        "intro": "Un guardaroba femminile contemporaneo e versatile.",
-        "description": "Essentials, denim e capi stagionali da mixare in libertà.",
+        "intro": "Il tuo stile non ha una sola versione.",
+        "description": "Essentials, denim e capi stagionali pensati per creare combinazioni diverse, senza complicare il guardaroba.",
         "worlds": [
           "DONNA"
         ],
         "selection": [
           {
-            "title": "KEY PIECES",
-            "text": "I capi che definiscono la stagione."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "EVERYDAY",
-            "text": "Essenziali e combinazioni per tutti i giorni."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "Le icone che rendono riconoscibile il brand."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione Vero Moda non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui Vero Moda non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     },
     {
@@ -494,49 +494,49 @@
       "slug": "nameit",
       "url": "https://www.nameit.com/",
       "collection": {
-        "tagline": "KIDS / PLAY / EVERYDAY",
+        "tagline": "KIDS / COMFORT / EVERYDAY",
         "audience": "BAMBINO",
-        "intro": "Stile, comfort e libertà di movimento per i più piccoli.",
-        "description": "Capi everyday e icone kids pensati per accompagnare ogni giorno.",
+        "intro": "Piccoli look. Grande personalità.",
+        "description": "Capi kids pensati per muoversi, giocare e vivere ogni giorno con comfort, praticità e stile.",
         "worlds": [
           "BAMBINO"
         ],
         "selection": [
           {
-            "title": "KEY PIECES",
-            "text": "I capi che definiscono la stagione."
+            "title": "FIRST LOOK",
+            "text": "Quello che noti per primo. Una selezione pensata per accendere un’idea."
           },
           {
-            "title": "EVERYDAY",
-            "text": "Essenziali e combinazioni per tutti i giorni."
+            "title": "BUILD THE LOOK",
+            "text": "Pezzi da combinare, provare e reinterpretare secondo il tuo stile."
           },
           {
-            "title": "SIGNATURE",
-            "text": "Le icone che rendono riconoscibile il brand."
+            "title": "SEE IT IN STORE",
+            "text": "La parte decisiva è dal vivo: materiali, vestibilità, proporzioni. Vieni a scoprirli."
           }
         ],
-        "statement": "La collezione name it non si compra da questa pagina. Si scopre, si prova e si sceglie da Flip&Co."
+        "statement": "Qui name it non è una vetrina online. È una selezione da vedere dal vivo, provare e scegliere da Flip&Co."
       }
     }
   ],
   "story": {
     "kicker": "THE FLIP&CO CODE",
     "title": [
-      "SELEZIONARE.",
-      "NON RIEMPIRE."
+      "MENO RUMORE.",
+      "PIÙ SELEZIONE."
     ],
-    "body": "Flip&Co costruisce il proprio stile attraverso la selezione. Non inseguiamo tutto: scegliamo ciò che ha carattere, riconoscibilità e un posto nel guardaroba. Il negozio è il punto d'incontro tra brand internazionali e persone di Cagliari.",
+    "body": "Un buon negozio non ti mostra tutto. Ti fa notare quello che cercavi — anche quando non sapevi ancora di cercarlo. Flip&Co costruisce la propria selezione attorno a brand riconoscibili, capi versatili e dettagli che meritano di essere visti da vicino. Il digitale ti orienta. Il negozio ti fa scegliere.",
     "facts": [
       "UOMO / DONNA / BAMBINO",
       "16 / BRAND SELEZIONATI",
-      "IN STORE / DA SCOPRIRE DAL VIVO"
+      "TOCCA · PROVA · SCEGLI"
     ]
   },
   "store": {
     "kicker": "THE STORE",
     "title": [
-      "VIENI A",
-      "VEDERLO DAL VIVO."
+      "IL LOOK",
+      "CAMBIA QUANDO LO PROVI."
     ],
     "address": "Via Italia 22, Cagliari",
     "hours": "LUN–SAB · 09:00–13:30 / 16:00–20:00",
@@ -548,7 +548,7 @@
     "rating": "4,2",
     "count": "41 RECENSIONI",
     "title": "LA PARTE PIÙ IMPORTANTE È FUORI DALLO SCHERMO.",
-    "body": "Il sito non sostituisce il negozio. Ti porta alla porta."
+    "body": "Il sito ti fa scoprire. Il negozio ti fa vedere come ti sta. Vieni a provarlo dal vivo."
   },
   "contact": {
     "title": [

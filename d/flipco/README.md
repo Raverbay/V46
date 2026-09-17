@@ -52,3 +52,11 @@ Logo asset: `assets/logo-flipco.png` (exact filename/case). All site references 
 - Renamed section 02 from “THE WORLDS” to “THE EDIT”.
 - Forced whole-word rendering for “ESSERE.” and “CONOSCI.” so individual letters cannot wrap onto a new line.
 - Tuned mobile headline sizing to preserve the intended editorial hierarchy without breaking words.
+
+
+## V10 — conversion copy / store-first strategy
+- Rewritten site-wide copy around a store-first customer journey.
+- Clear distinction: this is not an e-commerce; the website is a discovery and visit trigger.
+- Stronger semantic hierarchy, curiosity, sensory language, micro-commitments and action-oriented CTAs.
+- Reworked all brand-page copy and selection modules.
+- Section naming refined: THE EDIT / BRAND ATLAS.
