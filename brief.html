@@ -31,6 +31,94 @@ fieldset{border:0;border-top:1px solid var(--d);padding:58px 0 70px;margin:0}
 .site-header{height:64px;padding:0 20px}.header-logo{width:29px;height:32px}.hero{padding:115px 6vw 40px;min-height:100svh}.hero-top{font-size:9px}.hero h1{font-size:16.5vw;line-height:.83;margin:18vh 0 11vh}.hero h1 em{margin-left:8vw}.hero p{font-size:18px;line-height:1.42}.hero-bottom{margin-top:55px}.intro{padding:72px 6vw 65px}.intro-grid{display:block}.intro h2{font-size:15vw;margin-bottom:45px}.intro-copy{font-size:19px}.grid{grid-template-columns:1fr;gap:30px}.full{grid-column:auto}.choice-grid{grid-template-columns:1fr}.legend{display:block;margin-bottom:35px}.section-title{font-size:12vw;margin-top:12px}form{padding:0 6vw 75px}fieldset{padding:45px 0 55px}.submit{margin:0 -6vw;padding:60px 6vw;display:block}.submit-copy h2{font-size:15vw}.submit button{width:100%;margin-top:35px}.success{padding:115px 6vw 60px}.success h1{font-size:18vw}
 }
 </style>
+
+<style id="mediabay-success-final">
+.success{
+  display:none;
+  min-height:100svh;
+  background:#b7ff18;
+  color:#10110f;
+  padding:76px 5.5vw 32px;
+  position:relative;
+  overflow:hidden;
+  flex-direction:column;
+}
+.success:after{
+  content:"";
+  position:absolute;
+  width:42vw;height:42vw;
+  border:1px solid rgba(16,17,15,.12);
+  right:-15vw;bottom:-20vw;
+  transform:rotate(45deg);
+  pointer-events:none;
+}
+.success-top,.success-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+  position:relative;
+  z-index:1;
+}
+.success-top{
+  border-bottom:1px solid rgba(16,17,15,.28);
+  padding:24px 0 20px;
+}
+.success-center{
+  position:relative;
+  z-index:1;
+  margin:auto 0;
+  max-width:1050px;
+}
+.success-kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:28px}
+.success h1{
+  font-size:clamp(76px,13vw,190px);
+  line-height:.76;
+  letter-spacing:-.09em;
+  margin:0 0 45px;
+  font-weight:800;
+}
+.success h1 em{font-style:normal;margin-left:9vw}
+.success p{
+  font-size:clamp(19px,2.3vw,29px);
+  line-height:1.32;
+  max-width:650px;
+  margin:0 0 15px;
+}
+.success-back{
+  display:inline-block;
+  margin-top:35px;
+  color:#10110f;
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:1px solid #10110f;
+  padding-bottom:5px;
+}
+.success-bottom{
+  border-top:1px solid rgba(16,17,15,.28);
+  padding-top:18px;
+  font-size:9px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+@media(max-width:700px){
+  .success{padding:64px 6vw 24px}
+  .success-top{padding:22px 0 18px;align-items:flex-start}
+  .success-top span:last-child{display:none}
+  .success-center{margin:auto 0}
+  .success-kicker{font-size:8px;line-height:1.4;margin-bottom:24px}
+  .success h1{font-size:20vw;line-height:.78;margin-bottom:34px}
+  .success h1 em{margin-left:7vw}
+  .success p{font-size:19px;line-height:1.4;max-width:100%}
+  .success-back{margin-top:28px}
+  .success-bottom{display:block;line-height:1.7}
+  .success-bottom span{display:block}
+  .success-bottom span+span{margin-top:5px}
+}
+</style>
+
 </head>
 <body>
 <header class="site-header">
@@ -61,10 +149,13 @@ fieldset{border:0;border-top:1px solid var(--d);padding:58px 0 70px;margin:0}
 </section>
 
 <form id="clientBrief" action="https://formsubmit.co/info@mediabay.it" method="POST" enctype="multipart/form-data">
-<input type="hidden" name="_subject" value="MediaBay · Nuovo Client Brief">
+<input type="hidden" name="_subject" value="MediaBay · CLIENT BRIEF · Nuova richiesta">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_next" value="https://mediabay.it/brief.html?sent=1">
+<input type="hidden" name="_url" value="https://mediabay.it/brief.html">
+<!-- Anti-spam honeypot: real users should leave this empty. -->
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none !important;position:absolute;left:-9999px;height:0;width:0;opacity:0" aria-hidden="true">
 
 <fieldset><div class="legend"><span class="section-meta">02</span><div class="section-title">LA TUA ATTIVITÀ</div></div>
 <div class="grid">
@@ -76,7 +167,7 @@ fieldset{border:0;border-top:1px solid var(--d);padding:58px 0 70px;margin:0}
 <div class="field"><label>Indirizzo</label><input name="Indirizzo"></div>
 <div class="field"><label>Telefono</label><input name="Telefono"></div>
 <div class="field"><label>WhatsApp</label><input name="WhatsApp"></div>
-<div class="field"><label>Email *</label><input type="email" name="Email" required></div>
+<div class="field"><label>Email *</label><input type="email" name="email" autocomplete="email" required></div>
 </div></fieldset>
 
 <fieldset><div class="legend"><span class="section-meta">03</span><div class="section-title">IL BUSINESS</div></div>
@@ -135,10 +226,21 @@ fieldset{border:0;border-top:1px solid var(--d);padding:58px 0 70px;margin:0}
 </main>
 
 <section class="success" id="success">
-<div class="smallcaps">MEDIA BAY / BRIEF RECEIVED</div>
-<h1>ADESSO<br>TOCCA A NOI.</h1>
-<p>Abbiamo ricevuto le tue informazioni. Iniziamo a costruire la tua demo.</p>
-<a href="/">← TORNA A MEDIABAY</a>
+  <div class="success-top">
+    <span class="smallcaps">MEDIA BAY / BRIEF RECEIVED</span>
+    <span class="smallcaps">THANK YOU ↘</span>
+  </div>
+  <div class="success-center">
+    <div class="success-kicker">YOUR NEXT STEP STARTS HERE</div>
+    <h1>BRIEF<br><em>RICEVUTO.</em></h1>
+    <p>Abbiamo ricevuto le informazioni e i materiali che ci hai inviato.</p>
+    <p>Adesso tocca a noi: analizziamo il tuo business e iniziamo a costruire la tua demo.</p>
+    <a class="success-back" href="/">← TORNA A MEDIABAY</a>
+  </div>
+  <div class="success-bottom">
+    <span>MEDIA BAY</span>
+    <span>PHYGITAL MARKETING · SINCE 2013</span>
+  </div>
 </section>
 
 <script>
