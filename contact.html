@@ -71,6 +71,9 @@ body.loading{overflow:hidden}
 @media(max-width:700px){.preloader-logo{width:100px}}
 @media(prefers-reduced-motion:reduce){.preloader-logo{animation:none;opacity:1;transform:none}#preloader{transition:opacity .35s ease,visibility .35s ease}.done{transform:none}}
 </style>
+<style id="mediabay-project-start-v93">
+.project-start{margin-top:42px;border-top:1px solid currentColor;border-bottom:1px solid currentColor}.project-start-meta{display:flex;justify-content:space-between;gap:24px;padding:18px 0;border-bottom:1px solid currentColor;font-size:11px;letter-spacing:.2em;text-transform:uppercase}.project-start-copy{max-width:780px;padding:34px 0 28px}.project-start-copy h3{font-size:clamp(32px,5vw,64px);line-height:.95;margin:0 0 24px;letter-spacing:-.04em}.project-start-copy p{max-width:720px;font-size:clamp(18px,2vw,24px);line-height:1.45;margin:0 0 18px}.project-start-cta{display:inline-flex;margin:0 0 28px;padding:18px 0;border-bottom:2px solid currentColor;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}@media(max-width:700px){.project-start-meta{font-size:9px;letter-spacing:.14em}.project-start-copy{padding:28px 0 22px}.project-start-copy h3{font-size:38px}.project-start-copy p{font-size:18px;line-height:1.42}.project-start-cta{font-size:13px}}
+</style>
 </head>
 <body class="loading"><div id="preloader" aria-hidden="true"><img class="preloader-logo" src="mediabay-logo-white.png" alt="MediaBay"></div>
 <header class="site-header">
@@ -102,17 +105,20 @@ body.loading{overflow:hidden}
 <div class="detail"><span>Instagram</span><a href="https://www.instagram.com/mediabay.it/" target="_blank" rel="noopener">@mediabay.it ↗</a></div>
 </div>
 <div>
-<h2 class="form-intro">RACCONTACI<br>COSA VUOI<br>FAR PARTIRE.</h2>
-<form class="contact-form" name="mediabay-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-<input type="hidden" name="form-name" value="mediabay-contact"><p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
-<div class="field"><label>Nome *</label><input name="name" autocomplete="name" required></div>
-<div class="field"><label>Azienda</label><input name="company" autocomplete="organization"></div>
-<div class="field"><label>Email *</label><input type="email" name="email" autocomplete="email" required></div>
-<div class="field"><label>Telefono</label><input name="phone" autocomplete="tel"></div>
-<div class="field"><label>Di cosa hai bisogno?</label><select name="service"><option value="">Seleziona un servizio</option><option>Siti &amp; Landing</option><option>E-commerce</option><option>Strategia &amp; Brand</option><option>Social &amp; Content</option><option>SEO &amp; Advertising</option><option>AI &amp; Automation</option><option>Mobility &amp; Phygital</option><option>Altro</option></select></div>
-<div class="field"><label>Messaggio *</label><textarea name="message" placeholder="Raccontaci cosa vuoi costruire, cambiare o risolvere." required></textarea></div>
-<button class="submit" type="submit">INVIA RICHIESTA ↗</button>
-</form>
+<h2 class="form-intro" data-it="INIZIA UN PROGETTO<br>CON MEDIA BAY." data-en="START A PROJECT<br>WITH MEDIA BAY.">START A PROJECT<br>WITH MEDIA BAY.</h2>
+<div class="contact-copy">
+<p class="desc reveal" data-it="Compila il nostro brief e raccontaci la tua attività, i tuoi obiettivi e dove vuoi arrivare." data-en="Fill in our brief and tell us about your business, your goals and where you want to go.">Fill in our brief and tell us about your business, your goals and where you want to go.</p>
+<p class="desc reveal" data-it="È totalmente gratuito e senza impegno. Analizzeremo il tuo caso, studieremo l’opportunità e ti contatteremo il prima possibile per capire come possiamo aiutarti." data-en="It's completely free and without obligation. We'll review your case, analyse your opportunity and contact you as soon as possible to understand how we can help.">It's completely free and without obligation. We'll review your case, analyse your opportunity and contact you as soon as possible to understand how we can help.</p>
+</div>
+<div class="project-start reveal">
+<div class="project-start-meta"><span data-it="01 / INIZIA UN PROGETTO" data-en="01 / START A PROJECT">01 / START A PROJECT</span><span data-it="GRATUITO · SENZA IMPEGNO" data-en="FREE · NO OBLIGATION">FREE · NO OBLIGATION</span></div>
+<div class="project-start-copy">
+<h3 data-it="Raccontaci dove vuoi arrivare." data-en="Tell us where you want to go.">Tell us where you want to go.</h3>
+<p data-it="Compila il Client Brief in pochi minuti. Non c’è alcun impegno e nessun costo: ci servono semplicemente le informazioni necessarie per capire bene la tua attività prima di parlare." data-en="Complete the Client Brief in a few minutes. There's no commitment and no cost: we simply need the information to understand your business properly before we talk.">Complete the Client Brief in a few minutes. There's no commitment and no cost: we simply need the information to understand your business properly before we talk.</p>
+<p data-it="Quando lo riceveremo, analizzeremo il tuo caso nel dettaglio e ti ricontatteremo il prima possibile." data-en="Once we receive it, we'll analyse your case in full and get back to you as soon as possible.">Once we receive it, we'll analyse your case in full and get back to you as soon as possible.</p>
+</div>
+<a class="project-start-cta" href="brief.html" data-it="INIZIA UN PROGETTO ↗" data-en="START A PROJECT ↗">START A PROJECT ↗</a>
+</div>
 </div>
 </div>
 </section>
@@ -154,3 +160,5 @@ body.loading{overflow:hidden}
 })();
 </script>
 </body></html>
+
+>
