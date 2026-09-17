@@ -93,3 +93,10 @@ Logo asset: `assets/logo-flipco.png` (exact filename/case). All site references 
 - Added a transparent note in the MediaBay closing section explaining that the demo was created from information found online.
 - Added an invitation to send corrections, extra information, or requests for a more precise version.
 - Added separate CTAs for contacting MediaBay and visiting the brief page.
+
+
+## V17 — category worlds + brand filtering
+- Added TEENS as a fourth audience alongside UOMO, DONNA and BAMBINO.
+- Each audience card is clickable and jumps to the Brand Atlas filtered to that category.
+- Brand Atlas includes category filter controls and updates the visible brand count.
+- Brand cards continue to open the individual Flip&Co brand selection page.

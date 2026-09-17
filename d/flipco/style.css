@@ -402,3 +402,9 @@ img,svg,video,canvas{max-width:100%;height:auto}
   .mb-offer-actions{display:grid;grid-template-columns:1fr;gap:8px}
   .mb-offer-actions .mb-offer-cta,.mb-offer-brief{width:100%;min-width:0}
 }
+
+/* Category navigation for the brand atlas */
+.brand-filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;border-bottom:1px solid var(--line);padding:0 0 18px}
+.brand-filter{appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink);font:700 10px/1 Manrope,sans-serif;letter-spacing:.12em;padding:11px 14px;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.brand-filter:hover,.brand-filter.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+@media(max-width:800px){.brand-filter-bar{gap:6px;margin-bottom:22px}.brand-filter{font-size:8px;padding:10px 11px}}

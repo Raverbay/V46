@@ -7,12 +7,12 @@
     "ink": "#11120f",
     "introTitle": "NON È UN CATALOGO.\nÈ IL PRIMO PASSO\nVERSO IL TUO PROSSIMO LOOK.",
     "introLead": "Online ti ispiri. In store lo vivi.",
-    "introBody": "Flip&Co è un multibrand store a Cagliari per uomo, donna e bambino. Qui scopri una selezione di brand e collezioni che abbiamo scelto per il nostro negozio. Non trovi un carrello, trovi un invito: guarda, lasciati ispirare, contattaci se vuoi saperne di più e vieni a provare dal vivo ciò che ti ha colpito."
+    "introBody": "Flip&Co è un multibrand store a Cagliari per uomo, donna, teens e bambino. Qui scopri una selezione di brand e collezioni che abbiamo scelto per il nostro negozio. Non trovi un carrello, trovi un invito: guarda, lasciati ispirare, contattaci se vuoi saperne di più e vieni a provare dal vivo ciò che ti ha colpito."
   },
   "hero": {
     "logo": "logo-flipco.png",
     "kicker": "CAGLIARI · MULTIBRAND STORE",
-    "meta": "UOMO / DONNA / BAMBINO · SCOPRI IN STORE",
+    "meta": "UOMO / DONNA / TEENS / BAMBINO · SCOPRI IN STORE",
     "headline": [
       "NON CERCHI SOLO",
       "COSA INDOSSARE.",
@@ -33,6 +33,18 @@
     },
     {
       "label": "03",
+      "name": "TEENS",
+      "description": "Sneakers, streetwear, denim e casual. Una selezione giovane da scoprire, scegliere e provare in store.",
+      "brandSlugs": [
+        "nike",
+        "adidas",
+        "vans",
+        "thenorthface",
+        "timberland"
+      ]
+    },
+    {
+      "label": "04",
       "name": "BAMBINO",
       "description": "Comfort, carattere e stile. Una selezione pensata per i più piccoli e da scoprire dal vivo."
     }
