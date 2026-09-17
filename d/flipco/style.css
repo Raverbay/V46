@@ -174,3 +174,79 @@ footer{background:var(--bg);color:var(--ink)}.footer-inner{padding-top:32px;padd
   .floating-action-map{border-left:1px solid rgba(17,18,15,.14)}
 }
 @media(prefers-reduced-motion:reduce){.floating-action{transition:none}}
+
+
+/* V8 — mobile typography / layout correction
+   Worlds + Brand Atlas: give the editorial headlines the full available width,
+   then place supporting metadata separately. This prevents forced word breaks. */
+@media(max-width:800px){
+  #worlds .section-head{
+    display:block;
+    margin-bottom:46px;
+  }
+  #worlds .section-head > div{
+    width:100%;
+    max-width:none;
+  }
+  #worlds .section-head .display{
+    width:100%;
+    max-width:100%;
+    font-size:clamp(48px,14.5vw,76px);
+    line-height:.84;
+    letter-spacing:-.065em;
+    overflow-wrap:normal;
+    word-break:normal;
+    margin-top:18px;
+  }
+  #worlds .section-head > .muted{
+    display:block;
+    margin-top:24px;
+    text-align:left;
+    opacity:.48;
+  }
+
+  #brands .brand-top{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:24px;
+    margin-bottom:42px;
+  }
+  #brands .brand-top > div:first-child{
+    width:100%;
+    max-width:none;
+  }
+  #brands .brand-top .display{
+    width:100%;
+    max-width:100%;
+    font-size:clamp(52px,15vw,82px);
+    line-height:.82;
+    letter-spacing:-.065em;
+    overflow-wrap:normal;
+    word-break:normal;
+    margin-top:18px;
+  }
+  #brands .brand-note{
+    width:100%;
+    justify-content:flex-end;
+    align-items:center;
+    gap:10px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+  }
+  #brands .brand-count{
+    font-size:clamp(48px,13vw,66px);
+  }
+}
+
+@media(max-width:430px){
+  #worlds .section-head .display{
+    font-size:clamp(48px,14vw,64px);
+  }
+  #brands .brand-top .display{
+    font-size:clamp(50px,14vw,64px);
+  }
+  #brands .brand-note{
+    padding-top:16px;
+  }
+}

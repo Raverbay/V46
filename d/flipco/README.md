@@ -40,3 +40,9 @@ Logo asset: `assets/logo-flipco.png` (exact filename/case). All site references 
 - Replaced historical hero/story facts with neutral, non-dated positioning.
 - Kept the editorial storefront structure, brand pages, store section and responsive system intact.
 - No historical claim is made unless it is explicitly verified by the client.
+
+
+## V8 — mobile section hierarchy
+- Reworked the mobile layout of "The Worlds" so the headline gets full width and no longer breaks the final word awkwardly.
+- Reworked the mobile "Brand Atlas" header so the "16 Selected Brands" counter sits below the headline instead of compressing it.
+- Removed the remaining unverified "Since 1986" footer claim.
