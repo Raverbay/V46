@@ -83,3 +83,7 @@ Logo asset: `assets/logo-flipco.png` (exact filename/case). All site references 
 - Forced the MediaBay conversion section to the brand green and rebuilt its mobile layout.
 - Kept the Flip&Co footer store-only; removed legacy theme/demo footer references.
 - Refined the conversion copy around discovery, trust, store visit and direct contact.
+
+## V15
+- Reordered the final sections so the original Flip&Co store footer comes immediately before the MediaBay commercial offer.
+- The MediaBay offer is now the absolute final section of the page.
