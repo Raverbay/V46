@@ -11,3 +11,13 @@ Rebuilt the MediaBay closing section as a complete mini sales page: methodology,
 
 ## V21
 - MediaBay commercial CTA links updated to WhatsApp +39 351 847 2396.
+
+
+## V24 — Brand logos
+- Replaced the previous Simple Icons slug dependency for the Brand Atlas with domain-based real brand logos via Hunter Logo API.
+- Added explicit logo domains for all 16 brands.
+- Reworked the logo frame with optical centering, consistent max dimensions and mobile sizing.
+- Fallback brand names remain available only if a logo endpoint fails.
+
+
+V24: refined the “Modi di essere” section for four categories (Uomo, Donna, Teens, Bambino), removed the oversized empty visual tail on mobile, added category navigation, and refined optical centering/size constraints for brand logos.

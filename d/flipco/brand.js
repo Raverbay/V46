@@ -6,7 +6,8 @@
   const root=document.documentElement, site=cfg.site;
   root.style.setProperty('--accent',site.accent||'#b8ff38');root.style.setProperty('--bg',site.background||'#f2f0ea');root.style.setProperty('--ink',site.ink||'#11120f');
   const set=(sel,v)=>{const e=$(sel);if(e)e.textContent=v||''};
-  const logo=`https://cdn.simpleicons.org/${brand.slug}/11120f`;
+  const logoDomain=brand.logoDomain||new URL(brand.url).hostname.replace(/^www\./,'');
+  const logo=`https://logos.hunter.io/${logoDomain}`;
   const data=brand.collection||{};
   document.title=`${brand.name} — Flip&Co`;
   const img=$('#brandLogo');img.src=logo;img.alt=brand.name;

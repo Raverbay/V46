@@ -78,7 +78,8 @@
           }
         ],
         "statement": "La selezione Tommy Hilfiger che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "tommy.com"
     },
     {
       "name": "Calvin Klein",
@@ -108,7 +109,8 @@
           }
         ],
         "statement": "La selezione Calvin Klein che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "calvinklein.com"
     },
     {
       "name": "Guess",
@@ -138,7 +140,8 @@
           }
         ],
         "statement": "La selezione Guess che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "guess.com"
     },
     {
       "name": "Levi's",
@@ -168,7 +171,8 @@
           }
         ],
         "statement": "La selezione Levi's che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "levi.com"
     },
     {
       "name": "The North Face",
@@ -198,7 +202,8 @@
           }
         ],
         "statement": "La selezione The North Face che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "thenorthface.com"
     },
     {
       "name": "Nike",
@@ -229,7 +234,8 @@
           }
         ],
         "statement": "La selezione Nike che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "nike.com"
     },
     {
       "name": "adidas",
@@ -260,7 +266,8 @@
           }
         ],
         "statement": "La selezione adidas che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "adidas.com"
     },
     {
       "name": "Vans",
@@ -291,7 +298,8 @@
           }
         ],
         "statement": "La selezione Vans che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "vans.com"
     },
     {
       "name": "Carhartt",
@@ -321,7 +329,8 @@
           }
         ],
         "statement": "La selezione Carhartt che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "carhartt.com"
     },
     {
       "name": "New Balance",
@@ -351,7 +360,8 @@
           }
         ],
         "statement": "La selezione New Balance che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "newbalance.com"
     },
     {
       "name": "Timberland",
@@ -382,7 +392,8 @@
           }
         ],
         "statement": "La selezione Timberland che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "timberland.com"
     },
     {
       "name": "Dickies",
@@ -412,7 +423,8 @@
           }
         ],
         "statement": "La selezione Dickies che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "dickies.com"
     },
     {
       "name": "ONLY",
@@ -441,7 +453,8 @@
           }
         ],
         "statement": "La selezione ONLY che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "only.com"
     },
     {
       "name": "Jack & Jones",
@@ -470,7 +483,8 @@
           }
         ],
         "statement": "La selezione Jack & Jones che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "jackjones.com"
     },
     {
       "name": "Vero Moda",
@@ -499,7 +513,8 @@
           }
         ],
         "statement": "La selezione Vero Moda che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "veromoda.com"
     },
     {
       "name": "name it",
@@ -528,7 +543,8 @@
           }
         ],
         "statement": "La selezione name it che trovi qui è quella scelta da Flip&Co per il nostro store. Guarda l'idea, scopri la collezione e vieni a vedere dal vivo ciò che abbiamo selezionato."
-      }
+      },
+      "logoDomain": "nameit.com"
     }
   ],
   "story": {

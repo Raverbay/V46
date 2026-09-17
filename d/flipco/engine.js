@@ -33,7 +33,7 @@
     bg.innerHTML='';
     list.forEach((b,i)=>{
       const a=document.createElement('a'); a.className='brand-item reveal'; a.href=`brand.html?brand=${encodeURIComponent(b.slug)}`; a.style.setProperty('--i',i);
-      a.innerHTML=`<span class="brand-number">${String(i+1).padStart(2,'0')}</span><div class="brand-logo-wrap"><img src="https://cdn.simpleicons.org/${b.slug}/11120f" alt="${b.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('logo-fallback')"><span class="brand-fallback">${b.name}</span></div><div class="brand-name-hidden">${b.name}</div><span class="brand-arrow">↗</span>`;
+      const logoDomain=b.logoDomain||new URL(b.url).hostname.replace(/^www\./,''); a.innerHTML=`<span class="brand-number">${String(i+1).padStart(2,'0')}</span><div class="brand-logo-wrap"><img class="brand-logo-img" src="https://logos.hunter.io/${logoDomain}" alt="${b.name} logo" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.classList.add('logo-fallback')"><span class="brand-fallback">${b.name}</span></div><div class="brand-name-hidden">${b.name}</div><span class="brand-arrow">↗</span>`;
       bg.appendChild(a);
     });
     if(brandCount) brandCount.textContent=list.length;
