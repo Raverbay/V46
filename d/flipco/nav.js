@@ -8,18 +8,6 @@ let menu=document.getElementById('mobileMenu');if(!menu){menu=document.createEle
 const openMenu=()=>{menu.classList.add('open');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.classList.add('menu-open')};const closeMenu=()=>{menu.classList.remove('open');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open')};btn?.addEventListener('click',()=>menu.classList.contains('open')?closeMenu():openMenu());menu.querySelector('.menu-close').addEventListener('click',closeMenu);menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 if(search){let so=document.getElementById('searchOverlay');if(!so){so=document.createElement('div');so.id='searchOverlay';so.className='search-overlay';so.setAttribute('aria-hidden','true');so.innerHTML='<div class="search-shell"><div class="search-head"><span class="micro">FLIP&CO / CERCA</span><button class="search-close" type="button">CHIUDI ×</button></div><input id="siteSearch" type="search" placeholder="Brand, prodotto, categoria…" aria-label="Cerca nel catalogo"><div id="searchResults"></div></div>';document.body.appendChild(so)}const input=so.querySelector('#siteSearch'),results=so.querySelector('#searchResults');const close=()=>{so.classList.remove('open');so.setAttribute('aria-hidden','true');document.body.classList.remove('search-open')};search.addEventListener('click',()=>{so.classList.add('open');so.setAttribute('aria-hidden','false');document.body.classList.add('search-open');setTimeout(()=>input.focus(),120)});so.querySelector('.search-close').addEventListener('click',close);input.addEventListener('input',async()=>{const q=input.value.trim().toLowerCase();if(!q){results.innerHTML='';return}try{const d=await(await fetch('inventory/inventory.json',{cache:'no-store'})).json();const hits=(d.products||[]).filter(p=>`${p.brand} ${p.name} ${p.category} ${p.season}`.toLowerCase().includes(q)).slice(0,10);results.innerHTML=hits.map(p=>`<a class="search-result" href="product.html?id=${encodeURIComponent(p.id)}"><span>${esc(p.brand)} — ${esc(p.name)}</span><span>${money(p.price)}</span></a>`).join('')||'<p>Nessun risultato.</p>'}catch{results.innerHTML='<p>Catalogo non disponibile.</p>'}})}
 window.addEventListener('storage',count);window.addEventListener('cartupdated',count);count();
-  if(!document.querySelector('.site-footer')){
-    const footer=document.createElement('footer');
-    footer.className='site-footer';
-    footer.innerHTML=`<div class="footer-inner">
-      <div class="footer-brand"><img src="assets/logo-flipco.png" alt="Flip&Co"><span>FLIP&CO · CAGLIARI · SINCE 1986</span></div>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="index.html">HOME</a><a href="shop.html">SHOP</a><a href="shop.html?category=Uomo">UOMO</a><a href="shop.html?category=Donna">DONNA</a><a href="shop.html?category=Kids">KIDS</a><a href="brand.html">BRAND</a><a href="index.html#store">STORE</a>
-      </nav>
-      <div class="footer-bottom"><span>VIA ITALIA 22 · CAGLIARI</span><a href="https://www.instagram.com/flipabbigliamento/" target="_blank" rel="noopener">INSTAGRAM ↗</a><a href="https://wa.me/393661087819" target="_blank" rel="noopener">WHATSAPP ↗</a><span>© FLIP&CO</span></div>
-    </div>`;
-    document.body.appendChild(footer);
-  }
 }
 document.addEventListener('DOMContentLoaded',setup);
 })();
