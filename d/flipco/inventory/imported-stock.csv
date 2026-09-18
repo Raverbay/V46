@@ -1,0 +1,53 @@
+sku,brand,name,category,price,size,qty,season
+TH26-NYCOAT,Tommy Hilfiger,New York Label Wool Blend Coat,Uomo,499.9,S,1,FW26
+TH26-NYCOAT,Tommy Hilfiger,New York Label Wool Blend Coat,Uomo,499.9,M,1,FW26
+TH26-NYCOAT,Tommy Hilfiger,New York Label Wool Blend Coat,Uomo,499.9,L,0,FW26
+TH26-OXFORD,Tommy Hilfiger,Heritage Regular Fit Oxford Shirt,Uomo,119.9,S,1,FW26
+TH26-OXFORD,Tommy Hilfiger,Heritage Regular Fit Oxford Shirt,Uomo,119.9,M,2,FW26
+TH26-OXFORD,Tommy Hilfiger,Heritage Regular Fit Oxford Shirt,Uomo,119.9,L,1,FW26
+TH26-OXFORD,Tommy Hilfiger,Heritage Regular Fit Oxford Shirt,Uomo,119.9,XL,0,FW26
+CK26-STRIPE,Calvin Klein,Camicia a righe in popeline di cotone,Donna,109.9,XS,0,FW26
+CK26-STRIPE,Calvin Klein,Camicia a righe in popeline di cotone,Donna,109.9,S,1,FW26
+CK26-STRIPE,Calvin Klein,Camicia a righe in popeline di cotone,Donna,109.9,M,1,FW26
+CK26-STRIPE,Calvin Klein,Camicia a righe in popeline di cotone,Donna,109.9,L,0,FW26
+CK26-TEE,Calvin Klein,T-shirt con stemma in cotone oversize,Donna,59.9,XS,0,FW26
+CK26-TEE,Calvin Klein,T-shirt con stemma in cotone oversize,Donna,59.9,S,2,FW26
+CK26-TEE,Calvin Klein,T-shirt con stemma in cotone oversize,Donna,59.9,M,1,FW26
+CK26-TEE,Calvin Klein,T-shirt con stemma in cotone oversize,Donna,59.9,L,0,FW26
+LE26-501,Levi's,501 Original Jeans,Uomo,120.0,30,1,2026
+LE26-501,Levi's,501 Original Jeans,Uomo,120.0,32,1,2026
+LE26-501,Levi's,501 Original Jeans,Uomo,120.0,34,0,2026
+LE26-501,Levi's,501 Original Jeans,Uomo,120.0,36,0,2026
+LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.0,28,0,2026
+LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.0,30,1,2026
+LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.0,32,1,2026
+LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.0,34,0,2026
+LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.0,36,0,2026
+NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,40,0,SS26
+NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,41,1,SS26
+NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,42,1,SS26
+NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,43,0,SS26
+NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,44,1,SS26
+NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,45,0,SS26
+NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.0,35.5,0,SS26
+NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.0,36,1,SS26
+NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.0,36.5,1,SS26
+NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.0,37.5,0,SS26
+NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.0,38,0,SS26
+TNF26-QUEST,The North Face,Men’s Quest Mono Jacket,Uomo,149.9,S,1,FW26
+TNF26-QUEST,The North Face,Men’s Quest Mono Jacket,Uomo,149.9,M,1,FW26
+TNF26-QUEST,The North Face,Men’s Quest Mono Jacket,Uomo,149.9,L,0,FW26
+TNF26-QUEST,The North Face,Men’s Quest Mono Jacket,Uomo,149.9,XL,0,FW26
+TNF26-HKE,The North Face,HKe Devils Thumb GORE-TEX Jacket,Uomo,349.9,S,0,FW26
+TNF26-HKE,The North Face,HKe Devils Thumb GORE-TEX Jacket,Uomo,349.9,M,1,FW26
+TNF26-HKE,The North Face,HKe Devils Thumb GORE-TEX Jacket,Uomo,349.9,L,1,FW26
+AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.0,40,0,SS26
+AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.0,41,1,SS26
+AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.0,42,1,SS26
+AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.0,43,1,SS26
+AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.0,44,0,SS26
+AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.0,45,0,SS26
+AD26-TRACK,adidas,Originals Loose Track Top,Kids,85.0,128,0,SS26
+AD26-TRACK,adidas,Originals Loose Track Top,Kids,85.0,140,1,SS26
+AD26-TRACK,adidas,Originals Loose Track Top,Kids,85.0,152,0,SS26
+AD26-TRACK,adidas,Originals Loose Track Top,Kids,85.0,164,1,SS26

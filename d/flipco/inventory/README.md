@@ -1,0 +1,1 @@
+CSV importato: una riga per SKU/taglia. inventory.json è il catalogo normalizzato. Un solo inventario alimenta online e store.
