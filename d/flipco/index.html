@@ -10,12 +10,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="header-v22.css">
+<link rel="stylesheet" href="header-v23.css">
 <link rel="stylesheet" href="home-v22.css">
 </head>
 <body class="home-page v22-home">
 <a class="skip-link" href="#main">Vai al contenuto</a>
-<header class="site-header v22-header" id="siteHeader">
+<header class="site-header v22-header v23-header" id="siteHeader">
   <button class="v22-menu-trigger" id="v22MenuBtn" type="button" aria-label="Apri menu" aria-expanded="false"><span>MENU</span><i aria-hidden="true"><b></b><b></b></i></button>
   <a class="v22-logo" href="index.html" aria-label="Flip&Co home"><img src="assets/logo-flipco.png" alt="Flip&Co"></a>
   <div class="v22-actions">
@@ -39,11 +39,16 @@
 
   <section class="v22-intro"><div class="v22-intro-index">02</div><div><span>FLIP&CO / ONLINE + STORE</span><h2>UN SOLO STORE.<br>ONLINE E A CAGLIARI.</h2><p>Scopri i nuovi arrivi, scegli la tua taglia e acquista online. Oppure vieni in negozio e prova i capi dal vivo.</p><a href="shop.html">ENTRA NELLO SHOP ↗</a></div></section>
 
-  <section class="v22-identity">
-    <article class="v22-identity-card"><img src="assets/identity-men.jpg" alt="Flip&Co — selezione uomo"><div><span>03 / UOMO</span><h2>UOMO</h2><a href="shop.html?category=Uomo">SCOPRI LA SELEZIONE ↗</a></div></article>
-    <article class="v22-identity-card"><img src="assets/identity-kids.jpg" alt="Flip&Co — selezione kids"><div><span>04 / KIDS</span><h2>KIDS</h2><a href="shop.html?category=Kids">SCOPRI LA SELEZIONE ↗</a></div></article>
-    <article class="v22-identity-card v22-store-card" id="store"><img src="assets/identity-store.jpg" alt="Ingresso del negozio Flip&Co a Cagliari"><div><span>05 / STORE</span><h2>VIENI<br>IN STORE.</h2><a href="https://www.google.com/maps/search/?api=1&query=Via+Italia+22%2C+Cagliari" target="_blank" rel="noopener">VIA ITALIA 22 · CAGLIARI ↗</a></div></article>
+  <section class="v23-categories" id="categories">
+    <div class="v23-categories-head"><span>03 / CATEGORIES</span><h2>SHOP BY<br>CATEGORY.</h2><a href="shop.html">SHOP ALL ↗</a></div>
+    <div class="v23-category-products">
+      <article class="v23-category-product"><a href="shop.html?category=Uomo"><div class="v23-category-image"><img id="catUomoImage" src="" alt="Flip&Co Uomo"></div><div><span>UOMO</span><strong>SCOPRI LA SELEZIONE ↗</strong></div></a></article>
+      <article class="v23-category-product"><a href="shop.html?category=Donna"><div class="v23-category-image"><img id="catDonnaImage" src="" alt="Flip&Co Donna"></div><div><span>DONNA</span><strong>SCOPRI LA SELEZIONE ↗</strong></div></a></article>
+      <article class="v23-category-product"><a href="shop.html?category=Kids"><div class="v23-category-image"><img id="catKidsImage" src="" alt="Flip&Co Kids"></div><div><span>KIDS</span><strong>SCOPRI LA SELEZIONE ↗</strong></div></a></article>
+    </div>
   </section>
+
+  <section class="v23-store" id="store"><div class="v23-store-media"><img src="assets/identity-store.jpg" alt="Ingresso del negozio Flip&Co a Cagliari"></div><div class="v23-store-copy"><span>04 / STORE · CAGLIARI</span><h2>VIENI<br>IN STORE.</h2><p>Hai visto qualcosa online? Vieni a trovarci, guarda la selezione dal vivo e prova i tuoi capi in negozio.</p><a href="https://www.google.com/maps/search/?api=1&query=Via+Italia+22%2C+Cagliari" target="_blank" rel="noopener">VIA ITALIA 22 · CAGLIARI ↗</a><small>LUN — SAB · 09:00 — 13:30 / 16:00 — 20:00</small></div></section>
 
   <section class="v22-category" id="selection"><div class="v22-category-head"><span>06 / SELECTION</span><h2>THE<br>SELECTION.</h2><a href="shop.html">SHOP ALL ↗</a></div><div class="v22-category-grid" id="categoryProducts"></div></section>
 
@@ -55,6 +60,7 @@
 <script src="inventory.js"></script>
 <script src="commerce.js"></script>
 <script src="home-v22.js"></script>
-<script src="header-v22.js"></script>
+<script src="home-v23.js"></script>
+<script src="header-v23.js"></script>
 <div class="cookie-banner" id="cookieBanner"><div><strong>PRIVACY & COOKIE</strong><span>In questa build sono attive solo tecnologie necessarie.</span></div><button id="cookieOk" class="btn btn-primary">OK</button></div><script>if(localStorage.getItem("flip_cookie_ok"))document.getElementById("cookieBanner")?.remove();document.getElementById("cookieOk")?.addEventListener("click",()=>{localStorage.setItem("flip_cookie_ok","1");document.getElementById("cookieBanner")?.remove()});</script>
 </body></html>

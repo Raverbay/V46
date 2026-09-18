@@ -1,0 +1,10 @@
+V23 — HOME HEADER + PRODUCT-ONLY CATEGORY EXPERIENCE
+
+CHANGED/NEW:
+- index.html — new visible fixed header and product-only category sections; store image retained as the only identity photo.
+- header-v23.css — self-contained new header + menu/search overlays; no home scroll/stop/start header transition.
+- header-v23.js — new static header behavior with menu/search/cart only; old header-v22.js is no longer loaded.
+- home-v23.css — product-category layout and store invitation section.
+- home-v23.js — assigns catalog product images to Uomo/Donna/Kids category cards.
+
+COPY THESE FILES OVER THE V22 PROJECT USING THE SAME PATHS.

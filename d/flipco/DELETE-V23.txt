@@ -1,0 +1,14 @@
+DELETE FROM THE REPOSITORY:
+assets/identity-men.jpg
+assets/identity-kids.jpg
+assets/campaign-uomo.jpg
+assets/campaign-donna.jpg
+assets/campaign-kids.jpg
+assets/editorial-campaign.jpg
+
+KEEP:
+assets/identity-store.jpg
+
+OPTIONAL CLEANUP (superseded header behavior; safe to remove after copying V23):
+header-v22.css
+header-v22.js
