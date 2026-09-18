@@ -1,0 +1,10 @@
+FLIP&CO V21 — HEADER REDESIGN
+
+Rebuilt the site header from zero as a minimal fashion-commerce header inspired by the reference experience.
+- White/light header, no floating pill, no dark bar.
+- Left hamburger/menu control.
+- Centered Flip&Co wordmark.
+- Right-side search, profile affordance and bag/count.
+- Stable header on homepage and internal pages; legacy V12–V20 visual states are neutralized.
+- New transparent dark logo asset for the light header.
+- Preserves existing menu, search, cart and page-transition logic.

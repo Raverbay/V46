@@ -1,0 +1,2 @@
+No deletions required.
+The V21 CSS/JS intentionally neutralizes the previous V12–V20 header styles so old files do not need to be deleted.
