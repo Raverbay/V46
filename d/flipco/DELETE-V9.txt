@@ -1,0 +1,7 @@
+DELETE THESE OBSOLETE ASSETS FROM THE REPOSITORY AFTER COPYING THE UPDATE:
+
+assets/logo-flipco-header-tight.png
+assets/logo-flipco-header.png
+
+KEEP:
+assets/logo-flipco.png
