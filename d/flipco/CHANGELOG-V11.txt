@@ -1,0 +1,15 @@
+FLIP&CO V11 — HEADER REDESIGN
+
+Changed:
+- nav.js
+- style.css
+- index.html
+
+Design direction:
+- Header hidden at the top of the homepage and revealed after scrolling.
+- Floating editorial header, independent from page flow.
+- Minimal centered logo.
+- MENU on the left; search and bag on the right.
+- Full-screen menu and search retain the same visual system.
+- Header hides again while scrolling down deeply, then returns when scrolling up.
+- Internal pages keep the header visible.
