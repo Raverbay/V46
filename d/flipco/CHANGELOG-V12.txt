@@ -1,0 +1,14 @@
+FLIP&CO V12 — CONTEXTUAL HEADER
+
+Changed from V11:
+- Homepage header is invisible at initial load without waiting for JS.
+- While scrolling, only the centered logo appears, floating transparently over the page.
+- When scrolling stops, the full navigation expands into a subtle frosted-glass header.
+- When scrolling resumes, the navigation collapses back to the logo-only state.
+- Returning to the top hides the header again.
+- Internal pages keep the full header immediately available.
+- Reduced visual weight: no pill/background around the logo-only state.
+
+Files in this update:
+- nav.js
+- style.css

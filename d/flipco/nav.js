@@ -80,22 +80,51 @@
     trigger.addEventListener('click',open);overlay.querySelector('.search-close').addEventListener('click',close);overlay.addEventListener('click',e=>{if(e.target===overlay)close()});overlay.querySelector('.search-form').addEventListener('submit',e=>{e.preventDefault();render(input.value)});input.addEventListener('input',()=>render(input.value));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))close();if(e.key==='/'&&document.activeElement.tagName!=='INPUT'&&document.activeElement.tagName!=='TEXTAREA'){e.preventDefault();open()}});
   }
   function updateHeaderScroll(){
-    const h=document.querySelector('.site-header');if(!h)return;
+    const h=document.querySelector('.site-header'); if(!h)return;
     const isHome=document.body.classList.contains('home-page') || /(?:^|\/)index\.html?$/.test(location.pathname) || location.pathname.endsWith('/');
     h.classList.toggle('is-home-header',isHome);
+    if(!isHome){
+      h.classList.add('is-revealed','is-expanded');
+      h.classList.remove('is-minimal','is-hidden-on-scroll');
+      return;
+    }
     let lastY=window.scrollY;
+    let stopTimer=null;
     let ticking=false;
+    const apply=(y,force=false)=>{
+      const nearTop=y<56;
+      const hasScrolled=y>=56;
+      const scrollingDown=y>lastY+3;
+      h.classList.toggle('is-revealed',hasScrolled);
+      h.classList.toggle('is-scrolling',hasScrolled && !force);
+      h.classList.toggle('is-minimal',hasScrolled);
+      h.classList.toggle('is-expanded',false);
+      if(nearTop){
+        h.classList.remove('is-revealed','is-minimal','is-expanded','is-scrolling');
+      }
+      if(scrollingDown && y>120){
+        h.classList.remove('is-expanded');
+      }
+      lastY=y;
+    };
+    const expandAfterStop=()=>{
+      if(stopTimer)clearTimeout(stopTimer);
+      stopTimer=setTimeout(()=>{
+        const y=window.scrollY;
+        if(y>=90){
+          h.classList.add('is-revealed','is-minimal','is-expanded');
+          h.classList.remove('is-scrolling');
+        }
+      },420);
+    };
     const f=()=>{
       const y=window.scrollY;
-      const reveal=y>72;
-      h.classList.toggle('is-revealed',isHome ? reveal : true);
-      h.classList.toggle('is-scrolled',y>24);
-      h.classList.toggle('is-hidden-on-scroll',isHome && y>140 && y>lastY+6);
-      if(y<72) h.classList.remove('is-hidden-on-scroll');
-      lastY=y;
+      const wasMoving=Math.abs(y-lastY)>1;
+      apply(y);
+      if(wasMoving)expandAfterStop();
       ticking=false;
     };
-    f();
+    apply(window.scrollY,true);
     window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(f);ticking=true}},{passive:true});
   }
   function updateCart(){document.querySelectorAll('#cartCount').forEach(el=>{try{const c=JSON.parse(localStorage.getItem(CART_KEY)||'[]');el.textContent=c.reduce((s,i)=>s+Number(i.qty||0),0)}catch{el.textContent='0'}})}
