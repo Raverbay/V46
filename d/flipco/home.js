@@ -1,19 +1,50 @@
 (()=>{
 const mount=document.getElementById('productStoryMount'); if(!mount)return;
 const esc=window.escapeHtml||((v)=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])));
-const money=window.money||((v)=>new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR'}).format(Number(v)||0));
 let products=[];
 const hero=document.getElementById('heroProduct');
-async function init(){try{const d=await loadInventory(); products=(d.products||[]).filter(p=>stockFor(p)>0); render(); renderHero(); renderBrands(); observe();}catch(e){mount.innerHTML='<div class="home-error">SELEZIONE TEMPORANEAMENTE NON DISPONIBILE.</div>';}}
+
 function images(p){return Array.isArray(p.images)&&p.images.length?p.images:[p.image].filter(Boolean)}
-function availableSizes(p){return (p.sizes||[]).filter(s=>sizeStock(p,s)>0)}
-function render(){const list=products.slice(0,12);mount.innerHTML=list.map((p,i)=>{const sizes=availableSizes(p);const first=sizes[0]||'';return `<article class="product-story" data-id="${esc(p.id)}"><div class="story-media"><a href="product.html?id=${encodeURIComponent(p.id)}" aria-label="Apri ${esc(p.name)}"><img src="${esc(images(p)[0])}" alt="${esc(p.brand)} ${esc(p.name)}" loading="${i<2?'eager':'lazy'}"><span class="story-index">${String(i+1).padStart(2,'0')} / ${String(list.length).padStart(2,'0')}</span></a><button class="story-view" type="button" data-view="${esc(p.id)}">DETTAGLI ↗</button></div><div class="story-info"><div class="story-top"><span class="story-badge">${esc(p.badge||'SELECTED')}</span><p class="story-brand">${esc(p.brand)}</p><h3 class="story-name">${esc(p.name)}</h3><p class="story-price">${money(p.price)}</p><p class="story-proof">${stockFor(p)} ${stockFor(p)===1?'pezzo':'pezzi'} disponibili · stock reale Flip&Co</p></div><div class="story-bottom"><span class="micro">SCEGLI LA TAGLIA</span><div class="size-row">${sizes.map(s=>`<button class="size-btn ${s===first?'selected':''}" type="button" data-size="${esc(s)}">${esc(s)}</button>`).join('')}</div><button class="add-btn" type="button" data-add="${esc(p.id)}" data-size="${esc(first)}">AGGIUNGI AL BAG</button><a class="detail-link" href="product.html?id=${encodeURIComponent(p.id)}">VEDI SCHEDA PRODOTTO ↗</a></div></div></article>`}).join('');
-mount.querySelectorAll('.size-row').forEach(row=>row.addEventListener('click',e=>{const b=e.target.closest('.size-btn');if(!b)return;row.querySelectorAll('.size-btn').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');const add=row.closest('.story-info').querySelector('[data-add]');add.dataset.size=b.dataset.size;}));
-mount.querySelectorAll('[data-add]').forEach(b=>b.addEventListener('click',()=>{const p=products.find(x=>x.id===b.dataset.add);const r=addToCart(p,b.dataset.size);if(!r.ok){showCartNotice?.(r.message);return}b.textContent='NEL BAG ✓';window.dispatchEvent(new Event('cartupdated'));setTimeout(()=>b.textContent='AGGIUNGI AL BAG',1200);}));
-mount.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{const p=products.find(x=>x.id===b.dataset.view);if(p)location.href='product.html?id='+encodeURIComponent(p.id)}));
+async function init(){
+  try{
+    const d=await loadInventory();
+    products=(d.products||[]).filter(p=>stockFor(p)>0);
+    render();
+    renderHero();
+    renderBrands();
+    observe();
+  }catch(e){
+    mount.innerHTML='<div class="home-error">SELEZIONE TEMPORANEAMENTE NON DISPONIBILE.</div>';
+  }
 }
-function renderHero(){if(!hero)return; const p=products[0]; if(!p)return; hero.innerHTML=`<a href="product.html?id=${encodeURIComponent(p.id)}" class="hero-product-link"><img src="${esc(images(p)[0])}" alt="${esc(p.brand)} ${esc(p.name)}"><div class="hero-product-info"><span>${esc(p.brand)}</span><strong>${esc(p.name)}</strong><b>${money(p.price)}</b></div><span class="hero-arrow">↗</span></a>`;}
-function renderBrands(){const el=document.getElementById('brandTicker');if(!el)return;const names=[...new Set(products.map(p=>p.brand))];el.innerHTML=names.map((n,i)=>`<a href="brand.html?brand=${encodeURIComponent(n)}"><span>${String(i+1).padStart(2,'0')}</span><strong>${esc(n)}</strong><i>↗</i></a>`).join('');}
-function observe(){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('is-in')}),{threshold:.16});document.querySelectorAll('.product-story,.manifesto,.category-flow,.brand-flow,.store-section,.closing-cta').forEach(x=>io.observe(x));}
+function render(){
+  const list=products.slice(0,12);
+  mount.innerHTML=list.map((p,i)=>{
+    const src=images(p)[0];
+    return `<figure class="look-frame" data-id="${esc(p.id)}">
+      <a href="product.html?id=${encodeURIComponent(p.id)}" aria-label="Scopri ${esc(p.brand)} ${esc(p.name)}">
+        <img src="${esc(src)}" alt="${esc(p.brand)} ${esc(p.name)}" loading="${i<2?'eager':'lazy'}" decoding="async">
+      </a>
+    </figure>`;
+  }).join('');
+}
+function renderHero(){
+  if(!hero)return;
+  const p=products[0]; if(!p)return;
+  hero.innerHTML=`<a href="product.html?id=${encodeURIComponent(p.id)}" class="hero-product-link" aria-label="Scopri il nuovo arrivo ${esc(p.brand)} ${esc(p.name)}">
+    <img src="${esc(images(p)[0])}" alt="${esc(p.brand)} ${esc(p.name)}" fetchpriority="high">
+    <span class="hero-arrow" aria-hidden="true">↗</span>
+    <span class="hero-product-index">01 / ${String(Math.min(products.length,12)).padStart(2,'0')}</span>
+  </a>`;
+}
+function renderBrands(){
+  const el=document.getElementById('brandTicker'); if(!el)return;
+  const names=[...new Set(products.map(p=>p.brand))];
+  el.innerHTML=names.map((n,i)=>`<a href="brand.html?brand=${encodeURIComponent(n)}"><span>${String(i+1).padStart(2,'0')}</span><strong>${esc(n)}</strong><i>↗</i></a>`).join('');
+}
+function observe(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('is-in')}),{threshold:.08});
+  document.querySelectorAll('.look-frame,.manifesto,.category-flow,.brand-flow,.store-section,.closing-cta').forEach(x=>io.observe(x));
+}
 init();
 })();
