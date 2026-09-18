@@ -58,7 +58,7 @@
 <main id="top">
   <section class="hero">
     <div class="hero-gridline"></div>
-    <div class="hero-top"><span id="heroKicker" class="micro"></span><span class="hero-index">001 / 006</span></div>
+    <div class="hero-top"><span id="heroKicker" class="micro"></span><span class="hero-index">001 / 009</span></div>
     <div class="hero-center"><img id="heroLogo" class="hero-logo" alt="Flip&Co"><div class="hero-rule"></div></div>
     <div class="hero-bottom"><div id="heroHeadline" class="hero-headline"></div><div class="hero-meta"><span id="heroMeta"></span><span class="scroll-cue">SCROLL <i></i></span></div></div>
   </section>
@@ -140,6 +140,93 @@
       </div>
     </div>
   </section>
+
+
+  <section id="shop" class="ecom section-pad">
+    <div class="ecom-head reveal">
+      <div>
+        <span class="micro">06 / FLIP&CO ONLINE</span>
+        <h2 class="display heading-reveal">IL TUO LOOK.<br><span>ONLINE.</span></h2>
+      </div>
+      <div class="ecom-head-copy">
+        <p>La selezione Flip&Co può diventare anche uno store online: scopri i prodotti, aggiungili al carrello e completa l'ordine.</p>
+        <span class="micro">PROTOTYPE E-COMMERCE / 2026</span>
+      </div>
+    </div>
+
+    <div class="ecom-toolbar reveal">
+      <div class="ecom-filters" role="tablist" aria-label="Categorie">
+        <button class="ecom-filter active" data-filter="ALL">TUTTI</button>
+        <button class="ecom-filter" data-filter="UOMO">UOMO</button>
+        <button class="ecom-filter" data-filter="DONNA">DONNA</button>
+        <button class="ecom-filter" data-filter="TEENS">TEENS</button>
+        <button class="ecom-filter" data-filter="BAMBINO">BAMBINO</button>
+      </div>
+      <button id="cartOpen" class="ecom-cart-button" type="button">CARRELLO <span id="cartCount">0</span> ↗</button>
+    </div>
+
+    <div id="productGrid" class="product-grid" aria-live="polite"></div>
+
+    <div class="ecom-infrastructure reveal">
+      <div class="ecom-infra-top">
+        <span class="micro">MEDIABAY / E-COMMERCE INFRASTRUCTURE</span>
+        <span class="micro">ONE PLATFORM · MANY STORES</span>
+      </div>
+      <div class="ecom-infra-grid">
+        <div>
+          <h3>IL NEGOZIO<br><span>RESTa ONLINE.</span></h3>
+          <p>Lo store non è solo il design. Dietro ci sono infrastruttura, sicurezza, backup, dominio, aggiornamenti e gestione tecnica.</p>
+        </div>
+        <div class="infra-list">
+          <div><b>01</b><span>HOSTING &amp; SSL</span><em>sempre attivo</em></div>
+          <div><b>02</b><span>BACKUP</span><em>protezione dei dati</em></div>
+          <div><b>03</b><span>ORDINI &amp; CATALOGO</span><em>gestione centralizzata</em></div>
+          <div><b>04</b><span>AGGIORNAMENTI</span><em>manutenzione continua</em></div>
+          <div><b>05</b><span>SCALABILITÀ</span><em>pronto a crescere</em></div>
+        </div>
+      </div>
+      <div class="ecom-models">
+        <article class="ecom-model">
+          <span class="micro">MODELLO 01</span>
+          <h4>SETUP + INFRASTRUTTURA</h4>
+          <p>Sviluppo iniziale dello store, poi una fee mensile per mantenerlo attivo e gestito.</p>
+          <strong>IDEALE PER CHI VUOLE COSTI PREVEDIBILI.</strong>
+        </article>
+        <article class="ecom-model featured">
+          <span class="micro">MODELLO 02</span>
+          <h4>PARTNERSHIP</h4>
+          <p>Ingresso più leggero e remunerazione collegata alle vendite, secondo condizioni concordate con il business.</p>
+          <strong>PIÙ CRESCE LO STORE, PIÙ CRESCIAMO INSIEME.</strong>
+        </article>
+        <article class="ecom-model">
+          <span class="micro">MODELLO 03</span>
+          <h4>ACQUISTO</h4>
+          <p>Il cliente acquista lo sviluppo dello store. L'infrastruttura e gli eventuali servizi ricorrenti restano separati.</p>
+          <strong>IDEALE PER CHI VUOLE ACQUISIRE IL PROGETTO.</strong>
+        </article>
+      </div>
+      <div class="ecom-infra-note">
+        <span>FLIP&CO / E-COMMERCE PROTOTYPE</span>
+        <span>POWERED BY MEDIABAY</span>
+      </div>
+    </div>
+  </section>
+
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-overlay" id="cartClose"></div>
+    <div class="cart-panel">
+      <div class="cart-panel-head">
+        <div><span class="micro">FLIP&CO / CART</span><h3>IL TUO<br>CARRELLO.</h3></div>
+        <button type="button" class="cart-x" id="cartX" aria-label="Chiudi carrello">×</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-summary">
+        <div><span>SUBTOTALE</span><strong id="cartTotal">€0,00</strong></div>
+        <button id="checkoutButton" class="checkout-button" type="button">PROSEGUI AL CHECKOUT ↗</button>
+        <p>Demo: il checkout reale potrà essere collegato ai sistemi di pagamento del negozio.</p>
+      </div>
+    </div>
+  </aside>
 
   <section class="review-band">
     <div class="section-pad review-grid"><div class="reveal"><span class="micro">07 / LA PARTE REALE</span><div id="rating" class="rating"></div><span id="reviewCount" class="micro"></span></div><div class="reveal"><h2 id="reviewTitle" class="display heading-reveal"></h2><p id="reviewBody" class="body-copy light"></p></div></div>
