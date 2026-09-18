@@ -1,8 +1,334 @@
 [
-{"id":"fh-001","brand":"Tommy Hilfiger","name":"Logo Hoodie","category":"Uomo","price":129.9,"sizes":["S","M","L","XL"],"stock":{"S":0,"M":1,"L":1,"XL":0},"image":"assets/editorial-campaign.jpg","badge":"SELECTED"},
-{"id":"fh-002","brand":"Calvin Klein","name":"Essential Tee","category":"Donna","price":59.9,"sizes":["XS","S","M","L"],"stock":{"XS":0,"S":2,"M":1,"L":0},"image":"assets/editorial-campaign.jpg","badge":"NEW"},
-{"id":"fh-003","brand":"Levi's","name":"501 Original","category":"Uomo","price":109.9,"sizes":["30","32","34","36"],"stock":{"30":1,"32":0,"34":1,"36":0},"image":"assets/store-entrance.jpg","badge":"ICON"},
-{"id":"fh-004","brand":"Nike","name":"Air Max Lifestyle","category":"Kids","price":99.9,"sizes":["35","36","37","38"],"stock":{"35":0,"36":1,"37":1,"38":0},"image":"assets/editorial-campaign.jpg","badge":"JUST IN"},
-{"id":"fh-005","brand":"The North Face","name":"Lightweight Jacket","category":"Donna","price":189.9,"sizes":["S","M","L"],"stock":{"S":1,"M":0,"L":0},"image":"assets/store-entrance.jpg","badge":"LAST ONE"},
-{"id":"fh-006","brand":"adidas","name":"Originals Track Top","category":"Kids","price":74.9,"sizes":["128","140","152","164"],"stock":{"128":0,"140":1,"152":0,"164":1},"image":"assets/editorial-campaign.jpg","badge":"SELECTED"}
+  {
+    "id": "TH26-NYCOAT",
+    "sku": "TH26-NYCOAT",
+    "brand": "Tommy Hilfiger",
+    "name": "New York Label Wool Blend Coat",
+    "category": "Uomo",
+    "price": 499.9,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": {
+      "S": 1,
+      "M": 1,
+      "L": 0
+    },
+    "color": "Marrone",
+    "material": "75% lana, 25% nylon",
+    "fit": "Relaxed fit",
+    "season": "FW26",
+    "badge": "NEW",
+    "image": "https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/V06402s5.jpg?im=Resize%2Cwidth%3D750",
+    "source": "https://it.tommy.com/cappotto-new-york-label-in-misto-lana-mw0mw45282gvh"
+  },
+  {
+    "id": "TH26-OXFORD",
+    "sku": "TH26-OXFORD",
+    "brand": "Tommy Hilfiger",
+    "name": "Heritage Regular Fit Oxford Shirt",
+    "category": "Uomo",
+    "price": 119.9,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "S": 1,
+      "M": 2,
+      "L": 1,
+      "XL": 0
+    },
+    "color": "Azzurro",
+    "material": "Oxford cotton",
+    "fit": "Regular fit",
+    "season": "FW26",
+    "badge": "ICON",
+    "image": "https://pvh-brands.imgix.net/catalog/product/media/MW0MW35774_0GY_MO-ST-F1_222.jpg?auto=compress&auto=format&crop=edges&fit=crop",
+    "source": "https://au.tommy.com/heritage-regular-fit-oxford-shirt-shirt-blue-mw0mw357740gy"
+  },
+  {
+    "id": "CK26-STRIPE",
+    "sku": "CK26-STRIPE",
+    "brand": "Calvin Klein",
+    "name": "Camicia a righe in popeline di cotone",
+    "category": "Donna",
+    "price": 109.9,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": {
+      "XS": 0,
+      "S": 1,
+      "M": 1,
+      "L": 0
+    },
+    "color": "Blue Stripe",
+    "material": "Cotone popeline",
+    "fit": "Relaxed fit",
+    "season": "FW26",
+    "badge": "NEW",
+    "image": "https://japan.calvinklein.com/img/item/QS7652/QS7652_c2NE_a002_dc.jpg",
+    "source": "https://www.calvinklein.it/camicie-donna"
+  },
+  {
+    "id": "CK26-TEE",
+    "sku": "CK26-TEE",
+    "brand": "Calvin Klein",
+    "name": "T-shirt con stemma in cotone oversize",
+    "category": "Donna",
+    "price": 59.9,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": {
+      "XS": 0,
+      "S": 2,
+      "M": 1,
+      "L": 0
+    },
+    "color": "Vanilla Custard",
+    "material": "100% cotone",
+    "fit": "Oversize",
+    "season": "FW26",
+    "badge": "SELECTED",
+    "image": "https://www.calvinklein.com.sg/on/demandware.static/-/Sites/default/dw8a2d3d34/mobile-level-1_1/FA26%20collection%20site%20mobile%20output.jpg",
+    "source": "https://www.calvinklein.it/t-shirt-con-stemma-in-cotone-oversize-lv047d204gtgy"
+  },
+  {
+    "id": "LE26-501",
+    "sku": "LE26-501",
+    "brand": "Levi's",
+    "name": "501 Original Jeans",
+    "category": "Uomo",
+    "price": 120.0,
+    "sizes": [
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "stock": {
+      "30": 1,
+      "32": 1,
+      "34": 0,
+      "36": 0
+    },
+    "color": "Blue",
+    "material": "Denim",
+    "fit": "Straight / regular waist",
+    "season": "2026",
+    "badge": "ICON",
+    "image": "https://lsco.scene7.com/is/image/lsco/005013649-front-pdp?$qv_desktop$",
+    "source": "https://www.levi.com/CH/fr_CH/vetements/homme/jeans/droits/levis-jean-501-original/p/005013649"
+  },
+  {
+    "id": "LE26-568",
+    "sku": "LE26-568",
+    "brand": "Levi's",
+    "name": "568 Loose Straight Jeans",
+    "category": "Uomo",
+    "price": 120.0,
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "stock": {
+      "28": 0,
+      "30": 1,
+      "32": 1,
+      "34": 0,
+      "36": 0
+    },
+    "color": "Dark Wash",
+    "material": "100% cotone denim",
+    "fit": "Loose straight",
+    "season": "2026",
+    "badge": "NEW",
+    "image": "https://lsco.scene7.com/is/image/lsco/290370078-front-pdp?$qv_desktop$",
+    "source": "https://www.levi.com/IT/it_IT/abbigliamento/uomo/jeans/straight/jeans-568TM-loose-straight/p/290370078"
+  },
+  {
+    "id": "NI26-AM90",
+    "sku": "NI26-AM90",
+    "brand": "Nike",
+    "name": "Air Max 90 Infrared",
+    "category": "Uomo",
+    "price": 159.99,
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "stock": {
+      "40": 0,
+      "41": 1,
+      "42": 1,
+      "43": 0,
+      "44": 1,
+      "45": 0
+    },
+    "color": "White / Grey / Infrared",
+    "material": "Mesh / synthetic / suede",
+    "fit": "Regular",
+    "season": "SS26",
+    "badge": "JUST IN",
+    "image": "https://cdn.sneakersquad.nl/uploads/primary/blog/Nike-Air-Max-90-Infrared-2026-IU1055-100.jpg?fit=min&fm=webp&h=630&q=82&signature=425ed3dc&v=1765830997&w=1200",
+    "source": "https://www.nike.com/it/"
+  },
+  {
+    "id": "NI26-DUNK",
+    "sku": "NI26-DUNK",
+    "brand": "Nike",
+    "name": "Dunk Low Easter 2026",
+    "category": "Kids",
+    "price": 130.0,
+    "sizes": [
+      "35.5",
+      "36",
+      "36.5",
+      "37.5",
+      "38"
+    ],
+    "stock": {
+      "35.5": 0,
+      "36": 1,
+      "36.5": 1,
+      "37.5": 0,
+      "38": 0
+    },
+    "color": "Multi",
+    "material": "Leather",
+    "fit": "Regular",
+    "season": "SS26",
+    "badge": "DROP",
+    "image": "https://grailify.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjMwNTYyNywicHVyIjoiYmxvYl9pZCJ9fQ%3D%3D--390c6133b1675eaa922a9b02981cf99377f4e068/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbODAwLDgwMF0sInF1YWxpdHkiOjkwfSwicHVyIjoidmFyaWF0aW9uIn19--8c7d630b9b8fd5b9c842c93487267dfcebc5691c/IQ9404-349%20%285%29.jpg",
+    "source": "https://grailify.com/en/sneaker/nike-dunk-low-easter-2026"
+  },
+  {
+    "id": "TNF26-QUEST",
+    "sku": "TNF26-QUEST",
+    "brand": "The North Face",
+    "name": "Men’s Quest Mono Jacket",
+    "category": "Uomo",
+    "price": 149.9,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "S": 1,
+      "M": 1,
+      "L": 0,
+      "XL": 0
+    },
+    "color": "Black",
+    "material": "Technical shell",
+    "fit": "Regular",
+    "season": "FW26",
+    "badge": "NEW",
+    "image": "https://assets.thenorthface.com/images/t_img/f_auto%2Ch_400%2Ce_unsharp_mask%3A150%2Cw_344/dpr_2.0/v1762371065/NF0A8G0RJK3-HERO/Mens-Quest-Mono-Jacket-TNF-HERO.png",
+    "source": "https://www.thenorthface.com/en-us/c/shop-all/new-arrivals-723791"
+  },
+  {
+    "id": "TNF26-HKE",
+    "sku": "TNF26-HKE",
+    "brand": "The North Face",
+    "name": "HKe Devils Thumb GORE-TEX Jacket",
+    "category": "Uomo",
+    "price": 349.9,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": {
+      "S": 0,
+      "M": 1,
+      "L": 1
+    },
+    "color": "Pearl Stone / Endless Dusk",
+    "material": "GORE-TEX",
+    "fit": "Regular",
+    "season": "FW26",
+    "badge": "TECH",
+    "image": "https://assets.thenorthface.com/images/t_img/f_auto%2Ch_400%2Ce_unsharp_mask%3A150%2Cw_344/dpr_2.0/v1762369736/NF0A8CG3K59-HERO/Mens-HKe-Devils-Thumb-GORETEX-Jacket-TNF-HERO.png",
+    "source": "https://www.thenorthface.com/en-us/c/mens/mens-featured/mens-new-arrivals-226102"
+  },
+  {
+    "id": "AD26-SPEZIAL",
+    "sku": "AD26-SPEZIAL",
+    "brand": "adidas",
+    "name": "Handball Spezial",
+    "category": "Uomo",
+    "price": 120.0,
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "stock": {
+      "40": 0,
+      "41": 1,
+      "42": 1,
+      "43": 1,
+      "44": 0,
+      "45": 0
+    },
+    "color": "White / Blue",
+    "material": "Leather / suede",
+    "fit": "Regular",
+    "season": "SS26",
+    "badge": "NEW",
+    "image": "https://cdn.mos.cms.futurecdn.net/jeLnz2X6QzX933DKNMH6MS.jpg",
+    "source": "https://www.adidas.it/originals-nuovi_arrivi"
+  },
+  {
+    "id": "AD26-TRACK",
+    "sku": "AD26-TRACK",
+    "brand": "adidas",
+    "name": "Originals Loose Track Top",
+    "category": "Kids",
+    "price": 85.0,
+    "sizes": [
+      "128",
+      "140",
+      "152",
+      "164"
+    ],
+    "stock": {
+      "128": 0,
+      "140": 1,
+      "152": 0,
+      "164": 1
+    },
+    "color": "Black / Red",
+    "material": "Mesh / polyester",
+    "fit": "Loose",
+    "season": "SS26",
+    "badge": "EDITORIAL",
+    "image": "https://pbs.twimg.com/media/G-DvORwaoAAardG.jpg",
+    "source": "https://news.adidas.com/originals"
+  }
 ]

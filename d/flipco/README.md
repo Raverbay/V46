@@ -1,19 +1,22 @@
-# Flip&Co — Omnichannel V1
+# Flip&Co Premium Omnichannel V4
 
-Customer-facing Flip&Co prototype: editorial fashion experience + online shop + physical-store bridge.
+Versione ad alta fedeltà per presentazione cliente.
 
-## Core model
-- One real inventory concept shared by online and store.
-- Online discovery and purchase.
-- Product-to-store bridge with WhatsApp and Maps.
-- Uomo / Donna / Kids and brand-led shopping.
-- Cart persisted in localStorage for prototype use.
-- Checkout currently hands the order request to Flip&Co via WhatsApp; a real payment/inventory backend must be connected before production.
+- 12 prodotti esempio / 6 brand / 2 per brand
+- dati prodotto e stock per taglia
+- Shop + filtri + brand + disponibilità
+- Product detail + taglie + spedizione + ritiro in store + WhatsApp
+- Carrello persistente
+- Checkout completo lato UX: contatti, consegna, ritiro, pagamento, validazione, totali
+- Conferma ordine
+- Importatore CSV in /admin/import.html
+- inventory/imported-stock.csv e inventory/inventory.json
+- pagine base spedizioni, resi, FAQ, privacy, termini, cookie da completare con dati reali
 
-## Production integrations still required
-- authoritative inventory/POS or commerce backend
-- real payment provider
-- shipping rules and rates
-- order database
-- legal pages and consent management
-- analytics and conversion tracking
+## Architettura
+UN SOLO INVENTARIO → ONLINE + STORE.
+
+## Go-live finale
+Collegare payment provider, backend ordine, prenotazione atomica stock, spedizioni, email transactional, testi legali definitivi, analytics/consenso e immagini prodotto con diritti d'uso.
+
+Il prototipo non dichiara un pagamento come riuscito: crea un ordine locale in stato pending_payment.

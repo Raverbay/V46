@@ -1,0 +1,1 @@
+let INVENTORY=null;async function loadInventory(){if(INVENTORY)return INVENTORY;INVENTORY=await(await fetch('inventory/inventory.json')).json();return INVENTORY}function stockFor(p){return Object.values(p.stock||{}).reduce((a,b)=>a+Number(b||0),0)}function sizeStock(p,s){return Number((p.stock||{})[s]||0)}
