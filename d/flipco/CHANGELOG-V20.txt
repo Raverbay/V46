@@ -1,0 +1,27 @@
+FLIP&CO V20 — PRODUCT-ONLY HOMEPAGE
+
+Changed/new files:
+- index.html
+- home-v19.css
+- home-v19.js
+
+Deleted files:
+- assets/editorial-campaign.jpg
+- assets/campaign-uomo.jpg
+- assets/campaign-donna.jpg
+- assets/campaign-kids.jpg
+- assets/store-entrance.jpg
+
+V20 removes all campaign/editorial/store photography from the homepage. Every photographic visual on the home is now generated from the actual product catalog images loaded from inventory/inventory.json.
+
+Homepage rebuilt around product photography only:
+- full-screen product-led hero with rotating catalog products;
+- New In product grid;
+- Uomo / Donna / Kids product-only visual feeds;
+- brand selection list without photography;
+- store information section without photography;
+- final commerce CTA.
+
+No new campaign photography is introduced. The current remote product image URLs are demo placeholders and can later be replaced with Flip&Co-owned professional product photography in the inventory source without changing the homepage structure.
+
+Installation: copy/replace only the changed/new files at the existing Flip&Co project root. Delete the five listed photography assets from assets/.

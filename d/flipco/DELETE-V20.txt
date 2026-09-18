@@ -1,0 +1,10 @@
+DELETE these obsolete V19 homepage photography assets:
+assets/editorial-campaign.jpg
+assets/campaign-uomo.jpg
+assets/campaign-donna.jpg
+assets/campaign-kids.jpg
+assets/store-entrance.jpg
+
+KEEP:
+assets/logo-flipco.png
+assets/logo-flipco-dark.png
