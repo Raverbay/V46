@@ -11,7 +11,7 @@
 <body>
 <a class="skip-link" href="#main">Vai al contenuto</a>
 <header class="site-header">
-<a class="brand-logo" href="index.html"><img src="assets/logo-flipco.png" alt="Flip&Co"></a>
+<a class="brand-logo" href="index.html"><img src="assets/logo-flipco-header.png" alt="Flip&Co"></a>
 <nav aria-label="Navigazione principale">
 <a href="shop.html">SHOP</a><a href="shop.html?category=Uomo">UOMO</a><a href="shop.html?category=Donna">DONNA</a><a href="shop.html?category=Kids">KIDS</a><a href="brand.html">BRAND</a><a href="#store">STORE</a>
 </nav>
@@ -20,7 +20,7 @@
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true"><a href="shop.html">SHOP ONLINE</a><a href="shop.html?category=Uomo">UOMO</a><a href="shop.html?category=Donna">DONNA</a><a href="shop.html?category=Kids">KIDS</a><a href="brand.html">BRAND</a><a href="#store">IL NEGOZIO</a><a href="#contact">CONTATTI</a></div>
 <main id="main">
 <section class="hero">
-<div class="hero-image"><img src="assets/editorial-campaign.jpg" alt="Selezione Flip&Co" fetchpriority="high"></div>
+<div class="hero-image"><div class="hero-showcase" id="heroShowcase"></div><div class="hero-dots" id="heroDots" aria-label="Nuovi arrivi"></div></div>
 <div class="hero-content"><span class="eyebrow">CAGLIARI · MULTIBRAND STORE</span><h1>NON CERCHI SOLO<br>COSA INDOSSARE.<br><em>CERCHI COSA TI RAPPRESENTA.</em></h1><p>UOMO · DONNA · KIDS</p><div class="actions"><a class="btn btn-primary" href="#selection">SCOPRI LA SELEZIONE</a><a class="btn btn-ghost" href="shop.html">SHOP ONLINE ↗</a></div></div>
 </section>
 <section class="bridge section">
@@ -61,6 +61,6 @@
 </section>
 <section id="contact" class="section contact"><span class="eyebrow">08 / CONTATTI</span><h2>HAI TROVATO<br>QUELLO CHE<br><em>CERCAVI?</em></h2><p>Per informazioni su prodotti, disponibilità, taglie o ordini online, contattaci.</p><div class="actions"><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/393661087819?text=Ciao%20Flip%26Co%2C%20ho%20bisogno%20di%20informazioni.">WHATSAPP ↗</a><a class="btn btn-secondary" target="_blank" rel="noopener" href="https://www.instagram.com/flipabbigliamento/">INSTAGRAM ↗</a></div></section>
 </main>
-<footer><div class="footer-grid"><div><img src="assets/logo-flipco.png" alt="Flip&Co"><span class="eyebrow">CAGLIARI · VIA ITALIA 22</span></div><div class="footer-links"><a href="shop.html">SHOP</a><a href="shop.html?category=Uomo">UOMO</a><a href="shop.html?category=Donna">DONNA</a><a href="shop.html?category=Kids">KIDS</a><a href="#store">STORE</a><a href="#contact">CONTATTI</a></div><div><small>© FLIP&CO</small><div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Termini</a><a href="shipping.html">Spedizioni</a><a href="returns.html">Resi</a><a href="faq.html">FAQ</a><a href="cookies.html">Cookie</a></div></div></div></footer>
-<script src="commerce.js"></script><script src="engine.js"></script>
+<footer><div class="footer-grid"><div><img src="assets/logo-flipco-header.png" alt="Flip&Co"><span class="eyebrow">CAGLIARI · VIA ITALIA 22</span></div><div class="footer-links"><a href="shop.html">SHOP</a><a href="shop.html?category=Uomo">UOMO</a><a href="shop.html?category=Donna">DONNA</a><a href="shop.html?category=Kids">KIDS</a><a href="#store">STORE</a><a href="#contact">CONTATTI</a></div><div><small>© FLIP&CO</small><div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Termini</a><a href="shipping.html">Spedizioni</a><a href="returns.html">Resi</a><a href="faq.html">FAQ</a><a href="cookies.html">Cookie</a></div></div></div></footer>
+<script src="inventory.js"></script><script src="commerce.js"></script><script src="engine.js"></script><script src="nav.js"></script>
 <div class="cookie-banner" id="cookieBanner"><div><strong>PRIVACY & COOKIE</strong><span>In questa build sono attive solo tecnologie necessarie. Analytics e preferenze saranno configurati prima del go-live.</span></div><button id="cookieOk" class="btn btn-primary">OK</button></div><script>if(localStorage.getItem("flip_cookie_ok"))document.getElementById("cookieBanner")?.remove();document.getElementById("cookieOk")?.addEventListener("click",()=>{localStorage.setItem("flip_cookie_ok","1");document.getElementById("cookieBanner")?.remove()});</script></body></html>
