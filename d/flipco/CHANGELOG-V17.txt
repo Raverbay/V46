@@ -1,0 +1,24 @@
+FLIP&CO V17 — COMMERCE EXPERIENCE UPDATE
+
+Redesign based on the reference mobile fashion-commerce experience.
+
+CHANGED/NEW:
+- shop.html — editorial ecommerce listing, mobile category rail, filter sheet, quick-add, cart drawer
+- product.html — image-led PDP, size selection, size guide, sticky mobile add-to-cart
+- checkout.html — streamlined two-column desktop / mobile checkout
+- shop.js — filters, sorting, stock-aware quick add
+- product.js — PDP interactions and stock-aware size selection
+- commerce.js — shared cart, quantity validation and drawer rendering
+- checkout.js — stock revalidation and checkout totals
+- inventory.js — shared inventory source/helpers
+- engine.js — restored home catalog renderer
+- brand.js — restored brand page renderer
+- style.css — V17 commerce visual/interaction system
+- nav.js — carried forward from V16 for global navigation/search/transitions
+- assets/logo-flipco.png — carried forward as the single logo asset
+
+NOTE:
+The reference experience is used as UX/art-direction inspiration (editorial discovery, dense product grid, quick add, product-first PDP, sticky purchase action and streamlined checkout), not as a pixel-for-pixel copy.
+
+IMPORTANT:
+This remains a front-end prototype. Real card payment processing and server-side inventory locking must be connected before production checkout.
