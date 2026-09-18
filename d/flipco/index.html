@@ -1,48 +1,60 @@
 <!doctype html>
 <html lang="it">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Flip&Co — Cagliari</title>
 <meta name="description" content="Flip&Co — multibrand fashion store a Cagliari. Uomo, Donna, Kids e selezione online.">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://mediabay.it/d/flipco/index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="header-v21.css"><link rel="stylesheet" href="home-v19.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="header-v22.css">
+<link rel="stylesheet" href="home-v22.css">
 </head>
-<body class="home-page v20-home">
-<div class="page-loader" id="pageLoader" aria-hidden="true"><div class="loader-inner"><img src="assets/logo-flipco.png" alt="Flip&Co"><span>FLIP&CO · CAGLIARI</span><i></i></div></div>
+<body class="home-page v22-home">
 <a class="skip-link" href="#main">Vai al contenuto</a>
-<header class="site-header v20-header">
-  <a class="brand-logo" href="index.html" aria-label="Flip&Co home"><img src="assets/logo-flipco.png" alt="Flip&Co"></a>
-  <nav aria-label="Navigazione principale"><a href="shop.html">SHOP</a><a href="shop.html?category=Uomo">UOMO</a><a href="shop.html?category=Donna">DONNA</a><a href="shop.html?category=Kids">KIDS</a><a href="brand.html">BRAND</a><a href="#store">STORE</a></nav>
-  <div class="header-actions"><button class="menu-button" id="menuBtn" type="button" aria-label="Apri menu" aria-expanded="false"><span>MENU</span><i aria-hidden="true"><b></b><b></b></i></button><a class="cart-icon" id="cartTrigger" href="shop.html#cart" aria-label="Apri carrello"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 7h11A2.5 2.5 0 0 1 20 9.5V19a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9.5A2.5 2.5 0 0 1 6.5 7Z"/><path d="M8.5 7V5a3.5 3.5 0 0 1 7 0v2"/></svg><b id="cartCount">0</b></a></div>
+<header class="site-header v22-header" id="siteHeader">
+  <button class="v22-menu-trigger" id="v22MenuBtn" type="button" aria-label="Apri menu" aria-expanded="false"><span>MENU</span><i aria-hidden="true"><b></b><b></b></i></button>
+  <a class="v22-logo" href="index.html" aria-label="Flip&Co home"><img src="assets/logo-flipco.png" alt="Flip&Co"></a>
+  <div class="v22-actions">
+    <button class="v22-action v22-search" id="v22SearchBtn" type="button" aria-label="Cerca"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.2"></circle><path d="m15.3 15.3 5 5"></path></svg><span>SEARCH</span></button>
+    <a class="v22-action v22-account" href="checkout.html" aria-label="Area cliente"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.1"></circle><path d="M5.5 20c.8-3.5 3-5.3 6.5-5.3s5.7 1.8 6.5 5.3"></path></svg></a>
+    <a class="v22-action v22-bag" id="cartTrigger" href="shop.html#cart" aria-label="Bag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 7h11A2.5 2.5 0 0 1 20 9.5V19a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9.5A2.5 2.5 0 0 1 6.5 7Z"></path><path d="M8.5 7V5a3.5 3.5 0 0 1 7 0v2"></path></svg><b id="cartCount">0</b></a>
+  </div>
 </header>
+<div class="v22-search-panel" id="v22SearchPanel" aria-hidden="true"><button class="v22-search-close" id="v22SearchClose" type="button">CHIUDI <b>×</b></button><label for="v22SearchInput">Cerca</label><input id="v22SearchInput" type="search" autocomplete="off" placeholder="Cerca prodotti, brand, categorie"><div id="v22SearchResults"></div></div>
+<div class="v22-menu-panel" id="v22MenuPanel" aria-hidden="true"><div class="v22-menu-head"><span>FLIP&CO · CAGLIARI</span><button id="v22MenuClose" type="button">CHIUDI <b>×</b></button></div><div class="v22-menu-body"><nav><a href="shop.html">SHOP <small>01</small></a><a href="shop.html?category=Uomo">UOMO <small>02</small></a><a href="shop.html?category=Donna">DONNA <small>03</small></a><a href="shop.html?category=Kids">KIDS <small>04</small></a><a href="brand.html">BRAND <small>05</small></a><a href="#store">STORE <small>06</small></a></nav><aside><span>ONLINE + STORE</span><strong>VIA ITALIA 22<br>CAGLIARI</strong><small>LUN — SAB<br>09:00 — 13:30<br>16:00 — 20:00</small><a href="https://www.google.com/maps/search/?api=1&query=Via+Italia+22%2C+Cagliari" target="_blank" rel="noopener">COME ARRIVARE ↗</a></aside></div><div class="v22-menu-foot"><span>UOMO · DONNA · KIDS</span><span>SCOPRI LA SELEZIONE.</span></div></div>
 <main id="main">
-  <section class="v20-hero" id="hero" aria-label="Nuovi arrivi">
-    <div class="v20-hero-stage" id="heroStage"></div>
-    <div class="v20-hero-top"><span>NEW IN · 2026</span><span>CAGLIARI · VIA ITALIA 22</span></div>
-    <div class="v20-hero-bottom"><div><span class="v20-eyebrow" id="heroBrand">FLIP&CO</span><h1 id="heroName">SCOPRI LA SELEZIONE.</h1><p id="heroMeta">UOMO · DONNA · KIDS</p><a id="heroLink" href="shop.html">SCOPRI <span>↗</span></a></div><div class="v20-hero-counter"><b id="heroCurrent">01</b><i></i><span id="heroTotal">03</span></div></div>
+  <section class="v22-hero" id="hero" aria-label="Nuovi arrivi">
+    <div class="v22-hero-media"><a id="heroProductLink" href="shop.html"><img id="heroProductImage" src="" alt=""></a><div class="v22-hero-shade"></div></div>
+    <div class="v22-hero-meta"><span>NEW IN · 2026</span><span>CAGLIARI · VIA ITALIA 22</span></div>
+    <div class="v22-hero-copy"><span id="heroBrand">FLIP&CO</span><h1>SCOPRI LA<br>SELEZIONE.</h1><p>UOMO · DONNA · KIDS</p><a href="shop.html">SHOP ONLINE <b>↗</b></a></div>
+    <div class="v22-hero-product"><span id="heroProductBrand"></span><strong id="heroProductName"></strong><small id="heroProductPrice"></small></div>
+    <div class="v22-hero-progress"><i id="heroProgress"></i></div>
   </section>
 
-  <section class="v20-intro reveal-v20"><div class="v20-intro-label">FLIP&CO / ONLINE + STORE</div><div><p>Una selezione di brand e prodotti. Scopri online, scegli la tua taglia e acquista. Oppure vieni in store e provali dal vivo.</p><a href="shop.html">ENTRA NELLO SHOP <span>↗</span></a></div></section>
+  <section class="v22-runway" id="new-in"><div class="v22-section-head"><span>01 / NEW IN</span><a href="shop.html">VEDI TUTTO ↗</a></div><div class="v22-product-runway" id="newInProducts"></div></section>
 
-  <section class="v20-newin reveal-v20" id="new-in"><header><div><span>01 / NEW IN</span><h2>APPENA<br><em>ARRIVATI.</em></h2></div><a href="shop.html">VEDI TUTTO <span>↗</span></a></header><div class="v20-product-grid" id="homeProducts"></div></section>
+  <section class="v22-intro"><div class="v22-intro-index">02</div><div><span>FLIP&CO / ONLINE + STORE</span><h2>UN SOLO STORE.<br>ONLINE E A CAGLIARI.</h2><p>Scopri i nuovi arrivi, scegli la tua taglia e acquista online. Oppure vieni in negozio e prova i capi dal vivo.</p><a href="shop.html">ENTRA NELLO SHOP ↗</a></div></section>
 
-  <section class="v20-category-feed" id="selection">
-    <article class="v20-category-block reveal-v20" data-category="Uomo"><div class="v20-category-copy"><span>02 / UOMO</span><h2>UOMO</h2><a href="shop.html?category=Uomo">SCOPRI <span>↗</span></a></div><div class="v20-category-products" id="catUomo"></div></article>
-    <article class="v20-category-block reveal-v20" data-category="Donna"><div class="v20-category-copy"><span>03 / DONNA</span><h2>DONNA</h2><a href="shop.html?category=Donna">SCOPRI <span>↗</span></a></div><div class="v20-category-products" id="catDonna"></div></article>
-    <article class="v20-category-block reveal-v20" data-category="Kids"><div class="v20-category-copy"><span>04 / KIDS</span><h2>KIDS</h2><a href="shop.html?category=Kids">SCOPRI <span>↗</span></a></div><div class="v20-category-products" id="catKids"></div></article>
+  <section class="v22-identity">
+    <article class="v22-identity-card"><img src="assets/identity-men.jpg" alt="Flip&Co — selezione uomo"><div><span>03 / UOMO</span><h2>UOMO</h2><a href="shop.html?category=Uomo">SCOPRI LA SELEZIONE ↗</a></div></article>
+    <article class="v22-identity-card"><img src="assets/identity-kids.jpg" alt="Flip&Co — selezione kids"><div><span>04 / KIDS</span><h2>KIDS</h2><a href="shop.html?category=Kids">SCOPRI LA SELEZIONE ↗</a></div></article>
+    <article class="v22-identity-card v22-store-card" id="store"><img src="assets/identity-store.jpg" alt="Ingresso del negozio Flip&Co a Cagliari"><div><span>05 / STORE</span><h2>VIENI<br>IN STORE.</h2><a href="https://www.google.com/maps/search/?api=1&query=Via+Italia+22%2C+Cagliari" target="_blank" rel="noopener">VIA ITALIA 22 · CAGLIARI ↗</a></div></article>
   </section>
 
-  <section class="v20-brands reveal-v20"><div class="v20-brands-head"><span>05 / BRANDS</span><h2>BRAND<br><em>SELECTION.</em></h2><a href="brand.html">VEDI I BRAND <span>↗</span></a></div><div class="v20-brand-strip" id="brandStrip"></div></section>
+  <section class="v22-category" id="selection"><div class="v22-category-head"><span>06 / SELECTION</span><h2>THE<br>SELECTION.</h2><a href="shop.html">SHOP ALL ↗</a></div><div class="v22-category-grid" id="categoryProducts"></div></section>
 
-  <section class="v20-store reveal-v20" id="store"><div><span>06 / STORE</span><h2>VIENI A<br><em>PROVARLO.</em></h2><p>Flip&Co è in Via Italia 22, a Cagliari. Lo stesso assortimento che scopri online vive anche in negozio.</p><div class="v20-store-data"><strong>CAGLIARI</strong><span>VIA ITALIA 22</span><span>LUN — SAB · 09:00 — 13:30 / 16:00 — 20:00</span></div><a href="https://www.google.com/maps/search/?api=1&query=Via+Italia+22%2C+Cagliari" target="_blank" rel="noopener">COME ARRIVARE <span>↗</span></a></div></section>
+  <section class="v22-brands"><div class="v22-brands-title"><span>07 / BRANDS</span><h2>BRAND<br>SELECTION.</h2><a href="brand.html">VEDI I BRAND ↗</a></div><div class="v22-brand-list" id="brandList"></div></section>
 
-  <section class="v20-final reveal-v20"><span>FLIP&CO · CAGLIARI</span><h2>SCOPRI.<br><em>SCEGLI.</em><br>VIVI.</h2><a href="shop.html">SHOP ONLINE <span>↗</span></a></section>
+  <section class="v22-closing"><span>FLIP&CO · CAGLIARI</span><h2>SCOPRI.<br>SCEGLI.<br><em>VIVI.</em></h2><a href="shop.html">SHOP ONLINE ↗</a></section>
 </main>
-<footer class="v19-footer"><div><img src="assets/logo-flipco.png" alt="Flip&Co"><span>VIA ITALIA 22 · CAGLIARI</span></div><div class="v19-footer-links"><a href="shop.html">SHOP</a><a href="shop.html?category=Uomo">UOMO</a><a href="shop.html?category=Donna">DONNA</a><a href="shop.html?category=Kids">KIDS</a><a href="brand.html">BRAND</a><a href="#store">STORE</a><a href="privacy.html">PRIVACY</a><a href="terms.html">TERMINI</a></div><div><span>© FLIP&CO</span><a href="https://www.instagram.com/flipabbigliamento/" target="_blank" rel="noopener">INSTAGRAM ↗</a></div></footer>
-<script src="inventory.js"></script><script src="commerce.js"></script><script src="nav.js"></script><script src="home-v19.js"></script>
+<footer class="v22-footer"><div><img src="assets/logo-flipco.png" alt="Flip&Co"><span>VIA ITALIA 22 · CAGLIARI</span></div><div><a href="shop.html">SHOP</a><a href="shop.html?category=Uomo">UOMO</a><a href="shop.html?category=Donna">DONNA</a><a href="shop.html?category=Kids">KIDS</a><a href="brand.html">BRAND</a><a href="#store">STORE</a></div><div><a href="https://www.instagram.com/flipabbigliamento/" target="_blank" rel="noopener">INSTAGRAM ↗</a><span>© FLIP&CO</span></div></footer>
+<script src="inventory.js"></script>
+<script src="commerce.js"></script>
+<script src="home-v22.js"></script>
+<script src="header-v22.js"></script>
 <div class="cookie-banner" id="cookieBanner"><div><strong>PRIVACY & COOKIE</strong><span>In questa build sono attive solo tecnologie necessarie.</span></div><button id="cookieOk" class="btn btn-primary">OK</button></div><script>if(localStorage.getItem("flip_cookie_ok"))document.getElementById("cookieBanner")?.remove();document.getElementById("cookieOk")?.addEventListener("click",()=>{localStorage.setItem("flip_cookie_ok","1");document.getElementById("cookieBanner")?.remove()});</script>
-<script src="header-v21.js"></script>
 </body></html>

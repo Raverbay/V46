@@ -1,0 +1,48 @@
+/* V22 — new header system. No V12–V21 states, bars, pills or stop/start transitions. */
+.v22-header{position:fixed!important;inset:0 0 auto 0!important;height:72px!important;z-index:1000!important;display:grid!important;grid-template-columns:1fr auto 1fr!important;align-items:center!important;padding:0 28px!important;background:transparent!important;color:#fff!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;transition:color .28s ease,background .28s ease!important;pointer-events:none!important}
+.v22-header.is-light{color:#111!important;background:rgba(255,255,255,.94)!important;backdrop-filter:blur(14px)!important;-webkit-backdrop-filter:blur(14px)!important}
+.v22-logo{grid-column:2;display:flex;align-items:center;justify-content:center;width:120px;height:52px;pointer-events:auto}
+.v22-logo img{width:112px;max-width:112px;height:auto;max-height:48px;object-fit:contain;filter:none;display:block;transition:filter .28s ease,transform .28s ease}
+.v22-header:not(.is-light) .v22-logo img{filter:brightness(0) invert(1)}
+.v22-logo:hover img{transform:scale(1.02)}
+.v22-menu-trigger{grid-column:1;justify-self:start;display:flex;align-items:center;gap:10px;border:0;background:none;color:currentColor;padding:8px 0;cursor:pointer;pointer-events:auto;font:500 10px/1 "DM Sans",sans-serif;letter-spacing:.14em}
+.v22-menu-trigger i{width:20px;display:flex;flex-direction:column;gap:5px}
+.v22-menu-trigger i b{height:1px;width:20px;background:currentColor;display:block;transition:transform .3s ease,width .2s ease}
+.v22-menu-trigger:hover i b:last-child{width:13px}
+.v22-menu-trigger[aria-expanded=true] i b:first-child{transform:translateY(3px) rotate(45deg)}
+.v22-menu-trigger[aria-expanded=true] i b:last-child{transform:translateY(-3px) rotate(-45deg);width:20px}
+.v22-actions{grid-column:3;justify-self:end;display:flex;align-items:center;gap:20px;pointer-events:auto}
+.v22-action{display:inline-flex;align-items:center;justify-content:center;width:22px;height:34px;padding:0;margin:0;border:0;background:none;color:currentColor;text-decoration:none;cursor:pointer;position:relative}
+.v22-action svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+.v22-search span{display:none}
+.v22-bag b{position:absolute;right:-7px;top:2px;min-width:13px;height:13px;padding:0 3px;background:currentColor;color:#fff;font:600 7px/13px Arial,sans-serif;text-align:center;border-radius:50%}
+.v22-header:not(.is-light) .v22-bag b{color:#111}
+.v22-search-panel,.v22-menu-panel{position:fixed;z-index:990;inset:0;background:#fff;color:#111;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .32s ease,visibility .32s ease;overflow:auto}
+.v22-search-panel.open,.v22-menu-panel.open{opacity:1;visibility:visible;pointer-events:auto}
+.v22-search-panel{padding:28px 4vw 6vw}
+.v22-search-close,.v22-menu-head button{border:0;background:none;color:inherit;font:500 10px/1 "DM Sans",sans-serif;letter-spacing:.12em;cursor:pointer;padding:8px 0}
+.v22-search-close{float:right}
+.v22-search-panel label{display:block;margin-top:14vh;font:500 clamp(48px,9vw,120px)/.9 "Manrope",sans-serif;letter-spacing:-.05em}
+.v22-search-panel input{display:block;width:100%;border:0;border-bottom:1px solid #111;padding:18px 0 14px;background:transparent;outline:none;font:400 clamp(22px,3vw,38px)/1.1 "DM Sans",sans-serif}
+#v22SearchResults{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:34px}
+.v22-search-result{display:block;border-right:1px solid #ddd;padding:0 12px 30px;text-decoration:none;color:inherit}
+.v22-search-result img{width:100%;aspect-ratio:3/4;object-fit:cover;background:#f5f5f5;display:block;margin-bottom:10px}
+.v22-search-result span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+.v22-search-result strong{display:block;font-size:12px;font-weight:500;margin-top:3px}
+.v22-menu-panel{padding:24px 4vw 28px}
+.v22-menu-head{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.12em}
+.v22-menu-body{display:grid;grid-template-columns:2fr 1fr;gap:8vw;margin-top:12vh}
+.v22-menu-body nav{display:flex;flex-direction:column;align-items:flex-start}
+.v22-menu-body nav a{font:500 clamp(44px,7vw,94px)/.94 "Manrope",sans-serif;letter-spacing:-.055em;text-decoration:none;color:#111;transform:translateY(18px);opacity:0;transition:opacity .35s ease,transform .45s cubic-bezier(.22,.61,.36,1)}
+.v22-menu-panel.open .v22-menu-body nav a{opacity:1;transform:none}
+.v22-menu-panel.open .v22-menu-body nav a:nth-child(2){transition-delay:.025s}.v22-menu-panel.open .v22-menu-body nav a:nth-child(3){transition-delay:.05s}.v22-menu-panel.open .v22-menu-body nav a:nth-child(4){transition-delay:.075s}.v22-menu-panel.open .v22-menu-body nav a:nth-child(5){transition-delay:.1s}.v22-menu-panel.open .v22-menu-body nav a:nth-child(6){transition-delay:.125s}
+.v22-menu-body nav a:hover{opacity:.45!important}
+.v22-menu-body nav small{font:500 9px/1 "DM Sans",sans-serif;letter-spacing:.12em;vertical-align:top;margin-left:10px}
+.v22-menu-body aside{display:flex;flex-direction:column;gap:18px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;max-width:260px}
+.v22-menu-body aside strong{font:500 22px/1.15 "Manrope",sans-serif;letter-spacing:-.02em;text-transform:none}
+.v22-menu-body aside small{line-height:1.6}
+.v22-menu-body aside a{border-bottom:1px solid #111;padding-bottom:8px;width:max-content}
+.v22-menu-foot{position:absolute;left:4vw;right:4vw;bottom:28px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:.14em;border-top:1px solid #111;padding-top:12px}
+body.v22-modal-open{overflow:hidden}
+@media(max-width:700px){.v22-header{height:62px!important;padding:0 17px!important}.v22-logo{width:96px}.v22-logo img{width:90px;max-width:90px}.v22-menu-trigger{font-size:0}.v22-actions{gap:13px}.v22-action{width:20px}.v22-action svg{width:17px;height:17px}.v22-search-panel{padding:18px 18px 40px}.v22-search-panel label{margin-top:18vh;font-size:52px}.v22-search-panel input{font-size:22px}#v22SearchResults{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:25px}.v22-search-result{border-right:0;padding:0 5px 24px}.v22-menu-panel{padding:18px}.v22-menu-body{grid-template-columns:1fr;margin-top:11vh;gap:50px}.v22-menu-body nav a{font-size:47px}.v22-menu-body aside{max-width:220px}.v22-menu-foot{left:18px;right:18px;bottom:18px;font-size:8px}}
+@media(prefers-reduced-motion:reduce){.v22-header,.v22-logo img,.v22-menu-body nav a,.v22-search-panel,.v22-menu-panel{transition:none!important}}

@@ -1,0 +1,42 @@
+/* V22 — Flip&Co home rebuilt as a product-led fashion editorial. Identity imagery is limited to the three supplied store/people images. */
+body.v22-home{background:#fff;color:#111;overflow-x:hidden}
+.v22-home main{background:#fff}
+.v22-hero{position:relative;height:100svh;min-height:680px;background:#111;color:#fff;overflow:hidden}
+.v22-hero-media,.v22-hero-media a,.v22-hero-media img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.v22-hero-media img{object-fit:cover;object-position:center 28%;transform:scale(1.025);transition:opacity .55s ease,transform 7s cubic-bezier(.22,.61,.36,1)}
+.v22-hero-media img.is-changing{opacity:0;transform:scale(1.045)}
+.v22-hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),transparent 38%,rgba(0,0,0,.4))}
+.v22-hero-meta{position:absolute;top:92px;left:28px;right:28px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:.14em;text-transform:uppercase}
+.v22-hero-copy{position:absolute;left:28px;bottom:74px;max-width:620px}
+.v22-hero-copy>span,.v22-hero-product span{font-size:9px;letter-spacing:.15em;text-transform:uppercase}
+.v22-hero-copy h1{font:600 clamp(48px,8vw,116px)/.88 "Manrope",sans-serif;letter-spacing:-.06em;margin:14px 0 18px}
+.v22-hero-copy p{font-size:11px;letter-spacing:.12em;margin:0 0 28px}
+.v22-hero-copy a,.v22-section-head a,.v22-intro a,.v22-identity-card a,.v22-category-head a,.v22-brands-title a,.v22-closing a{display:inline-block;border-bottom:1px solid currentColor;padding-bottom:7px;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.v22-hero-product{position:absolute;right:28px;bottom:76px;text-align:right;display:flex;flex-direction:column;gap:6px;max-width:260px}
+.v22-hero-product strong{font:500 18px/1.05 "Manrope",sans-serif;letter-spacing:-.02em}
+.v22-hero-product small{font-size:10px}
+.v22-hero-progress{position:absolute;left:28px;right:28px;bottom:28px;height:1px;background:rgba(255,255,255,.35);overflow:hidden}
+.v22-hero-progress i{display:block;width:0;height:100%;background:#fff}
+.v22-runway{padding:26px 28px 7vw}
+.v22-section-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #111;padding-bottom:11px;margin-bottom:22px;font-size:9px;letter-spacing:.14em;text-transform:uppercase}
+.v22-product-runway{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#ddd}
+.v22-card{position:relative;background:#fff;color:#111;display:block;overflow:hidden;text-decoration:none}
+.v22-card-media{position:relative;background:#f5f5f5;overflow:hidden;aspect-ratio:3/4}
+.v22-card-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s cubic-bezier(.22,.61,.36,1)}
+.v22-card:hover .v22-card-media img{transform:scale(1.035)}
+.v22-card-info{display:grid;grid-template-columns:1fr auto;gap:12px;padding:10px 8px 20px;font-size:10px}
+.v22-card-info span{display:block}.v22-card-info .brand{font-size:8px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}.v22-card-info strong{font-weight:500}.v22-card-info .price{white-space:nowrap}
+.v22-card-add{position:absolute;left:8px;right:8px;bottom:56px;background:#111;color:#fff;border:0;padding:12px;text-align:center;font-size:9px;letter-spacing:.12em;opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease;cursor:pointer}
+.v22-card:hover .v22-card-add,.v22-card:focus-within .v22-card-add{opacity:1;transform:none}
+.v22-intro{display:grid;grid-template-columns:1fr 2fr;gap:8vw;padding:9vw 7vw;background:#f3f2ed}
+.v22-intro-index{font-size:10px;letter-spacing:.14em}.v22-intro span{font-size:9px;letter-spacing:.14em}.v22-intro h2{font:500 clamp(42px,7vw,94px)/.92 "Manrope",sans-serif;letter-spacing:-.06em;margin:22px 0 30px}.v22-intro p{max-width:560px;font-size:15px;line-height:1.5;margin:0 0 32px}
+.v22-identity{display:grid;grid-template-columns:repeat(3,1fr);background:#111;gap:1px}
+.v22-identity-card{height:90svh;min-height:600px;position:relative;overflow:hidden;background:#222;color:#fff}.v22-identity-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.22,.61,.36,1);filter:saturate(.92)}.v22-identity-card:hover img{transform:scale(1.025)}
+.v22-identity-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),transparent 45%,rgba(0,0,0,.55))}.v22-identity-card>div{position:absolute;z-index:2;left:24px;right:24px;bottom:28px}.v22-identity-card span{font-size:9px;letter-spacing:.15em}.v22-identity-card h2{font:500 clamp(42px,5vw,76px)/.9 "Manrope",sans-serif;letter-spacing:-.06em;margin:10px 0 20px}.v22-identity-card a{color:#fff}.v22-store-card img{object-position:center}
+.v22-category{padding:7vw 28px 8vw}.v22-category-head{display:grid;grid-template-columns:1fr 2fr auto;align-items:end;border-bottom:1px solid #111;padding-bottom:14px;margin-bottom:24px}.v22-category-head span,.v22-brands-title span{font-size:9px;letter-spacing:.14em}.v22-category-head h2,.v22-brands-title h2{font:500 clamp(54px,8vw,110px)/.82 "Manrope",sans-serif;letter-spacing:-.07em;margin:0}.v22-category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#ddd}
+.v22-brands{padding:8vw 7vw;background:#f3f2ed;display:grid;grid-template-columns:1fr 2fr;gap:8vw}.v22-brands-title a{margin-top:32px}.v22-brand-list{display:grid;grid-template-columns:repeat(2,1fr);align-content:start}.v22-brand-list a{font:500 clamp(22px,3vw,42px)/1.15 "Manrope",sans-serif;letter-spacing:-.04em;border-bottom:1px solid #bbb;padding:13px 0;text-decoration:none;color:#111;transition:padding-left .25s ease}.v22-brand-list a:hover{padding-left:8px}
+.v22-closing{background:#111;color:#fff;min-height:78svh;display:flex;flex-direction:column;justify-content:space-between;padding:8vw 28px 32px}.v22-closing>span{font-size:9px;letter-spacing:.15em}.v22-closing h2{font:500 clamp(70px,13vw,190px)/.78 "Manrope",sans-serif;letter-spacing:-.08em;margin:0}.v22-closing h2 em{font-style:normal;color:#d8ff38}.v22-closing a{color:#fff;align-self:flex-start}
+.v22-footer{background:#111;color:#fff;border-top:1px solid #333;padding:24px 28px;display:grid;grid-template-columns:1fr 2fr 1fr;gap:24px;font-size:9px;letter-spacing:.12em;text-transform:uppercase}.v22-footer img{width:90px;filter:brightness(0) invert(1);display:block;margin-bottom:16px}.v22-footer>div{display:flex;flex-direction:column;gap:10px}.v22-footer>div:nth-child(2){display:grid;grid-template-columns:repeat(3,1fr);align-content:start}.v22-footer>div:last-child{align-items:flex-end}
+.v22-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .8s cubic-bezier(.22,.61,.36,1)}.v22-reveal.is-visible{opacity:1;transform:none}
+@media(max-width:800px){.v22-hero{min-height:680px}.v22-hero-meta{top:76px;left:17px;right:17px;font-size:8px}.v22-hero-meta span:last-child{display:none}.v22-hero-copy{left:17px;bottom:78px}.v22-hero-copy h1{font-size:52px}.v22-hero-product{right:17px;bottom:78px;max-width:150px}.v22-hero-product strong{font-size:12px}.v22-hero-progress{left:17px;right:17px;bottom:22px}.v22-runway{padding:18px 0 14vw}.v22-section-head{margin:0 17px 14px}.v22-product-runway{grid-template-columns:repeat(2,minmax(0,1fr))}.v22-card-info{font-size:9px;padding:8px 6px 16px}.v22-card-add{display:none}.v22-intro{grid-template-columns:1fr;padding:17vw 17px;gap:18px}.v22-intro h2{font-size:50px}.v22-intro p{font-size:14px}.v22-identity{grid-template-columns:1fr}.v22-identity-card{height:86svh;min-height:560px}.v22-category{padding:14vw 0}.v22-category-head{grid-template-columns:1fr auto;padding:0 17px 12px}.v22-category-head h2{grid-column:1/-1;grid-row:2;font-size:64px;margin-top:12px}.v22-category-head a{grid-column:2;grid-row:1}.v22-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v22-brands{grid-template-columns:1fr;padding:15vw 17px;gap:50px}.v22-brand-list{grid-template-columns:1fr}.v22-closing{min-height:74svh;padding:14vw 17px 28px}.v22-closing h2{font-size:82px}.v22-footer{grid-template-columns:1fr 1fr;padding:24px 17px}.v22-footer>div:nth-child(2){display:flex}.v22-footer>div:last-child{grid-column:1/-1;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){.v22-hero-media img,.v22-card-media img,.v22-identity-card img,.v22-reveal{transition:none!important}}

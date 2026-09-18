@@ -1,0 +1,12 @@
+DELETE THESE OLD FILES FROM THE REPO:
+
+header-v21.css
+header-v21.js
+home-v19.css
+home-v19.js
+
+These files are superseded by:
+header-v22.css
+header-v22.js
+home-v22.css
+home-v22.js

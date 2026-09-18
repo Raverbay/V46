@@ -1,0 +1,13 @@
+V22 — COMPLETE HOME + HEADER REBUILD
+
+- Replaced the V20/V21 homepage structure with a product-led fashion editorial home.
+- Added three supplied Flip&Co identity images only: store, men, kids.
+- Product imagery comes from the existing demo inventory for all homepage product cards.
+- New full-screen product hero with controlled product rotation.
+- New product runway, intro, identity story, selection grid, brand index, closing CTA and footer.
+- Rebuilt header from zero: transparent over hero, centered logo, left menu, right search/account/bag.
+- Removed old stop/start header behaviour, floating pill states and previous transition system from the homepage.
+- Added new full-screen menu and search surfaces with fresh motion.
+- Removed nav.js from homepage so the old loader/page-transition system cannot reappear.
+- Added current 2026 product research notes and candidates in SOURCES-V22.md.
+- Demo product sources remain remote until Flip&Co-owned photography is supplied.
