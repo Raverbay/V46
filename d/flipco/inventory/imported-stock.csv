@@ -1,53 +1,53 @@
-sku,brand,name,category,price,size,qty,season
-TH26-NYCOAT,Tommy Hilfiger,New York Label Wool Blend Coat,Uomo,499.9,S,1,FW26
-TH26-NYCOAT,Tommy Hilfiger,New York Label Wool Blend Coat,Uomo,499.9,M,1,FW26
-TH26-NYCOAT,Tommy Hilfiger,New York Label Wool Blend Coat,Uomo,499.9,L,0,FW26
-TH26-OXFORD,Tommy Hilfiger,Heritage Regular Fit Oxford Shirt,Uomo,119.9,S,1,FW26
-TH26-OXFORD,Tommy Hilfiger,Heritage Regular Fit Oxford Shirt,Uomo,119.9,M,2,FW26
-TH26-OXFORD,Tommy Hilfiger,Heritage Regular Fit Oxford Shirt,Uomo,119.9,L,1,FW26
-TH26-OXFORD,Tommy Hilfiger,Heritage Regular Fit Oxford Shirt,Uomo,119.9,XL,0,FW26
-CK26-STRIPE,Calvin Klein,Camicia a righe in popeline di cotone,Donna,109.9,XS,0,FW26
-CK26-STRIPE,Calvin Klein,Camicia a righe in popeline di cotone,Donna,109.9,S,1,FW26
-CK26-STRIPE,Calvin Klein,Camicia a righe in popeline di cotone,Donna,109.9,M,1,FW26
-CK26-STRIPE,Calvin Klein,Camicia a righe in popeline di cotone,Donna,109.9,L,0,FW26
-CK26-TEE,Calvin Klein,T-shirt con stemma in cotone oversize,Donna,59.9,XS,0,FW26
-CK26-TEE,Calvin Klein,T-shirt con stemma in cotone oversize,Donna,59.9,S,2,FW26
-CK26-TEE,Calvin Klein,T-shirt con stemma in cotone oversize,Donna,59.9,M,1,FW26
-CK26-TEE,Calvin Klein,T-shirt con stemma in cotone oversize,Donna,59.9,L,0,FW26
-LE26-501,Levi's,501 Original Jeans,Uomo,120.0,30,1,2026
-LE26-501,Levi's,501 Original Jeans,Uomo,120.0,32,1,2026
-LE26-501,Levi's,501 Original Jeans,Uomo,120.0,34,0,2026
-LE26-501,Levi's,501 Original Jeans,Uomo,120.0,36,0,2026
-LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.0,28,0,2026
-LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.0,30,1,2026
-LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.0,32,1,2026
-LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.0,34,0,2026
-LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.0,36,0,2026
-NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,40,0,SS26
-NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,41,1,SS26
-NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,42,1,SS26
-NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,43,0,SS26
-NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,44,1,SS26
-NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,45,0,SS26
-NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.0,35.5,0,SS26
-NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.0,36,1,SS26
-NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.0,36.5,1,SS26
-NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.0,37.5,0,SS26
-NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.0,38,0,SS26
-TNF26-QUEST,The North Face,Men’s Quest Mono Jacket,Uomo,149.9,S,1,FW26
-TNF26-QUEST,The North Face,Men’s Quest Mono Jacket,Uomo,149.9,M,1,FW26
-TNF26-QUEST,The North Face,Men’s Quest Mono Jacket,Uomo,149.9,L,0,FW26
-TNF26-QUEST,The North Face,Men’s Quest Mono Jacket,Uomo,149.9,XL,0,FW26
-TNF26-HKE,The North Face,HKe Devils Thumb GORE-TEX Jacket,Uomo,349.9,S,0,FW26
-TNF26-HKE,The North Face,HKe Devils Thumb GORE-TEX Jacket,Uomo,349.9,M,1,FW26
-TNF26-HKE,The North Face,HKe Devils Thumb GORE-TEX Jacket,Uomo,349.9,L,1,FW26
-AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.0,40,0,SS26
-AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.0,41,1,SS26
-AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.0,42,1,SS26
-AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.0,43,1,SS26
-AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.0,44,0,SS26
-AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.0,45,0,SS26
-AD26-TRACK,adidas,Originals Loose Track Top,Kids,85.0,128,0,SS26
-AD26-TRACK,adidas,Originals Loose Track Top,Kids,85.0,140,1,SS26
-AD26-TRACK,adidas,Originals Loose Track Top,Kids,85.0,152,0,SS26
-AD26-TRACK,adidas,Originals Loose Track Top,Kids,85.0,164,1,SS26
+sku,brand,name,category,price,size,qty,season,image,color,material,fit,badge
+TH26-NYCOAT,Tommy Hilfiger,New York Label Wool Blend Coat,Uomo,499.90,S,1,FW26,https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/V06402s5.jpg?im=Resize%2Cwidth%3D750,Marrone,"75% lana, 25% nylon",Relaxed fit,NEW
+TH26-NYCOAT,Tommy Hilfiger,New York Label Wool Blend Coat,Uomo,499.90,M,1,FW26,https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/V06402s5.jpg?im=Resize%2Cwidth%3D750,Marrone,"75% lana, 25% nylon",Relaxed fit,NEW
+TH26-NYCOAT,Tommy Hilfiger,New York Label Wool Blend Coat,Uomo,499.90,L,0,FW26,https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/V06402s5.jpg?im=Resize%2Cwidth%3D750,Marrone,"75% lana, 25% nylon",Relaxed fit,NEW
+TH26-OXFORD,Tommy Hilfiger,Heritage Regular Fit Oxford Shirt,Uomo,119.90,S,1,FW26,https://pvh-brands.imgix.net/catalog/product/media/MW0MW35774_0GY_MO-ST-F1_222.jpg?auto=compress&auto=format&crop=edges&fit=crop,Azzurro,Oxford cotton,Regular fit,ICON
+TH26-OXFORD,Tommy Hilfiger,Heritage Regular Fit Oxford Shirt,Uomo,119.90,M,2,FW26,https://pvh-brands.imgix.net/catalog/product/media/MW0MW35774_0GY_MO-ST-F1_222.jpg?auto=compress&auto=format&crop=edges&fit=crop,Azzurro,Oxford cotton,Regular fit,ICON
+TH26-OXFORD,Tommy Hilfiger,Heritage Regular Fit Oxford Shirt,Uomo,119.90,L,1,FW26,https://pvh-brands.imgix.net/catalog/product/media/MW0MW35774_0GY_MO-ST-F1_222.jpg?auto=compress&auto=format&crop=edges&fit=crop,Azzurro,Oxford cotton,Regular fit,ICON
+TH26-OXFORD,Tommy Hilfiger,Heritage Regular Fit Oxford Shirt,Uomo,119.90,XL,0,FW26,https://pvh-brands.imgix.net/catalog/product/media/MW0MW35774_0GY_MO-ST-F1_222.jpg?auto=compress&auto=format&crop=edges&fit=crop,Azzurro,Oxford cotton,Regular fit,ICON
+CK26-STRIPE,Calvin Klein,Camicia a righe in popeline di cotone,Donna,109.90,XS,0,FW26,https://japan.calvinklein.com/img/item/QS7652/QS7652_c2NE_a002_dc.jpg,Blue Stripe,Cotone popeline,Relaxed fit,NEW
+CK26-STRIPE,Calvin Klein,Camicia a righe in popeline di cotone,Donna,109.90,S,1,FW26,https://japan.calvinklein.com/img/item/QS7652/QS7652_c2NE_a002_dc.jpg,Blue Stripe,Cotone popeline,Relaxed fit,NEW
+CK26-STRIPE,Calvin Klein,Camicia a righe in popeline di cotone,Donna,109.90,M,1,FW26,https://japan.calvinklein.com/img/item/QS7652/QS7652_c2NE_a002_dc.jpg,Blue Stripe,Cotone popeline,Relaxed fit,NEW
+CK26-STRIPE,Calvin Klein,Camicia a righe in popeline di cotone,Donna,109.90,L,0,FW26,https://japan.calvinklein.com/img/item/QS7652/QS7652_c2NE_a002_dc.jpg,Blue Stripe,Cotone popeline,Relaxed fit,NEW
+CK26-TEE,Calvin Klein,T-shirt con stemma in cotone oversize,Donna,59.90,XS,0,FW26,https://www.calvinklein.com.sg/on/demandware.static/-/Sites/default/dw8a2d3d34/mobile-level-1_1/FA26%20collection%20site%20mobile%20output.jpg,Vanilla Custard,100% cotone,Oversize,SELECTED
+CK26-TEE,Calvin Klein,T-shirt con stemma in cotone oversize,Donna,59.90,S,2,FW26,https://www.calvinklein.com.sg/on/demandware.static/-/Sites/default/dw8a2d3d34/mobile-level-1_1/FA26%20collection%20site%20mobile%20output.jpg,Vanilla Custard,100% cotone,Oversize,SELECTED
+CK26-TEE,Calvin Klein,T-shirt con stemma in cotone oversize,Donna,59.90,M,1,FW26,https://www.calvinklein.com.sg/on/demandware.static/-/Sites/default/dw8a2d3d34/mobile-level-1_1/FA26%20collection%20site%20mobile%20output.jpg,Vanilla Custard,100% cotone,Oversize,SELECTED
+CK26-TEE,Calvin Klein,T-shirt con stemma in cotone oversize,Donna,59.90,L,0,FW26,https://www.calvinklein.com.sg/on/demandware.static/-/Sites/default/dw8a2d3d34/mobile-level-1_1/FA26%20collection%20site%20mobile%20output.jpg,Vanilla Custard,100% cotone,Oversize,SELECTED
+LE26-501,Levi's,501 Original Jeans,Uomo,120.00,30,1,2026,https://lsco.scene7.com/is/image/lsco/005013649-front-pdp?$qv_desktop$,Blue,Denim,Straight / regular waist,ICON
+LE26-501,Levi's,501 Original Jeans,Uomo,120.00,32,1,2026,https://lsco.scene7.com/is/image/lsco/005013649-front-pdp?$qv_desktop$,Blue,Denim,Straight / regular waist,ICON
+LE26-501,Levi's,501 Original Jeans,Uomo,120.00,34,0,2026,https://lsco.scene7.com/is/image/lsco/005013649-front-pdp?$qv_desktop$,Blue,Denim,Straight / regular waist,ICON
+LE26-501,Levi's,501 Original Jeans,Uomo,120.00,36,0,2026,https://lsco.scene7.com/is/image/lsco/005013649-front-pdp?$qv_desktop$,Blue,Denim,Straight / regular waist,ICON
+LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.00,28,0,2026,https://lsco.scene7.com/is/image/lsco/290370078-front-pdp?$qv_desktop$,Dark Wash,100% cotone denim,Loose straight,NEW
+LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.00,30,1,2026,https://lsco.scene7.com/is/image/lsco/290370078-front-pdp?$qv_desktop$,Dark Wash,100% cotone denim,Loose straight,NEW
+LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.00,32,1,2026,https://lsco.scene7.com/is/image/lsco/290370078-front-pdp?$qv_desktop$,Dark Wash,100% cotone denim,Loose straight,NEW
+LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.00,34,0,2026,https://lsco.scene7.com/is/image/lsco/290370078-front-pdp?$qv_desktop$,Dark Wash,100% cotone denim,Loose straight,NEW
+LE26-568,Levi's,568 Loose Straight Jeans,Uomo,120.00,36,0,2026,https://lsco.scene7.com/is/image/lsco/290370078-front-pdp?$qv_desktop$,Dark Wash,100% cotone denim,Loose straight,NEW
+NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,40,0,SS26,https://cdn.sneakersquad.nl/uploads/primary/blog/Nike-Air-Max-90-Infrared-2026-IU1055-100.jpg?fit=min&fm=webp&h=630&q=82&signature=425ed3dc&v=1765830997&w=1200,White / Grey / Infrared,Mesh / synthetic / suede,Regular,JUST IN
+NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,41,1,SS26,https://cdn.sneakersquad.nl/uploads/primary/blog/Nike-Air-Max-90-Infrared-2026-IU1055-100.jpg?fit=min&fm=webp&h=630&q=82&signature=425ed3dc&v=1765830997&w=1200,White / Grey / Infrared,Mesh / synthetic / suede,Regular,JUST IN
+NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,42,1,SS26,https://cdn.sneakersquad.nl/uploads/primary/blog/Nike-Air-Max-90-Infrared-2026-IU1055-100.jpg?fit=min&fm=webp&h=630&q=82&signature=425ed3dc&v=1765830997&w=1200,White / Grey / Infrared,Mesh / synthetic / suede,Regular,JUST IN
+NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,43,0,SS26,https://cdn.sneakersquad.nl/uploads/primary/blog/Nike-Air-Max-90-Infrared-2026-IU1055-100.jpg?fit=min&fm=webp&h=630&q=82&signature=425ed3dc&v=1765830997&w=1200,White / Grey / Infrared,Mesh / synthetic / suede,Regular,JUST IN
+NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,44,1,SS26,https://cdn.sneakersquad.nl/uploads/primary/blog/Nike-Air-Max-90-Infrared-2026-IU1055-100.jpg?fit=min&fm=webp&h=630&q=82&signature=425ed3dc&v=1765830997&w=1200,White / Grey / Infrared,Mesh / synthetic / suede,Regular,JUST IN
+NI26-AM90,Nike,Air Max 90 Infrared,Uomo,159.99,45,0,SS26,https://cdn.sneakersquad.nl/uploads/primary/blog/Nike-Air-Max-90-Infrared-2026-IU1055-100.jpg?fit=min&fm=webp&h=630&q=82&signature=425ed3dc&v=1765830997&w=1200,White / Grey / Infrared,Mesh / synthetic / suede,Regular,JUST IN
+NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.00,35.5,0,SS26,https://grailify.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjMwNTYyNywicHVyIjoiYmxvYl9pZCJ9fQ%3D%3D--390c6133b1675eaa922a9b02981cf99377f4e068/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbODAwLDgwMF0sInF1YWxpdHkiOjkwfSwicHVyIjoidmFyaWF0aW9uIn19--8c7d630b9b8fd5b9c842c93487267dfcebc5691c/IQ9404-349%20%285%29.jpg,Multi,Leather,Regular,DROP
+NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.00,36,1,SS26,https://grailify.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjMwNTYyNywicHVyIjoiYmxvYl9pZCJ9fQ%3D%3D--390c6133b1675eaa922a9b02981cf99377f4e068/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbODAwLDgwMF0sInF1YWxpdHkiOjkwfSwicHVyIjoidmFyaWF0aW9uIn19--8c7d630b9b8fd5b9c842c93487267dfcebc5691c/IQ9404-349%20%285%29.jpg,Multi,Leather,Regular,DROP
+NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.00,36.5,1,SS26,https://grailify.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjMwNTYyNywicHVyIjoiYmxvYl9pZCJ9fQ%3D%3D--390c6133b1675eaa922a9b02981cf99377f4e068/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbODAwLDgwMF0sInF1YWxpdHkiOjkwfSwicHVyIjoidmFyaWF0aW9uIn19--8c7d630b9b8fd5b9c842c93487267dfcebc5691c/IQ9404-349%20%285%29.jpg,Multi,Leather,Regular,DROP
+NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.00,37.5,0,SS26,https://grailify.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjMwNTYyNywicHVyIjoiYmxvYl9pZCJ9fQ%3D%3D--390c6133b1675eaa922a9b02981cf99377f4e068/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbODAwLDgwMF0sInF1YWxpdHkiOjkwfSwicHVyIjoidmFyaWF0aW9uIn19--8c7d630b9b8fd5b9c842c93487267dfcebc5691c/IQ9404-349%20%285%29.jpg,Multi,Leather,Regular,DROP
+NI26-DUNK,Nike,Dunk Low Easter 2026,Kids,130.00,38,0,SS26,https://grailify.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjMwNTYyNywicHVyIjoiYmxvYl9pZCJ9fQ%3D%3D--390c6133b1675eaa922a9b02981cf99377f4e068/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbODAwLDgwMF0sInF1YWxpdHkiOjkwfSwicHVyIjoidmFyaWF0aW9uIn19--8c7d630b9b8fd5b9c842c93487267dfcebc5691c/IQ9404-349%20%285%29.jpg,Multi,Leather,Regular,DROP
+TNF26-QUEST,The North Face,Men’s Quest Mono Jacket,Uomo,149.90,S,1,FW26,https://assets.thenorthface.com/images/t_img/f_auto%2Ch_400%2Ce_unsharp_mask%3A150%2Cw_344/dpr_2.0/v1762371065/NF0A8G0RJK3-HERO/Mens-Quest-Mono-Jacket-TNF-HERO.png,Black,Technical shell,Regular,NEW
+TNF26-QUEST,The North Face,Men’s Quest Mono Jacket,Uomo,149.90,M,1,FW26,https://assets.thenorthface.com/images/t_img/f_auto%2Ch_400%2Ce_unsharp_mask%3A150%2Cw_344/dpr_2.0/v1762371065/NF0A8G0RJK3-HERO/Mens-Quest-Mono-Jacket-TNF-HERO.png,Black,Technical shell,Regular,NEW
+TNF26-QUEST,The North Face,Men’s Quest Mono Jacket,Uomo,149.90,L,0,FW26,https://assets.thenorthface.com/images/t_img/f_auto%2Ch_400%2Ce_unsharp_mask%3A150%2Cw_344/dpr_2.0/v1762371065/NF0A8G0RJK3-HERO/Mens-Quest-Mono-Jacket-TNF-HERO.png,Black,Technical shell,Regular,NEW
+TNF26-QUEST,The North Face,Men’s Quest Mono Jacket,Uomo,149.90,XL,0,FW26,https://assets.thenorthface.com/images/t_img/f_auto%2Ch_400%2Ce_unsharp_mask%3A150%2Cw_344/dpr_2.0/v1762371065/NF0A8G0RJK3-HERO/Mens-Quest-Mono-Jacket-TNF-HERO.png,Black,Technical shell,Regular,NEW
+TNF26-HKE,The North Face,HKe Devils Thumb GORE-TEX Jacket,Uomo,349.90,S,0,FW26,https://assets.thenorthface.com/images/t_img/f_auto%2Ch_400%2Ce_unsharp_mask%3A150%2Cw_344/dpr_2.0/v1762369736/NF0A8CG3K59-HERO/Mens-HKe-Devils-Thumb-GORETEX-Jacket-TNF-HERO.png,Pearl Stone / Endless Dusk,GORE-TEX,Regular,TECH
+TNF26-HKE,The North Face,HKe Devils Thumb GORE-TEX Jacket,Uomo,349.90,M,1,FW26,https://assets.thenorthface.com/images/t_img/f_auto%2Ch_400%2Ce_unsharp_mask%3A150%2Cw_344/dpr_2.0/v1762369736/NF0A8CG3K59-HERO/Mens-HKe-Devils-Thumb-GORETEX-Jacket-TNF-HERO.png,Pearl Stone / Endless Dusk,GORE-TEX,Regular,TECH
+TNF26-HKE,The North Face,HKe Devils Thumb GORE-TEX Jacket,Uomo,349.90,L,1,FW26,https://assets.thenorthface.com/images/t_img/f_auto%2Ch_400%2Ce_unsharp_mask%3A150%2Cw_344/dpr_2.0/v1762369736/NF0A8CG3K59-HERO/Mens-HKe-Devils-Thumb-GORETEX-Jacket-TNF-HERO.png,Pearl Stone / Endless Dusk,GORE-TEX,Regular,TECH
+AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.00,40,0,SS26,https://cdn.mos.cms.futurecdn.net/jeLnz2X6QzX933DKNMH6MS.jpg,White / Blue,Leather / suede,Regular,NEW
+AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.00,41,1,SS26,https://cdn.mos.cms.futurecdn.net/jeLnz2X6QzX933DKNMH6MS.jpg,White / Blue,Leather / suede,Regular,NEW
+AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.00,42,1,SS26,https://cdn.mos.cms.futurecdn.net/jeLnz2X6QzX933DKNMH6MS.jpg,White / Blue,Leather / suede,Regular,NEW
+AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.00,43,1,SS26,https://cdn.mos.cms.futurecdn.net/jeLnz2X6QzX933DKNMH6MS.jpg,White / Blue,Leather / suede,Regular,NEW
+AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.00,44,0,SS26,https://cdn.mos.cms.futurecdn.net/jeLnz2X6QzX933DKNMH6MS.jpg,White / Blue,Leather / suede,Regular,NEW
+AD26-SPEZIAL,adidas,Handball Spezial,Uomo,120.00,45,0,SS26,https://cdn.mos.cms.futurecdn.net/jeLnz2X6QzX933DKNMH6MS.jpg,White / Blue,Leather / suede,Regular,NEW
+AD26-TRACK,adidas,Originals Loose Track Top,Kids,85.00,128,0,SS26,https://pbs.twimg.com/media/G-DvORwaoAAardG.jpg,Black / Red,Mesh / polyester,Loose,EDITORIAL
+AD26-TRACK,adidas,Originals Loose Track Top,Kids,85.00,140,1,SS26,https://pbs.twimg.com/media/G-DvORwaoAAardG.jpg,Black / Red,Mesh / polyester,Loose,EDITORIAL
+AD26-TRACK,adidas,Originals Loose Track Top,Kids,85.00,152,0,SS26,https://pbs.twimg.com/media/G-DvORwaoAAardG.jpg,Black / Red,Mesh / polyester,Loose,EDITORIAL
+AD26-TRACK,adidas,Originals Loose Track Top,Kids,85.00,164,1,SS26,https://pbs.twimg.com/media/G-DvORwaoAAardG.jpg,Black / Red,Mesh / polyester,Loose,EDITORIAL
