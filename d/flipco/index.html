@@ -1,83 +1,50 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#f4f2ed">
-  <title>Flip&Co — Cagliari</title>
-  <meta name="description" content="Flip&Co — multibrand store a Cagliari. Uomo, donna, kids. Scopri la selezione online e in store.">
-  <link rel="preload" href="assets/logo-flipco.png" as="image">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4f2ed">
+<title>Flip&Co — Cagliari</title>
+<meta name="description" content="Flip&Co — multibrand store a Cagliari. Uomo, donna, kids. Scopri la selezione online e in store.">
+<link rel="preload" href="assets/logo-flipco.png" as="image">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header" aria-label="Navigazione principale">
-    <button class="header-link header-menu" id="menuOpen" type="button">MENU</button>
-    <a class="header-logo" href="index.html" aria-label="Flip&Co home">
-      <img src="assets/logo-flipco.png" alt="Flip&Co">
-    </a>
-    <nav class="header-actions" aria-label="Azioni">
-      <button class="header-link" id="searchOpen" type="button">CERCA</button>
-      <a class="header-link desktop-only" href="shop.html">SHOP</a>
-      <a class="header-link" href="checkout.html">BAG <span id="bagCount">0</span></a>
-    </nav>
-  </header>
-
-  <main id="home" class="home">
-    <section class="product-story-intro">
-      <p>FLIP&CO · CAGLIARI · VIA ITALIA 22</p>
-      <h1>SCOPRI.<br>SCEGLI.<br>INDOSSA.</h1>
-      <a href="#productStories" class="text-link">INIZIA A SCOPRIRE ↘</a>
-    </section>
-
-    <section id="productStories" class="product-stories" aria-label="Nuovi arrivi">
-      <div id="productStoryMount"></div>
-    </section>
-
-    <section class="store-section">
-      <div class="store-copy">
-        <p class="eyebrow">THE STORE</p>
-        <h2>VIENI A<br>VEDERLO<br>DAL VIVO.</h2>
-        <p>La selezione continua nel nostro store di Cagliari. Prova i capi, guarda le taglie disponibili e scopri anche ciò che non è ancora online.</p>
-        <div class="store-meta">
-          <span>VIA ITALIA 22 · CAGLIARI</span>
-          <span>LUN—SAB · 09:00—13:30 / 16:00—20:00</span>
-        </div>
-        <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Flip%26Co%20Via%20Italia%2022%20Cagliari" target="_blank" rel="noopener">RAGGIUNGI LO STORE ↗</a>
-      </div>
-      <div class="store-image">
-        <img src="assets/store-entry.jpg" alt="Ingresso del negozio Flip&Co" loading="lazy">
-      </div>
-    </section>
-
-    <section class="catalog-end">
-      <p class="eyebrow">FLIP&CO ONLINE</p>
-      <h2>CONTINUA<br>NELLO SHOP.</h2>
-      <a class="text-link" href="shop.html">VEDI TUTTI I PRODOTTI ↗</a>
-    </section>
-  </main>
-
-  <div class="overlay" id="menuOverlay" aria-hidden="true">
-    <button class="overlay-close" data-close="menuOverlay" type="button">CHIUDI ×</button>
-    <div class="overlay-inner">
-      <p class="eyebrow">FLIP&CO</p>
-      <a href="shop.html">SHOP</a>
-      <a href="shop.html?category=Uomo">UOMO</a>
-      <a href="shop.html?category=Donna">DONNA</a>
-      <a href="shop.html?category=Kids">KIDS</a>
-      <a href="brand.html">BRAND</a>
-      <a href="#store">STORE</a>
-    </div>
+<body class="home-page">
+<header class="site-header" aria-label="Navigazione principale">
+  <button class="menu-button" id="menuBtn" type="button" aria-label="Apri menu" aria-expanded="false"><span>MENU</span><i aria-hidden="true"><b></b><b></b></i></button>
+  <a class="brand-logo" href="index.html" aria-label="Flip&Co home"><img src="assets/logo-flipco.png" alt="Flip&Co"></a>
+  <div class="header-actions">
+    <button class="header-search" type="button" aria-label="Cerca nel catalogo"><span>SEARCH</span></button>
+    <a class="cart-icon" id="cartTrigger" href="shop.html#cart" aria-label="Apri carrello"><span>BAG</span><b id="cartCount">0</b></a>
   </div>
+</header>
 
-  <div class="overlay" id="searchOverlay" aria-hidden="true">
-    <button class="overlay-close" data-close="searchOverlay" type="button">CHIUDI ×</button>
-    <div class="search-inner">
-      <p class="eyebrow">CERCA NEL CATALOGO</p>
-      <input id="searchInput" type="search" autocomplete="off" placeholder="Cerca prodotto, brand..." aria-label="Cerca">
-      <div id="searchResults"></div>
-    </div>
+<main class="home">
+<section class="product-story-intro">
+  <p>FLIP&CO · CAGLIARI · VIA ITALIA 22</p>
+  <h1>SCOPRI.<br>SCEGLI.<br>INDOSSA.</h1>
+  <a href="#productStories" class="text-link">INIZIA A SCOPRIRE ↘</a>
+</section>
+
+<section id="productStories" class="product-stories" aria-label="Nuovi arrivi"><div id="productStoryMount"></div></section>
+
+<section class="store-section" id="store">
+  <div class="store-copy">
+    <p class="eyebrow">THE STORE</p>
+    <h2>VIENI A<br>VEDERLO<br>DAL VIVO.</h2>
+    <p>La selezione continua nel nostro store di Cagliari. Prova i capi, guarda le taglie disponibili e scopri anche ciò che non è ancora online.</p>
+    <div class="store-meta"><span>VIA ITALIA 22 · CAGLIARI</span><span>LUN—SAB · 09:00—13:30 / 16:00—20:00</span></div>
+    <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Flip%26Co%20Via%20Italia%2022%20Cagliari" target="_blank" rel="noopener">RAGGIUNGI LO STORE ↗</a>
   </div>
+  <div class="store-image"><img src="assets/store-entrance.jpg" alt="Ingresso del negozio Flip&Co" loading="lazy"></div>
+</section>
 
-  <script src="home.js" defer></script>
+<section class="catalog-end" id="contact">
+  <p class="eyebrow">FLIP&CO ONLINE</p>
+  <h2>CONTINUA<br>NELLO SHOP.</h2>
+  <a class="text-link" href="shop.html">VEDI TUTTI I PRODOTTI ↗</a>
+</section>
+</main>
+<script src="home.js" defer></script>
 </body>
 </html>
