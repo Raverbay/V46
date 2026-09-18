@@ -2,12 +2,9 @@ async function initProduct(){
  const id=new URLSearchParams(location.search).get('id'),data=await loadInventory().catch(()=>null),p=data?.products?.find(x=>x.id===id),root=document.getElementById('productView');
  if(!p){root.innerHTML='<div class="product-not-found"><strong>PRODOTTO NON TROVATO.</strong><a href="shop.html">TORNA ALLO SHOP →</a></div>';return}
  document.title=`${p.name} — ${p.brand} | Flip&Co`;
- const stock=stockFor(p);
+ const stock=stockFor(p); const gallery=Array.isArray(p.images)&&p.images.length?p.images:[p.image,p.image].filter(Boolean);
  root.innerHTML=`
- <section class="v18-pdp-gallery">
-   <div class="v18-pdp-frame"><img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.brand)} ${escapeHtml(p.name)}" fetchpriority="high"></div>
-   <div class="v18-pdp-frame v18-detail-frame"><img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.brand)} ${escapeHtml(p.name)} — dettaglio" loading="lazy"></div>
- </section>
+ <section class="v18-pdp-gallery">${gallery.map((im,i)=>`<div class="v18-pdp-frame"><img src="${escapeHtml(im)}" alt="${escapeHtml(p.brand)} ${escapeHtml(p.name)}${i?' — vista '+(i+1):''}" ${i?'loading="lazy"':'fetchpriority="high"'}></div>`).join('')}</section>
  <section class="v18-pdp-info">
    <div class="v18-pdp-top"><a href="shop.html" class="v18-back">← SHOP</a><button class="v18-pdp-wish" type="button" aria-label="Salva prodotto">♡</button></div>
    <div class="z-pdp-brand">${escapeHtml(p.brand)}</div><h1>${escapeHtml(p.name)}</h1><div class="z-pdp-price">${money(p.price)}</div>
