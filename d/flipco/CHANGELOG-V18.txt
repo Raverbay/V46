@@ -1,0 +1,21 @@
+FLIP&CO V18 — E-COMMERCE PURCHASE EXPERIENCE
+
+Reference: the supplied Zara mobile shopping video. The implementation recreates the interaction model and shopping flow with original Flip&Co UI/code/assets, not Zara's proprietary code, text, imagery or branding.
+
+CHANGED
+- shop.html — rebuilt commerce listing shell: minimal header, category rail, filter entry, sort, view toggle, wishlist, quick-add.
+- shop.js — rebuilt catalog interactions, category/filter/sort state, quick-add, wishlist and responsive view state.
+- product.html — rebuilt product page shell with image-led gallery, sticky purchase area, delivery/pickup information and details.
+- product.js — rebuilt product selection, wishlist and stock-aware purchase flow.
+- checkout.html — rebuilt checkout chrome to match the same minimal commerce system.
+- style.css — V18 visual system: minimal navigation, dense product grid, quick-add sheet, filter sheet, product-first PDP, mobile sticky CTA, bag and checkout refinements.
+- assets/logo-flipco.png — tightly cropped transparent light logo.
+- assets/logo-flipco-dark.png — tightly cropped transparent dark logo.
+
+NEW
+- inventory/inventory.json — single inventory source required by the V17/V18 commerce frontend.
+
+QA
+- JavaScript syntax checked for shop.js, product.js, commerce.js and nav.js.
+- HTML structure checked for shop/product/checkout.
+- Local HTTP checks completed for shop.html, product.html and inventory/inventory.json.
