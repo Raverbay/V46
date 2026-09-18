@@ -1,0 +1,15 @@
+FLIP&CO V16 — HEADER + MOTION REDESIGN
+
+CHANGED
+- nav.js: rebuilt homepage header as a real state machine: logo-only at load/top, logo-only while moving, navigation dock after a genuine scroll pause, immediate collapse on resumed movement.
+- style.css: replaced the conflicting V13/V14/V15 header overrides with a final V16 layer; refined dock geometry, easing, control entrance, mobile behavior and transition layer.
+- assets/logo-flipco.png: replaced with a tightly cropped transparent PNG derived from the approved Flip&Co logo; no rectangular background/margins.
+
+INSTALL
+Copy these files into the existing Flip&Co project at their matching paths:
+- nav.js
+- style.css
+- assets/logo-flipco.png
+
+NOTE
+The ZIP is incremental only. No unchanged project files are included.

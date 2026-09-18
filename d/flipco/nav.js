@@ -85,48 +85,59 @@
     h.classList.toggle('is-home-header',isHome);
     document.body.classList.add('nav-ready');
     if(!isHome){
-      h.classList.remove('is-home-hidden','is-logo-only','is-menu-visible','is-scroll-down','is-scroll-up','is-stopped','home-top','home-logo-state','home-expanded-state');
+      h.classList.remove('home-top','home-logo-state','home-expanded-state','is-scroll-down','is-scroll-up','is-stopped');
       h.classList.add('is-revealed','is-expanded');
       return;
     }
+
     let lastY=window.scrollY;
-    let stopTimer=null;
+    let lastMove=performance.now();
+    let expandTimer=null;
     let raf=0;
-    let hasScrolled=false;
-    const clearStates=()=>h.classList.remove('is-home-hidden','is-logo-only','is-menu-visible','is-scroll-down','is-scroll-up','is-stopped','home-top','home-logo-state','home-expanded-state');
-    const setState=(state)=>{clearStates();if(state)h.classList.add(state)};
-    const scheduleExpand=()=>{
-      if(stopTimer)clearTimeout(stopTimer);
-      stopTimer=setTimeout(()=>{
-        if(window.scrollY>20) setState('home-expanded-state is-stopped');
-      },850);
-    };
-    const apply=(y,initial=false)=>{
-      if(y<=55){
-        if(stopTimer)clearTimeout(stopTimer);
-        setState('home-logo-state');
-        lastY=y;
-        return;
-      }
-      if(initial){
-        setState('home-logo-state');
-        lastY=y;
-        return;
-      }
-      const delta=y-lastY;
-      if(Math.abs(delta)<0.5)return;
-      hasScrolled=true;
-      setState(delta>0 ? 'home-logo-state is-scroll-down' : 'home-logo-state is-scroll-up');
-      scheduleExpand();
-      lastY=y;
+    const clearHome=()=>h.classList.remove('home-top','home-logo-state','home-expanded-state','is-scroll-down','is-scroll-up','is-stopped');
+    const logoOnly=()=>{clearHome();h.classList.add('home-logo-state');};
+    const expanded=()=>{clearHome();h.classList.add('home-expanded-state','is-stopped');};
+    const cancelExpand=()=>{if(expandTimer){clearTimeout(expandTimer);expandTimer=null;}};
+    const armExpand=()=>{
+      cancelExpand();
+      expandTimer=setTimeout(()=>{
+        expandTimer=null;
+        if(document.visibilityState!=='visible')return;
+        if(window.scrollY<=8)return;
+        if(performance.now()-lastMove<430)return;
+        expanded();
+      },480);
     };
     const onScroll=()=>{
       if(raf)return;
-      raf=requestAnimationFrame(()=>{raf=0;apply(window.scrollY,false)});
+      raf=requestAnimationFrame(()=>{
+        raf=0;
+        const y=window.scrollY;
+        const delta=y-lastY;
+        if(Math.abs(delta)<1)return;
+        lastY=y;
+        lastMove=performance.now();
+        cancelExpand();
+        logoOnly();
+        h.classList.add(delta>0?'is-scroll-down':'is-scroll-up');
+        if(y<=8) h.classList.add('home-top');
+        // Expand only after the user actually stops moving.
+        armExpand();
+      });
     };
-    apply(window.scrollY,true);
+    const onPointer=()=>{
+      // Any interaction with the logo/header while expanded should not cause flicker.
+      if(h.classList.contains('home-expanded-state')) return;
+      if(window.scrollY>8) armExpand();
+    };
+    cancelExpand();
+    clearHome();
+    h.classList.add(window.scrollY<=8?'home-top':'home-logo-state');
     window.addEventListener('scroll',onScroll,{passive:true});
-    window.addEventListener('resize',()=>{ if(window.scrollY<=55)setState('home-top') },{passive:true});
+    window.addEventListener('wheel',()=>{lastMove=performance.now();cancelExpand();logoOnly();},{passive:true});
+    window.addEventListener('touchmove',()=>{lastMove=performance.now();cancelExpand();logoOnly();},{passive:true});
+    h.addEventListener('mouseenter',onPointer);
+    document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelExpand();});
   }
   function updateCart(){document.querySelectorAll('#cartCount').forEach(el=>{try{const c=JSON.parse(localStorage.getItem(CART_KEY)||'[]');el.textContent=c.reduce((s,i)=>s+Number(i.qty||0),0)}catch{el.textContent='0'}})}
   function setupCartLinks(){document.querySelectorAll('.cart-icon').forEach(a=>a.addEventListener('click',e=>{if(document.getElementById('cartTrigger'))return;}));window.addEventListener('storage',updateCart);window.addEventListener('cartupdated',updateCart)}
