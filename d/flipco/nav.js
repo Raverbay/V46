@@ -5,11 +5,21 @@
     try{const u=new URL(href,location.href);return u.origin===location.origin && (u.pathname.endsWith('.html')||u.pathname.endsWith('/')||u.pathname===location.pathname);}catch{return false;}
   };
   function mountLoader(){
-    if(document.getElementById('pageLoader')) return;
-    const el=document.createElement('div'); el.id='pageLoader'; el.className='page-loader'; el.innerHTML='<div class="loader-inner"><img src="assets/logo-flipco-header.png" alt="Flip&Co"><span>FLIP&CO · CAGLIARI</span><i></i></div>';
-    document.body.prepend(el); requestAnimationFrame(()=>el.classList.add('is-ready'));
+    let el=document.getElementById('pageLoader');
+    if(!el){
+      el=document.createElement('div');
+      el.id='pageLoader';
+      el.className='page-loader';
+      el.setAttribute('aria-hidden','true');
+      el.innerHTML='<div class="loader-inner"><img src="assets/logo-flipco-header.png" alt="Flip&Co"><span>FLIP&CO · CAGLIARI</span><i></i></div>';
+      document.body.prepend(el);
+    }
+    requestAnimationFrame(()=>el.classList.add('is-ready'));
     const started=performance.now();
-    const reveal=()=>{const wait=Math.max(0,520-(performance.now()-started));setTimeout(()=>el.classList.add('is-hidden'),wait)};
+    const reveal=()=>{
+      const wait=Math.max(0,520-(performance.now()-started));
+      setTimeout(()=>{el.classList.add('is-hidden');el.setAttribute('aria-hidden','true')},wait);
+    };
     if(document.readyState==='complete') reveal(); else window.addEventListener('load',reveal,{once:true});
   }
   function transitions(){
