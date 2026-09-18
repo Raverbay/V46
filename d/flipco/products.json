@@ -1,0 +1,8 @@
+[
+{"id":"fh-001","brand":"Tommy Hilfiger","name":"Logo Hoodie","category":"Uomo","price":129.9,"sizes":["S","M","L","XL"],"stock":{"S":0,"M":1,"L":1,"XL":0},"image":"assets/editorial-campaign.jpg","badge":"SELECTED"},
+{"id":"fh-002","brand":"Calvin Klein","name":"Essential Tee","category":"Donna","price":59.9,"sizes":["XS","S","M","L"],"stock":{"XS":0,"S":2,"M":1,"L":0},"image":"assets/editorial-campaign.jpg","badge":"NEW"},
+{"id":"fh-003","brand":"Levi's","name":"501 Original","category":"Uomo","price":109.9,"sizes":["30","32","34","36"],"stock":{"30":1,"32":0,"34":1,"36":0},"image":"assets/store-entrance.jpg","badge":"ICON"},
+{"id":"fh-004","brand":"Nike","name":"Air Max Lifestyle","category":"Kids","price":99.9,"sizes":["35","36","37","38"],"stock":{"35":0,"36":1,"37":1,"38":0},"image":"assets/editorial-campaign.jpg","badge":"JUST IN"},
+{"id":"fh-005","brand":"The North Face","name":"Lightweight Jacket","category":"Donna","price":189.9,"sizes":["S","M","L"],"stock":{"S":1,"M":0,"L":0},"image":"assets/store-entrance.jpg","badge":"LAST ONE"},
+{"id":"fh-006","brand":"adidas","name":"Originals Track Top","category":"Kids","price":74.9,"sizes":["128","140","152","164"],"stock":{"128":0,"140":1,"152":0,"164":1},"image":"assets/editorial-campaign.jpg","badge":"SELECTED"}
+]

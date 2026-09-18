@@ -1,40 +1,52 @@
 {
   "site": {
     "brandName": "Flip&Co",
-    "tagline": "Scopri la selezione. Online o in store.",
+    "tagline": "Scopri. Immagina. Vieni a provarlo.",
     "accent": "#b8ff38",
     "background": "#f2f0ea",
     "ink": "#11120f",
-    "introTitle": "SCOPRI ONLINE.\nVIENI A VEDERLO\nDAL VIVO.",
-    "introLead": "ONLINE O IN STORE. FLIP&CO È UNO SOLO.",
-    "introBody": "Flip&Co è un multibrand store a Cagliari. Una selezione di abbigliamento, footwear e accessori per uomo, donna e kids, con brand internazionali e una ricerca costante di nuovi capi da scoprire. Puoi esplorare la selezione online, oppure venire direttamente in negozio. Lo stock online è collegato alla disponibilità reale di Flip&Co: un solo assortimento, un solo stock, due canali di vendita."
+    "introTitle": "NON È UN CATALOGO.\nÈ IL PRIMO PASSO\nVERSO IL TUO PROSSIMO LOOK.",
+    "introLead": "Online ti ispiri. In store lo vivi.",
+    "introBody": "Flip&Co è un multibrand store a Cagliari per uomo, donna, teens e bambino. Qui scopri una selezione di brand e collezioni che abbiamo scelto per il nostro negozio. Non trovi un carrello, trovi un invito: guarda, lasciati ispirare, contattaci se vuoi saperne di più e vieni a provare dal vivo ciò che ti ha colpito."
   },
   "hero": {
     "logo": "logo-flipco.png",
     "kicker": "CAGLIARI · MULTIBRAND STORE",
-    "meta": "UOMO · DONNA · KIDS · ONLINE + STORE",
+    "meta": "UOMO / DONNA / TEENS / BAMBINO · SCOPRI IN STORE",
     "headline": [
       "NON CERCHI SOLO",
       "COSA INDOSSARE.",
-      "CERCHI COSA",
-      "TI RAPPRESENTA."
+      "CERCHI COME",
+      "SENTIRTI."
     ]
   },
   "worlds": [
     {
       "label": "01",
       "name": "UOMO",
-      "description": "Abbigliamento, sneakers, footwear e accessori selezionati per costruire il tuo stile."
+      "description": "Denim, contemporary, casual e essentials. Una selezione da guardare, provare e fare tua."
     },
     {
       "label": "02",
       "name": "DONNA",
-      "description": "Una selezione contemporanea di abbigliamento, footwear e accessori."
+      "description": "Contemporary, denim e occasion. Capi da combinare, interpretare e vivere secondo il tuo stile."
     },
     {
       "label": "03",
-      "name": "KIDS",
-      "description": "Stile, comfort e brand selezionati per i più piccoli."
+      "name": "TEENS",
+      "description": "Sneakers, streetwear, denim e casual. Una selezione giovane da scoprire, scegliere e provare in store.",
+      "brandSlugs": [
+        "nike",
+        "adidas",
+        "vans",
+        "thenorthface",
+        "timberland"
+      ]
+    },
+    {
+      "label": "04",
+      "name": "BAMBINO",
+      "description": "Comfort, carattere e stile. Una selezione pensata per i più piccoli e da scoprire dal vivo."
     }
   ],
   "brands": [
@@ -536,25 +548,24 @@
     }
   ],
   "story": {
-    "kicker": "07 / FLIP&CO",
+    "kicker": "IL CODICE FLIP&CO",
     "title": [
-      "UNA SELEZIONE",
-      "FATTA PER",
-      "ESSERE VISSUTA."
+      "MENO RUMORE.",
+      "PIÙ SELEZIONE."
     ],
-    "body": "Flip&Co nasce dalla passione per l'abbigliamento e dalla ricerca di brand, capi e dettagli capaci di distinguersi. Online puoi scoprire la selezione, scegliere e acquistare. In negozio puoi vedere, provare e lasciarti consigliare. Il digitale ti porta a Flip&Co. Flip&Co ti porta al tuo prossimo look.",
+    "body": "Un buon negozio non ti mostra tutto. Ti fa notare quello che potresti amare. Flip&Co seleziona brand, collezioni e capi con un criterio semplice: creare una proposta che abbia carattere e che valga la pena scoprire dal vivo. Il digitale ti orienta. La prova in negozio ti aiuta a scegliere.",
     "facts": [
-      "CAGLIARI · VIA ITALIA 22",
-      "UOMO · DONNA · KIDS",
-      "ONLINE + IN STORE",
-      "UN SOLO STOCK"
+      "UOMO / DONNA / BAMBINO",
+      "16 / BRAND SELEZIONATI",
+      "GUARDA · CONTATTA · PROVA"
     ]
   },
   "store": {
-    "kicker": "09 / VISIT US",
+    "kicker": "IL NEGOZIO",
     "title": [
-      "VIENI A",
-      "TROVARCI."
+      "NON È SOLO DOVE",
+      "COMPRI.",
+      "È DOVE SCOPRI."
     ],
     "address": "Via Italia 22, Cagliari",
     "hours": "LUN–SAB · 09:00–13:30 / 16:00–20:00",
@@ -565,208 +576,16 @@
   "reviews": {
     "rating": "4,2",
     "count": "41 RECENSIONI",
-    "title": "PERSONE REALI.\nESPERIENZE REALI.",
-    "body": "Scopri cosa dicono di Flip&Co le persone che ci hanno visitato."
+    "title": "LA PARTE PIÙ IMPORTANTE È FUORI DALLO SCHERMO.",
+    "body": "Il sito ti fa scoprire. Il negozio ti permette di vedere, toccare e provare. E se vuoi sapere qualcosa prima di venire, scrivici: siamo qui per aiutarti."
   },
   "contact": {
     "title": [
-      "HAI TROVATO",
-      "QUELLO CHE",
-      "CERCAVI?"
+      "VISTO.",
+      "TI PIACE.",
+      "ADESSO PROVALO."
     ],
     "instagram": "https://www.instagram.com/flipabbigliamento/",
     "whatsapp": "393661087819"
-  },
-  "shop": {
-    "title": [
-      "SCOPRI.",
-      "SCEGLI.",
-      "ACQUISTA."
-    ],
-    "intro": "La selezione Flip&Co è anche online. Esplora i prodotti disponibili, scegli modello e taglia e acquista direttamente dal nostro store. La disponibilità online segue lo stock reale Flip&Co.",
-    "note": "UN SOLO ASSORTIMENTO · UN SOLO STOCK · FLIP&CO"
-  },
-  "products": [
-    {
-      "id": "fh-001",
-      "brand": "Tommy Hilfiger",
-      "name": "Essential Logo T-Shirt",
-      "category": "UOMO",
-      "type": "T-SHIRT",
-      "price": 49.9,
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "available": true
-    },
-    {
-      "id": "fh-002",
-      "brand": "Calvin Klein",
-      "name": "Cotton Logo T-Shirt",
-      "category": "UOMO",
-      "type": "T-SHIRT",
-      "price": 59.9,
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "available": true
-    },
-    {
-      "id": "fh-003",
-      "brand": "Levi’s",
-      "name": "501 Original Jeans",
-      "category": "UOMO",
-      "type": "DENIM",
-      "price": 109.9,
-      "sizes": [
-        "28",
-        "30",
-        "32",
-        "34",
-        "36"
-      ],
-      "available": true
-    },
-    {
-      "id": "fh-004",
-      "brand": "The North Face",
-      "name": "Easy T-Shirt",
-      "category": "UOMO",
-      "type": "T-SHIRT",
-      "price": 45.0,
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "available": true
-    },
-    {
-      "id": "fh-005",
-      "brand": "Guess",
-      "name": "Logo Mini Bag",
-      "category": "DONNA",
-      "type": "ACCESSORI",
-      "price": 99.9,
-      "sizes": [
-        "ONE SIZE"
-      ],
-      "available": true
-    },
-    {
-      "id": "fh-006",
-      "brand": "Vero Moda",
-      "name": "Essential Knit Top",
-      "category": "DONNA",
-      "type": "TOP",
-      "price": 39.9,
-      "sizes": [
-        "XS",
-        "S",
-        "M",
-        "L"
-      ],
-      "available": true
-    },
-    {
-      "id": "fh-007",
-      "brand": "ONLY",
-      "name": "Wide Leg Denim",
-      "category": "DONNA",
-      "type": "DENIM",
-      "price": 59.9,
-      "sizes": [
-        "26",
-        "28",
-        "30",
-        "32"
-      ],
-      "available": true
-    },
-    {
-      "id": "fh-008",
-      "brand": "Nike",
-      "name": "Club Fleece Hoodie",
-      "category": "KIDS",
-      "type": "FELPA",
-      "price": 54.9,
-      "sizes": [
-        "XS",
-        "S",
-        "M",
-        "L"
-      ],
-      "available": true
-    },
-    {
-      "id": "fh-009",
-      "brand": "adidas",
-      "name": "Trefoil T-Shirt",
-      "category": "KIDS",
-      "type": "T-SHIRT",
-      "price": 29.9,
-      "sizes": [
-        "116",
-        "128",
-        "140",
-        "152"
-      ],
-      "available": true
-    },
-    {
-      "id": "fh-010",
-      "brand": "Vans",
-      "name": "Classic Sneaker",
-      "category": "KIDS",
-      "type": "FOOTWEAR",
-      "price": 59.9,
-      "sizes": [
-        "31",
-        "32",
-        "33",
-        "34",
-        "35"
-      ],
-      "available": true
-    },
-    {
-      "id": "fh-011",
-      "brand": "Timberland",
-      "name": "Classic Casual Shoe",
-      "category": "UOMO",
-      "type": "FOOTWEAR",
-      "price": 139.9,
-      "sizes": [
-        "40",
-        "41",
-        "42",
-        "43",
-        "44"
-      ],
-      "available": true
-    },
-    {
-      "id": "fh-012",
-      "brand": "New Balance",
-      "name": "Lifestyle Sneaker",
-      "category": "DONNA",
-      "type": "FOOTWEAR",
-      "price": 119.9,
-      "sizes": [
-        "36",
-        "37",
-        "38",
-        "39",
-        "40"
-      ],
-      "available": true
-    }
-  ]
+  }
 }

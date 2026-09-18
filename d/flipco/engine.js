@@ -76,7 +76,7 @@
   set('#rating',cfg.reviews.rating); set('#reviewCount',cfg.reviews.count); set('#reviewTitle',cfg.reviews.title); set('#reviewBody',cfg.reviews.body);
   setHTML('#contactTitle',cfg.contact.title.map(x=>`${x}<br>`).join('')); set('#contactMeta',`${site.brandName} · ${cfg.store.address}`); $('#instagramLink').href=cfg.contact.instagram; $('#contactWa').href=`https://wa.me/${cfg.contact.whatsapp}`;
 
-  const navItems=[['SCOPRI LA SELEZIONE','#campaign'],['SHOP ONLINE','shop.html'],['BRAND','#brands'],['FLIP&CO','#story'],['IL NEGOZIO','#store'],['CONTATTI','#contact']];
+  const navItems=[['UN SOLO MODO DI ESSERE','#campaign'],['BRAND','#brands'],['IL CODICE','#story'],['IL NEGOZIO','#store'],['CONTATTI','#contact']];
   const n=$('#mobileNav'); navItems.forEach(([label,href])=>{const a=document.createElement('a');a.href=href;a.textContent=label;n.appendChild(a)});
   $$('.language button').forEach(btn=>btn.addEventListener('click',()=>{$$('.language button').forEach(b=>b.classList.remove('active'));btn.classList.add('active')}));
   const menuButton=$('#menuButton'),panel=$('#menuPanel');
