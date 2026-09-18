@@ -1,0 +1,15 @@
+FLIP&CO V19 — HOME REDESIGN
+
+Changed/new files:
+- index.html
+- home-v19.css
+- home-v19.js
+- assets/editorial-campaign.jpg
+- assets/store-entrance.jpg
+- assets/campaign-uomo.jpg
+- assets/campaign-donna.jpg
+- assets/campaign-kids.jpg
+
+The update rebuilds the complete homepage as an original editorial fashion-commerce experience inspired by the reference video's minimalist retail flow. It does not copy Zara code, proprietary assets, text, or branding.
+
+Installation: copy/replace only these files at the existing Flip&Co project root.
